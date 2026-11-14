@@ -1,0 +1,1 @@
+0x8185fb14 func module_start hand export NID 0x935CD196 (module_start), calls the CRT entry
