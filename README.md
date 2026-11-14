@@ -10,7 +10,7 @@ One search (2026-11-14) found no public decomp of the Vita or PSP game. This is 
 | Code | 0x81000000..0x81763E38 (function bodies cover 97.5 %), import stubs 0x81763E38..0x81766468 |
 | Functions | 30,095 |
 | SDK imports (NID -> name, vitasdk/vita-headers `c00157c`) | 611 stubs, 48 libraries; 600 of 619 NIDs (functions + variables) resolved, the rest are `<Lib>_<NID>` |
-| hand | 1 (`module_start`, from the export table) |
+| hand | 2,765 lines in `ghidra/hand.txt`: `module_start`, 2,737 script-native functions named from the game script-native table (`tools/natives.py`), 27 Poppet (create mode) functions named by reading the code |
 | `str`: named from a string the function references | 1,967 |
 | `src`: references only a source-path string (`<file>_fn_<addr>`) | 374 |
 | `imp`: named after the rarest SDK import it calls (`<area>_use_<import>_<addr>`) | 2,763 |
@@ -28,6 +28,10 @@ Not done: C++ class recovery (vtables), the bundled libraries (FMOD, libpng and 
 | `ghidra/names_imports.txt` | import stub address -> SDK name |
 | `ghidra/names_auto.txt` | `0x<addr> func <name> <tag> <note>` for all provisional names |
 | `ghidra/hand.txt` | hand names (applied last) |
+| `LEVELEDIT.md` | how the create-mode tools work: state stack, messages, undo, vertex edit, slice, glue, flood fill |
+| `enums.txt` | 138 reflection enum tables (2,961 entries) read from the binary by `tools/enums.py` |
+| `tools/natives.py`, `enums.py`, `strs.py`, `ptrs.py`, `vtab.py` | script-native table, enum tables, string search, pointer sites, vtable listing |
+| `ghidra/dump.sh` + `scripts/DumpRange.java` | decompile an address range to a local file (output is never committed) |
 | `ghidra/funcinfo.tsv` | `F` address name source size, `C` callee |
 | `ghidra/scripts/` | SeedVita (Thumb context, import stubs, pointer seeds), ApplyNames, ExportFuncInfo |
 | `tools/` | fself.py / unfself.py (fself -> ELF), modinfo.py (module info, imports), nids.py (NID db lookup), autoname.py, stats.py |
