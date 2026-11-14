@@ -1,7 +1,7 @@
 # LBP Vita: how the level edit tools (Poppet / create mode) work
 
 Source: Ghidra decompile of eboot (names-only project). Addresses are eboot VAs.
-"read" = seen in the decompile. "guess" = inferred, not checked. State: 2026-11-14, first pass.
+"read" = seen in the decompile. "guess" = inferred, not checked. State: 2026-11-14, second pass (layers, unphysics, wiring added).
 
 ## Index
 1. Big picture
@@ -12,7 +12,7 @@ Source: Ghidra decompile of eboot (names-only project). Addresses are eboot VAs.
 6. Vertex editor (corner edit)
 7. Slice
 8. Glue
-9. Flood fill (material change)
+9. Flood fill (material change); 9a vertex move, 9b layers, 9c unphysics, 9d wiring, 9e joints and stamp
 10. Function map by tool
 11. Not read yet
 
@@ -90,6 +90,40 @@ Source: Ghidra decompile of eboot (names-only project). Addresses are eboot VAs.
 ## 9. Flood fill = change material (read in part)
 - Action handler 0x8132a2ec builds a temporary flood-fill state and calls 0x8131833e per thing: set the new material on the render part (0x810b5366), pick one of two defaults when shape +0x7c == 10.0 (guess: bevel by thickness), rebuild (0x810ed0f4), play poppet/floodfill.
 
+## 9a. Vertex move (read)
+- 0x813140c2. BP_NEXT_VERTEX = button 0xc, BP_PREVIOUS_VERTEX = 0xd (both repeat while held). BP_PLACE_HERE (button 9) commits the moved vertices with 0x810ec580(shape, verts, loops, 0).
+
+## 9b. Layers and thickness (read)
+- Grab state update 0x8131069e. Held things = vector at state+0x88 (count +0x8c), 0x24 bytes each: +0xc thing, +0x18 back depth, +0x1c front depth (integers).
+- 0x81337638 = lowest back of the held set, 0x813376a2 = highest front.
+- Depth units: layer pitch 200, thick layer 180 deep, thin layer 20 deep. Layer back planes: -510, -310, -110, 90. Allowed range: back >= -510, front <= 110.
+- 0x8130d510(state, forward, thickness, thinStep) = one layer / thickness step:
+  - step is 200, or 20 when thinStep is set and the shape material type (shape +0x124) is not 6..11;
+  - new thickness is clamped to at least 20, or at least 180 for material types 6..11 and for multi-selections (0x81337982);
+  - a thin thing that grows goes straight to 180; a thing that shrinks to 20 snaps to the nearest layer back plane;
+  - the move is refused when the free room in front or behind (0x81339a26 sweep, start 1000000) is too small;
+  - on success: sound poppet/changelayer, then 0x8133770e applies it.
+- 0x8133770e(world, held, front, back, ...): turns the request into a delta, rounds it to a multiple of 200, pulls it back inside -510..110, then sets each held thing with 0x8133d024(world, entry, front + d, back + d).
+- Prompts BP_CHANGE_LAYER / BP_CHANGE_LAYER_THICKNESS are shown on button 0xf. Last used front / back are kept in globals 0x8186551c / 0x81865518 (guess: so the next object starts on the same layer).
+
+## 9c. Unphysics (read)
+- 0x8132decc(state, button). Selection = vector at state+0xd0 (0xc bytes each, count +0xd4). Empty selection + button 9 = error sound.
+- It is a toggle: if every selected thing is already unphysics (0x8122bed4) the tool turns physics back on (sound dephys_undo), otherwise off (dephys_activate).
+- Steps: undo snapshot 0x8113036c; for each selected thing collect its group (0x810e8896); for each member call 0x8122be3c(member, on, 1) and set or clear bit 8 of the 16-bit flags at thing+0x78; register the thing with the Poppet (0x8113c85c).
+- First activation also reports a hash id 0x8a9e3e57 to the player record (guess: tutorial or pin progress).
+
+## 9d. Switch wiring (read in part)
+- 0x81328388. State fields (int index): [0x2d] the switch thing, [0x30] output index in use, [0x31] thing connected now, [0x34] its port.
+- Switch part: +0x30 type, +0x34 output array, +0x38 output count. Type 0x13 has a growing output list: when the current output is taken, a new one is added (0x810f8a5c(switch, count + 1)) and empty ones are removed afterwards (0x810f8728).
+- Connect (button 9 or touch 0x51 over a valid target, prompt BP_PLACE_SWITCH_HERE): undo snapshot; 0x810fe578(output, target, port, 0) tests the link; the old link is removed and the new one made with 0x810fd908(output, thing, port); both things go into an edit list sent through 0x8113c75c; sound poppet/connect_switch.
+- Released over nothing: a helper thing is spawned from a resource (0x81195470) at the cursor and a 0xf4-byte state (ctor 0x81305e74) takes over (guess: the wire end becomes a placed object).
+- BP_DELETE_SWITCH (button 0xb): undo snapshot, remove the link (0x810fd908), sound poppet/deleteobject, pop the state. Button 10 = cancel.
+
+## 9e. Joints and place / stamp (call skeleton only)
+- Joints 0x8131cad4: prompts BP_PLACE_JOINT or BP_ATTACH_JOINT (button 9), BP_DETACH_JOINT / BP_DELETE_JOINT (0xb). Commit = undo snapshot, then 0x8131aeda(state, a, b); on failure the snapshot is dropped. Helpers 0x8131a01e, 0x81319f78, 0x8131a0c4, 0x8131a20a pick the two things and the joint end.
+- Place / stamp 0x81307f28: BP_PLACE_HERE (9) -> placement test 0x81343346, on success sound poppet/createstamp, on failure poppet/error_3d; BP_DELETE (0xb); BP_HIDE / BP_SHOW on button 0x3b. Commit path: undo snapshot, 0x81307ca2(state, thing), snapshot dropped on failure.
+- 0x812f9db0 is not the save itself: it is the thermometer / saving notification (voice lines vo_create_saving, vo_create_thermo).
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
@@ -109,4 +143,4 @@ Source: Ghidra decompile of eboot (names-only project). Addresses are eboot VAs.
 Full list: ghidra/work/poppet_strs.txt.
 
 ## 11. Not read yet
-- Move / delete vertex bodies, the cut maths (0x81141592), the glue test maths (0x810e8322), place / stamp, grab, joints, wiring, stickers, UV, save path (vo_create_saving 0x812f9db0).
+- Delete vertex body (0x81315fee), the polygon boolean (0x8140c306), the glue test maths (0x810e8322, 0x81418114), joint creation (0x8131aeda), stamp commit (0x81307ca2), scale / rotate maths (0x8130e890), stickers, decorations, UV, the real level save.

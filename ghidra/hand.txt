@@ -2763,3 +2763,10 @@
 0x81052af6 func Pad_ButtonPressedPrompt hand pad, button, BP_ text
 0x81052bd0 func Pad_ButtonHeld hand
 0x8100cf40 func operator_new hand
+0x8130d510 func Poppet_StepLayerOrThickness hand pitch 200 thin 20
+0x8133770e func Poppet_ApplyLayerMove hand snap to 200 clamp -510..110
+0x81337638 func HeldSet_MinBack hand
+0x813376a2 func HeldSet_MaxFront hand
+0x8132decc func Poppet_UnphysicsToggle hand
+0x81328388 func Poppet_SwitchWireUpdate hand
+0x812f9db0 func Poppet_ThermoSaveNotice hand not the save
