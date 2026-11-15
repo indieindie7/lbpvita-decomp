@@ -3596,3 +3596,8 @@
 0x811fc7f8 func native_SetTopButtonPrompt hand late67 script native SetTopButtonPrompt__Q21System.EButtonPromptsi flag=0
 0x811fc820 func native_SetBottomButtonPrompt hand late67 script native SetBottomButtonPrompt__Q21System.EButtonPromptsi flag=0
 0x8129b018 func Gooey_DoCarousel hand late67 only caller of GooeyCarousel_Setup
+0x8107bc40 func Game_GetPoppetModeForPlayer hand late68
+0x8107bcd2 func Game_GetPoppetSubModeForPlayer hand late68
+0x8112d99a func Poppet_GetMode hand late68
+0x8112ddba func Poppet_GetSubMode hand late68
+0x81284b7a func Gooey_DoSliderByHandle hand late68 callee of native_DoSlider
