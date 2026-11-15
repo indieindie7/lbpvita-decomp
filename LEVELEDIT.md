@@ -447,7 +447,12 @@ The only callers of the 9za functions are script natives (found by scanning ever
   - POPPET_LOAD_PAINTING (0x5a): 0x81330dcc Poppet_OnLoadPainting: type 0x12 pushes the painting tool state (0x468 bytes; shows a notice when no move input is there), type 0x13 hands the picture to the current state.
   - The rest (value, text, picks, marquee, select slot) do nothing without a delegate.
 - EDIT_DATA (0x31) is not a level change: 0x81390c74 Game_OnEditData writes one word of the per-player record (0x80 bytes, keyed by NpId, game +0x190, count +0x194): mode 0 -> +0x24, mode 1 -> +0x28, mode 2 -> 0x81182b6e (not read).
-- Which tool an inventory item opens (0x81342740 Poppet_UseInventoryItems, classes by vtable): decoration items push DecorationHoverState (0x8130294a), object items build a temp thing and push SelectionTool (0x8130fc3a), everything else pushes StickerHoverState (0x81325088). The hover states turn into PlaceDecorationState / PlaceStickerState, which derive from them.
+- Which tool an inventory item opens (0x81342740 Poppet_UseInventoryItems, then per item 0x81341b02 Poppet_UseInventoryObject; classes by vtable):
+  - all items are stickers (flag 8 / 0x4000): StickerHoverState (0x81325088); with use mode 0xe instead a temp thing + SelectionTool (0x8130fc3a).
+  - all items are decorations (flag 4): DecorationHoverState (0x8130294a). The hover states turn into PlaceStickerState / PlaceDecorationState, which derive from them.
+  - joints (flag 0x40): AttachJointTool (0x81319d6a) or PlaceJointTool (0x812fd3fc).
+  - other objects: 0x813405d6 makes the thing from the plan near the player, then SelectionTool (thing already held) or PlaceObjectTool (0x81305e74).
+  - flag 0x100 goes to 0x81341886, costumes (0x20 / 0x100010) to 0x813417d6 (both not read). Flag names are unverified.
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |

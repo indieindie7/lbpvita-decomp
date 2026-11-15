@@ -3258,3 +3258,8 @@
 0x8130294a func DecorationHoverState_ctor hand late50 vtable 0x818576d0
 0x8130fc3a func SelectionTool_ctor hand late50 vtable 0x81857ad0
 0x81325088 func StickerHoverState_ctor hand late50 vtable 0x818584b8
+0x81341b02 func Poppet_UseInventoryObject hand late51
+0x813405d6 func Poppet_SpawnInventoryThing hand late51
+0x81319d6a func AttachJointTool_ctor hand late51 vtable 0x81857fb4
+0x812fd3fc func PlaceJointTool_ctor hand late51 vtable 0x818570fc
+0x81305e74 func PlaceObjectTool_ctor hand late51 vtable 0x81857a08
