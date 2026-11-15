@@ -2951,3 +2951,5 @@
 0x8113b954 func PoppetState_dtor hand late27
 0x8122fe7c func Thing_GetPart hand late28
 0x816ca078 func Resource_WriteBody hand late29
+0x816d5a58 func Level_WriteBinary hand late30
+0x8100b54c func Stream_Grow hand late30
