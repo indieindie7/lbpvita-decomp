@@ -4046,3 +4046,4 @@
 0x8165468c func PWorld_SerializeSub_8165468c hand late110
 0x81654a4c func PWorld_SerializeSub_81654a4c hand late110
 0x81654cc4 func PWorld_SerializeSub_81654cc4 hand late110
+0x810211ba func VoiceChat_Update hand late113
