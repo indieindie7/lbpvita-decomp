@@ -2905,3 +2905,4 @@
 0x810e5b10 func Shape_PairDistance hand read
 0x8107b0b2 func Game_RequestSaveLevel hand read
 0x8107b0de func Game_DoPreSaveLevelCheck hand read
+0x8113b90c func PoppetState_ctor hand late20

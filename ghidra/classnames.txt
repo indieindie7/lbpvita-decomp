@@ -176,3 +176,8 @@
 8185edf8 FMOD_EmulatedChannelDSPHead
 8185f660 AacDecoder
 8185f680 AvcDecoder
+81858080 NormalModeState
+81858110 MenuModeState
+81858230 InventoryMenuState
+81858908 TweakModeState
+81858998 TweakModeInventoryState

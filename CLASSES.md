@@ -86,18 +86,18 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
     - StickerHoverState 0x818584b8 slots 40 own 14
       - PlaceStickerState 0x81858560 slots 40 own 10
   - cls_81857978 0x81857978 slots 34 own 6
-  - cls_81858080 0x81858080 slots 34 own 5
-  - cls_81858110 0x81858110 slots 34 own 8
+  - NormalModeState 0x81858080 slots 34 own 5
+  - MenuModeState 0x81858110 slots 34 own 8
     - PhotoState 0x818571c4 slots 34 own 11
     - cls_818582e4 0x818582e4 slots 35 own 14
   - PopitMenuState 0x818581a0 slots 34 own 12
-  - cls_81858230 0x81858230 slots 34 own 13
+  - InventoryMenuState 0x81858230 slots 34 own 13
   - cls_81858878 0x81858878 slots 34 own 4
-  - cls_81858908 0x81858908 slots 34 own 17
+  - TweakModeState 0x81858908 slots 34 own 17
     - cls_81858428 0x81858428 slots 34 own 4
     - cls_818586b8 0x818586b8 slots 34 own 4
     - cls_818587e8 0x818587e8 slots 34 own 5
-  - cls_81858998 0x81858998 slots 34 own 17
+  - TweakModeInventoryState 0x81858998 slots 34 own 17
   - CameraToolBase 0x81858a28 slots 34 own 7
     - CameraAngleState 0x81857254 slots 37 own 10
     - CameraZoneState 0x818572f0 slots 37 own 9
