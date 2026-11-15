@@ -2966,3 +2966,10 @@
 0x816d6834 func Plan_ReadBinary hand late34
 0x816aaf8c func InventoryDetails_WriteBinary hand late34
 0x816ab76c func InventoryDetails_ReadBinary hand late34
+0x8123b858 func Text_LookupKey hand late36
+0x812fae18 func Limit_ShowCannotSave hand late36
+0x812fb04a func Limit_ShowEmittersFailing hand late36
+0x81348814 func Limit_ShowTooComplicated hand late36
+0x813519a6 func Sticker_ShowRestricted hand late36
+0x81320130 func Paint_AskSavePainting hand late36
+0x8132124e func Paint_AskQuit hand late36

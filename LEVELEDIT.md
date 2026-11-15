@@ -374,6 +374,13 @@ So placing an object from the Popit means deserialising the blob of its plan int
 
 Inventory details record (dump decomp_invd.c; callee list read, field order not checked one by one): 0x816aaf8c writes the struct that FIELDS.md lists under 0x816ac304: DateAdded +0 (64-bit, 0x8100bea8), LevelUnlockSlotID +8, HighlightSound +0x10, Colour +0x14, Type +0x18, SubType +0x1c, the two translation tags +0x20 / +0x24, a creator id at +0x28 (0x816aaf34), Icon +0x2c (resource descriptor, 0x816aae50), UserCreatedDetails +0x30 (two UTF-16 strings, each a count then count * 2 bytes), PhotoData +0x34 (0x81611060) and EyetoyData +0x38 (0x816139c4), each written only when present, the u16 indices LocationIndex / CategoryIndex / PrimaryIndex +0x40..+0x44, a record at +0x3c (0x816aadf8) and the bytes ToolType +0x46, Flags +0x47, MakeSizeProportional +0x48. This is what the Popit shows for an item: name, description, icon, category and creator all travel inside the plan.
 
+## 9zd. Text keys and the Move save check (read, tool tools/lamskey.py)
+- Text is looked up by a 32-bit hash of its key name: 0x8123b858 Text_LookupKey(hash, out string), non-zero when found. The hash walks the first 32 characters backwards (v = v * 0x1b + char, short keys padded with spaces), a second pass does characters 33..64 when the key is longer (else the constant 0xC8509800), result = v0 + v1 * 0xDEADBEEF, low 32 bits. The key names themselves are still in the eboot as plain strings, so tools/lamskey.py hashes every identifier string (26682 keys, ghidra/work/lamskeys.tsv) and resolves the constants in the dumps: all 106 Text_LookupKey constants in the current dumps resolve (ghidra/work/textkeys.txt).
+- Game_PreSaveCheck 0x81183706 (section 7): the three keys are SAVE_MESSAGE_MOVE_FLAG_NOT_SET, TG_Yes, TG_No. So the level byte at world +0x60 is the "needs PlayStation Move" flag of the level, and the check is: the level holds an OBJECT_MOVINATOR or OBJECT_POWERUP_MOVE but the flag is off -> ask Yes / No (dialog 0x62 or 0x63) and do not save yet. It is a question, not a hard block; what Yes does is in the dialog handlers (not read).
+- Limits shown by the editor, by key: LIMIT_CANNOT_SAVE (0x812fae18), LIMIT_EMITTERS_FAILING (0x812fb04a), LIMIT_TOO_COMPLICATED (0x81348814), LIMIT_APPROACHING (thermometer 0x812f9db0), LIMIT_TOO_MANY_STICKERS (sticker paint 0x8121a488), LIMIT_TOO_MANY_DECORATIONS (decoration attach 0x814212fe), TG_STICKERING_RESTRICTED (0x813519a6).
+- Paint tool prompts: POPPET_SAVE_PAINTING_REQUEST (0x81320130), PAINT_QUIT_CHECK (0x8132124e), PAINT_MESSAGE_NO_MOVE_CONTROLLER (0x81330dcc), default item name ITEM_NAME_DEFAULT_PAINTING (0x8131f0c8).
+- 0x81331038 is the shared text entry opener: its title key is one of NOTE_ENTER_TEXT, SPEECH_BUBBLE_ENTER_SPEECH, POPPET_TEXT_ENTRY_ITEM_NAME, SEQUENCER_NAME, TWEAK_CONTROLINATOR_BUTTON_PROMPT_NAME and others (which case picks which: not read).
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
@@ -394,6 +401,6 @@ Full list: ghidra/work/poppet_strs.txt.
 
 ## 11. Not read yet
 - The rest of decomp_joint.c.
-- Body writer 0x816ca078, reflect functions of types above 30, handler of network message 0x37 (the real save). Why OBJECT_MOVINATOR / OBJECT_POWERUP_MOVE block a save (9zb).
+- Body writer 0x816ca078, reflect functions of types above 30, handler of network message 0x37 (the real save). The Yes / No handlers of the Move flag dialog 0x62 / 0x63 (9zd).
 - Class trees are in CLASSES.md (Poppet tool states sit under PickState 0x8185b62c; each constructor passes its SUBMODE number). Unnamed classes there still need reading.
 - Libraries: FMOD, zlib and libpng are named; vorbis, Bink and xml are not. libult and steroid suprx modules.
