@@ -2949,3 +2949,4 @@
 0x8113d2f8 func ToolState_ctorFromGame hand late27
 0x81328ef0 func Tweak_GetSelectionBounds hand late27
 0x8113b954 func PoppetState_dtor hand late27
+0x8122fe7c func Thing_GetPart hand late28

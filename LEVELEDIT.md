@@ -333,6 +333,13 @@ CLASSES.md is built by slot matching and shows EditToolBase and DecorationStateB
 
 So a tool is one class per SUBMODE, all sharing EditToolBase; the 48-slot table is the tool interface (update, draw, button prompts), and MODE says which family the state belongs to.
 
+## 9y. Thing part mask (read, dump decomp_rthing.c)
+Reflect_Thing 0x81664b50 tests one bit per part in the 64-bit mask at Thing +0x10 (low word +0x10, high word +0x14) and gets the part with Thing_GetPart 0x8122fe7c(mask address, part number).
+- Bit n = part n in the order of 9w: 0 PBody, 1 PJoint, 2 PWorld, 3 PRenderMesh, 4 PPos, 5 PTrigger, 6 PYellowHead, 7 PAudioWorld, 8 PAnimation, 9 PGeneratedMesh, 0xa PLevelSettings, 0xb PSpriteLight, 0xc PScriptName, 0xd PCreature, 0xe PCheckpoint, 0xf PStickers, 0x10 PDecorations, 0x11 PScript, 0x12 PShape, 0x13 PEffector, 0x14 PEmitter, 0x15 PRef, 0x16 PMetaData, 0x17 PCostume, 0x18 PCameraTweak, 0x19 PSwitch, 0x1a PSwitchKey, 0x1b PGameplayData, 0x1c PEnemy, 0x1d PGroup, 0x1e PPhysicsTweak, 0x1f PNpc, 0x20 PSwitchInput, 0x21 PMicroChip, 0x22 PMaterialTweak, 0x23 PMaterialOverride, 0x24 PInstrument, 0x25 PSequencer, 0x26 PControlinator. Bits 0, 1, 2, 3, 0xb..0x1f, 0x20, 0x21, 0x25, 0x26 were read in the dump; the rest follow the same sequence of calls.
+- Thing +0x34 points to a table of part pointers indexed by part number (0x81328ef0 reads PScript at table +0x44 = 0x11 * 4; 0x8113d2f8 reads PWorld at table +8).
+- Bits above 0x26 exist at run time and are not saved: bit 0x28 (tested in 0x8113d2f8) and bit 0x32 (tested in 0x81328ef0). Their pointers sit in the thing itself at +0x38 + 4 * k, with k taken from 2-bit fields of the word at +0x18 (bits 2..3 for 0x28, bits 22..23 for 0x32). Which parts these are is not known.
+So a tool asks what a thing is by testing mask bits: has PShape (0x12) = editable material, has PJoint (1) = connector, has PSwitch (0x19) = logic source.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
