@@ -3308,7 +3308,7 @@
 0x8146704e func Text_ButtonPromptNames hand late55 by text keys (keyuse.tsv), body not read
 0x8147021a func Text_CircuitNames hand late55 by text keys (keyuse.tsv), body not read
 0x8148806c func Text_MusicTweakPrompts hand late55 by text keys (keyuse.tsv), body not read
-0x81495ea0 func Text_CarouselOptionNames hand late55 by text keys (keyuse.tsv), body not read
+0x81495ea0 func GooeyCarousel_Setup hand late66 was Text_CarouselOptionNames
 0x813958e2 func Thing_GetNameOrPortLabel hand late60
 0x81340dce func Poppet_ApplyCostumeItem hand late60
 0x81382a6c func SaveJob_ComputePackSize hand late61
@@ -3331,3 +3331,6 @@
 0x81042d5e func FileSlice_OpenFile hand late63
 0x81042c04 func FileSlice_Seek hand late63
 0x81182b6e func Game_SetPlayerEditMode hand late65
+0x81495d68 func GooeyCarousel_AddIconOption hand late66
+0x81495de6 func GooeyCarousel_AddTextOption hand late66
+0x81495e38 func GooeyCarousel_AddStringOption hand late66
