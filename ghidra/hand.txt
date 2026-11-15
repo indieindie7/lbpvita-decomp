@@ -2908,7 +2908,7 @@
 0x8113b90c func PoppetState_ctor hand late20
 0x811810d6 func Game_SendSaveLevelMsg hand late21
 0x81183706 func Game_PreSaveCheck hand late21
-0x810587da func SaveJob_Step hand late22
+0x810587da func DownloadJob_Step hand late22
 0x8167f730 func Reflect_Mesh hand late23
 0x81682f80 func Reflect_Anim hand late23
 0x816dea10 func Reflect_GuidSubst hand late23
@@ -2953,9 +2953,9 @@
 0x816ca078 func Resource_WriteBody hand late29
 0x816d5a58 func Level_WriteBinary hand late30
 0x8100b54c func Stream_Grow hand late30
-0x810589fc func SaveJobMap_GetOrCreate hand late31
-0x81058c8e func SaveJobMap_Update hand late31
-0x8105885a func SaveJob_Ctor hand late31
+0x810589fc func DownloadJobMap_GetOrCreate hand late31
+0x81058c8e func DownloadJobMap_Update hand late31
+0x8105885a func DownloadJob_Ctor hand late31
 0x8122ab62 func Thing_UpdateBoardHidden hand late32
 0x8122ab00 func Thing_SetBoardHidden hand late32
 0x8118128c func Game_RequestSaveLevel hand late32
@@ -2973,3 +2973,13 @@
 0x813519a6 func Sticker_ShowRestricted hand late36
 0x81320130 func Paint_AskSavePainting hand late36
 0x8132124e func Paint_AskQuit hand late36
+0x8105a018 func Download_IsLevelDownloading hand late37
+0x8105a062 func Download_Start hand late37
+0x8105a0b8 func Download_Remove hand late37
+0x8105a10a func Download_NeedsUpdate hand late37
+0x8105a148 func Download_AnyInProgress hand late37
+0x8105a198 func Download_CancelAll hand late37
+0x8105a1ce func Download_UpdateAll hand late37
+0x81059c5a func DownloadJobMap_CancelAll hand late37
+0x810595fc func DownloadJobMap_Find hand late37
+0x810594c0 func Download_SlotStatus hand late37
