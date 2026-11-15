@@ -1,0 +1,194 @@
+func	name	depth	owners	fields
+8160676c	lbp_MainColour_8160676c	1		MainColour SubColour1 SubColour2 Emphasis
+81610630	lbp_Photo_81610630	3		Photo Level
+816116b8	lbp_PhotoMetaData_816116b8	1		Sticker PhotoMetaData Painting
+81613c2c	lbp_ColorCorrectionSrc_81613c2c	2	PStickers:1	Data.Frame Data.AlphaMask Data.ColorCorrection ColorCorrectionSrc Outline
+81617acc	lbp_MatPlan_81617acc	1		MatPlan MeshPartsHidden MeshPrimitives
+81619618	lbp_CutSceneSendsSignalOnCancelled_81619618	1		Nodes
+81619890	lbp_LocalSpaceRoll_81619890	3		TargetBox PitchAngle ZoomDistance LocalSpaceRoll
+8161f05c	lbp_GetDataLabelsDataOwnerID_8161f05c	1		Outputs ReferenceThing Current.ManualActivation InputListDeprecated UserDefinedColour
+8161fc80	lbp_HideInPlayModeOld_8161fc80	1		Key.ColourIndex HideInPlayModeOld
+816205bc	lbp_DataSource_816205bc	1		DataSource SackbotBehaviour
+816211e4	lbp_SmokeColour_816211e4	1		AnimThing SourcePlayerNumber SmokeColour
+8162285c	lbp_Decorations_8162285c	1		Decorations
+81622b74	lbp_ScriptInstance_81622b74	1		ScriptInstance
+816235f4	lbp_FalloffTexture_816235f4	1		FalloffTexture LookAt
+81624b08	lbp_TweakTargetMaxLength_81624b08	1		Settings
+8162557c	lbp_CacheDirtyButNotRecomputed_8162557c	1		Contacts ContactsSorted CacheDirtyButNotRecomputed
+81625650	lbp_Analogue_81625650	1		Analogue Ternary Player
+8162572c	lbp_SlotNumber_8162572c	1	Game:1	SlotNumber
+816258b4	lbp_OnlineID_816258b4	5		OnlineID
+81625abc	lbp_BDontWantGammaCorrection_81625abc	1		texture
+81625f00	lbp_MorphParamRemap_81625f00	2		CategoriesUsed MeshPrimitives OriginalPlan
+81626230	lbp_Port_81626230	5		Thing
+81626380	lbp_CurrentActivation_81626380	4		Current.Activation TargetList UserDefinedName
+81626b5c	lbp_DecorationAngle_81626b5c	3		RenderMesh PlanGUID
+81626dec	lbp_Shape_81626dec	3		Shape Flags
+8162aba8	lbp_LastUnitSphereFace_8162aba8	1		OrthoLength Aspect LODDistStart LODDistRange ZNear ViewProjMatrix
+8162ae10	lbp_DoubleTap_8162ae10	2		DoubleTap
+8162b804	lbp_KeyboardConnected_8162b804	1		Buttons MouseButtons KeyModifierState MouseWorldPos MouseConnected KeyboardConnected
+8162c614	lbp_LastSignificantMoveTime_8162c614	1		castThingUID castT gameFrameLastCast timeDown startX startY
+8162f050	lbp_ControllingPauseMenu_8162f050	1		Alive LeftStick RightStick SensorDir SensorDirOld PlayerNumber
+8163329c	lbp_SlotID_8163329c	2	PGameplayData:1	SlotID
+8163f800	lbp_GameLastKnownActivation_8163f800	1		TweakGravity TweakBuoyancy TweakDampening Input MiddleVel VelRange
+8164154c	lbp_MaterialPlan_8164154c	3		Region MaterialPlan Material UVScale
+81642580	lbp_RegionOverrides_81642580	1		RegionOverrides
+816434f8	lbp_IsCurrentJumpFlipped_816434f8	1		IsCurrentJumpFlipped CurSource CurTarget0 CurTarget1 CurrentJump CurrentJumpPos
+816464b8	lbp_PatrolStationaryCounter_816464b8	1		TargetThing Attributes MaxMoveSpeed MaxWaitTime WaypointKey.ColourIndex POIKey.ColourIndex
+81646c68	lbp_LastTouchWasATap_81646c68	3		TimeStamp count m_hasChanged LastTouchWasATap LastTouchTapTime
+81646e20	lbp_NetworkCamera_81646e20	2		networkCamera m_hasChanged
+8164712c	lbp_MThingAction_8164712c	2	PTrigger:1	mThingPtr mThingAction
+81647208	lbp_HasPainting_81647208	2	PGameplayData:1	Shareable
+81647470	lbp_GamePlayedFailToFireSound_81647470	2	PCreature:1	CreatureThing DEPRECATED_BaseHandleMatrix Game.PrevDir Game.CurrDir Game.StateTimer Game.State
+8164776c	lbp_SpawnPosIndex_8164776c	2	PCheckpoint:1	SpawnThing SpawnTimer SpawnPosIndex
+81647800	lbp_Things_81647800	2		Things
+81647bf0	lbp_RecordingCountdown_81647bf0	3		State RecordingNpc Recording RecordingPlayer CurrentFrame RecordingCountdown
+81647d0c	lbp_RecordingContainsMoveData_81647d0c	4		InputBuffer OffsetBuffer AbsoluteExpressionBuffer StartWorldTransform StartLocalSceneGraph StartFootPos
+8165074c	lbp_BakedShadowAmount_8165074c	1	PLevelSettings:1	SunPosition SunPositionScale SunColor AmbientColor SunMultiplier Exposure
+8165a688	lbp_BackdropNewPlan_8165a688	1		Things Selections Backdrop BackdropNew CompleteRewards CollectRewards
+8165ba9c	lbp_Things_8165ba9c	4		Things
+8165bc98	lbp_ColourCorrectionFactor_8165bc98	2		LightingFactor ColourCorrectionFactor FogFactor FogTintFactor DarknessFactor NonLinearFog
+8165bdbc	lbp_DefaultZoomMultiplier_8165bdbc	2		DefaultZoomMultiplier MaximumZoomMultiplier ZoomDelayMultiplier ZoomSpeedMultiplier
+8165be88	lbp_CurrentCutSceneCamera_8165be88	2		State CurrentCutSceneCamera TimeInCurrentCamera EndCountdown TransitionStage CurrentCameraTweaking
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	2		Reverb MusicVolume SfxVolume BackgroundVolume DialogueVolume SfxReverbSend
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	3		Game.SelectionFrame Switch Game.Selection Game.LocalPosition Game.LocalAngle Game.MoveAngleXYZxZy
+81664b50	Reflect_Thing	1		Parent GroupHead CreatedBy ChangedBy PlanGUID
+81673890	lbp_OverrideShape_81673890	1		IsInUse ModeStack PoppetGooey Raycast Inventory FrozenList
+81673cf8	Reflect_PoppetState	3		submode
+81673d90	Reflect_PoppetHit	2		HitPoint_Fred Normal BaryU BaryV TriIndex HitThing
+81673fac	lbp_PhysicsMaterial_81673fac	2		GfxMaterial Bevel PhysicsMaterial BevelSize SoundEnum EditorColour
+816740d4	lbp_Front_816740d4	2		Polygon Loops Front Scale Angle WorldMatrix
+816757e0	Reflect_Bevel	1		Shared.AutoSmoothCutoffAngle Vertices IncludeBackFace Shared.SmoothWithFront RelaxStrength SubDivRadius
+81675cc4	lbp_Saturation_81675cc4	1		Saturation HueShift Brightness Contrast TintHue TintAmount
+81677030	Reflect_Material	1		Traction IDensity Restitution SlidingFriction RollingFriction SoundEnum
+816778a0	lbp_TextureAlternatives_816778a0	1		Material TextureAlternatives MinVert MaxVert FirstIndex NumIndices
+81682f80	Reflect_Anim	1		Header Locators
+81686b6c	Reflect_Gfxmaterial	1		GMatFlags AlphaTestLevel AlphaLayer AlphaMode ShadowCastMode BumpLevel
+816898ac	Reflect_PoppetSettings	1		Deadzone MinSpeedFraction AccelTime CursorSpeed PaintSpeed VertexSpeed
+81689dac	lbp_SmoothWithPrevious_81689dac	2	Bevel:1	Rigidity SmoothWithPrevious GMatSlot MappingMode
+81689ee8	lbp_MinUnalignedSpringVert_81689ee8	1		NumVerts NumIndices NumEdgeIndices NumTris StreamCount AttributeCount
+8168acf8	lbp_NextSibling_8168acf8	3		Flags AnimHash Parent FirstChild NextSibling SkinPoseMatrix
+8168b0b0	lbp_BoneIndex_8168b0b0	5		LocalPos LocalNormal BoneIndex
+8168b1d8	lbp_IsPointCloud_8168b1d8	5		NumVerts IsPointCloud
+8168b328	lbp_RestQuadraticDyadicSum_8168b328	2		ClusterCount
+8168b660	lbp_RestLengthSq_8168b660	3		rest_length_sq
+8168b784	lbp_First_8168b784	3		first count
+8168b964	lbp_AffectWorldOnly_8168b964	3		Transform ParentBone AffectWorldOnly
+8168bb74	lbp_PointInPlane_8168bb74	3		PlaneNormal PointInPlane ParentBone
+8168bd80	lbp_InvSkinPoseMatrix_8168bd80	3		InvSkinPoseMatrix BoundBoxMin BoundBoxMax
+8168c18c	lbp_Looping_8168c18c	2	Anim:1	Position Looping
+8168c2e8	lbp_ScaledBonesAnimatedCount_8168c2e8	1	Anim:1	NumFrames LoopStart MorphCount BoneCount RotBonesAnimatedCount PosBonesAnimatedCount
+8168c6fc	lbp_SubType_8168c6fc	2	Gfxmaterial:1	SubType Anim2
+8168c920	lbp_ComponentsAnimated_8168c920	2	Gfxmaterial:1	BaseValue ComponentsAnimated
+8168cae8	lbp_PortFrom_8168cae8	2	Gfxmaterial:1	BoxFrom BoxTo PortFrom PortTo
+81690c98	Reflect_Game	1		LevelSlotID PreviousLevelSlotID PrimaryLevelSlotID PreviousPrimaryLevelSlotID CanReturnToPreviousLevel DeathCount
+81699bc8	lbp_InventoryCollectionIndex_81699bc8	2		InventoryCollectionIndex InventoryPageInstances CurrentPageNumber
+8169a410	lbp_CurrentSortMode_8169a410	5		SubType Title HeartedOnly CustomID CurrentSortMode DesiredSortMode
+8169b28c	lbp_ActionOnItemSelect_8169b28c	2		InventoryViews CurrentPageNumber CollectionID ActionOnItemSelect
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	3	BigProfile:1,SlotList:1	SlotID Level Location AuthorID AuthorName TranslationTag
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	1		SlotID LastPlayedTimestamp PlayCount CompletionCount AcedCount Collectables
+816a20e0	lbp_LastAuthorPhotoCount_816a20e0	1		SlotID LastReviewCount LastCommentCount LastPhotoCount LastAuthorPhotoCount LastStreamEventTimestamp
+816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	1		OnlineID LastReviewCount LastCommentCount LastPhotosByMeCount LastPhotosWithMeCount LastFavouriteSlotsCount
+816a35b0	lbp_SampleGuids_816a35b0	1		Numstack Arpeggiate
+816a3e74	Reflect_SlotList	1		Slots FromProductionBuild
+816a4650	Reflect_CachedLevelData	1		CachedLevelData TutorialCheatPlans
+816a4e80	Reflect_Packs	1		Packs
+816a647c	Reflect_DownloadableContent	1		GUIDS Files
+816a7220	Reflect_SyncedProfile	1		TimePlayed PlatonicAvatar.AvatarWorld TimePlayed UniqueNumber Colours PlayerID
+816a737c	lbp_ContentsType_816a737c	1		ContentsType ContentID Timestamp
+816a7458	lbp_GUIDGuid_816a7458	1		GUID.guid Flags
+816a74c4	lbp_InGameCommerceID_816a74c4	1		Directory ContentID InGameCommerceID CategoryID Flags GUIDs
+816a7638	lbp_InitialProgressValue_816a7638	1		ProgressType Category TitleLamsKey DescriptionLamsKey InitialProgressValue TargetValue
+816a806c	lbp_InventoryPageTitleKey_816a806c	5		InventoryPageTitleKey DesiredSortMode
+816a81a4	lbp_Labels_816a81a4	4	BigProfile:1,SlotList:1	Labels
+816a8268	lbp_Order_816a8268	5		Order
+816a8368	lbp_Count_816a8368	5	BigProfile:1,SlotList:1	Count
+816a8458	lbp_Basenote_816a8458	2		basenote basebpm pitched fitbpm fitbpm finetune
+816ac304	lbp_MakeSizeProportional_816ac304	3		DateAdded LevelUnlockSlotID HighlightSound Colour SubType NameTranslationTag
+816acdd8	lbp_Outfits_816acdd8	1		Outfits
+816ad094	lbp_CachedToolType_816ad094	1		Category Location CachedToolType CachedUVs
+816ad8ec	lbp_JitterRoundness_816ad8ec	1		Texture Angle Roundness BaseOpacity JitterOpacity Spacing
+816af8d0	lbp_BackgroundAlpha_816af8d0	1		BackgroundAlpha
+816b05d8	lbp_UserCategoryIndex_816b05d8	1		Details Flags UserCategoryIndex
+816b1290	lbp_SortEnabled_816b1290	1	BigProfile:1	Unsorted SortEnabled RawIndexToSortedIndex StringList
+816b15ec	lbp_StatList_816b15ec	2		StatList
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	1		TimeTracker.TotalTime TimeTracker.EditingTime TimeTracker.PlayingTime TimeTracker.IdlingTime MultiplayerGamesCount TimeTracker.m_levelTimesMap
+816b35fc	lbp_Protected_816b35fc	1		Values Protected
+816b6728	Reflect_BigProfile	1		Inventory StringTable FromProductionBuild MyMoonSlots CreatorDataLabels NearMyChallengesDataStore
+816b6a60	lbp_ThingUID_816b6a60	1		Level ThingUID
+816b8880	lbp_MoreOfEverythingPinProgress_816b8880	1		PinAwards PinProgress RecentlyAwardedPinIDs ProfileDisplayPinIDs PinsFlags WeekdaysPlayedBits
+816b8d20	lbp_UseDefaultBackground_816b8d20	1		TriggerOverride StickerSaveSize AngleOverride UIHidden LastAutosave UseDefaultBackground
+816b915c	lbp_Components_816b915c	3		Components Outfit
+816b937c	lbp_AwardCount_816b937c	1		PinID AwardCount
+816b9630	lbp_Creators_816b9630	2		Creators
+816b96c8	lbp_Description_816b96c8	5		Description
+816b9710	lbp_PlayerID_816b9710	2		PlayerID
+816b9944	lbp_WString_816b9944	3	BigProfile:1	String WString Index
+816b9a5c	lbp_StatLong_816b9a5c	4		StatLong
+816b9bd8	lbp_CreatorID_816b9bd8	3		creatorID labelIndex analogue ternary
+816b9e5c	lbp_Names_816b9e5c	1	BigProfile:1	Names
+816b9f28	lbp_LabelIndex_816b9f28	3	BigProfile:1	labelIndex
+816b9f84	lbp_NearChallengesOpen_816b9f84	1	BigProfile:1	m_NearChallenges_Log m_NearChallenges_Open
+816ba06c	lbp_ChallengeStatus_816ba06c	3	BigProfile:1	m_challengeID m_challengeStatus m_levelID m_scoreToBeat m_levelType m_myScore
+816ba1c0	lbp_NearTreasuresLog_816ba1c0	1	BigProfile:1	m_NearTreasures_Log
+816ba278	lbp_TimeStampPacked_816ba278	3	BigProfile:1	m_treasureID m_planID m_timeStamp.m_packed
+816ba434	lbp_ProgressCount_816ba434	3		ProgressType ProgressCount
+816baa54	lbp_VideoGuid_816baa54	3		Video.guid Timings
+816bad1c	lbp_TutorialTimings_816bad1c	1		TutorialTimings
+816bae68	lbp_DataLabels_816bae68	1		DataLabels
+816c74d4	lbp_OnlineBetaNetworkTimestamp_816c74d4	1		Inventory StringTable FromProductionBuild LBP1TutorialStates DLCPackViewed DLCPackShown
+816c8b64	lbp_RawData_816c8b64	1		RawData
+816cb3f8	lbp_Remap_816cb3f8	3		Texture Remap
+816cd05c	Reflect_GameConstants	1		DefaultGroupRadius DefaultBadgeRadius DefaultZoomRadius DefaultZoomedInGroupRadius DefaultZoomedInBadgeRadius StoryGroupRadius
+816ceb5c	lbp_MaxPlanetsGfxMemMainUnmapped_816ceb5c	1		LimitApproachingFraction MaxStickersPerThing MaxStickersPerPlayer MaxStickersPerCostumePiece MaxStickersPerPod MaxStickersPerPlanet
+816d0fec	lbp_TutorialGroupList_816d0fec	1		TutorialGroupList
+816d3018	Reflect_SettingsSoftPhys	1		Damping CollideDamping Force WindStrength WindScale WindFrequency
+816d470c	Reflect_SettingsNetwork	1		ProbabilityOfPacketDelay MinPacketDelayFrames MaxPacketDelayFrames ProbabilityOfPacketDrop EnableFakeConditionsForLoopback NumberOfFramesPredictionAllowedForNonLocalPlayer
+816d6180	Reflect_Level	1		PlayerRecord TutorialInventory TutorialInventoryData TutorialInventoryActive CopiedFromSomeoneElse MusicGuid
+816d69a8	lbp_InventoryData_816d69a8	1		Revision ThingData InventoryData
+816d7b38	lbp_ConvertedPlans_816d7b38	1		PlanList Location Description ConvertedPlans
+816d7e40	lbp_BlendFrames_816d7e40	1		Texture FrameCount FrameW FrameH BlendFrames
+816d8eec	lbp_Materials_816d8eec	1		Materials
+816d9e40	lbp_TrackTranslatedTag_816d9e40	1		MasterVolume TrackTranslatedTag IsCopyrighted IsSting StereoPairs
+816dccf4	lbp_MixSettingsDefs_816dccf4	1		MixNodeDefs MixSettingsDefs
+816de608	lbp_IniFileSettings_816de608	1		EnableVSync AutoStart MaxBufferSize MaxFrames IniFileSettings ReplayFileDefs
+816dea10	Reflect_GuidSubst	1		Substitutions
+816dfb78	Reflect_Joint	1		AllowExpand AllowContract ContractFreely LengthElasticity LengthPlasticity LengthFunc
+816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	1		SyncedProfile Game.Input AvatarInLimbo.AvatarWorld PlayerNumber Score TimeUntilLeave
+816e1bf4	lbp_TimesSpawned_816e1bf4	1		OwnerPlayerID UserID TimesSpawned
+816e21c8	lbp_LeftGameFrame_816e21c8	1		PlayerNumber PlayerID OwnerPlayerID DisplayName UserID LeftGameFrame
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	1		OwnerID GridSize ModalOverlayActive LevelFeedback AngleSnap PreviewMode
+816e36ac	lbp_Source_816e36ac	1		Source
+816e37c4	lbp_TutorialGroups_816e37c4	3		TutorialGroups
+816e3960	lbp_Tutorials_816e3960	5		NameKey Tutorials
+816e3b34	lbp_DescriptionKey_816e3b34	5		LevelGUID VideoGUID NameKey DescriptionKey Image Prerequisites
+816e3d40	lbp_MetaData_816e3d40	5		MetaData
+816e3d90	lbp_PlayerIDs_816e3d90	1	Level:1	Offset
+816e3f5c	lbp_Category_816e3f5c	2		Location Category
+816e41a8	lbp_MaterialGroupName_816e41a8	3		MaterialGroupName Hardness SmallestImpact SmallestSize OverridePitch
+816e434c	lbp_MusicStemTranslatedTag_816e434c	3		MusicStemTranslatedTag SliderIndex FadeIn FadeOut ForwardSend RearSend
+816e45a8	lbp_DspType_816e45a8	3		Parent DspType Params
+816e4748	lbp_DefaultValue_816e4748	5		ParamType CurveType DefaultValue
+816e48d0	lbp_Settings_816e48d0	3		Settings
+816e49d4	lbp_Value_816e49d4	5		Value
+816e4be4	lbp_ReplayStreams_816e4be4	3		Filename Hotkey EstBuffer ReplayStreams
+816e4d74	lbp_StreamTypeID_816e4d74	5		StreamTypeID PollInterval
+816e4e70	lbp_FromGuid_816e4e70	2	GuidSubst:1	From.guid To.guid
+816e4f68	lbp_Player_816e4f68	3		Player Score
+816e50f0	lbp_Score_816e50f0	3		Score
+816e515c	lbp_CountdownStartServerTime_816e515c	2		State CountdownStartServerTime Thumb
+816ee868	lbp_InstanceLayout_816ee868	4		Script InstanceLayout
+816f2c64	Reflect_Script	1		ClassName SuperClassScript Modifiers TypeReferences FieldReferences FunctionReferences
+816f2f90	lbp_FieldLayoutDetailsVec_816f2f90	1		FieldLayoutDetailsVec InstanceSize
+816f3040	lbp_InstanceOffset_816f3040	1		FieldName Modifiers MachineType FishType DimensionCount ArrayBaseMachineType
+816f32f0	lbp_ScriptInstance_816f32f0	3		ScriptInstance
+816f3318	lbp_String_816f3318	3		String
+816f3358	lbp_String_816f3358	3		String
+816f425c	lbp_TypeNameStringIdx_816f425c	2	Script:1	MachineType FishType DimensionCount ArrayBaseMachineType Script TypeNameStringIdx
+816f4400	lbp_TypeReferenceIdx_816f4400	2	Script:1	TypeReferenceIdx NameStringIdx
+816f4514	lbp_TypeReferenceIdx_816f4514	2	Script:1	TypeReferenceIdx NameStringIdx
+816f4610	lbp_TypeReferenceIdx_816f4610	2	Script:1	Modifiers TypeReferenceIdx NameStringIdx
+816f472c	lbp_GetFunctionIdx_816f472c	2	Script:1	Modifiers TypeReferenceIdx NameStringIdx GetFunctionIdx SetFunctionIdx
+816f48a4	lbp_LocalVariablesBegin_816f48a4	2	Script:1	Modifiers TypeReferenceIdx NameStringIdx ArgumentsBegin ArgumentsSize BytecodeBegin
+816f4b58	lbp_TypeReferenceIdx_816f4b58	2	Script:1	TypeReferenceIdx Offset
+816f4cdc	lbp_TypeReferenceIdx_816f4cdc	2	Script:1	Modifiers TypeReferenceIdx NameStringIdx Offset
