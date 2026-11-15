@@ -1,0 +1,278 @@
+part	offset	field_writer	field
+PBody	-	-	(no named fields)
+PJoint	0x34	Stream_WriteVec3	AContact
+PJoint	0x44	Stream_WriteVec3	BContact
+PJoint	0xd8	Stream_WriteU32	Length
+PJoint	0xd4	Stream_WriteU32	Angle
+PJoint	0x150	Stream_WriteU32	OffsetTime
+PJoint	0x158	Stream_WriteU8	InvertAngle
+PJoint	0x130	lbp_Thunk_81618a50	BoneLengths
+PJoint	0xb8	Stream_WriteU32	Strength
+PJoint	0x30	Stream_WriteU8	Stiff
+PJoint	0xa8	Stream_WriteVec3	SlideDir
+PJoint	0xbc	Stream_WriteU32	AnimationPattern
+PJoint	0xc0	Stream_WriteU32	AnimationRange
+PJoint	0xc4	Stream_WriteU32	AnimationTime
+PJoint	0xc8	Stream_WriteU32	AnimationPhase
+PJoint	0xcc	Stream_WriteU32	AnimationSpeed
+PJoint	0xd0	Stream_WriteU32	AnimationPause
+PJoint	0x54	Stream_WriteU32	AAngleOffset
+PJoint	0x58	Stream_WriteU32	BAngleOffset
+PJoint	0x114	Stream_WriteU32	Game.ModStartFrame
+PJoint	0x118	Stream_WriteU32	Game.ModDeltaFrames
+PJoint	0x11c	Stream_WriteU32	Game.ModScale
+PJoint	0x140	Stream_WriteU32	RenderScale
+PJoint	0xdc	Stream_WriteU32	JointSoundEnum
+PJoint	0x144	Stream_WriteU32	TweakTargetMaxLength
+PJoint	0x148	Stream_WriteU32	TweakTargetMinLength
+PJoint	0x14c	Stream_WriteU8	CurrentlyEditing
+PJoint	0x159	Stream_WriteU8	HideInPlayModeOld
+PJoint	0xa4	Stream_WriteU32Keep	Behaviour
+PWorld	0x14	lbp_Proc_816571a4	Things
+PWorld	0x840	Stream_WriteU32	MaxVel
+PWorld	0x844	Stream_WriteU32	MaxAVel
+PWorld	0x28c	Stream_WriteU32	Frame
+PWorld	0x290	Stream_WriteU32	Game.SimFrame
+PWorld	0x300	Stream_WriteU32	FrameLevelStarted
+PWorld	0x10	Stream_WriteU32	ThingUIDCounter
+PWorld	0x64	lbp_Proc_81657334	Selections
+PWorld	?(param_2 + 0x848), iVar1 == 0)) && ((iVar)	Stream_WriteThingRef	BackdropTimer
+PWorld	0x89c	Stream_WriteU32	LBP2NightDaySwapped
+PWorld	0x8a0	Stream_WriteU8	IsPaused
+PWorld	0x364	Stream_WriteU32	LightingFactor
+PWorld	0x368	Stream_WriteU32	ColorCorrectionFactor
+PWorld	0x36c	Stream_WriteU32	FogFactor
+PWorld	0x370	Stream_WriteU32	FogTintFactor
+PWorld	0x374	Stream_WriteU32	DarknessFactor
+PWorld	0x378	Stream_WriteU8	NonLinearFog
+PWorld	0xc3c	Stream_WriteArray_81657380	CompleteRewards
+PWorld	0xc48	Stream_WriteArray_81657380	CollectRewards
+PWorld	0xc54	Stream_WriteArray_81657380	AceRewards
+PWorld	0xc60	Stream_WriteU8	AreRewardsShareable
+PWorld	0xc64	lbp_Wrap_8160fe78	ScoreboardLevelLinkSlot
+PWorld	0xc6c	Stream_WriteArray_816573e8	CompleteUnlocks
+PWorld	0xc78	Stream_WriteArray_816573e8	CollectUnlocks
+PWorld	0xc84	Stream_WriteArray_816573e8	AceUnlocks
+PWorld	0xbc8	Stream_WriteArray_81657380	GoldRewards
+PWorld	0xbd4	Stream_WriteArray_816573e8	GoldUnlocks
+PWorld	0xbe0	Stream_WriteArray_81657380	SilverRewards
+PWorld	0xbec	Stream_WriteArray_816573e8	SilverUnlocks
+PWorld	0xbf8	Stream_WriteArray_81657380	BronzeRewards
+PWorld	0xc04	Stream_WriteArray_816573e8	BronzeUnlocks
+PWorld	0xc10	Stream_WriteU8	GoldTrophyConditionType
+PWorld	0xc11	Stream_WriteU8	SilverTrophyConditionType
+PWorld	0xc12	Stream_WriteU8	BronzeTrophyConditionType
+PWorld	0xc14	Stream_WriteU32	ScoreRequiredForGoldTrophy
+PWorld	0xc18	Stream_WriteU32	TimeRequiredForGoldTrophy
+PWorld	?(param_2 + 0xc1c, "LivesLostRequiredForGo)	Stream_WriteU32	ScoreRequiredForSilverTrophy
+PWorld	0xc24	Stream_WriteU32	TimeRequiredForSilverTrophy
+PWorld	?(param_2 + 0xc28, "LivesLostRequiredForSi)	Stream_WriteU32	ScoreRequiredForBronzeTrophy
+PWorld	0xc30	Stream_WriteU32	TimeRequiredForBronzeTrophy
+PWorld	?(param_2 + 0xc34, "LivesLostRequiredForBr)	Stream_WriteU32	EnableAcing
+PWorld	0xbc1	Stream_WriteU8	EnableGoldTrophy
+PWorld	0xbc2	Stream_WriteU8	EnableSilverTrophy
+PWorld	0xbc3	Stream_WriteU8	EnableBronzeTrophy
+PWorld	0xc38	Stream_WriteU8	EnforceMinMaxPlayers
+PWorld	0xca0	Stream_WriteU32	MaxNumPlayers
+PWorld	0x70	Stream_WriteArray_81636c2c	DissolvingThings
+PWorld	0x7c	Stream_WriteArray_81636c2c	OldDissolvingThings
+PWorld	0xca9	Stream_WriteU8	EverSpawned
+PWorld	0xca4	Stream_WriteU32	SpawnFailureCount
+PWorld	0x380	lbp_Wrap_81651084	TargetGlobalSettings
+PWorld	0x418	lbp_Wrap_81651084	FromGlobalSettings
+PWorld	?(param_2 + 0x5ac, "Deprecated_GlobalSetti)	Stream_WriteU32	HasLevelLightingBeenSetup
+PWorld	?(param_2 + 0x5b0, "Deprecated_GlobalSetti)	Stream_WriteU32	CameraSettings
+PWorld	0x4c4	Stream_WriteU32	WaterLevel
+PWorld	0x4c8	Stream_WriteU32	FromWaterLevel
+PWorld	0x4cc	Stream_WriteU32	TargetWaterLevel
+PWorld	0x4d0	Stream_WriteU32	WaterWaveMagnitude
+PWorld	?(param_2 + 0x4d4, "FromWaterWaveMagnitude)	Stream_WriteU32	Gravity
+PWorld	0x540	Stream_WriteU32	FromGravity
+PWorld	0x544	Stream_WriteU32	TargetGravity
+PWorld	?(param_2 + 0x54c,8), iVar1 == 0 && (iVar1)	Stream_WriteFloats	WaterColor
+PWorld	0x520	Stream_WriteU32	WaterBrightness
+PWorld	0x510	Stream_WriteU32	WaterMurkiness
+PWorld	0x514	Stream_WriteU32	FromWaterMurkiness
+PWorld	0x518	Stream_WriteU32	TargetWaterMurkiness
+PWorld	0x524	Stream_WriteU32	WaterBits
+PWorld	0x528	Stream_WriteU32	FromWaterBits
+PWorld	0x52c	Stream_WriteU32	TargetWaterBits
+PWorld	?(param_2 + 0x530,"WaterDrainSoundsEnabled)	Stream_WriteU8	Game.CurrWavePos
+PWorld	0x50	Stream_WriteU32	GameMode
+PWorld	0x548	Stream_WriteU32	NextSackbotPlayerNumber
+PWorld	0x5b4	lbp_Proc_81657454	CutSceneCameraManager
+PWorld	0xcb0	lbp_Wrap_816574f4	GlobalAudioSettings
+PWorld	?(param_2 + 0x860,0,0), iVar1 == 0 && (iVa)	lbp_Proc_816055e8	SubLevel
+PWorld	0x7b4	Stream_WriteU8	ScoreLocked
+PWorld	0x7b8	Stream_WriteU32	DebugTimeInLevel
+PWorld	?(param_2 + 0x5d, "UseEvenNewerCheckpointC)	Stream_WriteU8	MoveCursors
+PWorld	0x7d0	Stream_WriteU32	GlobalTouchCursor
+PWorld	0x5e	Stream_WriteU8	MinPlayers
+PWorld	0x5f	Stream_WriteU8	MaxPlayers
+PWorld	0x60	Stream_WriteU8	MoveRecommended
+PWorld	0x7d4	Stream_WriteU8	PortraitMode
+PWorld	0xcac	Stream_WriteU8	FixInvalidInOutMoverContacts
+PWorld	0x7d9	Stream_WriteU8	SharedScreen
+PWorld	0x7d5	Stream_WriteU8	DisableHUD
+PWorld	0x7d6	Stream_WriteU8	DisableShadows
+PWorld	0x7da	Stream_WriteU8	FlipBackground
+PWorld	0x7db	Stream_WriteU8	MPSeparateScreen
+PRenderMesh	-	-	(no named fields)
+PPos	0x60	lbp_Proc_816138e8	WorldPosition
+PTrigger	-	-	(no named fields)
+PYellowHead	-	-	(no named fields)
+PAudioWorld	-	-	(no named fields)
+PAnimation	-	-	(no named fields)
+PGeneratedMesh	-	-	(no named fields)
+PLevelSettings	-	-	(no named fields)
+PSpriteLight	0x38	lbp_Thunk_81618a50	Color
+PSpriteLight	0x28	lbp_Thunk_81618a50	ColorOff
+PSpriteLight	0x48	Stream_WriteU32	Multiplier
+PSpriteLight	0x4c	Stream_WriteU32	MultiplierOff
+PSpriteLight	0x50	Stream_WriteU32	GlowRadius
+PSpriteLight	0x54	Stream_WriteU32	FarDist
+PSpriteLight	0x58	Stream_WriteU32	SourceSize
+PSpriteLight	0xc	Stream_WriteU8	SpotLight
+PSpriteLight	0x6c	Stream_WriteU32	FogAmount
+PSpriteLight	0x70	Stream_WriteU32	OnSpeed
+PSpriteLight	0x74	Stream_WriteU32	OffSpeed
+PSpriteLight	0x78	Stream_WriteU32	FlickerProb
+PSpriteLight	0x7c	Stream_WriteU32	FlickerAmount
+PSpriteLight	0xa0	Stream_WriteU32Keep	Behaviour
+PScriptName	-	-	(no named fields)
+PCreature	0xf0	Stream_WriteVec3	GroundNormal
+PCreature	0x6f8	Stream_WriteVec3	ForceThatSmashedCreature
+PCreature	0x5c0	lbp_Proc_816369f0	BouncepadThingUIDs
+PCreature	0x6a0	lbp_Proc_816369f0	GrabbedThingUIDs
+PCreature	0x788	Stream_WriteArray_81636c2c	LegList
+PCreature	0x7b8	Stream_WriteArray_81636c2c	LifeSourceList
+PCreature	0x794	Stream_WriteArray_81636c2c	EyeList
+PCreature	0x7a0	Stream_WriteArray_81636c2c	BrainAIList
+PCreature	0x7ac	Stream_WriteArray_81636c2c	BrainLifeList
+PCreature	0x438	lbp_Proc_816138e8	OldAnimMatrix
+PCreature	0x100	Stream_WriteVec3	GroundNormalRaw
+PCreature	0x110	Stream_WriteVec3	GroundNormalSmooth
+PCreature	0x4a4	Stream_WriteVec3	Game.GunDir
+PCreature	0x880	Stream_WriteVec3	BulletEmitOffset
+PCheckpoint	-	-	(no named fields)
+PStickers	0xc	lbp_Proc_816151b4	Decals
+PStickers	0xe4	lbp_DataColorCorrection_81615200	EyetoyData
+PDecorations	-	-	(no named fields)
+PScript	-	-	(no named fields)
+PShape	0x94	Stream_WriteArray_81616e78	Loops
+PEffector	-	-	(no named fields)
+PEmitter	-	-	(no named fields)
+PRef	-	-	(no named fields)
+PMetaData	-	-	(no named fields)
+PCostume	0xcac	Stream_WriteArray_81616e78	MeshPartsHidden
+PCostume	0xcb8	lbp_Proc_816170b8	MeshPrimitives
+PCameraTweak	0x10	lbp_Thunk_81618a50	TriggerBox
+PCameraTweak	0x20	Stream_WriteU32	PositionFactor
+PCameraTweak	0x4c	Stream_WriteU32	PhotoBoothTimerLength
+PCameraTweak	0x30	Stream_WriteU32	CameraType
+PCameraTweak	0x34	Stream_WriteU8	DisableZoomMode
+PCameraTweak	0x35	Stream_WriteU8	RequireAll
+PCameraTweak	0x50	Stream_WriteU8	MotionControllerZone
+PCameraTweak	0x38	Stream_WriteU32Keep	Behaviour
+PCameraTweak	0x51	Stream_WriteU8	CutSceneTransitionType
+PCameraTweak	0x54	Stream_WriteU32	CutSceneHoldTime
+PCameraTweak	0x5d	Stream_WriteU8	CutSceneSkippable
+PCameraTweak	0x5e	Stream_WriteU8	CutSceneTimeSinceUsed
+PCameraTweak	0x58	Stream_WriteU32	CutSceneTransitionTime
+PCameraTweak	0x78	Stream_WriteU32	CutSceneColour
+PCameraTweak	0x60	Stream_WriteU8	CutSceneMovieMode
+PCameraTweak	0x64	Stream_WriteU32	CutSceneDepthOfField
+PCameraTweak	0x68	Stream_WriteU32	CutSceneFog
+PCameraTweak	0x6c	Stream_WriteU32	CutSceneFOV
+PCameraTweak	0x70	Stream_WriteU32	CutSceneShake
+PCameraTweak	0x74	Stream_WriteU8	FadeAudio
+PCameraTweak	0x36	Stream_WriteU8	OldStyleCameraZone
+PCameraTweak	0x75	Stream_WriteU8	CutSceneTrackPlayer
+PCameraTweak	0x76	Stream_WriteU8	CutSceneSendsSignalOnCancelled
+PCameraTweak	0x77	Stream_WriteU8	CutSceneWasActiveLastFrame
+PCameraTweak	0x24	lbp_Proc_81618b50	Nodes
+PSwitch	0xa4	Stream_WriteU8	Inverted
+PSwitch	0x54	Stream_WriteU32	Radius
+PSwitch	0x58	Stream_WriteU32	MinRadius
+PSwitch	0x60	Stream_WriteU32	Key.ColourIndex
+PSwitch	?(auStack_88)	lbp_Proc_8160feb8	Key.Name
+PSwitch	0xc3	Stream_WriteU8	CrappyOldLBP1Switch
+PSwitch	0x4c	Stream_WriteU32	BehaviourOld
+PSwitch	0x34	lbp_Proc_8161cc88	Outputs
+PSwitch	0xa6	Stream_WriteU8	HideInPlayModeOld
+PSwitch	?(iVar1,0x398,"RefSticker")	lbp_Wrap_816af9ac	StickerPlan
+PSwitch	0x24	Stream_WriteU32	Current.ActivationHoldTime
+PSwitch	0xa8	Stream_WriteU8	RequireAll
+PSwitch	0xe2	Stream_WriteU8	ImpactSensorMode
+PSwitch	0x5c	Stream_WriteU32	AngleRange
+PSwitch	0x6c	Stream_WriteU32	IncludeTouching
+PSwitch	?(iVar1,0x398,"RefSticker")	lbp_Wrap_816af9ac	StickerPlan
+PSwitch	0xac	Stream_WriteU32	BulletsRequired
+PSwitch	0x18	Stream_WriteU32	Current.BulletsDetected
+PSwitch	0x1c	Stream_WriteU32	Current.BulletRefreshTime
+PSwitch	0xc0	Stream_WriteU8	ResetWhenFull
+PSwitch	0x50	lbp_Proc_8161ccd4	InputListDeprecated
+PSwitch	0xa9	Stream_WriteU8	IncludeRigidConnectors
+PSwitch	0x20	Stream_WriteU32	Current.TimerCount
+PSwitch	0x44	Stream_WriteU32Keep	TeamFilter
+PSwitch	0xa0	Stream_WriteU32Keep	Behaviour
+PSwitch	0x88	Stream_WriteU32Keep	RandomBehaviour
+PSwitch	0x8c	Stream_WriteU32Keep	RandomPattern
+PSwitch	0x90	Stream_WriteU32	RandomOnTimeMin
+PSwitch	0x94	Stream_WriteU32	RandomOnTimeMax
+PSwitch	0x98	Stream_WriteU32	RandomOffTimeMin
+PSwitch	0x9c	Stream_WriteU32	RandomOffTimeMax
+PSwitch	0xa7	Stream_WriteU8	RetardedOldJoint
+PSwitch	0x84	Stream_WriteU32Keep	KeySensorMode
+PSwitch	?(param_2 + 0x48), iVar1 == 0)) && ((iVar1)	Stream_WriteU32	WiresVisible
+PSwitch	0xe1	Stream_WriteU8	BulletTypes
+PSwitch	?(param_2 + 0xc1,"DetectUnspawnedPlayers" )	Stream_WriteU8	PlaySwitchAudio
+PSwitch	0xc8	Stream_WriteU32	SwitchTouchType
+PSwitch	0xdc	Stream_WriteU8	CursorScreenArea
+PSwitch	0xde	Stream_WriteU8	CursorInteractionType
+PSwitch	0xdf	Stream_WriteU8	CursorTouchPanels
+PSwitch	0xe0	Stream_WriteU8	CursorTouchIndex
+PSwitch	0xdd	Stream_WriteU8	Flags
+PSwitch	0xd4	Stream_WriteU32	outputAndOr
+PSwitch	?(uVar2)	Stream_WriteU32	GetDataLabelsData().Index
+PSwitch	0xe4	Stream_WriteU8	IncludeSameChipTags
+PSwitch	0xec	Stream_WriteU32	GlowFrontCol
+PSwitch	0xf0	Stream_WriteU32	GlowBackCol
+PSwitch	0xf4	Stream_WriteU32	GlowActiveCol
+PSwitch	0xaa	Stream_WriteU8	PlayerFilter
+PSwitchKey	?(auStack_20)	lbp_Proc_8160feb8	Key.Name
+PGameplayData	-	-	(no named fields)
+PEnemy	0xc	Stream_WriteU32	PartType
+PEnemy	0x20	Stream_WriteU32	Radius
+PEnemy	0x24	Stream_WriteU32	SnapVertex
+PEnemy	0x34	Stream_WriteVec3	CenterOffset
+PEnemy	?(param_2 + 0x28), iVar1 == 0)) && (iVar1 )	Stream_WriteThingRef	AnimSpeed
+PEnemy	0x48	Stream_WriteU32	SourcePlayerNumber
+PEnemy	0x1c	Stream_WriteU8	NewWalkConstraintMass
+PEnemy	?(param_2 + 0x4c), iVar1 == 0 && ((iVar1 =)	Stream_WriteU32	SmokeBrightness
+PEnemy	0x119	Stream_WriteU8	bTouchSensitive
+PEnemy	0x11c	Stream_WriteU32	TouchType
+PGroup	0x3c	lbp_Thunk_81607d38	Creator
+PGroup	0xc	Stream_WriteU32	Lifetime
+PGroup	0x10	Stream_WriteU32	AliveFrames
+PGroup	0x64	Stream_WriteU8	Flags
+PPhysicsTweak	0xd0	lbp_Proc_816138e8	Game.StartOrientation
+PNpc	?(iVar3,uVar9), iVar3 == 0)) && (iVar3 = l)	lbp_use_memcpy_8100b88a	SackbotRecordingDataNbytes
+PNpc	0x98	Stream_WriteArray_81616e78	SackbotRecordingTimes
+PSwitchInput	0x1c	Stream_WriteU32	UpdateType
+PSwitchInput	0x28	Stream_WriteU32	LethalType
+PSwitchInput	0x2f	Stream_WriteU8	IncludeRigidConnectors
+PSwitchInput	0x18	Stream_WriteU32	Game.LethalActivationFrame
+PSwitchInput	0x2c	Stream_WriteU8	LethalInverted
+PSwitchInput	0x2d	Stream_WriteU8	HideInPlayModeOld
+PSwitchInput	0x2e	Stream_WriteU8	DisableLethalAudio
+PSwitchInput	0x20	lbp_Proc_816200f4	SackbotBehaviour
+PSwitchInput	0x34	Stream_WriteU32	SackbotObjectColourIndex
+PSwitchInput	0x24	Stream_WriteU32Keep	Behaviour
+PSwitchInput	0x30	Stream_WriteU32Keep	EffectDestroy
+PMicroChip	-	-	(no named fields)
+PMaterialTweak	-	-	(no named fields)
+PMaterialOverride	-	-	(no named fields)
+PInstrument	-	-	(no named fields)
+PSequencer	-	-	(no named fields)
+PControlinator	-	-	(no named fields)

@@ -461,6 +461,7 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - Saving a thing: 0x81661ee0 Thing_WriteBinary writes a marker byte 0xaa, the thing uid, its links to other things, a few small fields, and then every part it has (0x2f part slots, a bit mask says which are present). A link to another thing (0x81605ba4 / 0x81605f00) is a number in the file's pointer table; the first time a thing is linked it is written right there.
 - Saving the parts of a thing: 0x81661718 Thing_WritePartList walks the part mask and calls one writer per part type, in slot order (PBody, PJoint, PWorld, PRenderMesh, PPos, PTrigger ..). The table is ghidra/partwriters.tsv.
 - Saved fields of each part: ghidra/partfields.tsv lists, per part type, the writer body and the field names it saves (PSwitch, PShape, PEmitter, PWorld ..).
+- Where a tweak lands in memory: ghidra/partoffsets.tsv gives, for the parts saved field by field (PSwitch, PWorld, PJoint, PCameraTweak, PSpriteLight, PCreature, PSwitchInput, PEnemy), the offset of each named field in the part object (e.g. PSwitch Radius +0x54, Inverted +0xa4).
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |

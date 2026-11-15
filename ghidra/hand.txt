@@ -3877,3 +3877,11 @@
 0x816486a8 func PInstrument_WriteBinary hand late82
 0x81649754 func PSequencer_WriteBinary hand late82
 0x8164a43c func PControlinator_WriteBinary hand late82
+0x81606608 func Stream_WriteU32 hand late83
+0x8160ef50 func Stream_WriteU8 hand late83
+0x81617c9c func Stream_WriteVec3 hand late83
+0x81618a64 func Stream_WriteU32Keep hand late83
+0x81616e78 func Stream_WriteArray_81616e78 hand late83
+0x81636c2c func Stream_WriteArray_81636c2c hand late83
+0x816573e8 func Stream_WriteArray_816573e8 hand late83
+0x81657380 func Stream_WriteArray_81657380 hand late83
