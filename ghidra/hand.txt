@@ -3204,3 +3204,5 @@
 0x81382a36 func SaveFile_ReadBack hand late40
 0x81164cce func Save_MoonFileName hand late40
 0x8123e2d6 func Save_SlotFolder hand late40
+0x814a395e func QuickSaveJob_Finish hand late41
+0x817621b8 func QuickSaveJob_GetName hand late41
