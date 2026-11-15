@@ -1,6 +1,6 @@
 # LBP Vita class trees (from vtables, no RTTI in the binary)
 
-Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 451 roots. Names: hand names of the constructor, then ghidra/classnames.txt (from strings in the own virtual functions of the class, not constructor-verified), else cls_<vtable address>. Each line: name, vtable, slot count, own or overridden slots.
+Made by tools/vtscan.py + tools/classes.py. 746 vtables, 294 with a base found, 452 roots. Names: hand names of the constructor, then ghidra/classnames.txt (from strings in the own virtual functions of the class, not constructor-verified), else cls_<vtable address>. Each line: name, vtable, slot count, own or overridden slots.
 
 - cls_81859cdc 0x81859cdc slots 6 own 6
   - cls_8183b248 0x8183b248 slots 9 own 6
@@ -85,7 +85,7 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
       - PlaceDecorationState 0x81857774 slots 39 own 6
     - StickerHoverState 0x818584b8 slots 40 own 14
       - PlaceStickerState 0x81858560 slots 40 own 10
-  - cls_81857978 0x81857978 slots 34 own 6
+  - PickStickersState 0x81857978 slots 34 own 6
   - NormalModeState 0x81858080 slots 34 own 5
   - MenuModeState 0x81858110 slots 34 own 8
     - PhotoState 0x818571c4 slots 34 own 11
@@ -98,10 +98,6 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
     - cls_818586b8 0x818586b8 slots 34 own 4
     - cls_818587e8 0x818587e8 slots 34 own 5
   - TweakModeInventoryState 0x81858998 slots 34 own 17
-  - CameraToolBase 0x81858a28 slots 34 own 7
-    - CameraAngleState 0x81857254 slots 37 own 10
-    - CameraZoneState 0x818572f0 slots 37 own 9
-    - CameraTargetState 0x8185738c slots 34 own 6
   - PickStateBase 0x8185b58c slots 38 own 23
     - CameraCountdownState 0x81857f14 slots 38 own 17
     - SwitchWireState 0x81858748 slots 38 own 9
@@ -268,6 +264,10 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
   - cls_8183beec 0x8183beec slots 4 own 2
     - cls_8183be84 0x8183be84 slots 4 own 2
   - cls_818590ac 0x818590ac slots 4 own 2
+- CameraToolBase 0x81858a28 slots 34 own 34
+  - CameraAngleState 0x81857254 slots 37 own 10
+  - CameraZoneState 0x818572f0 slots 37 own 9
+  - CameraTargetState 0x8185738c slots 34 own 6
 - FMOD_plugin_a14c 0x8185a14c slots 25 own 25
   - FMOD_dsp_hardware 0x8185f298 slots 25 own 6
   - cls_8185f374 0x8185f374 slots 25 own 2

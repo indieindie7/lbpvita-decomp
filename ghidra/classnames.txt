@@ -181,3 +181,4 @@
 81858230 InventoryMenuState
 81858908 TweakModeState
 81858998 TweakModeInventoryState
+81857978 PickStickersState

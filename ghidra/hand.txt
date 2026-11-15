@@ -2908,3 +2908,4 @@
 0x8113b90c func PoppetState_ctor hand late20
 0x811810d6 func Game_SendSaveLevelMsg hand late21
 0x81183706 func Game_PreSaveCheck hand late21
+0x810587da func SaveJob_Step hand late22
