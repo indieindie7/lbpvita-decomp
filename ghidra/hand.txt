@@ -3311,3 +3311,4 @@
 0x81495ea0 func Text_CarouselOptionNames hand late55 by text keys (keyuse.tsv), body not read
 0x813958e2 func Thing_GetNameOrPortLabel hand late60
 0x81340dce func Poppet_ApplyCostumeItem hand late60
+0x81382a6c func SaveJob_ComputePackSize hand late61
