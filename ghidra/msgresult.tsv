@@ -1,4 +1,4 @@
-type	case	calls	keys_and_data
+action	case	calls	keys_and_data
 0x01	81070bce	lbp_LeafM_812c64b0 CreateMode_AskLeaveSave lbp_use_sceKernelLockLwMutex_8106510a	@819077a8 @81862d70 @818d0348
 0x02	81070c40	lbp_LeafS_812c37a0 lbp_LeafM_81544210 lbp_Run_8157f1bc	@819077a8 @818d016c
 0x03	81070c8a	lbp_LeafS_812c37a0 lbp_LeafM_81544210 lbp_Run_8157f1bc	@819077a8 @818d016c
