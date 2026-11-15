@@ -3124,7 +3124,7 @@
 0x812fedb2 func Text_CameraSavePhoto hand textkey_late40 CAMERA_SAVE_PHOTO,PHOTO_SAVE
 0x8131f0c8 func Text_ItemNameDefaultPainting hand textkey_late40 ITEM_NAME_DEFAULT_PAINTING
 0x81325418 func Text_Layertest hand textkey_late40 layertest
-0x81330dcc func Text_DlcNotOwnedWarning6 hand textkey_late40 DLC_NOT_OWNED_WARNING_6,MSG_CLOSE,PAINT_MESSAGE_NO_MOVE_CONTROLLER
+0x81330dcc func Poppet_OnLoadPainting hand late46 was Text_DlcNotOwnedWarning6
 0x81332590 func Text_DlcNotOwnedWarning4_81332590 hand textkey_late40 DLC_NOT_OWNED_WARNING_4,MSG_CLOSE,DLC_NOT_OWNED_WARNING_4A
 0x81332cba func Text_DlcNotOwnedWarning4_81332cba hand textkey_late40 DLC_NOT_OWNED_WARNING_4,MSG_CLOSE,DLC_NOT_OWNED_WARNING_4A
 0x81333122 func Text_DlcNotOwnedWarning4_81333122 hand textkey_late40 DLC_NOT_OWNED_WARNING_4,MSG_CLOSE,DLC_NOT_OWNED_WARNING_4A,DLC_NOT_OWNED_WARNING_2,DLC_NOT_OWNED_WARNING_2A
@@ -3223,3 +3223,29 @@
 0x8117723a func Game_SnapshotLevelForSave hand late45
 0x81383a4e func Save_FlagDirtyForQuickSave hand late45
 0x8117f054 func Game_RegisterMessageHandlers hand late45
+0x8117f88c func Game_GetPoppetForPlayer hand late46
+0x8112daa2 func Poppet_FindForPlayer hand late46
+0x8112da72 func Poppet_SyncBeforeMessage hand late46
+0x8172e33c func Msg_OnPoppet hand late46
+0x8172e3bc func Msg_OnPoppetValue hand late46
+0x8172e408 func Msg_OnPoppetV4 hand late46
+0x8172e478 func Msg_OnPoppetText hand late46
+0x8172e200 func Msg_OnPoppetCreate hand late46
+0x8172e278 func Msg_OnPoppetLoadPainting hand late46
+0x8172e2e8 func Msg_OnPoppetPlayerColour hand late46
+0x8172e4e8 func Msg_OnSelectSlot hand late46
+0x8172e540 func Msg_OnPoppetPickSticker hand late46
+0x8172e5a4 func Msg_OnPoppetPickObject hand late46
+0x8172e5f4 func Msg_OnPoppetPickDecoration hand late46
+0x8172e644 func Msg_OnPoppetStartMarquee hand late46
+0x8172e164 func Msg_OnDlcQuery hand late46
+0x8172e1a8 func Msg_OnDlcQueryResponse hand late46
+0x815ae0f0 func Msg_OnPoppetPlaceDecoration hand late46
+0x815ae168 func Msg_OnPoppetPlaceSticker hand late46
+0x8173af30 func Msg_OnEditData hand late46
+0x81390c74 func Game_OnEditData hand late46
+0x81330cfe func Poppet_OnCreateDefault hand late46
+0x81330c38 func Net_AnswerDlcQuery hand late46
+0x81390e28 func EditData_RegisterMessageHandlers hand late46
+0x81330954 func Poppet_RegisterMessageHandlers hand late46
+0x81330b0e func Poppet_RegisterMessageHandlers2 hand late46

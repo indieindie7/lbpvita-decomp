@@ -437,6 +437,16 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - So "save level" = serialise the world without players into a level resource in memory, attach it to a slot of the big profile, mark both profiles dirty. The file write happens later through the save queue (9zi, 9zg, 9zf).
 - 0x81383cd4 SaveQueue_SaveNowAndWait: guard byte DAT_818658ec, SaveQueue_AddQuickSave with mask 0xc1, then it waits in a loop (queue +0x44 not 0: run vtable +0x14 of the first job, sleep 5). Used by the profile load code.
 
+## 9zk. How a poppet message reaches the tool code (read, dumps decomp_pph.c .. decomp_ppo.c)
+- Each poppet message type has a small stub (table: ghidra/work/msghandlers.tsv). All stubs do the same: read the payload, free the network buffer, find the poppet of the sending player with 0x8117f88c Game_GetPoppetForPlayer (player thing -> part slot 6 -> +0x2c), run 0x8112da72 Poppet_SyncBeforeMessage, then call a delegate (object, function) stored in the poppet.
+- Delegate slots in the poppet: POPPET +0xd18, POPPET_VALUE +0xd20, POPPET_V4 +0xd28, POPPET_TEXT +0xd30, POPPET_CREATE +0xd38, PLACE_DECORATION +0xd40, PLACE_STICKER +0xd48, PICK_OBJECT +0xd50, PICK_STICKER +0xd58, START_MARQUEE +0xd68, PICK_DECORATION +0xe18, SELECT_SLOT +0xe48 (function = slot +4). Who fills them: not found yet.
+- When a slot is empty the stub uses a default:
+  - POPPET (0x1e): Poppet_HandleMessage(poppet, message) (section 2: builds the tool state), then 0x8135105e(poppet +0x740, message).
+  - POPPET_V4 (0x20): 0x812fd3f0. POPPET_CREATE (0x22): 0x81330cfe Poppet_OnCreateDefault loads every resource of the list and calls 0x812fc48c(poppet, list, ...).
+  - POPPET_LOAD_PAINTING (0x5a): 0x81330dcc Poppet_OnLoadPainting: type 0x12 pushes the painting tool state (0x468 bytes; shows a notice when no move input is there), type 0x13 hands the picture to the current state.
+  - The rest (value, text, picks, marquee, select slot) do nothing without a delegate.
+- EDIT_DATA (0x31) is not a level change: 0x81390c74 Game_OnEditData writes one word of the per-player record (0x80 bytes, keyed by NpId, game +0x190, count +0x194): mode 0 -> +0x24, mode 1 -> +0x28, mode 2 -> 0x81182b6e (not read).
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
