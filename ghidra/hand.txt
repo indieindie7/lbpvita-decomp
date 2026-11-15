@@ -3605,3 +3605,5 @@
 0x81043066 func CacheFileReader_Close hand late69
 0x810430a2 func CacheFileReader_OpenByHash hand late69
 0x81042e48 func FileCacheRecord_Swap hand late69
+0x8129b12e func Gooey_DoSlider hand late70
+0x81297544 func Gooey_GetTopLayout hand late70
