@@ -471,6 +471,7 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - Part field names: ghidra/reflfields.tsv gives name + offset for every part, also the ones the binary writer has no names for (PBody, PEmitter, PCheckpoint, PTrigger, PMaterialTweak, PControlinator ..). Emitter: Frequency, Phase, Lifetime, MaxEmitted, MaxEmittedAtOnce, LinearVel, AngVel, EmitScale, EmitFlip, RecycleEmittedObjects, IgnoreParentsVelocity.
 - Dialog table: every dialog type has one row (buttons -> action code, two timers -> action code). Example: the create mode leave question (type 0x31) maps save -> action 0x1a (save check, then save), discard -> 0x1b, cancel -> 0x1c. Full table: ghidra/dlgactions.tsv.
 - File versions: a saved level carries a head revision and a branch word (D1 + Vita branch revision). Each part has a revision-aware serialiser that reads a field only when the file is new enough (for example: head > 0x3e1 and Vita branch > 0x82). The gates are listed in ghidra/revgates.tsv.
+- Part bits in a level file: each object stores a 64-bit list of which parts it has. The file numbering has 47 bits and still counts 8 parts that the game no longer keeps (they are read and thrown away), so it differs from the in-memory numbering. The table is ghidra/partbits.tsv.
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |

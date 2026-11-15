@@ -1,0 +1,48 @@
+file_bit	test_addr	thing_slot	part	min_parts_revision	calls
+0	8165ebc0		PBody		8165d704
+1	8165ebf6		PJoint	1	8165d768
+2	8165ec28	8	PWorld	2	8165d7cc
+3	8165ec64		PRenderMesh	3	8165d830
+4	8165ec96	0x10	PPos	4	816311b8
+5	8165ed26	0x14	PTrigger	5	81631624
+6	8165edb8		(removed part)	6	
+7	8165ee50		(removed part)	7	8165d894
+8	8165eec0	0x18	PYellowHead	8	8162f580
+9	8165ef5c	0x1c	PAudioWorld	9	81632170
+10	8165f022	0x20	PAnimation	0xa	81632fc4
+11	8165f0b2	0x24	PGeneratedMesh	0xb	81633f18
+12	8165f160		(removed part)	0xc	
+13	8165f22a		(removed part)	0xd	8165daf4
+14	8165f2aa		(removed part)	0xe	8165db9c
+15	8165f2fe	0x28	PLevelSettings	0xf	8164f9a0
+16	8165f39e	0x2c	PSpriteLight	0x10	81622d14
+17	8165f432		(removed part)	0x11	8165e158
+18	8165f494		(removed part)	0x12	8165e27c
+19	8165f4f2	0x30	PScriptName	0x13	816228dc
+20	8165f59c	0x34	PCreature	0x14	81635864
+21	8165f632	0x38	PCheckpoint	0x15	81639c94
+22	8165f6ca	0x3c	PStickers	0x16	81614e10
+23	8165f75e	0x40	PDecorations	0x17	81621fb8
+24	8165f7f6	0x44	PScript	0x18	81622adc
+25	8165f88a	0x48	PShape	0x19	81627584
+26	8165f924	0x4c	PEffector	0x1a	8163cce8
+27	8165f9b2	0x50	PEmitter	0x1b	8163b0d4
+28	8165fa4c	0x54	PRef	0x1c	8163a690
+29	8165fadc	0x58	PMetaData	0x1d	81612108
+30	8165fb74	0x5c	PCostume	0x1e	81616b20
+31	8165fc0e		(removed part)	0x1f	8165e4c4
+32	8165fcd4	0x60	PCameraTweak	0x20	81618444
+33	8165fd68	0x64	PSwitch	0x21	8161b324
+34	8165fdf8	0x68	PSwitchKey	0x22	8161f8c0
+35	8165fe82	0x6c	PGameplayData	0x23	816337a8
+36	8165ff12	0x70	PEnemy	0x24	81620864
+37	8165ffa0	0x74	PGroup	0x25	81621560
+38	81660030	0x78	PPhysicsTweak	0x26	8163d874
+39	816600c8	0x7c	PNpc	0x27	8164adc8
+40	8166015a	0x80	PSwitchInput	0x28	8161fea8
+41	816601e6	0x84	PMicroChip	0x29	8164cec8
+42	81660276	0x88	PMaterialTweak	0x2a	81640058
+43	81660300	0x8c	PMaterialOverride	0x2b	816418d4
+44	81660390	0x90	PInstrument	0x2c	816481d0
+45	8166041c	0x94	PSequencer	0x2d	8164941c
+46	816604ac	0x98	PControlinator	0x2e	
