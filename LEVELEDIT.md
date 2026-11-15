@@ -469,6 +469,7 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - Dialog answers: each dialog option carries an action code (1..0x59); Messaging_OnMessageResult 0x81070a6c runs the built-in action for that code, then the callback the opener gave. Action codes are not dialog type numbers (ghidra/msgresult.tsv lists the actions). The save check Game_PreSaveCheck opens dialog 0x62 / 0x63 and blocks the save.
 - Joint types (PJoint type field): 1 elastic, 2 spring, 3 chain, 4 piston, 5 string, 6 rod (by elimination), 7 bolt, 8 sprung bolt, 9 motor bolt / wobble bolt, 10 unknown bolt kind. Connectors 1..6 are built with two end things; bolts 7..10 sit at the cursor.
 - Part field names: ghidra/reflfields.tsv gives name + offset for every part, also the ones the binary writer has no names for (PBody, PEmitter, PCheckpoint, PTrigger, PMaterialTweak, PControlinator ..). Emitter: Frequency, Phase, Lifetime, MaxEmitted, MaxEmittedAtOnce, LinearVel, AngVel, EmitScale, EmitFlip, RecycleEmittedObjects, IgnoreParentsVelocity.
+- Dialog table: every dialog type has one row (buttons -> action code, two timers -> action code). Example: the create mode leave question (type 0x31) maps save -> action 0x1a (save check, then save), discard -> 0x1b, cancel -> 0x1c. Full table: ghidra/dlgactions.tsv.
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
