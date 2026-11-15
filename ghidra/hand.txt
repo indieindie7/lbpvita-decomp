@@ -3213,3 +3213,4 @@
 0x814a28f6 func QuickSaveJob_ctor hand late43
 0x81383816 func SaveQueue_AddQuickSave hand late43
 0x8138378e func SaveQueue_AddJob hand late43
+0x81383c46 func Save_QuickSaveLocalProfile hand late44
