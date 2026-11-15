@@ -3902,3 +3902,4 @@
 0x81708868 func Gooey_GetNumberWidget hand late86
 0x817086f0 func Gooey_GetCarouselWidget hand late86
 0x817089e0 func Gooey_GetSliderWidget hand late86
+0x8149390a func GooeyCarousel_GetValue hand late87
