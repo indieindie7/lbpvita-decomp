@@ -472,6 +472,7 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - Dialog table: every dialog type has one row (buttons -> action code, two timers -> action code). Example: the create mode leave question (type 0x31) maps save -> action 0x1a (save check, then save), discard -> 0x1b, cancel -> 0x1c. Full table: ghidra/dlgactions.tsv.
 - File versions: a saved level carries a head revision and a branch word (D1 + Vita branch revision). Each part has a revision-aware serialiser that reads a field only when the file is new enough (for example: head > 0x3e1 and Vita branch > 0x82). The gates are listed in ghidra/revgates.tsv.
 - Part bits in a level file: each object stores a 64-bit list of which parts it has. The file numbering has 47 bits and still counts 8 parts that the game no longer keeps (they are read and thrown away), so it differs from the in-memory numbering. The table is ghidra/partbits.tsv.
+- Magic mouth bubbles: dialog types 1 to 3 are the speech bubbles. Opening a new one closes the others, and each close is sent to the other players (net message MAGIC_MOUTH_CLOSED).
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
