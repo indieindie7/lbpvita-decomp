@@ -182,3 +182,6 @@
 81858908 TweakModeState
 81858998 TweakModeInventoryState
 81857978 PickStickersState
+8183bfac EditStateBase
+8183c044 EditToolBase
+81858878 TweakStateBase

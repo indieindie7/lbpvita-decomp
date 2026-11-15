@@ -2936,3 +2936,16 @@
 0x815ba36c func Reflect_GrowRecords hand late24
 0x812414ea func Reflect_FillRecord hand late24
 0x81241548 func Reflect_FillRecordEx hand late24
+0x81664b50 func Reflect_Thing hand late26
+0x81630ec0 func Reflect_PRenderMesh hand late26
+0x8164e68c func Reflect_PMicroChip hand late26
+0x81673cf8 func Reflect_PoppetState hand late27
+0x81673d90 func Reflect_PoppetHit hand late26
+0x81621980 func Reflect_EmittedRef hand late26
+0x8113cee2 func EditState_ctor hand late27
+0x8113ce84 func EditState_ctorDefault hand late27
+0x8113d264 func ToolState_ctor hand late27
+0x8113d1d4 func ToolState_ctorDefault hand late27
+0x8113d2f8 func ToolState_ctorFromGame hand late27
+0x81328ef0 func Tweak_GetSelectionBounds hand late27
+0x8113b954 func PoppetState_dtor hand late27

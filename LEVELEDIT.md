@@ -269,6 +269,70 @@ Reflect_Level 0x816d6180(visitor, level). Every field is registered by name, so 
 
 Field registration calls: 0x815ba3d4 Reflect_AddField(visitor, name, ptr, type code, element reflect function), 0x812414ea / 0x81241548 fill one 0x50-byte field record after 0x815ba36c grows the record array at visitor +0x14. A scan of every call to these three with its name string and offset gives the layout of all reflected structs: tools/fields.py, output FIELDS.md (259 functions, 1857 fields).
 
+## 9w. Level-edit structs from the reflect tables (FIELDS.md)
+Field names are the strings the game itself registers (Reflect_AddField 0x815ba3d4), offsets are the pointer argument minus the struct base. Struct names marked (guess) are chosen from the field set, not from a string.
+
+### Thing: Reflect_Thing 0x81664b50
+The object record of the level. Header: UID +0x70, Parent +0x50, GroupHead +0x58, CreatedBy +0x74, ChangedBy +0x76, PlanGUID +0x6c. Then one optional part per slot, registered in this order (the offset is computed per part, so FIELDS.md shows +0x0):
+PBody, PJoint, PWorld, PRenderMesh, PPos, PTrigger, PYellowHead, PAudioWorld, PAnimation, PGeneratedMesh, PLevelSettings, PSpriteLight, PScriptName, PCreature, PCheckpoint, PStickers, PDecorations, PScript, PShape, PEffector, PEmitter, PRef, PMetaData, PCostume, PCameraTweak, PSwitch, PSwitchKey, PGameplayData, PEnemy, PGroup, PPhysicsTweak, PNpc, PSwitchInput, PMicroChip, PMaterialTweak, PMaterialOverride, PInstrument, PSequencer, PControlinator.
+39 parts. Everything the Poppet tools make is a Thing with some of these parts: a drawn shape = PShape + PBody + PPos + PGeneratedMesh, a bolt = PJoint, a sticker lands in PStickers of its target, a wire end in PSwitch / PSwitchInput.
+
+### Joint: Reflect_Joint 0x816dfb78 (the PJoint part)
+- Length: AllowExpand +0xc8, AllowContract +0xc9, ContractFreely +0xcd, LengthElasticity +0x88, LengthPlasticity +0x8c, LengthFunc +0x90.
+- Angle: AngleDeviation +0x48, AngleElasticity +0x40, AnglePlasticity +0x44, AngleVelocity +0x4c, AngleFunc +0x50.
+- NormalisedForces +0xca, DontRotateA +0xcb, DontRotateB +0xcc, BreakResistance +0xd0, GfxWidth +0xd8, EventNameAngle +0xf0, EventNameLength +0xe0.
+One struct serves every connector the joint tool places (BP_PLACE_SPRING / WOBBLER / MOTOR / BOLT, 0x812fdbb4): the kind is the mix of length and angle settings, not a separate class per connector.
+
+### Material: Reflect_Material 0x81677030
+- Contact: Traction +0x60, IDensity +0x5c, Restitution +0x48, SlidingFriction +0x40, RollingFriction +0x44, Grabbable +0x59, ShiftGrip +0x70, TouchMoveable +0x5b, SoundEnum +0x6c.
+- Forces: GravityMultiplier +0x64, AirResistanceMultiplier +0x68, MaxForce +0x54.
+- Collision: CollideType +0x4c, CollideIgnore +0x50, Bullet +0x94, CompactMaterial.Limb +0x58.
+- Edit rules: Dissolvable +0x71, DisableCSG +0x97 (blocks the cut / slice boolean of 9i), CircuitBoard +0x96.
+- Breaking: Breakable +0x72, BreakMinVel +0x74, BreakMinForce +0x78.
+- Explosion: Explodable +0x7c, CuttableByExplosion +0x95, ExplosionMinRadius +0x80, ExplosionMaxRadius +0x84, ExplosionMaxVel +0x88, ExplosionMaxAngVel +0x8c, ExplosionMaxForce +0x90.
+
+### Bevel: Reflect_Bevel 0x816757e0
+Vertices +0x50, Shared.AutoSmoothCutoffAngle +0x5c, Shared.TextureRepeats +0x60, Shared.SmoothWithFront +0x64, RelaxStrength +0x68, SubDivRadius +0x6c, FixedBevelSize +0x70, Spongy +0x74, IncludeBackFace +0x75. This is the edge profile the generated mesh of a drawn shape uses.
+
+### Poppet tuning: Reflect_PoppetSettings 0x816898ac
+All floats (type 8) unless noted.
+- Stick: Deadzone +0x40, Bias +0x44 (int), MinSpeedFraction +0x48, AccelTime +0x4c, MouseStickScaleFactor +0x70.
+- Speeds per tool: CursorSpeed +0x50, PaintSpeed +0x54, VertexSpeed +0x58, TranslateSpeed +0x5c, RotateSpeed +0x60, ScaleSpeed +0x64, PlanSelectScaleSpeed +0x68, PhotoSelectScaleSpeed +0x6c.
+- Menu: CursorStringMaxLength +0x74, DPadRepeatRate +0x80 (int), MaxItemsPerPage +0x84 (int).
+- Limits: WalkInputMultiplier +0x78, EdgeLimitMultiplier +0x7c, MaterialCostPerUnitArea +0xb0 (thermometer cost of drawn material), TopLevelPoppetScale +0xb4.
+So cursor, paint, vertex, move, rotate and scale speeds are data, not constants in the tool code.
+
+### Render mesh part: Reflect_PRenderMesh 0x81630ec0 (guess)
+BoneThings +0x40, AnimPos +0x20, AnimSpeed +0x28, LoopStart +0x2c, LoopEnd +0x30, AnimLoop +0x60, EditorColour +0x10, DontCastShadows +0x5c, RTTEnable +0x5d, VisibilityFlags +0x5f (the BP_HIDE / BP_SHOW target, not checked), PoppetRenderScale +0x58.
+
+### Microchip part: Reflect_PMicroChip 0x8164e68c (guess)
+CircuitBoardThing +0xc, HideInPlayModeOld +0x18, WiresVisible +0x19, LastTouched +0x1c, Offset +0x20, CircuitBoardSizeX +0x3c, CircuitBoardSizeY +0x40, Name +0xa8, CompactComponents +0xb4.
+
+### Poppet state header: Reflect_PoppetState 0x81673cf8
+mode +0x14, submode +0x18: the MODE_* / SUBMODE_* pair (enums.txt). The offsets equal the fields the state constructors write (9x), so this reflects the state object itself.
+
+### Cursor hit record: Reflect_PoppetHit 0x81673d90 (guess)
+HitPoint_Fred +0x0, Normal +0x10 (vectors), BaryU +0x20, BaryV +0x24, TriIndex +0x28, HitThing +0x2c, HitPort +0x38, RefThing +0x3c, RefPort +0x48, OnCostumePiece +0x4c, DecorationIdx +0x50, SwitchConnector +0x54 (bool).
+One record describes what the cursor is on: the triangle and barycentric position (sticker and decoration placement), the thing and port (wire connect, 0x81328388), and whether it is a costume piece.
+
+### Emitted object record: Reflect_EmittedRef 0x81621980 (guess)
+Creator +0x3c, PlanDescriptor +0x20, Emitter +0x60, Lifetime +0xc, AliveFrames +0x10, Flags +0x64.
+
+Not named: 0x81647800 (Things +0x10) and 0x8165ba9c (Name +0x8, Things +0x18): thing lists, owner unknown.
+
+## 9x. Poppet state class tree, from the constructors (dis.py read)
+Root vtable 0x8183ab4c. Two constructors of it set the same header: +0x10 poppet, +0x14 MODE, +0x18 SUBMODE, +0x1c = 0.
+- PoppetState 0x8183bf1c (34 slots): PoppetState_ctor 0x8113b90c(this, poppet, mode, submode). Menu and tweak states (late 20 list in NOTES).
+- EditStateBase 0x8183bfac (36 slots): EditState_ctor 0x8113cee2(this, poppet, mode, submode), default 0x8113ce84. Adds zeroed fields +0x34..+0x50 and an object at +0x54. Children: DecorationStateBase 0x8185762c (mode 1), DecorationHoverState 0x818576d0 (mode 1, SUBMODE_PLACE_DECORATIONS 0x27), PickStateBase 0x8185b58c (mode 2 = MODE_CURSOR), PickState 0x8185b62c.
+- EditToolBase 0x8183c044 (48 slots, child of EditStateBase): ToolState_ctor 0x8113d264(this, poppet, submode) always passes MODE_EDIT (1); default 0x8113d1d4; a third constructor 0x8113d2f8 reads the game object DAT_818e56ec. Fields: +0x88..+0xc4 zero, +0xac and +0xc8 = 1.0, +0xe4 = 0x1e, +0xe8 = 1.
+  Children and the submode each one passes: PlaceJointTool 0x818570fc = SUBMODE_PLACE_BOLT (0x28), AttachJointTool 0x81857fb4 = SUBMODE_LONG_JOINT (0x29), PlaceObjectTool 0x81857a08 = SUBMODE_DECORATIVE_THING (0x2a), EditVertsTool 0x81857b98 = SUBMODE_EDIT_VERTS (6), EditUVTool 0x81858b80 = SUBMODE_EDIT_UV (0x2e), SelectionTool 0x81857ad0 (submode from its caller).
+- CameraToolBase 0x81858a28: PoppetState_ctor with MODE_TWEAK_CUSTOM (5), ctor 0x8132c1b8. PopitMenuState 0x818581a0: MODE_MENU (3), submode 0.
+- 0x81858878 (TweakStateBase, guess): no constructor of its own in the binary; its destructor 0x81728090 is also slot 0 of TweakModeState 0x81858908, so it is the folded base of the tweak states. Its one own method, slot 19 0x81328ef0 Tweak_GetSelectionBounds(this, centre out, half size out), walks the selection list of the poppet (pointer +0x144, count +0x148, 12 bytes per entry) and returns the box of all selected things; a thing with a script part can supply its own box (0x8139cab6, result type 5).
+
+CLASSES.md is built by slot matching and shows EditToolBase and DecorationStateBase under PoppetState and the six tools as roots; the constructor reads above are the checked version.
+
+So a tool is one class per SUBMODE, all sharing EditToolBase; the 48-slot table is the tool interface (update, draw, button prompts), and MODE says which family the state belongs to.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
