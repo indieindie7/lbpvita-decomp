@@ -3952,3 +3952,8 @@
 0x8164c46c func ReflectText_PNpc hand late95
 0x81650b24 func ReflectText_PLevelSettings hand late95
 0x8106e632 func Messaging_InitDialogTypeTable hand late97
+0x81623d10 func PJoint_SerializeRevisioned hand late98
+0x81655704 func PWorld_SerializeRevisioned hand late98
+0x81635864 func PCreature_SerializeRevisioned hand late98
+0x816311b8 func PPos_SerializeRevisioned hand late98
+0x8165ebb0 func Thing_SerializePartsRevisioned hand late98
