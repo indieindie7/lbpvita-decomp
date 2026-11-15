@@ -452,7 +452,7 @@ The only callers of the 9za functions are script natives (found by scanning ever
   - all items are decorations (flag 4): DecorationHoverState (0x8130294a). The hover states turn into PlaceStickerState / PlaceDecorationState, which derive from them.
   - joints (flag 0x40): AttachJointTool (0x81319d6a) or PlaceJointTool (0x812fd3fc).
   - other objects: 0x813405d6 makes the thing from the plan near the player, then SelectionTool (thing already held) or PlaceObjectTool (0x81305e74).
-  - flag 0x100 goes to 0x81341886, costumes (0x20 / 0x100010) to 0x813417d6 (both not read). Flag names are unverified.
+  - flag 0x100 = level background: 0x81341886 Poppet_UseBackgroundItem loads the plan into the world (+0x854, descriptor +0x87c) and applies it. Costumes (0x20 / 0x100010) go to 0x813417d6 (not read). Flag names are unverified.
 - Where a saved level lands (9zj step 4): 0x81164180 BigProfile_FindOrCreateSlot looks the slot id up in a map at big profile +0x8c. A missing My Moon slot (type 2) is created for numbers 0..0x51 with a fixed planet position from the table DAT_8186374c (number 0x52 = one extra entry DAT_81863d2c): 82 + 1 level places. The profile also keeps a sorted array of 0xa8-byte slot records (profile +0x230, 0x81188704 Profile_FindOrAddSlotRecord, at most 4000, oldest type 1 record dropped first).
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
