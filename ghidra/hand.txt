@@ -2906,3 +2906,5 @@
 0x8107b0b2 func Game_RequestSaveLevel hand read
 0x8107b0de func Game_DoPreSaveLevelCheck hand read
 0x8113b90c func PoppetState_ctor hand late20
+0x811810d6 func Game_SendSaveLevelMsg hand late21
+0x81183706 func Game_PreSaveCheck hand late21

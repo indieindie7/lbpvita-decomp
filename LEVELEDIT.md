@@ -215,6 +215,12 @@ A thing keeps its parts as a bitmask at +0x10 / +0x14 (up to 0x27 part kinds) wi
 - 0x810e5b10 Shape_PairDistance(a, b, outDist, outInfo): radius at +0x38 of each shape. Both 0: polygon against polygon (0x811292b0), distance = separation along the returned axis. One with a radius: closest point of each polygon edge to the centre of the round shape.
 - native_RequestSaveLevel 0x811ed4b0 only calls 0x8107b0b2; native_DoPreSaveLevelCheck 0x811ed4b8 calls 0x8107b0de (bodies not read).
 
+## 9t. Save request path (read)
+- native_RequestSaveLevel 0x811ed4b0 -> Game_RequestSaveLevel 0x8107b0b2: takes the game object (DAT_818e56ec), reads the current slot id (0x81179814) and calls 0x811810d6 Game_SendSaveLevelMsg(game, slot, 1).
+- Game_SendSaveLevelMsg only acts on slot type 2. It first walks 0x21 budget records (0x14 bytes each, at +0x8c0 of the local player record; used +4, limit +8, flags +0xc): if one is over its limit it shows the notice 0x812fae18 and returns without saving. Otherwise it builds network message 0x37 through the session object DAT_819077ac (0x812c2896 / 0x812c27f8) with the slot id as payload. So the save itself is done by the handler of message 0x37, on every peer, not by the caller.
+- native_DoPreSaveLevelCheck 0x811ed4b8 -> Game_DoPreSaveLevelCheck 0x8107b0de -> 0x81183706 Game_PreSaveCheck(game, flag): when the world byte +0x60 is 0 it scans the thing list of the world (+0x14 array, +0x18 count); a thing with kind byte +0x7e of 7 or 0x84 opens a three-string dialog (0x8107075e, dialog 0x62 or 0x63, text keys 0x7832f029 / 0x9d9c76e9 / 0x56eda7e1) and returns 0 = do not save.
+- 0x8118128c (next to it, read in part) fills a type 9 resource descriptor from the level resource (+0x84 of the game), the same type the undo snapshots use.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
@@ -235,6 +241,6 @@ Full list: ghidra/work/poppet_strs.txt.
 
 ## 11. Not read yet
 - Thing state byte +0x7f (0x8122ab62) and the rest of decomp_joint.c.
-- The per-type reflection table 0x816079b4, body writer 0x816ca078, save request 0x8107b0b2 / 0x8107b0de.
+- The per-type reflection table 0x816079b4, body writer 0x816ca078, handler of network message 0x37 (the real save), thing kinds 7 / 0x84.
 - Class trees are in CLASSES.md (Poppet tool states sit under PickState 0x8185b62c; each constructor passes its SUBMODE number). Unnamed classes there still need reading.
 - Libraries: FMOD, zlib and libpng are named; vorbis, Bink and xml are not. libult and steroid suprx modules.
