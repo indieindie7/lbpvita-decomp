@@ -1,0 +1,6 @@
+place | Stamp|PlaceJoint|PlaceDecoration|PlaceSticker|Decoration_Commit|UseInventoryItems | commit order of a held object, sticker or decoration
+transform | Scale|Rotat|HeldSet|AngleSnap|ApplyItemOffset | scale and rotation of the held set
+slice | Slice|Flood|Cut | slice / cut tool and material change
+undo | Undo|Redo|Snapshot|QueueAction|PushAction | action queue and undo
+switch | Switch|Wire|Connector | switch wiring
+uvsave | ^Poppet_.*UV|UVTool|SaveLevel|QuickSave|Level_Save | UV tool and level save

@@ -1,0 +1,53 @@
+- 0x8130ce88 Held_ClampScale (590 bytes)
+  - floats: 1.0 x5, 0.1 x2, 0.0
+  - compares: 0 x5, 1 x3, 6 x2, 10
+- 0x8130d0d6 Held_QuantiseRotation (894 bytes)
+  - floats: 0.0 x6, 0.5 x5, 1.0 x3, 0.01
+  - cases: 0x6e, 0x6f, 0x70, 0x71, 0x73
+  - compares: 0 x10, 6 x2, 10, 1, 0x1f, 0x12
+- 0x8130e890 Held_UpdateScaleRotate (3114 bytes)
+  - floats: 0.0 x13, 0.5 x4, 1.0 x2, 1.5707964 x2, 4.0 x2, 50.0
+  - strings: BP_ROTATE, BP_SCALE_ROTATE
+  - compares: 0 x57, 0x20 x49, 1 x5, 6 x4, 4 x2, 5 x2, 10 x2, 7, 8, 0x13c7f, 0x1e, 0xe
+- 0x81145604 lbp_use_floorf_81145604 (126 bytes)
+  - floats: 1.0 x2
+- 0x81145682 lbp_Wrap_81145682 (16 bytes)
+- 0x81145a14 lbp_use_floorf_81145a14 (494 bytes)
+  - floats: 0.0 x13, 1.0 x3, 6.2831855 x2, 1.5707964, 27.0, 3.0, 0.01
+  - compares: 0 x10, 6 x2, 1, 10, 0x20
+- 0x81307ca2 Stamp_CommitDrop (274 bytes)
+  - compares: 0 x11, 0x1e x2, 0x16, 0x19, 1, 0xe
+  - p1 fields: 0x98
+- 0x81343346 lbp_Run_81343346 (806 bytes)
+  - compares: 0 x21, 2 x2, 0x1e, 1, 0xe, 6, 8, 0x12
+- 0x812fbdc4 Poppet_QueueGenericAction (202 bytes)
+  - compares: 0 x2
+- 0x815ae0b4 lbp_Wrap_815ae0b4 (54 bytes)
+- 0x8123d7b8 Undo_StepBack (272 bytes)
+  - compares: 0 x5
+- 0x8123d8c8 Undo_StepForward (206 bytes)
+- 0x8131833e FloodFill_ApplyToThing (474 bytes)
+  - floats: 10.0
+  - compares: 0 x12, 10 x2, 0xc, 9, 6
+  - p1 fields: 0x118 x6, 0x114 x4, 0x110 x2, 0x124 x2, 0x11c, 0x120
+- 0x8132d320 UVTool_Update (1970 bytes)
+  - floats: 1.0 x5, 0.0 x2, 5.0 x2, 3.1415927 x2, 0.002, 6.2831855
+  - strings: poppet/object/select, poppet/menuback_3d, BP_RESET_UV_TOOL
+  - compares: 0 x21, 0x20 x14, 0x16 x4, 9 x2, 0x1e x2, 0x12, 0xc, 10
+  - p1 fields: 0x15 x2, 0xbc
+- 0x81328388 Poppet_SwitchWireUpdate (2312 bytes)
+  - strings: poppet/connect_switch x3, BP_PLACE_SWITCH_HERE x2, poppet/error_3d, BP_DELETE_SWITCH, poppet/deleteobject, poppet/cancelobject
+  - compares: 0 x50, 0x20 x9, 0x16 x2, 0x19 x2, 0x1e x2, 0x13 x2
+  - p1 fields: 0x36 x2, 0xc, 0x94
+- 0x810fe578 lbp_Run_810fe578 (232 bytes)
+  - compares: 0 x5
+  - p1 fields: 0x18
+- 0x810fd908 lbp_Proc_810fd908 (92 bytes)
+  - compares: 0 x2
+  - p1 fields: 0x18 x2
+- 0x81177656 Game_OnSaveLevel (1426 bytes)
+  - compares: 0 x45, 2 x5, 6 x2, 8 x2, 1 x2, 0x21, 9, 7, 0x12, 0x11, 0x16
+  - p1 fields: 0x84
+- 0x8117723a Game_SnapshotLevelForSave (1052 bytes)
+  - compares: 0 x41, 2 x12, 6 x7, 8 x6, 10, 0xf, 0xd, 0x10, 0x20
+  - p1 fields: 0x1dc x6, 0x84 x6, 0x1d8 x4

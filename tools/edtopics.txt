@@ -1,0 +1,6 @@
+place | stamp|PlaceJoint|PlaceDecoration|PlaceSticker|Decoration_Commit|UseInventoryItems|place | In what order of steps does the editor commit a held object, sticker or decoration into the level? List the steps with the function address of each step.
+transform | scale|rotat|HeldSet|angle|ApplyItemOffset | How are scale and rotation applied to the held objects? Name the fields or constants used for limits and snapping, with function addresses.
+slice | slice|flood|material|polygon|cut | How does the slice / cut tool change a shape, and how is a material change applied? List the steps with function addresses.
+undo | undo|redo|snapshot|QueueAction|PushAction|action queue|HandleMessage | What kinds of editor actions are queued and what does each kind do, and how is an undo snapshot stored and restored? Give function addresses.
+switch | switch|wire|connector|signal | How does the editor connect a switch output to an input (wiring)? List the steps with function addresses.
+uvsave | UV|texture coord|save|serial|writer | How does the UV tool change texture coordinates, and what steps does saving the level take? Give function addresses.

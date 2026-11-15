@@ -479,6 +479,18 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - Saved edit state: grid size, angle snap, preview mode and front view are stored per player in the game record (Reflect_PlayerEditState); the poppet record inside the player head part keeps the mode stack, frozen and hidden lists, tweak objects and the material / shape override (Reflect_Poppet). Offsets: NOTES.md late 117.
 - Grid, angle snap, preview: the pop-up scripts read them with GetGridSnapMode / GetAngleSnapMode / GetPreviewMode and change them only by sending a network message (kind 0 / 1 / 2), so every player sees the same setting; front view is set directly. Addresses: NOTES.md late 118.
 
+## 9zl. Six-topic tool pass (11-15; tables only: tools/edflow.py call skeleton, tools/edconst.py constants; meanings marked guess are not read)
+- Place joint: Poppet_PlaceJointPrompt 0x812fdbb4 order = can-place checks (0x81346b7c, 0x812fd446; names are local-model drafts), Poppet_UndoSnapshot, create 0x812fd758 (draft), set ends 0x812fd4e2 (draft), Poppet_UndoDropSnapshot on failure, PoppetState_PopIfTop.
+- Stamp: Stamp_CommitDrop 0x81307ca2 has two callees only: 0x810fe578 (the same link test the switch wiring uses) and 0x810bbdba (not read).
+- Decoration: Decoration_Commit 0x81303a62 order = UndoSnapshot, Decoration_AttachToThing, 0x810b49ba, 0x813028d4, size check 0x811815e2 (draft: placement would pass the level limit), UndoDropSnapshot, PopIfTop.
+- Inventory: Poppet_UseInventoryItems 0x81342740 fans out to Poppet_SpawnInventoryThing, Poppet_UseInventoryObject, Shape_SetPolygon, Stickers_Add, SelectionTool_ctor + SelectionTool_ApplyStickerSettings, StickerHoverState_ctor, DecorationHoverState_ctor, PoppetState_Push.
+- Scale / rotate constants: Held_ClampScale 0x8130ce88 compares |limit - factor| < 0.1; Held_QuantiseRotation 0x8130d0d6 ignores a stick vector with squared length < 0.01 and works about the bounds centre; stick step 0x81145a14 uses (1 - x) * 27 + 3 and floorf((a + 0.01) / step), wraps at 6.2831855 (guess: 3..30 snap steps by stick deflection); Held_UpdateScaleRotate 0x8130e890 also holds 50.0 and a x4.0 zero test (meaning unverified).
+- UV tool 0x8132d320: constants 0.002 (pan), 5.0 / x and -5.0 / y (guess: scale), pi and 2 pi (angle wrap).
+- Flood fill: FloodFill_Action 0x8132a2ec also calls Poppet_UseInventoryItems and Poppet_ApplyCostumeItem; FloodFill_ApplyToThing 0x8131833e touches state +0x110..+0x124.
+- Undo: Undo_StepBack 0x8123d7b8 and Undo_StepForward 0x8123d8c8 = 0x811616de (draft: lock), Level_LoadResource_thunk, 0x81176e88 (draft: reset selection). Poppet_QueueAction 0x81134022 pushes through 0x815ae0b4. The kinds of queued actions are NOT answered.
+- Save: Msg_OnSaveLevel 0x815c2d7c -> Game_OnSaveLevel 0x81177656 -> Limit_ShowCannotSave / Game_SnapshotLevelForSave 0x8117723a (-> Resource_SerialiseToHash 0x8116122a) / BigProfile_FindOrCreateSlot / Save_FlagDirtyForQuickSave 0x81383a4e. Quick save: Save_QuickSaveLocalProfile 0x81383c46 -> SaveQueue_AddQuickSave 0x81383816 -> QuickSaveJob_ctor + SaveQueue_AddJob.
+- Switch wiring: nothing new over 9d (strings and type 0x13 confirmed by the table).
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|

@@ -1,0 +1,689 @@
+## place (8 hand-named functions)
+- 0x811f264e native_IsStamping (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x8145003c (unnamed, 20 bytes) draft: Poppet_IsStamping? Returns whether the poppet is currently stamping
+- 0x812fd3fc PlaceJointTool_ctor (26 bytes, 4 callers, 0 shared utility calls left out)
+  - 0x8113d2f0 (unnamed, 8 bytes) draft: Poppet_ToolState_ctor? Constructs the base tool state for a named editor tool
+- 0x812fdbb4 Poppet_PlaceJointPrompt (2102 bytes, 0 callers, 25 shared utility calls left out)
+  - 0x813390aa (unnamed, 246 bytes) draft: -
+  - 0x81337a8e (unnamed, 272 bytes) draft: -
+  - 0x8113e056 (unnamed, 52 bytes) draft: -
+  - 0x8113fda8 (unnamed, 100 bytes) draft: Poppet_JointPromptCommit? collects joint candidates and queues glue for a poppet joint prompt commit
+  - 0x812fda9a (unnamed, 282 bytes) draft: Poppet_JointPrompt? Handle the poppet joint placement prompt by initializing a wrap and either confirming or invoking the failure path
+  - 0x81346b7c (unnamed, 270 bytes) draft: Poppet_CanPlaceJoint? Validates whether a joint can be placed at the current poppet state
+  - 0x8134b2a0 (unnamed, 18 bytes) draft: -
+  - 0x8123930c (unnamed, 420 bytes) draft: -
+  - 0x8110d22a (unnamed, 68 bytes) draft: -
+  - 0x813463fa (unnamed, 228 bytes) draft: -
+  - 0x81052bd0 Pad_ButtonHeld
+  - 0x81420888 (unnamed, 18 bytes) draft: -
+  - 0x813493d6 (unnamed, 106 bytes) draft: -
+  - 0x813492e6 (unnamed, 240 bytes) draft: -
+  - 0x8113036c Poppet_UndoSnapshot
+  - 0x812fd758 (unnamed, 388 bytes) draft: Poppet_CreateJoint? Creates a new joint entity in the level editor and stores it in the poppet's joint record.
+  - 0x8113ff26 (unnamed, 50 bytes) draft: -
+  - 0x81337292 (unnamed, 380 bytes) draft: -
+  - 0x8113c206 PoppetState_PopIfTop
+  - 0x81130f7a Poppet_UndoDropSnapshot
+  - 0x81337924 (unnamed, 94 bytes) draft: -
+  - 0x8106508c (unnamed, 66 bytes) draft: -
+  - 0x812fd662 (unnamed, 246 bytes) draft: Poppet_IsJointValid? validates a joint by checking its type and target constraints
+  - 0x8113c8ba (unnamed, 70 bytes) draft: -
+  - 0x812f89aa (unnamed, 98 bytes) draft: -
+  - 0x812fd4e2 (unnamed, 384 bytes) draft: Poppet_JointApply? Applies a joint to the level by setting end A and B after computing positions
+  - 0x812fd446 (unnamed, 156 bytes) draft: Poppet_CanPlaceJoint? Determines whether the player can place a joint in the current state
+- 0x81303a62 Decoration_Commit (526 bytes, 1 callers, 2 shared utility calls left out)
+  - 0x8113036c Poppet_UndoSnapshot
+  - 0x814212fe Decoration_AttachToThing
+  - 0x81067262 (unnamed, 70 bytes) draft: -
+  - 0x810b49ba (unnamed, 196 bytes) draft: -
+  - 0x813028d4 (unnamed, 118 bytes) draft: Poppet_CommitDecoration? Commits the currently held decoration or sticker to the level
+  - 0x8117b562 (unnamed, 20 bytes) draft: Poppet_AcquireInventoryItem? Acquires an inventory item for the poppet by calling a wrapper at offset 0x488
+  - 0x81139bf8 (unnamed, 280 bytes) draft: -
+  - 0x811815e2 (unnamed, 194 bytes) draft: Poppet_CheckPlacementSize? Checks if placing a decoration or sticker would exceed the level's size limit and triggers an error if so
+  - 0x8117828e (unnamed, 74 bytes) draft: -
+  - 0x8113c85c (unnamed, 94 bytes) draft: -
+  - 0x81130f7a Poppet_UndoDropSnapshot
+  - 0x8113c206 PoppetState_PopIfTop
+- 0x81307ca2 Stamp_CommitDrop (274 bytes, 1 callers, 0 shared utility calls left out)
+  - 0x810fe578 (unnamed, 232 bytes) draft: -
+  - 0x810bbdba (unnamed, 478 bytes) draft: -
+- 0x81342740 Poppet_UseInventoryItems (2632 bytes, 2 callers, 45 shared utility calls left out)
+  - 0x813405d6 Poppet_SpawnInventoryThing
+  - 0x81131498 (unnamed, 210 bytes) draft: Poppet_MoveObject? Moves a held object by copying its position and clamping the Y coordinate
+  - 0x8122dcfe (unnamed, 152 bytes) draft: -
+  - 0x8113138a (unnamed, 62 bytes) draft: Poppet_ApplyItemOffset? Applies item offset and rotation to the poppet's transform based on inventory state
+  - 0x81341b02 Poppet_UseInventoryObject
+  - 0x81726240 (unnamed, 1342 bytes) draft: Poppet_ApplyInventoryItems? Applies inventory items to the poppet by encoding them into its state fields
+  - 0x81430b06 (unnamed, 4 bytes) draft: -
+  - 0x8112dd3e (unnamed, 12 bytes) draft: Poppet_UseInventoryItems? Thunk that calls the inventory item usage handler with the poppet's pointer offset by 0x19c
+  - 0x8134f63a (unnamed, 24 bytes) draft: Poppet_UseInventoryItems? Checks if the player has an item and a leaf, then wraps the inventory items
+  - 0x81350e3c (unnamed, 24 bytes) draft: Poppet_UseInventoryItems? Check if inventory item use is allowed and wrap the poppet
+  - 0x81350e54 (unnamed, 24 bytes) draft: Poppet_UseInventoryItems? Checks if editor tool is active and inventory item selected to wrap selection
+  - 0x81195470 (unnamed, 1312 bytes) draft: -
+  - 0x81388a2a (unnamed, 62 bytes) draft: -
+  - 0x813889be (unnamed, 46 bytes) draft: Poppet_GetResourceOffset? Compute pointer to resource entry in a list based on an index and size
+  - 0x811436f4 (unnamed, 482 bytes) draft: -
+  - 0x8122b552 (unnamed, 436 bytes) draft: -
+  - 0x810e7efa Shape_SetPolygon
+  - 0x810ed0f4 (unnamed, 148 bytes) draft: -
+  - 0x8133fe92 (unnamed, 1314 bytes) draft: Poppet_ApplyGridSnap? Applies grid snapping to selected objects in the editor by adjusting their positions based on snap settings
+  - 0x81143a32 Stickers_Add
+  - 0x811440c4 (unnamed, 3018 bytes) draft: -
+  - 0x810ec580 (unnamed, 242 bytes) draft: Poppet_ShapeSetPolygon? Sets a polygon shape from a list of vertex points in the editor tool
+  - 0x8130fc3a SelectionTool_ctor
+  - 0x8130fdb2 SelectionTool_ApplyStickerSettings
+  - 0x8113c1f8 PoppetState_Push
+  - 0x81556a60 (unnamed, 18 bytes) draft: -
+  - 0x81325088 StickerHoverState_ctor
+  - 0x8130294a DecorationHoverState_ctor
+  - 0x811343ce (unnamed, 58 bytes) draft: Poppet_HasInvalidCommunityObjects? Checks if any community objects in the list are invalid (negative ID)
+  - 0x8117b562 (unnamed, 20 bytes) draft: Poppet_AcquireInventoryItem? Acquires an inventory item for the poppet by calling a wrapper at offset 0x488
+  - 0x81139bf8 (unnamed, 280 bytes) draft: -
+- 0x815ae0f0 Msg_OnPoppetPlaceDecoration (120 bytes, 0 callers, 2 shared utility calls left out)
+  - 0x8160c6c0 (unnamed, 1280 bytes) draft: Poppet_PlaceDecoration? Reads a decoration record from the poppet and writes its data into the message buffer.
+  - 0x8133100a (unnamed, 16 bytes) draft: Poppet_SyncBeforeMessage? Marks the poppet object as needing a sync update before sending a message
+  - 0x8112d9ae (unnamed, 196 bytes) draft: -
+- 0x815ae168 Msg_OnPoppetPlaceSticker (126 bytes, 0 callers, 2 shared utility calls left out)
+  - 0x8160b288 (unnamed, 1234 bytes) draft: Poppet_PlaceSticker? Serializes the poppet's sticker placement state into a message buffer for network or undo purposes.
+  - 0x8133100a (unnamed, 16 bytes) draft: Poppet_SyncBeforeMessage? Marks the poppet object as needing a sync update before sending a message
+  - 0x8112d9ae (unnamed, 196 bytes) draft: -
+
+## transform (20 hand-named functions)
+- 0x8107b550 Poppet_SendAngleSnapMessage (200 bytes, 1 callers, 14 shared utility calls left out)
+  - 0x81607d44 (unnamed, 32 bytes) draft: -
+- 0x8107b730 Poppet_GetAngleSnapMode (34 bytes, 1 callers, 1 shared utility calls left out)
+  - 0x81182856 Game_GetAngleSnapForPlayer
+- 0x81182856 Game_GetAngleSnapForPlayer (72 bytes, 1 callers, 1 shared utility calls left out)
+- 0x811e51ee native_SetFrameTailScale (36 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x8127e740 (unnamed, 122 bytes) draft: -
+- 0x811e8980 native_SetLastItemRotateSpeed (28 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x81288502 (unnamed, 98 bytes) draft: -
+- 0x811eb02e native_GetUIScale (14 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8134ef94 (unnamed, 14 bytes) draft: -
+- 0x811eb03c native_GetTopLevelPoppetScale (14 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8134efa2 (unnamed, 16 bytes) draft: -
+- 0x811ed6a0 native_GetAngleSnapMode (12 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8107b730 Poppet_GetAngleSnapMode
+- 0x811ed6ce native_SendAngleSnapMessage (10 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8107b550 Poppet_SendAngleSnapMessage
+- 0x811f2f76 native_UpdateScale (22 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x8144fae4 (unnamed, 10 bytes) draft: -
+- 0x811f5762 native_Rotate (60 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x81277bc2 (unnamed, 600 bytes) draft: -
+- 0x811f6462 native_PushRotation (82 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x81277e52 (unnamed, 16 bytes) draft: -
+- 0x811f64b4 native_PushAngleAxisRotation (46 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x81277e62 (unnamed, 8 bytes) draft: -
+- 0x811f6514 native_PopRotation (28 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x81277e72 (unnamed, 32 bytes) draft: -
+- 0x811f66e0 native_GetScreenScale (14 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x81279dba (unnamed, 8 bytes) draft: -
+- 0x8130ce88 Held_ClampScale (590 bytes, 1 callers, 1 shared utility calls left out)
+  - 0x81182954 (unnamed, 30 bytes) draft: -
+  - 0x8110dcf8 (unnamed, 38 bytes) draft: -
+  - 0x810537f4 (unnamed, 14 bytes) draft: -
+  - 0x81145536 (unnamed, 76 bytes) draft: -
+  - 0x81145604 (unnamed, 126 bytes) draft: -
+  - 0x81145682 (unnamed, 16 bytes) draft: -
+- 0x8130d0d6 Held_QuantiseRotation (894 bytes, 1 callers, 2 shared utility calls left out)
+  - 0x8110dcf8 (unnamed, 38 bytes) draft: -
+  - 0x810537f4 (unnamed, 14 bytes) draft: -
+  - 0x8113c8ba (unnamed, 70 bytes) draft: -
+  - 0x811454d2 (unnamed, 16 bytes) draft: -
+  - 0x81145692 (unnamed, 298 bytes) draft: -
+  - 0x81182954 (unnamed, 30 bytes) draft: -
+  - 0x81145582 (unnamed, 130 bytes) draft: -
+  - 0x811458d6 (unnamed, 244 bytes) draft: -
+- 0x8130e890 Held_UpdateScaleRotate (3114 bytes, 2 callers, 14 shared utility calls left out)
+  - 0x8133e534 (unnamed, 18 bytes) draft: -
+  - 0x8113eed2 (unnamed, 62 bytes) draft: -
+  - 0x8113f5b0 (unnamed, 200 bytes) draft: -
+  - 0x8113e056 (unnamed, 52 bytes) draft: -
+  - 0x8133d9d6 (unnamed, 96 bytes) draft: -
+  - 0x8133da36 (unnamed, 94 bytes) draft: -
+  - 0x8113d6b0 (unnamed, 28 bytes) draft: -
+  - 0x8130b998 (unnamed, 208 bytes) draft: -
+  - 0x8113c8ba (unnamed, 70 bytes) draft: -
+  - 0x8113cc70 (unnamed, 306 bytes) draft: -
+  - 0x81338442 (unnamed, 404 bytes) draft: -
+  - 0x8133827c (unnamed, 454 bytes) draft: -
+  - 0x8130dd16 (unnamed, 2402 bytes) draft: -
+  - 0x8113c72e (unnamed, 46 bytes) draft: -
+  - 0x8133de92 (unnamed, 196 bytes) draft: -
+  - 0x8133740e (unnamed, 336 bytes) draft: -
+  - 0x8133e546 (unnamed, 36 bytes) draft: -
+  - 0x8130cafe (unnamed, 826 bytes) draft: -
+  - 0x81140440 (unnamed, 44 bytes) draft: -
+  - 0x81337a8e (unnamed, 272 bytes) draft: -
+  - 0x8130e792 (unnamed, 254 bytes) draft: -
+  - 0x81036c3c (unnamed, 126 bytes) draft: -
+  - 0x8113ed54 (unnamed, 36 bytes) draft: -
+  - 0x814207bc (unnamed, 204 bytes) draft: -
+  - 0x811828e8 (unnamed, 42 bytes) draft: -
+  - 0x81145a14 (unnamed, 494 bytes) draft: -
+  - 0x81337b9e (unnamed, 1340 bytes) draft: -
+  - 0x8130ce88 Held_ClampScale
+  - 0x8130d0d6 Held_QuantiseRotation
+  - 0x8133e56a (unnamed, 1922 bytes) draft: -
+  - 0x8130c33c (unnamed, 572 bytes) draft: -
+  - 0x8106147a (unnamed, 134 bytes) draft: -
+  - 0x810537f4 (unnamed, 14 bytes) draft: -
+  - 0x81145536 (unnamed, 76 bytes) draft: -
+  - 0x810bcb34 (unnamed, 1648 bytes) draft: -
+  - 0x8130e6aa (unnamed, 232 bytes) draft: -
+  - 0x8130bc52 (unnamed, 564 bytes) draft: -
+  - 0x8113e1b8 (unnamed, 82 bytes) draft: -
+- 0x81337638 HeldSet_MinBack (106 bytes, 9 callers, 0 shared utility calls left out)
+- 0x813376a2 HeldSet_MaxFront (108 bytes, 9 callers, 0 shared utility calls left out)
+
+## slice (18 hand-named functions)
+- 0x81042c04 FileSlice_Seek (162 bytes, 3 callers, 0 shared utility calls left out)
+  - 0x81013c9c (unnamed, 52 bytes) draft: -
+  - 0x81011dda (unnamed, 270 bytes) draft: -
+- 0x81042d38 FileSlice_Init (38 bytes, 2 callers, 1 shared utility calls left out)
+  - 0x81013c9c (unnamed, 52 bytes) draft: -
+- 0x81042d5e FileSlice_OpenFile (136 bytes, 2 callers, 1 shared utility calls left out)
+  - 0x810123d4 (unnamed, 96 bytes) draft: -
+  - 0x81011dda (unnamed, 270 bytes) draft: -
+  - 0x81013c9c (unnamed, 52 bytes) draft: -
+- 0x811ec860 native_IsCutSceneMovieActive (12 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x814517f6 (unnamed, 120 bytes) draft: -
+- 0x811ecf1c native_IsCutSceneActive (12 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8143b6be (unnamed, 114 bytes) draft: -
+- 0x811ed4e2 native_IsCutSceneLevel (12 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8107b2c4 (unnamed, 110 bytes) draft: -
+- 0x811ed4ee native_SkipCutSceneLevel (8 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8107b332 (unnamed, 26 bytes) draft: -
+- 0x811f40ba native_DoesCutSceneCameraSupportTransitions (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x8139390e (unnamed, 94 bytes) draft: -
+- 0x811f82dc native_GetCutSceneSkippable (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x8139476e (unnamed, 70 bytes) draft: -
+- 0x811f82f6 native_GetCutSceneTransitionType (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x813947b4 (unnamed, 70 bytes) draft: -
+- 0x811f8310 native_GetCutSceneTrackPlayer (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x813947fa (unnamed, 70 bytes) draft: -
+- 0x81312b74 Slice_Commit (1668 bytes, 2 callers, 28 shared utility calls left out)
+  - 0x81348ad6 (unnamed, 24 bytes) draft: Poppet_Unused? empty wrapper function with no meaningful logic
+  - 0x81348814 Limit_ShowTooComplicated
+  - 0x811411a2 (unnamed, 550 bytes) draft: Poppet_Slice_Commit? processes slice planes for a shape during level editing commit
+  - 0x810eb936 (unnamed, 140 bytes) draft: Poppet_MaskFlags? Combines mask flags from two objects to produce a combined result
+  - 0x810c424a (unnamed, 2596 bytes) draft: -
+  - 0x81418072 (unnamed, 64 bytes) draft: -
+  - 0x8112b2b0 (unnamed, 8 bytes) draft: Poppet_Thunk? Thunk wrapper function that calls a single procedure
+  - 0x81141452 (unnamed, 320 bytes) draft: Poppet_Slice_Commit? Commits a slice operation on the shape by applying polygon data and cleaning up resources.
+  - 0x81141592 (unnamed, 640 bytes) draft: Poppet_CommitSlice? Validate and commit a polygon slice operation for the editor cursor tool
+  - 0x8122dcfe (unnamed, 152 bytes) draft: -
+  - 0x813394c2 (unnamed, 92 bytes) draft: -
+  - 0x8156b1d4 (unnamed, 152 bytes) draft: -
+  - 0x8112a7ae (unnamed, 132 bytes) draft: -
+  - 0x81130fc8 (unnamed, 104 bytes) draft: -
+  - 0x810b4868 (unnamed, 332 bytes) draft: -
+  - 0x811406ce (unnamed, 184 bytes) draft: Poppet_SliceCommit? Commits a slice operation on a joint or object record via a wrapper call
+  - 0x81067262 (unnamed, 70 bytes) draft: -
+  - 0x810dfbb0 (unnamed, 56 bytes) draft: -
+  - 0x8113c72e (unnamed, 46 bytes) draft: -
+  - 0x8131280c (unnamed, 188 bytes) draft: -
+  - 0x814184ca (unnamed, 562 bytes) draft: Poppet_Slice_Commit? commits a slice operation by adding parts, gluing them, and updating the level
+- 0x813133fc Slice_EditPoints (3206 bytes, 1 callers, 49 shared utility calls left out)
+  - 0x813394c2 (unnamed, 92 bytes) draft: -
+  - 0x81036d76 (unnamed, 44 bytes) draft: -
+  - 0x81039754 (unnamed, 68 bytes) draft: -
+  - 0x810397dc (unnamed, 68 bytes) draft: -
+  - 0x8112b9ee (unnamed, 406 bytes) draft: -
+  - 0x815568f4 (unnamed, 126 bytes) draft: -
+  - 0x813132f0 VertEdit_InsertVertexOnEdge
+  - 0x8158687c (unnamed, 54 bytes) draft: -
+  - 0x8159bb78 (unnamed, 184 bytes) draft: -
+  - 0x81418072 (unnamed, 64 bytes) draft: -
+  - 0x810e6e72 (unnamed, 38 bytes) draft: -
+  - 0x8112b2b8 (unnamed, 1774 bytes) draft: -
+  - 0x81348ad6 (unnamed, 24 bytes) draft: Poppet_Unused? empty wrapper function with no meaningful logic
+  - 0x81348814 Limit_ShowTooComplicated
+  - 0x813128c8 (unnamed, 408 bytes) draft: -
+  - 0x810e7f98 (unnamed, 906 bytes) draft: -
+  - 0x814186fc (unnamed, 204 bytes) draft: -
+  - 0x8122be0e (unnamed, 46 bytes) draft: -
+  - 0x8122bd28 (unnamed, 230 bytes) draft: -
+  - 0x8122bed4 (unnamed, 38 bytes) draft: -
+  - 0x8122be3c (unnamed, 152 bytes) draft: -
+  - 0x81418114 Glue_TryPair
+  - 0x81335256 (unnamed, 422 bytes) draft: -
+  - 0x8122b552 (unnamed, 436 bytes) draft: -
+  - 0x81765ea8 ceilf
+  - 0x810e64de (unnamed, 1432 bytes) draft: -
+  - 0x810ed0f4 (unnamed, 148 bytes) draft: -
+  - 0x810ec580 (unnamed, 242 bytes) draft: Poppet_ShapeSetPolygon? Sets a polygon shape from a list of vertex points in the editor tool
+  - 0x814187c8 (unnamed, 668 bytes) draft: -
+  - 0x810b4868 (unnamed, 332 bytes) draft: -
+  - 0x810b4bc2 (unnamed, 102 bytes) draft: Poppet_UnlinkFromHistory? Iterates a list of objects and unlinks one matching the given pointer, clearing a flag.
+  - 0x81130fc8 (unnamed, 104 bytes) draft: -
+  - 0x8113c85c (unnamed, 94 bytes) draft: -
+- 0x813180b0 FloodFillState_ctor (58 bytes, 3 callers, 1 shared utility calls left out)
+  - 0x81322bae (unnamed, 8 bytes) draft: Poppet_Thunk? Thunk wrapper calling the wrapped function
+- 0x8131833e FloodFill_ApplyToThing (474 bytes, 2 callers, 4 shared utility calls left out)
+  - 0x813182ce (unnamed, 112 bytes) draft: -
+  - 0x811413d0 (unnamed, 22 bytes) draft: -
+  - 0x810b5318 (unnamed, 78 bytes) draft: -
+  - 0x810b5366 (unnamed, 72 bytes) draft: -
+  - 0x810b4f6a (unnamed, 92 bytes) draft: -
+  - 0x810ed0f4 (unnamed, 148 bytes) draft: -
+  - 0x8113c85c (unnamed, 94 bytes) draft: -
+  - 0x810c3f30 (unnamed, 332 bytes) draft: -
+- 0x81327560 StickerCutterState_ctor (82 bytes, 1 callers, 1 shared utility calls left out)
+  - 0x81322bae (unnamed, 8 bytes) draft: Poppet_Thunk? Thunk wrapper calling the wrapped function
+- 0x8132a2ec FloodFill_Action (1184 bytes, 0 callers, 27 shared utility calls left out)
+  - 0x815aa3a8 (unnamed, 102 bytes) draft: -
+  - 0x8119b436 (unnamed, 158 bytes) draft: -
+  - 0x813180b0 FloodFillState_ctor
+  - 0x8131825a (unnamed, 116 bytes) draft: Poppet_HandleMessage? Dispatch an incoming message to the appropriate handler based on its type.
+  - 0x811305a2 (unnamed, 22 bytes) draft: -
+  - 0x8131833e FloodFill_ApplyToThing
+  - 0x8133ca98 (unnamed, 376 bytes) draft: -
+  - 0x81322c1c (unnamed, 72 bytes) draft: -
+  - 0x81329d3c (unnamed, 640 bytes) draft: -
+  - 0x81329fcc (unnamed, 480 bytes) draft: -
+  - 0x81456666 (unnamed, 62 bytes) draft: -
+  - 0x81243386 (unnamed, 132 bytes) draft: -
+  - 0x8113c206 PoppetState_PopIfTop
+  - 0x8112dc80 (unnamed, 190 bytes) draft: -
+  - 0x81342740 Poppet_UseInventoryItems
+  - 0x81195470 (unnamed, 1312 bytes) draft: -
+  - 0x81340dce Poppet_ApplyCostumeItem
+  - 0x8112dd4a (unnamed, 30 bytes) draft: -
+  - 0x81567718 (unnamed, 58 bytes) draft: -
+- 0x8165be88 Reflect_CutsceneCameraState (276 bytes, 0 callers, 11 shared utility calls left out)
+
+## undo (14 hand-named functions)
+- 0x8113036c Poppet_UndoSnapshot (124 bytes, 37 callers, 2 shared utility calls left out)
+  - 0x8123da08 Undo_CanUndo
+  - 0x8100d2ea (unnamed, 1074 bytes) draft: Poppet_UndoSnapshot? Serializes the current level state into a buffer for undo history
+  - 0x8123d0dc Undo_PushSnapshot
+  - 0x8100d71c (unnamed, 2436 bytes) draft: Poppet_UndoSnapshot? Logs per-frame undo snapshot memory deltas for the editor's undo history system
+  - 0x815adea4 (unnamed, 46 bytes) draft: -
+  - 0x813a0f64 (unnamed, 14 bytes) draft: -
+- 0x81130f7a Poppet_UndoDropSnapshot (20 bytes, 12 callers, 0 shared utility calls left out)
+  - 0x8123da08 Undo_CanUndo
+  - 0x8123cffc Undo_DropNewest
+- 0x81134022 Poppet_QueueAction (42 bytes, 14 callers, 0 shared utility calls left out)
+  - 0x815ae0b4 (unnamed, 54 bytes) draft: Poppet_PushAction? appends a new action to the poppet's action queue array
+- 0x8117723a Game_SnapshotLevelForSave (1052 bytes, 2 callers, 12 shared utility calls left out)
+  - 0x81177192 (unnamed, 168 bytes) draft: -
+  - 0x8113b608 (unnamed, 56 bytes) draft: -
+  - 0x8110df9e (unnamed, 30 bytes) draft: -
+  - 0x811bd252 (unnamed, 100 bytes) draft: -
+  - 0x810cf154 (unnamed, 46 bytes) draft: -
+  - 0x81214fb6 (unnamed, 36 bytes) draft: -
+  - 0x8116122a Resource_SerialiseToHash
+  - 0x8113b640 (unnamed, 50 bytes) draft: -
+  - 0x810cf108 (unnamed, 76 bytes) draft: -
+  - 0x815adea4 (unnamed, 46 bytes) draft: -
+- 0x811f33f6 native_UndownloadedGifts (12 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8143b958 (unnamed, 14 bytes) draft: -
+- 0x811f3402 native_SetUndownloadedGifts (10 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8143b966 (unnamed, 14 bytes) draft: -
+- 0x8123cf9e Undo_Clear (94 bytes, 1 callers, 3 shared utility calls left out)
+- 0x8123cffc Undo_DropNewest (88 bytes, 3 callers, 2 shared utility calls left out)
+- 0x8123d054 Undo_IsAtSavedState (60 bytes, 2 callers, 0 shared utility calls left out)
+- 0x8123d0dc Undo_PushSnapshot (1056 bytes, 2 callers, 27 shared utility calls left out)
+  - 0x811615fa (unnamed, 62 bytes) draft: Undo_PushSnapshot? Initializes a new undo history snapshot record with default values and the level data pointer.
+  - 0x81212cdc Level_SaveResource_thunk
+  - 0x81130b9c (unnamed, 346 bytes) draft: -
+  - 0x81014ed0 (unnamed, 4 bytes) draft: Undo_PushSnapshot? Returns the snapshot pointer stored in the undo history record for the given undo state.
+- 0x8123d502 Undo_EnsureCurrent (66 bytes, 1 callers, 0 shared utility calls left out)
+  - 0x8123d0dc Undo_PushSnapshot
+- 0x8123d7b8 Undo_StepBack (272 bytes, 1 callers, 2 shared utility calls left out)
+  - 0x81014fa8 (unnamed, 70 bytes) draft: Poppet_UndoStepBack? Guess based on caller name only
+  - 0x8100a142 (unnamed, 58 bytes) draft: -
+  - 0x811616de (unnamed, 292 bytes) draft: Undo_LockLevel? Acquire a mutex lock for the level data before performing an undo step
+  - 0x81212cd4 Level_LoadResource_thunk
+  - 0x81009e80 (unnamed, 112 bytes) draft: -
+  - 0x8119a56e (unnamed, 112 bytes) draft: -
+  - 0x81176e88 (unnamed, 44 bytes) draft: Poppet_ResetSelection? Resets the editor selection state and clears associated flags after a step operation
+  - 0x81176b60 (unnamed, 130 bytes) draft: -
+- 0x8123d8c8 Undo_StepForward (206 bytes, 1 callers, 1 shared utility calls left out)
+  - 0x811616de (unnamed, 292 bytes) draft: Undo_LockLevel? Acquire a mutex lock for the level data before performing an undo step
+  - 0x81212cd4 Level_LoadResource_thunk
+  - 0x81009e80 (unnamed, 112 bytes) draft: -
+  - 0x8119a56e (unnamed, 112 bytes) draft: -
+  - 0x81176e88 (unnamed, 44 bytes) draft: Poppet_ResetSelection? Resets the editor selection state and clears associated flags after a step operation
+  - 0x81176b60 (unnamed, 130 bytes) draft: -
+- 0x8123da08 Undo_CanUndo (310 bytes, 5 callers, 0 shared utility calls left out)
+
+## switch (48 hand-named functions)
+- 0x811059a4 Switch_GetPortLabel (6254 bytes, 2 callers, 258 shared utility calls left out)
+  - 0x8159e3f0 (unnamed, 62 bytes) draft: -
+  - 0x815a05b0 (unnamed, 28 bytes) draft: -
+  - 0x8159e2c4 (unnamed, 62 bytes) draft: -
+  - 0x81585b7c (unnamed, 62 bytes) draft: -
+  - 0x815a05d0 (unnamed, 62 bytes) draft: -
+  - 0x8159e3b0 (unnamed, 62 bytes) draft: -
+  - 0x81585a40 (unnamed, 58 bytes) draft: -
+  - 0x8159e430 (unnamed, 60 bytes) draft: -
+  - 0x810f3580 (unnamed, 64 bytes) draft: -
+  - 0x810f17d4 (unnamed, 206 bytes) draft: -
+  - 0x8122c2ec (unnamed, 84 bytes) draft: -
+  - 0x81765a78 swprintf
+  - 0x8154c340 (unnamed, 208 bytes) draft: -
+- 0x811ea9ba native_CanSwitchToPlanet (30 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x8138d7e8 (unnamed, 120 bytes) draft: -
+- 0x811ec00c native_FixupSwitch (44 bytes, 0 callers, 2 shared utility calls left out)
+  - 0x81392142 (unnamed, 294 bytes) draft: -
+- 0x811ec038 native_GetSwitchType (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x81391ff8 (unnamed, 66 bytes) draft: -
+- 0x811ec0a0 native_GetStickerSwitchPlan (50 bytes, 0 callers, 2 shared utility calls left out)
+  - 0x81392304 (unnamed, 42 bytes) draft: Poppet_GetStickerSwitchPlan? Retrieves the plan for a sticker switch object in the editor
+  - 0x8138f2a4 (unnamed, 30 bytes) draft: -
+- 0x811ec0d2 native_GetStickerSwitchIcon (50 bytes, 0 callers, 2 shared utility calls left out)
+  - 0x8139232e (unnamed, 120 bytes) draft: Poppet_GetStickerSwitchIcon? Retrieves the icon for a sticker switch item in the editor
+  - 0x8138f2a4 (unnamed, 30 bytes) draft: -
+- 0x811ee002 native_IsLevelSwitchPending (12 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8107b3f4 (unnamed, 8 bytes) draft: -
+- 0x811eefba native_GetSwitchColour (16 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x81277a58 (unnamed, 8 bytes) draft: -
+- 0x811f200a native_SendSwitchingToWifiMessage (8 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8144f262 Text_ConnectionStatusSwitchToWifi
+- 0x811f2e64 native_IsSwitchTriggered (30 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x8145038e (unnamed, 36 bytes) draft: -
+- 0x811f2e82 native_HasSwitchInput (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x814503b2 (unnamed, 22 bytes) draft: -
+- 0x811f2eb6 native_GetSwitchActivationBinary (30 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x8145040e (unnamed, 48 bytes) draft: -
+- 0x811f2ed4 native_GetSwitchActivationAnalogue (32 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x8145043e (unnamed, 48 bytes) draft: -
+- 0x811f2ef4 native_GetSwitchActivationTernary (32 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x8145046e (unnamed, 54 bytes) draft: -
+- 0x811f2f14 native_GetSwitchActivationPlayer (30 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x814504a4 (unnamed, 172 bytes) draft: -
+- 0x811f323e native_GetNumSwitchTargets (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x814510d0 (unnamed, 68 bytes) draft: -
+- 0x811f3258 native_GetSwitchTarget (42 bytes, 0 callers, 2 shared utility calls left out)
+  - 0x81451114 (unnamed, 84 bytes) draft: -
+- 0x811f38d6 native_GetSwitchOutputControlPad (42 bytes, 0 callers, 2 shared utility calls left out)
+  - 0x81450e9a (unnamed, 8 bytes) draft: -
+- 0x811f9420 native_GetSizePSwitch (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x814421c8 (unnamed, 16 bytes) draft: -
+- 0x811f943a native_GetSizePSwitchKey (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x814421d8 (unnamed, 16 bytes) draft: -
+- 0x811f94d6 native_GetSizePSwitchInput (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x81442238 (unnamed, 16 bytes) draft: -
+- 0x811f993e native_GetElemPSwitch (42 bytes, 0 callers, 2 shared utility calls left out)
+  - 0x8144248e (unnamed, 22 bytes) draft: -
+- 0x811f9968 native_GetElemPSwitchKey (42 bytes, 0 callers, 2 shared utility calls left out)
+  - 0x814424a4 (unnamed, 22 bytes) draft: -
+- 0x811f9a64 native_GetElemPSwitchInput (42 bytes, 0 callers, 2 shared utility calls left out)
+  - 0x81442528 (unnamed, 22 bytes) draft: -
+- 0x811f9d6c native_HasPSwitch (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x814427ee (unnamed, 26 bytes) draft: -
+- 0x811f9d86 native_HasPSwitchKey (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x81442808 (unnamed, 26 bytes) draft: -
+- 0x811f9e22 native_HasPSwitchInput (26 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x814428a0 (unnamed, 22 bytes) draft: -
+- 0x811fc73e native_FixupButtonSwitch (48 bytes, 0 callers, 2 shared utility calls left out)
+  - 0x813923a6 (unnamed, 322 bytes) draft: -
+- 0x81328388 Poppet_SwitchWireUpdate (2312 bytes, 0 callers, 37 shared utility calls left out)
+  - 0x8113c206 PoppetState_PopIfTop
+  - 0x81100646 (unnamed, 188 bytes) draft: -
+  - 0x810f820a (unnamed, 114 bytes) draft: Poppet_WireUpdate? Traverse a wire chain to find and return the first editable wire object
+  - 0x81327f8a (unnamed, 92 bytes) draft: Poppet_SwitchWireUpdate? Finalizes a switch wire by releasing and zeroing its state fields
+  - 0x813390aa (unnamed, 246 bytes) draft: -
+  - 0x810f18a6 (unnamed, 82 bytes) draft: -
+  - 0x81327ed8 (unnamed, 178 bytes) draft: Poppet_SwitchWireUpdate? Clears the wire target data of a poppet and its nested child object when updating switch wires.
+  - 0x8146f694 (unnamed, 248 bytes) draft: -
+  - 0x8113036c Poppet_UndoSnapshot
+  - 0x810f8a5c (unnamed, 204 bytes) draft: -
+  - 0x810fe578 (unnamed, 232 bytes) draft: -
+  - 0x810fd908 (unnamed, 92 bytes) draft: -
+  - 0x810fe660 (unnamed, 666 bytes) draft: -
+  - 0x810f1bf4 (unnamed, 234 bytes) draft: Poppet_GetEditObject? Returns an object from the level's edit list based on a numeric index or '@' tag
+  - 0x810f8830 (unnamed, 170 bytes) draft: -
+  - 0x810f8728 (unnamed, 264 bytes) draft: -
+  - 0x81337292 (unnamed, 380 bytes) draft: -
+  - 0x8113c75c PoppetState_QueueGlue
+  - 0x81130f7a Poppet_UndoDropSnapshot
+  - 0x8156b298 (unnamed, 74 bytes) draft: -
+  - 0x81195470 (unnamed, 1312 bytes) draft: -
+  - 0x810b95de (unnamed, 3952 bytes) draft: -
+  - 0x81305e74 PlaceObjectTool_ctor
+  - 0x8113c1f8 PoppetState_Push
+  - 0x813282d6 (unnamed, 178 bytes) draft: Poppet_Createstamp? Creates a stamp for the poppet and decrements its remaining count.
+- 0x813666a8 Text_StickerSwitchSection (2466 bytes, 1 callers, 18 shared utility calls left out)
+  - 0x8117b8c8 (unnamed, 54 bytes) draft: -
+  - 0x811343ce (unnamed, 58 bytes) draft: Poppet_HasInvalidCommunityObjects? Checks if any community objects in the list are invalid (negative ID)
+  - 0x81297c88 (unnamed, 42 bytes) draft: -
+  - 0x81297ac4 (unnamed, 74 bytes) draft: -
+  - 0x81297f5c (unnamed, 36 bytes) draft: -
+  - 0x81297cb2 (unnamed, 36 bytes) draft: -
+  - 0x81297b40 (unnamed, 28 bytes) draft: -
+  - 0x81363b90 (unnamed, 366 bytes) draft: -
+  - 0x8129765a (unnamed, 64 bytes) draft: -
+  - 0x81297d42 (unnamed, 72 bytes) draft: -
+  - 0x81297cfa (unnamed, 36 bytes) draft: -
+  - 0x812e22d0 (unnamed, 6 bytes) draft: -
+  - 0x81732ec4 (unnamed, 160 bytes) draft: -
+  - 0x811055b0 (unnamed, 184 bytes) draft: -
+  - 0x81732f64 (unnamed, 112 bytes) draft: -
+  - 0x81430e78 (unnamed, 18 bytes) draft: -
+  - 0x81430770 (unnamed, 128 bytes) draft: -
+  - 0x81544158 (unnamed, 68 bytes) draft: -
+  - 0x8172801c (unnamed, 54 bytes) draft: -
+  - 0x813663ac (unnamed, 764 bytes) draft: -
+  - 0x813643d0 Text_PopitPageEmptyMessages
+  - 0x8129867a (unnamed, 40 bytes) draft: -
+  - 0x81732e90 (unnamed, 48 bytes) draft: -
+  - 0x8135d8a2 (unnamed, 14 bytes) draft: -
+  - 0x812a1864 (unnamed, 100 bytes) draft: -
+- 0x8144f262 Text_ConnectionStatusSwitchToWifi (102 bytes, 1 callers, 2 shared utility calls left out)
+  - 0x812e33f4 (unnamed, 94 bytes) draft: -
+- 0x8161a528 PSwitch_SerializeSub_8161a528 (102 bytes, 4 callers, 3 shared utility calls left out)
+- 0x8161a7ec PSwitch_SerializeSub_8161a7ec (596 bytes, 1 callers, 16 shared utility calls left out)
+  - 0x810f89a0 (unnamed, 188 bytes) draft: -
+  - 0x8161a6e8 (unnamed, 258 bytes) draft: -
+  - 0x8154c0d8 (unnamed, 10 bytes) draft: -
+- 0x8161b324 PSwitch_SerializeRevisioned (5868 bytes, 2 callers, 56 shared utility calls left out)
+  - 0x8160f258 (unnamed, 42 bytes) draft: -
+  - 0x81611b28 (unnamed, 46 bytes) draft: -
+  - 0x8160f32c (unnamed, 254 bytes) draft: -
+  - 0x81619adc (unnamed, 74 bytes) draft: -
+  - 0x810f86fa (unnamed, 46 bytes) draft: -
+  - 0x81619ac4 (unnamed, 24 bytes) draft: -
+  - 0x8161a5ac (unnamed, 8 bytes) draft: -
+  - 0x815564b0 (unnamed, 10 bytes) draft: -
+  - 0x8161a5b8 (unnamed, 258 bytes) draft: -
+  - 0x81619a54 (unnamed, 112 bytes) draft: -
+  - 0x8161a6bc (unnamed, 8 bytes) draft: -
+  - 0x8159e5f8 (unnamed, 12 bytes) draft: -
+  - 0x8161a6c4 (unnamed, 36 bytes) draft: -
+  - 0x8161a6e8 (unnamed, 258 bytes) draft: -
+  - 0x8161aa40 (unnamed, 200 bytes) draft: -
+  - 0x81619cd8 (unnamed, 22 bytes) draft: -
+  - 0x816af950 (unnamed, 90 bytes) draft: -
+  - 0x8161a590 (unnamed, 24 bytes) draft: -
+  - 0x8161a528 PSwitch_SerializeSub_8161a528
+  - 0x8161ab08 (unnamed, 350 bytes) draft: -
+  - 0x8161ac68 (unnamed, 212 bytes) draft: -
+  - 0x81618064 (unnamed, 176 bytes) draft: -
+  - 0x8161ad3c (unnamed, 900 bytes) draft: -
+  - 0x8160e0a0 (unnamed, 24 bytes) draft: -
+  - 0x81606560 (unnamed, 16 bytes) draft: Game_IsReady? Checks whether the game or level is ready to proceed before continuing
+  - 0x8161b0c0 (unnamed, 28 bytes) draft: -
+  - 0x8161b0dc (unnamed, 34 bytes) draft: -
+  - 0x8161b100 (unnamed, 34 bytes) draft: -
+  - 0x8161b124 (unnamed, 34 bytes) draft: -
+  - 0x8161b148 (unnamed, 34 bytes) draft: -
+  - 0x810f8b28 (unnamed, 86 bytes) draft: -
+  - 0x81607dac (unnamed, 354 bytes) draft: -
+  - 0x8123d0d0 (unnamed, 12 bytes) draft: -
+  - 0x8161b16c (unnamed, 228 bytes) draft: -
+  - 0x8161b250 (unnamed, 212 bytes) draft: -
+  - 0x8110584e (unnamed, 210 bytes) draft: -
+- 0x8161cf58 PSwitch_WriteBinary (1732 bytes, 1 callers, 18 shared utility calls left out)
+  - 0x8160ef50 Stream_WriteU8
+  - 0x81606608 Stream_WriteU32
+  - 0x8160feb8 (unnamed, 142 bytes) draft: -
+  - 0x81619adc (unnamed, 74 bytes) draft: -
+  - 0x8161cc88 (unnamed, 74 bytes) draft: -
+  - 0x81619cd8 (unnamed, 22 bytes) draft: -
+  - 0x81618a64 Stream_WriteU32Keep
+  - 0x8161ca10 (unnamed, 90 bytes) draft: -
+  - 0x816af9ac (unnamed, 48 bytes) draft: -
+  - 0x815564b0 (unnamed, 10 bytes) draft: -
+  - 0x8161ccd4 (unnamed, 500 bytes) draft: -
+  - 0x810f8b28 (unnamed, 86 bytes) draft: -
+  - 0x81607d2c (unnamed, 12 bytes) draft: -
+  - 0x8123d0d0 (unnamed, 12 bytes) draft: -
+  - 0x8161cec8 (unnamed, 72 bytes) draft: -
+  - 0x8161cf10 (unnamed, 72 bytes) draft: -
+- 0x8161f05c ReflectText_PSwitch (1862 bytes, 0 callers, 21 shared utility calls left out)
+  - 0x81613034 (unnamed, 58 bytes) draft: -
+  - 0x8161959c (unnamed, 58 bytes) draft: -
+  - 0x81612ff8 (unnamed, 58 bytes) draft: -
+  - 0x81619cd8 (unnamed, 22 bytes) draft: -
+  - 0x816afa3c (unnamed, 56 bytes) draft: -
+  - 0x816195dc (unnamed, 58 bytes) draft: -
+  - 0x815564b0 (unnamed, 10 bytes) draft: -
+  - 0x81612fbc (unnamed, 58 bytes) draft: -
+  - 0x810f8b28 (unnamed, 86 bytes) draft: -
+  - 0x8123d0d0 (unnamed, 12 bytes) draft: -
+  - 0x8110584e (unnamed, 210 bytes) draft: -
+  - 0x8161b148 (unnamed, 34 bytes) draft: -
+- 0x8161f8c0 PSwitchKey_SerializeRevisioned (312 bytes, 2 callers, 7 shared utility calls left out)
+  - 0x8160f32c (unnamed, 254 bytes) draft: -
+  - 0x8154cb0c (unnamed, 24 bytes) draft: -
+  - 0x812250c8 (unnamed, 18 bytes) draft: -
+  - 0x81225004 (unnamed, 196 bytes) draft: -
+  - 0x8160f258 (unnamed, 42 bytes) draft: -
+  - 0x8161a528 PSwitch_SerializeSub_8161a528
+- 0x8161f9f8 PSwitchKey_WriteBinary (194 bytes, 1 callers, 7 shared utility calls left out)
+  - 0x8160feb8 (unnamed, 142 bytes) draft: -
+  - 0x8154cb0c (unnamed, 24 bytes) draft: -
+  - 0x812250c8 (unnamed, 18 bytes) draft: -
+  - 0x81225004 (unnamed, 196 bytes) draft: -
+- 0x8161fc80 ReflectText_PSwitchKey (112 bytes, 0 callers, 4 shared utility calls left out)
+- 0x8161fea8 PSwitchInput_SerializeRevisioned (588 bytes, 2 callers, 9 shared utility calls left out)
+  - 0x8161a528 PSwitch_SerializeSub_8161a528
+  - 0x8160f258 (unnamed, 42 bytes) draft: -
+  - 0x8161fe3c (unnamed, 108 bytes) draft: -
+  - 0x81606560 (unnamed, 16 bytes) draft: Game_IsReady? Checks whether the game or level is ready to proceed before continuing
+  - 0x8160e0a0 (unnamed, 24 bytes) draft: -
+- 0x81620148 PSwitchInput_WriteBinary (338 bytes, 1 callers, 2 shared utility calls left out)
+  - 0x81606608 Stream_WriteU32
+  - 0x8160ef50 Stream_WriteU8
+  - 0x816200f4 (unnamed, 84 bytes) draft: -
+  - 0x81618a64 Stream_WriteU32Keep
+- 0x816205bc ReflectText_PSwitchInput (350 bytes, 0 callers, 3 shared utility calls left out)
+  - 0x81612fbc (unnamed, 58 bytes) draft: -
+  - 0x81613034 (unnamed, 58 bytes) draft: -
+  - 0x81612ff8 (unnamed, 58 bytes) draft: -
+- 0x81625650 Reflect_SwitchSignal (138 bytes, 0 callers, 5 shared utility calls left out)
+- 0x81626380 Reflect_SwitchOutput (104 bytes, 0 callers, 3 shared utility calls left out)
+- 0x816612f0 PSwitch_WritePtr (76 bytes, 1 callers, 2 shared utility calls left out)
+  - 0x8161cf58 PSwitch_WriteBinary
+- 0x8166133c PSwitchKey_WritePtr (76 bytes, 1 callers, 2 shared utility calls left out)
+  - 0x8161f9f8 PSwitchKey_WriteBinary
+- 0x81661504 PSwitchInput_WritePtr (76 bytes, 1 callers, 2 shared utility calls left out)
+  - 0x81620148 PSwitchInput_WriteBinary
+- 0x8168cae8 Reflect_MaterialWire (200 bytes, 0 callers, 8 shared utility calls left out)
+
+## uvsave (17 hand-named functions)
+- 0x8107b0b2 Game_RequestSaveLevel (44 bytes, 1 callers, 1 shared utility calls left out)
+  - 0x811810d6 Game_SendSaveLevelMsg
+- 0x8107b0de Game_DoPreSaveLevelCheck (44 bytes, 1 callers, 0 shared utility calls left out)
+  - 0x81183706 Game_PreSaveCheck
+  - 0x810750a2 (unnamed, 14 bytes) draft: -
+- 0x81177656 Game_OnSaveLevel (1426 bytes, 1 callers, 21 shared utility calls left out)
+  - 0x812fae18 Limit_ShowCannotSave
+  - 0x810c9bca (unnamed, 404 bytes) draft: -
+  - 0x8103243a (unnamed, 1214 bytes) draft: -
+  - 0x8123364c (unnamed, 472 bytes) draft: -
+  - 0x8117723a Game_SnapshotLevelForSave
+  - 0x812cc8fe (unnamed, 22 bytes) draft: -
+  - 0x81164180 BigProfile_FindOrCreateSlot
+  - 0x812180fa (unnamed, 86 bytes) draft: -
+  - 0x811d190e (unnamed, 190 bytes) draft: -
+  - 0x811d21d4 (unnamed, 276 bytes) draft: -
+  - 0x810139fc (unnamed, 46 bytes) draft: -
+  - 0x8118783a (unnamed, 194 bytes) draft: -
+  - 0x81246ffc (unnamed, 38 bytes) draft: -
+  - 0x81247d7c (unnamed, 70 bytes) draft: -
+  - 0x810429e8 FileCaches_GetSize
+  - 0x8124705a (unnamed, 72 bytes) draft: -
+  - 0x81218246 Text_LevelinfoUntitled_81218246
+  - 0x8121843c (unnamed, 26 bytes) draft: -
+  - 0x81218392 Text_LevelinfoNoDescription_81218392
+  - 0x81218456 (unnamed, 26 bytes) draft: -
+  - 0x814332b8 (unnamed, 12 bytes) draft: -
+  - 0x8118fa24 (unnamed, 214 bytes) draft: -
+  - 0x81225e28 (unnamed, 12 bytes) draft: -
+  - 0x81218470 (unnamed, 32 bytes) draft: -
+  - 0x81218a58 (unnamed, 66 bytes) draft: -
+  - 0x81218490 (unnamed, 32 bytes) draft: -
+  - 0x81218a9a (unnamed, 66 bytes) draft: -
+  - 0x81118462 (unnamed, 10 bytes) draft: -
+  - 0x8123d090 (unnamed, 64 bytes) draft: -
+  - 0x81383a4e Save_FlagDirtyForQuickSave
+- 0x811810d6 Game_SendSaveLevelMsg (438 bytes, 6 callers, 12 shared utility calls left out)
+  - 0x812fae18 Limit_ShowCannotSave
+  - 0x815b3d44 (unnamed, 24 bytes) draft: -
+- 0x8118128c Game_RequestSaveLevel (348 bytes, 3 callers, 8 shared utility calls left out)
+  - 0x81404ede (unnamed, 372 bytes) draft: -
+  - 0x8105c914 (unnamed, 138 bytes) draft: -
+  - 0x812ccfb8 LevelChange_Request
+  - 0x81176eb4 (unnamed, 178 bytes) draft: -
+  - 0x8118f8fe (unnamed, 14 bytes) draft: -
+  - 0x812df5c0 (unnamed, 196 bytes) draft: -
+- 0x811ed4b0 native_RequestSaveLevel (8 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8107b0b2 Game_RequestSaveLevel
+- 0x811ed4b8 native_DoPreSaveLevelCheck (8 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x8107b0de Game_DoPreSaveLevelCheck
+- 0x811ef6ce native_RequestQuickSave (8 bytes, 0 callers, 0 shared utility calls left out)
+  - 0x81443dc0 (unnamed, 22 bytes) draft: -
+- 0x81212cdc Level_SaveResource_thunk (8 bytes, 9 callers, 0 shared utility calls left out)
+  - 0x8119b89e Resource_Save
+- 0x8132d320 UVTool_Update (1970 bytes, 0 callers, 17 shared utility calls left out)
+  - 0x81036d76 (unnamed, 44 bytes) draft: -
+  - 0x81039754 (unnamed, 68 bytes) draft: -
+  - 0x81036c3c (unnamed, 126 bytes) draft: -
+  - 0x811454e2 (unnamed, 84 bytes) draft: -
+  - 0x8133ca98 (unnamed, 376 bytes) draft: -
+  - 0x8113036c Poppet_UndoSnapshot
+  - 0x81337292 (unnamed, 380 bytes) draft: -
+  - 0x8112df74 (unnamed, 84 bytes) draft: -
+  - 0x81131a6a (unnamed, 52 bytes) draft: -
+  - 0x8113c206 PoppetState_PopIfTop
+  - 0x81420120 (unnamed, 418 bytes) draft: -
+  - 0x810b4f6a (unnamed, 92 bytes) draft: -
+  - 0x810537f4 (unnamed, 14 bytes) draft: -
+  - 0x81337a8e (unnamed, 272 bytes) draft: -
+  - 0x810b2fa0 (unnamed, 158 bytes) draft: -
+  - 0x81765e38 fmodf
+- 0x81383816 SaveQueue_AddQuickSave (362 bytes, 2 callers, 11 shared utility calls left out)
+  - 0x8118e164 (unnamed, 26 bytes) draft: -
+  - 0x814a28f6 QuickSaveJob_ctor
+  - 0x8138378e SaveQueue_AddJob
+- 0x81383a4e Save_FlagDirtyForQuickSave (88 bytes, 3 callers, 2 shared utility calls left out)
+  - 0x8114cee0 (unnamed, 36 bytes) draft: -
+  - 0x8114cc0e (unnamed, 40 bytes) draft: -
+- 0x81383c46 Save_QuickSaveLocalProfile (142 bytes, 3 callers, 3 shared utility calls left out)
+  - 0x81383aa6 (unnamed, 416 bytes) draft: -
+  - 0x8100a142 (unnamed, 58 bytes) draft: -
+  - 0x8137933c (unnamed, 12 bytes) draft: -
+  - 0x8114cb50 (unnamed, 8 bytes) draft: -
+  - 0x81383816 SaveQueue_AddQuickSave
+- 0x814a28f6 QuickSaveJob_ctor (246 bytes, 1 callers, 4 shared utility calls left out)
+  - 0x813836e4 (unnamed, 34 bytes) draft: -
+- 0x814a395e QuickSaveJob_Finish (1464 bytes, 0 callers, 18 shared utility calls left out)
+  - 0x8123e508 (unnamed, 132 bytes) draft: -
+  - 0x8139cc3c (unnamed, 20 bytes) draft: -
+  - 0x8139cc50 (unnamed, 38 bytes) draft: -
+  - 0x8123e5f8 (unnamed, 30 bytes) draft: -
+  - 0x8123e616 (unnamed, 32 bytes) draft: -
+  - 0x813836be (unnamed, 38 bytes) draft: -
+  - 0x8114cee0 (unnamed, 36 bytes) draft: -
+  - 0x81073212 (unnamed, 68 bytes) draft: -
+  - 0x811611f4 (unnamed, 54 bytes) draft: -
+  - 0x813836b8 (unnamed, 6 bytes) draft: -
+- 0x815c2d7c Msg_OnSaveLevel (58 bytes, 0 callers, 1 shared utility calls left out)
+  - 0x8160d4f4 (unnamed, 38 bytes) draft: -
+  - 0x81177656 Game_OnSaveLevel
+- 0x817621b8 QuickSaveJob_GetName (24 bytes, 0 callers, 0 shared utility calls left out)
+
