@@ -459,6 +459,7 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - Tweak menu sliders: the script native DoSlider (0x811e7f18) finds the menu by handle (map DAT_81bc6bb8) and calls 0x8129b12e Gooey_DoSlider. The slider widget keeps an integer step (+0x164); the menu gets back value = step * step scale (or step / step count) at gooey +0x25c and the step at +0x260. The script then writes that value to the thing.
 - Tweak menu widgets: each script native Do* (DoButton, DoText, DoSlider, DoCarousel, DoTextEntry ..) goes native -> ByHandle wrapper (finds the menu by handle) -> one widget body. The full table is ghidra/gooeydo.tsv. A few bodies are shared: one button body draws buttons, tags, inlines, labels and big icons.
 - Saving a thing: 0x81661ee0 Thing_WriteBinary writes a marker byte 0xaa, the thing uid, its links to other things, a few small fields, and then every part it has (0x2f part slots, a bit mask says which are present). A link to another thing (0x81605ba4 / 0x81605f00) is a number in the file's pointer table; the first time a thing is linked it is written right there.
+- Saving the parts of a thing: 0x81661718 Thing_WritePartList walks the part mask and calls one writer per part type, in slot order (PBody, PJoint, PWorld, PRenderMesh, PPos, PTrigger ..). The table is ghidra/partwriters.tsv.
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
