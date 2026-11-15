@@ -3254,3 +3254,4 @@
 0x8135105e func Poppet_ForwardMessageToHook hand late47
 0x8116122a func Resource_SerialiseToHash hand late48
 0x81161358 func Resource_FormatName hand late48
+0x81342740 func Poppet_UseInventoryItems hand late49
