@@ -3330,3 +3330,4 @@
 0x81042d38 func FileSlice_Init hand late63
 0x81042d5e func FileSlice_OpenFile hand late63
 0x81042c04 func FileSlice_Seek hand late63
+0x81182b6e func Game_SetPlayerEditMode hand late65
