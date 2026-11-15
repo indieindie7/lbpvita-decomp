@@ -3928,3 +3928,5 @@
 0x8114991e func WebReq_Queue hand late93
 0x81147a3e func WebReq_Send hand late93
 0x811478e0 func WebReq_ctor hand late93
+0x8101ad36 func Joint_GetSoundName hand late94
+0x812fdbb4 func Poppet_PlaceJointPrompt hand late94

@@ -467,6 +467,7 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - Editor dialogs: every pop-up question goes through Messaging_OpenDialog with a type number and text keys; the full list is ghidra/dialogs.tsv. Editor ones: leave create mode (save / discard / cancel), thermometer notices (limit exceeded, approaching, emitters failing, sequencer), too many stickers / decorations, too complicated, delete community objects, save / reset painting.
 - New connectors: the Poppet builds a joint thing with two end things 52.5 units above and below the cursor (length 105), strength 0.125 or 1.0 by joint type and animation time 120; joint types 7..10 attach both ends to the world at the cursor (Poppet_BuildJointThing 0x81343f30).
 - Dialog answers: Messaging_RunDialogAction 0x81070a6c runs a built-in action per dialog type (1..0x59), then the callback the opener gave. Delete community objects / photos and leave create mode are built-in cases; the save and painting questions (types above 0x59) are answered only through the opener's callback.
+- Joint types (PJoint type field): 1 elastic, 2 spring, 3 chain, 4 piston, 5 string, 6 rod (by elimination), 7 bolt, 8 sprung bolt, 9 motor bolt / wobble bolt, 10 unknown bolt kind. Connectors 1..6 are built with two end things; bolts 7..10 sit at the cursor.
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
