@@ -341,7 +341,7 @@ Reflect_Thing 0x81664b50 tests one bit per part in the 64-bit mask at Thing +0x1
 So a tool asks what a thing is by testing mask bits: has PShape (0x12) = editable material, has PJoint (1) = connector, has PSwitch (0x19) = logic source.
 
 ## 9z. Mode 5 body writer (read, dump decomp_bodyw.c)
-Resource_WriteBody 0x816ca078(stream, resource) is a switch on the resource type byte at +0x3c, one direct call per type, for types 1..55 (table: ghidra/rtype_body.txt). This is a second per-type table next to the thunk row of 9u, and it also covers the types above 30 that 9u could not reach. Type 31 returns 0x69, an unknown type returns 0x6d, types 46, 54 and 55 are written inline. The functions differ from the 9u row for the same type (mesh: 0x8167c8e8 here, 0x8167f730 there), so mode 5 is its own format, not a wrapper around the reflect functions.
+Resource_WriteBody 0x816ca078(stream, resource) is a switch on the resource type byte at +0x3c, one direct call per type, for types 1..55 (table: ghidra/rtype_body.txt). This is a second per-type table next to the thunk row of 9u, and it also covers the types above 30 that 9u could not reach. Type 31 returns 0x69, an unknown type returns 0x6d, types 46, 54 and 55 are written inline. The functions differ from the 9u row for the same type (mesh: 0x8167c8e8 here, 0x8167f730 there; level: 0x816d5a58 here, Reflect_Level 0x816d6180 there) and, by their call lists, do not call the 9u functions directly. Whether mode 5 is a different file format is not known until one body is read.
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
