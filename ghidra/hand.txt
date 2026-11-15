@@ -3903,3 +3903,6 @@
 0x817086f0 func Gooey_GetCarouselWidget hand late86
 0x817089e0 func Gooey_GetSliderWidget hand late86
 0x8149390a func GooeyCarousel_GetValue hand late87
+0x812a1fb6 func Gooey_SetLastItemTextOffset hand late88
+0x81288f1e func Gooey_SetLastItemTextOffsetByHandle hand late88
+0x8129545a func Gooey_Init hand late88
