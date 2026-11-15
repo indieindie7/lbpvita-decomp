@@ -169,7 +169,7 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
   - cls_8185cef4 0x8185cef4 slots 61 own 20
   - cls_8185cff0 0x8185cff0 slots 61 own 13
   - cls_8185d0ec 0x8185d0ec slots 61 own 14
-  - cls_8185d1e8 0x8185d1e8 slots 61 own 15
+  - GooeyCarousel 0x8185d1e8 slots 61 own 15
   - cls_8185d2e4 0x8185d2e4 slots 63 own 17
     - cls_8185c0f4 0x8185c0f4 slots 63 own 5
 - cls_81859504 0x81859504 slots 15 own 15
@@ -217,27 +217,27 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
 - cls_8185eeb0 0x8185eeb0 slots 44 own 44
   - cls_8185d6e4 0x8185d6e4 slots 44 own 33
   - cls_8185d948 0x8185d948 slots 44 own 5
-  - cls_8185edf8 0x8185edf8 slots 44 own 9
+  - FMOD_EmulatedChannelDSPHead 0x8185edf8 slots 44 own 9
   - cls_8185ef68 0x8185ef68 slots 44 own 2
     - cls_8185ed40 0x8185ed40 slots 44 own 19
     - cls_8185f020 0x8185f020 slots 44 own 31
 - cls_81858e14 0x81858e14 slots 8 own 8
-  - cls_81858e40 0x81858e40 slots 8 own 6
-  - cls_81858e74 0x81858e74 slots 8 own 5
-  - cls_81858ee8 0x81858ee8 slots 8 own 5
-  - cls_8185904c 0x8185904c slots 8 own 6
-  - cls_81859080 0x81859080 slots 8 own 4
-- cls_8185d7b8 0x8185d7b8 slots 26 own 26
-  - cls_8185f0d8 0x8185f0d8 slots 26 own 3
-  - cls_8185f148 0x8185f148 slots 26 own 3
-  - cls_8185f1b8 0x8185f1b8 slots 26 own 3
-  - cls_8185f228 0x8185f228 slots 26 own 3
+  - TextEntryTask 0x81858e40 slots 8 own 6
+  - SentPoppetMessageTask 0x81858e74 slots 8 own 5
+  - CheckDLCWithHostTask 0x81858ee8 slots 8 own 5
+  - PickObjectTask 0x8185904c slots 8 own 6
+  - StartMarqueeTask 0x81859080 slots 8 own 4
+- FMOD_plugin_d7b8 0x8185d7b8 slots 26 own 26
+  - FMOD_dsp_codec_f0d8 0x8185f0d8 slots 26 own 3
+  - FMOD_dsp_codec_f148 0x8185f148 slots 26 own 3
+  - FMOD_dsp_codec_f1b8 0x8185f1b8 slots 26 own 3
+  - FMOD_dsp_codec_f228 0x8185f228 slots 26 own 3
   - cls_8185f304 0x8185f304 slots 26 own 2
 - cls_8185d828 0x8185d828 slots 10 own 10
   - cls_8185d888 0x8185d888 slots 10 own 6
     - cls_8185d858 0x8185d858 slots 10 own 6
     - cls_8185d918 0x8185d918 slots 10 own 7
-  - cls_8185d8b8 0x8185d8b8 slots 10 own 8
+  - FMOD_file_net 0x8185d8b8 slots 10 own 8
   - cls_8185d8e8 0x8185d8e8 slots 10 own 6
 - cls_8183c1a4 0x8183c1a4 slots 11 own 11
   - cls_8183d2e4 0x8183d2e4 slots 11 own 3
@@ -251,9 +251,9 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
   - cls_8185b814 0x8185b814 slots 11 own 4
 - cls_81859b94 0x81859b94 slots 12 own 12
   - cls_81859b10 0x81859b10 slots 12 own 2
-    - cls_81859b48 0x81859b48 slots 12 own 5
-  - cls_8185d528 0x8185d528 slots 12 own 5
-  - cls_8185d574 0x8185d574 slots 12 own 9
+    - QuickLoadProfileTask 0x81859b48 slots 12 own 5
+  - DeleteSaveDataTask 0x8185d528 slots 12 own 5
+  - QuickSaveProfileTask 0x8185d574 slots 12 own 9
 - cls_81859c70 0x81859c70 slots 6 own 6
   - cls_81859bfc 0x81859bfc slots 6 own 4
   - cls_81859c24 0x81859c24 slots 6 own 4
@@ -268,10 +268,10 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
   - cls_8183beec 0x8183beec slots 4 own 2
     - cls_8183be84 0x8183be84 slots 4 own 2
   - cls_818590ac 0x818590ac slots 4 own 2
-- cls_8185a14c 0x8185a14c slots 25 own 25
-  - cls_8185f298 0x8185f298 slots 25 own 6
+- FMOD_plugin_a14c 0x8185a14c slots 25 own 25
+  - FMOD_dsp_hardware 0x8185f298 slots 25 own 6
   - cls_8185f374 0x8185f374 slots 25 own 2
-  - cls_8185f3e0 0x8185f3e0 slots 25 own 6
+  - FMOD_dspi 0x8185f3e0 slots 25 own 6
 - cls_8183abf0 0x8183abf0 slots 8 own 8
   - cls_8183abb4 0x8183abb4 slots 8 own 3
   - cls_8183ac40 0x8183ac40 slots 8 own 3
@@ -282,8 +282,8 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
   - cls_8183ae78 0x8183ae78 slots 3 own 1
     - cls_8183ae8c 0x8183ae8c slots 3 own 1
 - cls_8183afb8 0x8183afb8 slots 13 own 13
-  - cls_8183affc 0x8183affc slots 13 own 11
-  - cls_8183b074 0x8183b074 slots 13 own 10
+  - Fart 0x8183affc slots 13 own 11
+  - FartManyRO 0x8183b074 slots 13 own 10
 - cls_8183b864 0x8183b864 slots 22 own 22
   - cls_8183b8c4 0x8183b8c4 slots 22 own 9
   - cls_8183b924 0x8183b924 slots 82 own 78
@@ -299,31 +299,31 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
 - cls_81856ed0 0x81856ed0 slots 3 own 3
   - cls_81856ee4 0x81856ee4 slots 3 own 1
   - cls_81856ef8 0x81856ef8 slots 3 own 1
-- cls_81858eb0 0x81858eb0 slots 8 own 8
-  - cls_81858f24 0x81858f24 slots 8 own 3
-  - cls_8185900c 0x8185900c slots 8 own 3
-- cls_81858f54 0x81858f54 slots 8 own 8
-  - cls_81858f90 0x81858f90 slots 8 own 5
-  - cls_81858fcc 0x81858fcc slots 8 own 4
+- RequestPreloadTask 0x81858eb0 slots 8 own 8
+  - CreateTask 0x81858f24 slots 8 own 3
+  - ChangePlayerColourTask 0x8185900c slots 8 own 3
+- LoadInventoryItemsTask 0x81858f54 slots 8 own 8
+  - ResetAndLoadCostumeTask 0x81858f90 slots 8 own 5
+  - RandomiseCostumeTask 0x81858fcc slots 8 own 4
 - CPlanets 0x8185b528 slots 23 own 23
   - CPodComputerPlanets 0x8183bd68 slots 23 own 12
   - cls_8183d648 0x8183d648 slots 23 own 7
 - cls_8185b738 0x8185b738 slots 25 own 25
   - cls_8183c254 0x8183c254 slots 25 own 11
   - cls_8183c65c 0x8183c65c slots 26 own 16
-- cls_8185dba4 0x8185dba4 slots 56 own 56
-  - cls_8185d5fc 0x8185d5fc slots 56 own 6
-  - cls_8185dabc 0x8185dabc slots 56 own 7
+- FMOD_soundi_dba4 0x8185dba4 slots 56 own 56
+  - FMOD_sample_ngp 0x8185d5fc slots 56 own 6
+  - FMOD_sample_software 0x8185dabc slots 56 own 7
 - cls_8183aea0 0x8183aea0 slots 3 own 3
   - cls_8183aeb4 0x8183aeb4 slots 3 own 1
 - cls_8183aef0 0x8183aef0 slots 3 own 3
   - cls_8183af04 0x8183af04 slots 3 own 1
-- cls_81857ad0 0x81857ad0 slots 48 own 48
-  - cls_81858ab8 0x81858ab8 slots 48 own 10
+- SelectionTool 0x81857ad0 slots 48 own 48
+  - EmitterPlaceTool 0x81858ab8 slots 48 own 10
 - cls_818582c0 0x818582c0 slots 7 own 7
   - cls_81858df0 0x81858df0 slots 7 own 4
-- cls_8185a508 0x8185a508 slots 5 own 5
-  - cls_8185aaac 0x8185aaac slots 5 own 2
+- FMOD_simplemempool_a508 0x8185a508 slots 5 own 5
+  - FMOD_simplemempool_aaac 0x8185aaac slots 5 own 2
 - cls_8185a75c 0x8185a75c slots 23 own 23
   - cls_8185a7d8 0x8185a7d8 slots 23 own 8
 - cls_8185adcc 0x8185adcc slots 5 own 5
@@ -339,7 +339,7 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
 - cls_8185d4e4 0x8185d4e4 slots 4 own 4
   - cls_818570e4 0x818570e4 slots 4 own 2
 - cls_8185df48 0x8185df48 slots 9 own 9
-  - cls_8185e294 0x8185e294 slots 11 own 6
+  - FMOD_compositionentities_e294 0x8185e294 slots 11 own 6
 - cls_8185f6a0 0x8185f6a0 slots 26 own 26
   - cls_8185f71c 0x8185f71c slots 26 own 2
 - cls_8185f9e0 0x8185f9e0 slots 6 own 6
