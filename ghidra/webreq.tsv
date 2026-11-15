@@ -1,0 +1,18 @@
+type	case	strings
+0x1	81147bea	/favourite/slot/ /unfavourite/slot/
+0x2	81147c3e	/favourite/user/ /unfavourite/user/
+0x3	81147c94	/lolcatftw/add/ /lolcatftw/remove/
+0x4	81147cfc	/postComment/ /postUserComment/
+0x5	81147e88	/deleteComment/ /deleteUserComment/ ?commentId=%u
+0x6	81147f32	
+0x7	811480ba	/deleteReview/
+0x8	81148136	/uploadPhoto
+0x9	8114810e	/deletePhoto/
+0xa	81148556	/upload/
+0xb	811485ac	/play/ ?lbp2=true
+0xc	8114862c	?rating=%d
+0xd	81148682	/privacySettings
+0xe	81148720	/rateReview/ ?rating=%d
+0xf	81148798	/rateComment/ /rateUserComment/ ?commentId=%d&rating=%d
+0x10	8114883e	/updateUser
+0x11	81147cdc	/lolcatftw/clear
