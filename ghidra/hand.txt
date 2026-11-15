@@ -3620,3 +3620,7 @@
 0x811244f4 func PodComputer_GetCriticalDecisionResult hand late72
 0x816b03e8 func InventoryItem_WriteBinary hand late74
 0x816acf90 func LevelRecord3_WriteBinary hand late74
+0x816afc3c func ResourceDescriptor_WriteBinary hand late75
+0x816ace00 func Bytes4_WriteSwapped hand late75
+0x81605f00 func Stream_WriteThingRef hand late75
+0x81475d6c func FileCacheTask_New hand late75
