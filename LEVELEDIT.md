@@ -340,6 +340,9 @@ Reflect_Thing 0x81664b50 tests one bit per part in the 64-bit mask at Thing +0x1
 - Bits above 0x26 exist at run time and are not saved: bit 0x28 (tested in 0x8113d2f8) and bit 0x32 (tested in 0x81328ef0). Their pointers sit in the thing itself at +0x38 + 4 * k, with k taken from 2-bit fields of the word at +0x18 (bits 2..3 for 0x28, bits 22..23 for 0x32). Which parts these are is not known.
 So a tool asks what a thing is by testing mask bits: has PShape (0x12) = editable material, has PJoint (1) = connector, has PSwitch (0x19) = logic source.
 
+## 9z. Mode 5 body writer (read, dump decomp_bodyw.c)
+Resource_WriteBody 0x816ca078(stream, resource) is a switch on the resource type byte at +0x3c, one direct call per type, for types 1..55 (table: ghidra/rtype_body.txt). This is a second per-type table next to the thunk row of 9u, and it also covers the types above 30 that 9u could not reach. Type 31 returns 0x69, an unknown type returns 0x6d, types 46, 54 and 55 are written inline. The functions differ from the 9u row for the same type (mesh: 0x8167c8e8 here, 0x8167f730 there), so mode 5 is its own format, not a wrapper around the reflect functions.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
