@@ -2806,3 +2806,12 @@
 0x810a8cf2 func Decorations_Add hand late10
 0x8119b6c6 func Resource_Load hand late10
 0x8119b89e func Resource_Save hand late10
+0x810f0c58 func Stickers_Append hand late11
+0x810a8740 func Decorations_Attach hand late11
+0x810e8322 func Shape_MinGap hand late11
+0x813459a2 func Joint_AttachEnd hand late11
+0x810c4d58 func PJoint_SetEndA hand late11
+0x810c4db8 func PJoint_SetEndB hand late11
+0x81212b94 func Resource_Deserialise hand late11
+0x81212288 func Resource_ReadBinary hand late11
+0x81213470 func Resource_Serialise hand late11

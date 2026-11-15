@@ -198,6 +198,13 @@ A thing keeps its parts as a bitmask at +0x10 / +0x14 (up to 0x27 part kinds) wi
 - 0x8119b89e Resource_Save: only for state 4..5; state 5 while 0x81213470 serialises, then back to 4. Both return 0x72 when refused.
 - Joint placement 0x8134465c (not named): works on end A (+0x18) and end B (+0x24), joint type 1..6 at +0xc, compares an angle at +0x7c of each end with 90 and 180 and moves the ends with 0x810dfbb0. Purpose of the angle test not determined.
 
+## 9r. Sticker list, decoration record, glue gap, joint ends, resource reader (read)
+- 0x810f0c58 Stickers_Append(part, sticker, slot, outChanged): the stickers part has one list at +0xc and per-slot lists at +0x18 + slot * 0xc (slot -1 = the main list); records are 0x58 bytes. A normal sticker (byte +0x43 clear) first removes every record with +0x43 set; then the oldest records are dropped (0x810f066e) while the list is at its cap (cap from 0x810f08e4), and the new one is appended. So stickers per surface are capped and the oldest goes first.
+- 0x810a8740 Decorations_Attach: decoration records are 0x78 bytes in the list at part +0xc (count +0x10): 4x4 matrix at +0, render instance at +0x40, plan id u16 at +0x6c. Moving a decoration that already sits on another thing copies its record, removes it there (0x810a7b44) and re-adds it here; a new one gets a 0x80-byte render instance (0x810dbf82). Scale is halved when the target has part 6.
+- 0x810e8322 Shape_MinGap(shapeA, shapeB, outA, outB): for every convex piece of A (+0x114, count +0x118) against every piece of B, 0x810e5b10 gives two distances and the minimum of each is kept. This is the gap that Glue_TryPair compares with 0.5.
+- 0x813459a2 Joint_AttachEnd(angle, joint thing, target thing, end): needs the joint part (kind 1) and a target with a shape; end 0 goes through 0x810c4d58 (set end A, +0x18), end 1 through 0x810c4db8 (set end B, +0x24). The joint keeps a per-end angle offset at +0x54 / +0x58 and a local anchor at +0x34.. / +0x44..; re-attaching an end zeroes its anchor.
+- 0x81212b94 Resource_Deserialise: sniffs the header (0x81211efe); binary goes to 0x81212288, text to 0x816067d8, then calls the resource vtable slot 0 (post-load). 0x81212288 switches on the resource type byte (+0x3c, 1..0x29 and up) to pick the reflection function from a table at 0x816079b4 (8 bytes per type) and runs the generic reader 0x81240d52. Unknown type returns 0x6d. 0x81213470 is the writer twin (not read).
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
@@ -217,4 +224,8 @@ A thing keeps its parts as a bitmask at +0x10 / +0x14 (up to 0x27 part kinds) wi
 Full list: ghidra/work/poppet_strs.txt.
 
 ## 11. Not read yet
-- The polygon boolean (0x8140c306), the glue test maths (0x810e8322, 0x81418114), scale / rotate maths (0x8130e890), stickers, decorations, UV, the real level save (lbp_SaveLevelFart 0x8105764e, script native RequestSaveLevel 0x811ed4b0; not dumped).
+- Joint placement 0x8134465c (angle test against 90 / 180 not understood) and the rest of decomp_joint.c.
+- Thing 0x8122ab62 (walks parents by kind byte +0x7e), 0x8122c012.
+- The writer 0x81213470, the generic reflection reader 0x81240d52, the per-type reflection table 0x816079b4.
+- Piece-pair distance 0x810e5b10, sticker removal 0x810f066e, script native RequestSaveLevel 0x811ed4b0.
+- Class / vtable recovery and library identification (FMOD, libpng); libult and steroid suprx modules.
