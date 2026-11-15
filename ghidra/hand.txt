@@ -3263,3 +3263,5 @@
 0x81319d6a func AttachJointTool_ctor hand late51 vtable 0x81857fb4
 0x812fd3fc func PlaceJointTool_ctor hand late51 vtable 0x818570fc
 0x81305e74 func PlaceObjectTool_ctor hand late51 vtable 0x81857a08
+0x81164180 func BigProfile_FindOrCreateSlot hand late52
+0x81188704 func Profile_FindOrAddSlotRecord hand late52
