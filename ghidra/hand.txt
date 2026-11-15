@@ -2956,3 +2956,7 @@
 0x810589fc func SaveJobMap_GetOrCreate hand late31
 0x81058c8e func SaveJobMap_Update hand late31
 0x8105885a func SaveJob_Ctor hand late31
+0x8122ab62 func Thing_UpdateBoardHidden hand late32
+0x8122ab00 func Thing_SetBoardHidden hand late32
+0x8118128c func Game_RequestSaveLevel hand late32
+0x811813e8 func Game_CloneLevelBySave hand late32

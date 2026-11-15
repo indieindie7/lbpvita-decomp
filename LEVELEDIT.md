@@ -208,7 +208,7 @@ A thing keeps its parts as a bitmask at +0x10 / +0x14 (up to 0x27 part kinds) wi
 ## 9s. Joint end depths, thing slots, writers, sticker removal (read)
 - 0x8134465c Joint_FitEndDepths(joint, hit, changedCount): the 90 / 180 numbers are depths, not angles. For the shape at each end it reads the depth value d at +0x7c and the centre c = (+0xf0 + +0x100) * 0.5. Both d under 180: both end offsets are 0. A wholly in front of B (cA - dA >= cB + dB): offset A = 90 - dA, offset B = dB - 90. A wholly behind B: the signs swap. Equal depths that overlap: both 90 - d. Different depths that overlap: the shape with the smaller d sets the offset and its point is carried into the space of the other shape (0x8172b3bc). An offset is forced to 0 for a shape with d under 180. Results go to joint +0x3c (end A) and +0x4c (end B); the count of changed ends is returned through the third argument. So a joint end on a deep shape is pulled to 90 from the face that looks at the other shape.
 - 0x8122c012 Thing_SetRefSlot(thing, value, index): pointer vector at thing +0x60; grows it to the index, stores, trims empty slots from the end, frees the vector when it is empty, then marks the thing dirty in the world (+0xc) and in the dirty byte table (world +0x2a8, index = u16 at part +0x28).
-- 0x8122ab62 (not named): recomputes the state byte +0x7f of a thing from its kind byte +0x7e (3, 6, 7, 0x24, 0x40, 0x43, 0x95) and the same byte of its parent (+0x50) chain; kind 0x40 inherits from the parent. Meaning of the byte still open.
+- 0x8122ab62 Thing_UpdateBoardHidden: recomputes the byte +0x7f of a thing from its object type +0x7e and its parent (+0x50) chain; see 9zb.
 - 0x81213470 Resource_Serialise(res, out, opts): frees the old buffer; opts[0] is the mode (3 = pick by resource type with 0x8119f97e). Mode 1 = binary writer 0x81212ce4. Mode 5 = 0x81607188 Resource_WriteMode5, a stream writer (vtable 0x8183fd04) that emits marker words 0xe2030000 and 0x84003144 before the body 0x816ca078.
 - 0x81240d52 Resource_ReadWithHeader: optional 4 byte magic, then a header parsed by 0x8123f9e0; when the hash in the header equals res +0x44 the body is skipped (already current), else the dependency range is loaded (0x8124028c) and the body read (0x81240b72).
 - 0x810f066e Stickers_RemoveRange(part, first, count, list, otherList, markOnly, onlyFlagged): list -1 = the main sticker list at part +0xc, else the list at part + list * 0xc + 0x18; records are 0x58 bytes. Each removed record frees its 0x70 byte slot in the table at part +0xe4 (index u16 at +0x3c) and every higher index in both lists moves down by one. markOnly sets byte +0x44 on the records in place of erasing. Then the render caches of the world are marked dirty.
@@ -218,7 +218,7 @@ A thing keeps its parts as a bitmask at +0x10 / +0x14 (up to 0x27 part kinds) wi
 ## 9t. Save request path (read)
 - native_RequestSaveLevel 0x811ed4b0 -> Game_RequestSaveLevel 0x8107b0b2: takes the game object (DAT_818e56ec), reads the current slot id (0x81179814) and calls 0x811810d6 Game_SendSaveLevelMsg(game, slot, 1).
 - Game_SendSaveLevelMsg only acts on slot type 2. It first walks 0x21 budget records (0x14 bytes each, at +0x8c0 of the local player record; used +4, limit +8, flags +0xc): if one is over its limit it shows the notice 0x812fae18 and returns without saving. Otherwise it builds network message 0x37 through the session object DAT_819077ac (0x812c2896 / 0x812c27f8) with the slot id as payload. So the save itself is done by the handler of message 0x37, on every peer, not by the caller.
-- native_DoPreSaveLevelCheck 0x811ed4b8 -> Game_DoPreSaveLevelCheck 0x8107b0de -> 0x81183706 Game_PreSaveCheck(game, flag): when the world byte +0x60 is 0 it scans the thing list of the world (+0x14 array, +0x18 count); a thing with kind byte +0x7e of 7 or 0x84 opens a three-string dialog (0x8107075e, dialog 0x62 or 0x63, text keys 0x7832f029 / 0x9d9c76e9 / 0x56eda7e1) and returns 0 = do not save.
+- native_DoPreSaveLevelCheck 0x811ed4b8 -> Game_DoPreSaveLevelCheck 0x8107b0de -> 0x81183706 Game_PreSaveCheck(game, flag): when the world byte +0x60 is 0 it scans the thing list of the world (+0x14 array, +0x18 count); a thing with object type +0x7e of 7 (OBJECT_MOVINATOR) or 0x84 (OBJECT_POWERUP_MOVE) opens a three-string dialog (0x8107075e, dialog 0x62 or 0x63, text keys 0x7832f029 / 0x9d9c76e9 / 0x56eda7e1) and returns 0 = do not save.
 - 0x8118128c (next to it, read in part) fills a type 9 resource descriptor from the level resource (+0x84 of the game), the same type the undo snapshots use.
 - Message 0x37 is E_MESSAGE_TYPE_SAVE_LEVEL in the message type enum. The save job is stepped by 0x810587da SaveJob_Step (job state +0x28, 1 = running): pending work at +0x3c goes to 0x810585ec, a slot index at +0x38 other than -1 goes to 0x81058472; otherwise it scans the per-peer status array (+0x1c, count +0x20): any 0 = wait (0x81058148), any 1 = 0x810580b0, all higher = lbp_SaveLevelFart 0x8105764e (section 9o). State 2 or 3 returns 1 = finished. Callers 0x810589fc and 0x81058c8e (not read).
 
@@ -349,6 +349,18 @@ The save jobs live in a std::map keyed by a 64-bit id (two u32, compared high wo
 - 0x810589fc SaveJobMap_GetOrCreate(out ref, map, key, arg): equal_range on the key. Found: returns a new reference to the existing job, so one slot never has two save jobs. Not found: operator new(0xe0), SaveJob constructor, insert, one SaveJob_Step (0x810587da) at once, return the reference. Callers 0x8105a062 and 0x8105a1ce (not read).
 - 0x81058c8e SaveJobMap_Update(mgr): once per frame from 0x81050226. Steps every job; a job that reports finished is erased from the map (0x81577858). Finished with state (+0x28) 3 = success: mgr +0x10 += the two sizes at job +8 -> +0x40 -> +0xd4 and +0xd8 (bytes written, guess). State 2 = failure: mgr +0x14 = 1. Ends with 0x81057592 on DAT_818d2328.
 
+## 9zb. Thing object type and the board-hidden byte (read, dumps decomp_thing.c, decomp_sreq2.c)
+- Thing +0x7e is the object type: one byte indexing the OBJECT_ name table 0x818266e8 (157 names in enums.txt: 0 OBJECT_UNKNOWN, 1 OBJECT_TAG, 2 OBJECT_WORLD, 3 OBJECT_MICROCHIP, 6 OBJECT_CONTROLINATOR, 7 OBJECT_MOVINATOR, 0x24 OBJECT_CAMERA_MOVIE, 0x40 OBJECT_SWITCH_CIRCUIT_BOARD, 0x43 OBJECT_LETHALISER, 0x84 OBJECT_POWERUP_MOVE, 0x95 OBJECT_CURSOR). Every "kind byte +0x7e" in the sections above is this enum.
+- Thing +0x7f = hidden on a closed circuit board (meaning inferred: the change is applied through a fade, 0x810fd988, target 1.0 when the byte clears and 0 when it sets). 0x8122ab62 Thing_UpdateBoardHidden(thing, a, b) computes it:
+  - a thing with no +0x5c gets 0;
+  - OBJECT_MICROCHIP / OBJECT_CURSOR: 1 when the list at +0x60 has an entry [4] whose +0xc is 0 (board closed);
+  - OBJECT_SWITCH_CIRCUIT_BOARD: inherits the byte of a parent of type microchip, controlinator, movinator or cursor;
+  - a child of a circuit board also inherits, and gets 1 when its grid cell (0x810b6e6a, cell size 1 / 52.5 of the board value from 0x810bbd94) falls outside the board;
+  - OBJECT_CAMERA_MOVIE that stays visible is registered at world +0x5b4 (0x8141b0b2).
+  On a change it calls the setter 0x8122ab00 Thing_SetBoardHidden, then repeats for the thing in its microchip part (+0xc) and every child of that (+0x48 first, +0x4c next).
+- 0x8118128c Game_RequestSaveLevel(game, flag) (guess): with game +0x80 set, or the slot id at game +0x19c / +0x1a0 equal to DAT_818d2430 / DAT_818d2434, it builds a type 9 resource descriptor from the level at game +0x84 (hash at +0x20, else guid at +0xc) and posts it (0x8105c914, queue DAT_819077c0); otherwise it sends the slot id at +0x1ac / +0x1b0 to 0x812df5c0.
+- 0x811813e8 Game_CloneLevelBySave (guess): in create mode (game +0x3a9, level byte +0x3d of 4 or 5, flag 0x40 at +0x3f of the second level from 0x8114c27e) it makes a new level resource (0x590 bytes, 0x81186cba), saves the current level into a buffer (Level_SaveResource) and loads that buffer into the new one (Level_LoadResource). The copy is passed to 0x811913c2. A level is duplicated by serialising it, the same way undo snapshots work (9k).
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
@@ -368,7 +380,7 @@ The save jobs live in a std::map keyed by a 64-bit id (two u32, compared high wo
 Full list: ghidra/work/poppet_strs.txt.
 
 ## 11. Not read yet
-- Thing state byte +0x7f (0x8122ab62) and the rest of decomp_joint.c.
-- Body writer 0x816ca078, reflect functions of types above 30, handler of network message 0x37 (the real save), thing kinds 7 / 0x84.
+- The rest of decomp_joint.c.
+- Body writer 0x816ca078, reflect functions of types above 30, handler of network message 0x37 (the real save). Why OBJECT_MOVINATOR / OBJECT_POWERUP_MOVE block a save (9zb).
 - Class trees are in CLASSES.md (Poppet tool states sit under PickState 0x8185b62c; each constructor passes its SUBMODE number). Unnamed classes there still need reading.
 - Libraries: FMOD, zlib and libpng are named; vorbis, Bink and xml are not. libult and steroid suprx modules.
