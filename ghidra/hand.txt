@@ -3271,3 +3271,41 @@
 0x81340ba0 func Thing_CopyStickersToWorldTwin hand late54
 0x8130fdb2 func SelectionTool_ApplyStickerSettings hand late54
 0x81343f30 func Poppet_BuildJointThing hand late54
+0x810847ea func Text_TrialAndChatRestrictedDialogs hand late55 by text keys (keyuse.tsv), body not read
+0x8108e6cc func Text_CostumeCategoryNames hand late55 by text keys (keyuse.tsv), body not read
+0x811059a4 func Text_TweakOptionNames hand late55 by text keys (keyuse.tsv), body not read
+0x8112452e func Text_LevelLaunchMessages hand late55 by text keys (keyuse.tsv), body not read
+0x81127fe2 func Text_PlanetStatusStrings hand late55 by text keys (keyuse.tsv), body not read
+0x81137df2 func Text_PopitMyItemsCategories hand late55 by text keys (keyuse.tsv), body not read
+0x8114b700 func Text_CostumeToolMessages hand late55 by text keys (keyuse.tsv), body not read
+0x811867ae func Text_LevelLaunchMaxPlayers hand late55 by text keys (keyuse.tsv), body not read
+0x81205bb8 func Text_SearchFriendsCounts hand late55 by text keys (keyuse.tsv), body not read
+0x8120604e func Text_SearchNearCounts hand late55 by text keys (keyuse.tsv), body not read
+0x8120b268 func Text_InventoryCategoryNames hand late55 by text keys (keyuse.tsv), body not read
+0x812186d0 func Text_WinConditionString hand late55 by text keys (keyuse.tsv), body not read
+0x8121b7d8 func Text_StorePrompts hand late55 by text keys (keyuse.tsv), body not read
+0x8121d768 func Text_ActivityEventString hand late55 by text keys (keyuse.tsv), body not read
+0x812222ba func Text_ActivityEventStringNoActor hand late55 by text keys (keyuse.tsv), body not read
+0x812bb41c func Text_PlayerStatusString hand late55 by text keys (keyuse.tsv), body not read
+0x812bc91e func Text_ScoreHeartNotifications hand late55 by text keys (keyuse.tsv), body not read
+0x812cf358 func Text_JoinFailedMessages hand late55 by text keys (keyuse.tsv), body not read
+0x812d7a3a func Text_ConnectOnlineFailedMessages hand late55 by text keys (keyuse.tsv), body not read
+0x812d89fe func Text_PresenceString hand late55 by text keys (keyuse.tsv), body not read
+0x812e0ecc func Text_StartupScreens hand late55 by text keys (keyuse.tsv), body not read
+0x812eee4a func Net_SessionStateMessages hand late55 by text keys (keyuse.tsv), body not read
+0x8131fe82 func Text_PaintToolButtonPrompts hand late55 by text keys (keyuse.tsv), body not read
+0x81331038 func Text_TextEntryTitles hand late55 by text keys (keyuse.tsv), body not read
+0x8135e914 func Text_InventoryPageNames hand late55 by text keys (keyuse.tsv), body not read
+0x813643d0 func Text_PopitPageEmptyMessages hand late55 by text keys (keyuse.tsv), body not read
+0x81383330 func Text_SaveDataErrors hand late55 by text keys (keyuse.tsv), body not read
+0x8140cd98 func Text_CalibrationScreen hand late55 by text keys (keyuse.tsv), body not read
+0x814308f0 func Text_DefaultItemNames hand late55 by text keys (keyuse.tsv), body not read
+0x81431eec func Text_CommunityCategoryNames hand late55 by text keys (keyuse.tsv), body not read
+0x81432658 func Text_ProfileImportMessages hand late55 by text keys (keyuse.tsv), body not read
+0x8144b0f0 func Text_LevelInfoStoreState hand late55 by text keys (keyuse.tsv), body not read
+0x8145634c func Text_CostumePageNames hand late55 by text keys (keyuse.tsv), body not read
+0x814604b4 func Text_LevelInfoActions hand late55 by text keys (keyuse.tsv), body not read
+0x8146704e func Text_ButtonPromptNames hand late55 by text keys (keyuse.tsv), body not read
+0x8147021a func Text_CircuitNames hand late55 by text keys (keyuse.tsv), body not read
+0x8148806c func Text_MusicTweakPrompts hand late55 by text keys (keyuse.tsv), body not read
+0x81495ea0 func Text_CarouselOptionNames hand late55 by text keys (keyuse.tsv), body not read
