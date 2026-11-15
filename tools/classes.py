@@ -1,4 +1,4 @@
-# classes.py <vtables.tsv> <funcinfo.tsv> <classes.tsv> <CLASSES.md> : class tree from vtables.
+# classes.py <vtables.tsv> <funcinfo.tsv> <classes.tsv> <CLASSES.md> [classnames.txt] : class tree from vtables.
 # base of V = a vtable P with slots(P) <= slots(V), sharing slot functions at the same index, whose
 # ctor/dtor is called by (or inlined in) a ctor/dtor of V. Names come from hand names *_ctor / *_dtor, else cls_<va>.
 import sys, re, collections
@@ -47,7 +47,13 @@ for v in list(base):
     while p in base:
         if p in seen: del base[v]; break
         seen.add(p); p = base[p]
+extra = {}
+if len(sys.argv) > 5:
+    for l in open(sys.argv[5], encoding='utf8'):
+        t = l.split()
+        if len(t) >= 2 and not l.startswith('#'): extra[int(t[0], 16)] = t[1]
 def cname(v):
+    if v in extra: return extra[v]
     for f in vt[v][1]:
         m = re.match(r'(.+)_(ctor|dtor)$', f)
         if m and len(reff[f]) == 1: return m.group(1)
@@ -63,7 +69,7 @@ roots = [v for v in sorted(vt) if v not in base]
 def size(v): return 1 + sum(size(k) for k in kids[v])
 with open(sys.argv[4], 'w', encoding='utf8', newline='\n') as f:
     f.write('# LBP Vita class trees (from vtables, no RTTI in the binary)\n\n')
-    f.write('Made by tools/vtscan.py + tools/classes.py. %d vtables, %d with a base found, %d roots. Names: hand names of the constructor, else cls_<vtable address>. Each line: name, vtable, slot count, own or overridden slots.\n\n' % (len(vt), len(base), len(roots)))
+    f.write('Made by tools/vtscan.py + tools/classes.py. %d vtables, %d with a base found, %d roots. Names: hand names of the constructor, then ghidra/classnames.txt (from strings in the own virtual functions of the class, not constructor-verified), else cls_<vtable address>. Each line: name, vtable, slot count, own or overridden slots.\n\n' % (len(vt), len(base), len(roots)))
     def emit(v, d):
         s = vt[v][0]
         own = sum(1 for i, x in enumerate(s) if v not in base or i >= len(vt[base[v]][0]) or vt[base[v]][0][i] != x)

@@ -1,6 +1,6 @@
 # LBP Vita class trees (from vtables, no RTTI in the binary)
 
-Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 451 roots. Names: hand names of the constructor, else cls_<vtable address>. Each line: name, vtable, slot count, own or overridden slots.
+Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 451 roots. Names: hand names of the constructor, then ghidra/classnames.txt (from strings in the own virtual functions of the class, not constructor-verified), else cls_<vtable address>. Each line: name, vtable, slot count, own or overridden slots.
 
 - cls_81859cdc 0x81859cdc slots 6 own 6
   - cls_8183b248 0x8183b248 slots 9 own 6
@@ -78,19 +78,19 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
   - cls_8185b2a4 0x8185b2a4 slots 9 own 6
   - cls_8185b2f8 0x8185b2f8 slots 9 own 6
   - cls_8185b44c 0x8185b44c slots 9 own 6
-- cls_8183bf1c 0x8183bf1c slots 34 own 34
+- PoppetState 0x8183bf1c slots 34 own 34
   - cls_8183c044 0x8183c044 slots 48 own 31
-  - cls_8185762c 0x8185762c slots 39 own 19
-    - cls_818576d0 0x818576d0 slots 39 own 14
-      - cls_81857774 0x81857774 slots 39 own 6
-    - cls_818584b8 0x818584b8 slots 40 own 14
-      - cls_81858560 0x81858560 slots 40 own 10
+  - DecorationStateBase 0x8185762c slots 39 own 19
+    - DecorationHoverState 0x818576d0 slots 39 own 14
+      - PlaceDecorationState 0x81857774 slots 39 own 6
+    - StickerHoverState 0x818584b8 slots 40 own 14
+      - PlaceStickerState 0x81858560 slots 40 own 10
   - cls_81857978 0x81857978 slots 34 own 6
   - cls_81858080 0x81858080 slots 34 own 5
   - cls_81858110 0x81858110 slots 34 own 8
-    - cls_818571c4 0x818571c4 slots 34 own 11
+    - PhotoState 0x818571c4 slots 34 own 11
     - cls_818582e4 0x818582e4 slots 35 own 14
-  - cls_818581a0 0x818581a0 slots 34 own 12
+  - PopitMenuState 0x818581a0 slots 34 own 12
   - cls_81858230 0x81858230 slots 34 own 13
   - cls_81858878 0x81858878 slots 34 own 4
   - cls_81858908 0x81858908 slots 34 own 17
@@ -98,13 +98,13 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
     - cls_818586b8 0x818586b8 slots 34 own 4
     - cls_818587e8 0x818587e8 slots 34 own 5
   - cls_81858998 0x81858998 slots 34 own 17
-  - cls_81858a28 0x81858a28 slots 34 own 7
-    - cls_81857254 0x81857254 slots 37 own 10
-    - cls_818572f0 0x818572f0 slots 37 own 9
-    - cls_8185738c 0x8185738c slots 34 own 6
-  - cls_8185b58c 0x8185b58c slots 38 own 23
-    - cls_81857f14 0x81857f14 slots 38 own 17
-    - cls_81858748 0x81858748 slots 38 own 9
+  - CameraToolBase 0x81858a28 slots 34 own 7
+    - CameraAngleState 0x81857254 slots 37 own 10
+    - CameraZoneState 0x818572f0 slots 37 own 9
+    - CameraTargetState 0x8185738c slots 34 own 6
+  - PickStateBase 0x8185b58c slots 38 own 23
+    - CameraCountdownState 0x81857f14 slots 38 own 17
+    - SwitchWireState 0x81858748 slots 38 own 9
     - PickState 0x8185b62c slots 42 own 9
       - PickDecorationsState 0x81857818 slots 42 own 10
       - PickDecorations2State 0x818578c8 slots 42 own 11

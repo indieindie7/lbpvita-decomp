@@ -1,0 +1,16 @@
+# vtable name : names taken from strings used by the class's own virtual functions (not constructor-verified)
+8183bf1c PoppetState
+8185b58c PickStateBase
+818571c4 PhotoState
+81857254 CameraAngleState
+818572f0 CameraZoneState
+8185738c CameraTargetState
+81858a28 CameraToolBase
+8185762c DecorationStateBase
+818576d0 DecorationHoverState
+81857774 PlaceDecorationState
+818584b8 StickerHoverState
+81858560 PlaceStickerState
+81857f14 CameraCountdownState
+818581a0 PopitMenuState
+81858748 SwitchWireState
