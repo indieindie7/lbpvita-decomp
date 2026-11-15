@@ -1,0 +1,44 @@
+body	name	widget_getter(size)	calls_in_order	gooey_stores
+81299cf0	Gooey_DoButton	lbp_Proc_81707f98(0x80)	lbp_Proc_81707f98 lbp_use_wcslen_81013170 lbp_Proc_8147adae lbp_Wrap_81297560 lbp_Proc_81298570	
+81299e1e	Gooey_DoButtonTextEntry		lbp_Proc_81707f98 lbp_use_wcslen_81013170 lbp_Proc_8147adae lbp_Wrap_81297560 lbp_Proc_81298570 lbp_Proc_8122781c lbp_use_memmove_8154c2a8 lbp_LeafM_8122788e	
+81299ffe	Gooey_DoInlineFontNamed		lbp_LeafM_8128bcca lbp_Proc_81707f98 lbp_Proc_8147adae lbp_Wrap_81297560 lbp_Proc_81298570	
+8129a0d6	Gooey_DoSectionHeaderNamed		lbp_Proc_81707f98 lbp_use_wcslen_81013170 lbp_Proc_8147adae lbp_LeafM_8147e1fc lbp_Wrap_81297560 lbp_Proc_81298570	
+8129a202	lbp_Wrap_8129a202		lbp_Proc_812b3338	
+8129a21e	Gooey_DoPlayerInline		lbp_Proc_8111afee lbp_Proc_8125f5a2 Gooey_DoButton lbp_Proc_812b33f4 lbp_Proc_812b3338 lbp_Wrap_812b3378 lbp_Wrap_8125fb6a	
+8129a2ca	Gooey_DoPlayerLabel		lbp_Proc_8111afee lbp_Proc_8125f5a2 Gooey_DoButton lbp_Proc_812b33f4 lbp_Proc_812b3338 lbp_Wrap_812b3378 lbp_Wrap_8125fb6a	
+8129a39a	Gooey_DoPlayerBigIcon		lbp_Proc_8111afee lbp_Proc_8125f5a2 Gooey_DoButton lbp_Wrap_8125fb6a lbp_Proc_8114c27e lbp_LeafM_81544968 lbp_LeafM_81012f0c lbp_Wrap_8111bad6 lbp_Proc_8111674c lbp_LeafM_8111795a lbp_Proc_81116060 lbp_LeafM_81195236 lbp_LeafM_815448ac lbp_Proc_8148c85e lbp_LeafM_8154498c lbp_Proc_8125f6ac lbp_Proc_812b33f4 lbp_Proc_812b3338 lbp_Wrap_812b3378	
+8129a686	Text_LevelinfoUntitled_8129a686		lbp_Proc_8114cb44 lbp_Run_811892ce Text_LookupKey Text_LevelinfoUntitled_81218246 lbp_Run_8125f80e Gooey_DoButton lbp_Wrap_812b33a4 lbp_Proc_812b3338 lbp_Wrap_812b3378 lbp_Wrap_8125fb6a	
+8129a774	Gooey_DoLevelBadge		lbp_Proc_8114cb44 lbp_Run_811892ce lbp_Run_8125f80e lbp_Proc_81707f98 lbp_Wrap_8125fb6a lbp_Proc_8147adae lbp_Wrap_81297560 lbp_Proc_81298570	
+8129a830	Text_LevelinfoUntitled_8129a830		lbp_Proc_8114cb44 lbp_Run_811892ce Text_LookupKey Text_LevelinfoUntitled_81218246 lbp_Run_8125f80e Gooey_DoButton lbp_Wrap_812b33a4 lbp_Proc_812b3338 lbp_Wrap_812b3378 lbp_Wrap_8125fb6a	
+8129a914	lbp_Proc_8129a914	lbp_Proc_81708110(0x70)	lbp_Proc_81708110 lbp_Proc_81491eb6 lbp_Proc_81298570	
+8129a98c	Gooey_DoText		lbp_Proc_81708110 lbp_Proc_81491eb6 lbp_Proc_81298570	
+8129aa66	Gooey_DoTitle	lbp_Proc_81708288(0x58)	lbp_Proc_81708288 lbp_Proc_814930b8 lbp_Proc_81298570	
+8129ab08	Gooey_DoTextEntryNamed		Gooey_DoButton lbp_LeafM_8128bcca lbp_Proc_81707384 lbp_LeafL_81294404 lbp_Wrap_81297560 lbp_Proc_81708288 lbp_Proc_814930b8 lbp_Proc_81298570 lbp_Proc_8122781c lbp_use_wcslen_81013170 lbp_use_memmove_8154c2a8 lbp_LeafM_8122788e	
+8129ada4	Gooey_DoTextEntry		lbp_LeafM_8128bcca	
+8129ae30	Gooey_DoSquishyTextLine	lbp_Proc_81708400(0x58)	lbp_Proc_81708400 lbp_Proc_814906f6 lbp_Proc_81298570	
+8129ae7e	Gooey_DoScrollingTextChangerNamed	lbp_Proc_81708578(0x28)	lbp_Proc_81708578 lbp_Wrap_814901ee lbp_Proc_81298570	
+8129af44	Gooey_DoScrollingTextChangerNamed2	lbp_Proc_81708578(0x28)	lbp_Proc_81708578 lbp_Wrap_814901ee lbp_Proc_8149016a lbp_Proc_81298570	
+8129b018	Gooey_DoCarousel	lbp_Proc_817086f0(0x70)	lbp_Proc_817086f0 GooeyCarousel_Setup lbp_Proc_81298570 lbp_Proc_8149390a	+0x250 undefined4 = uVar3
+8129b0c8	Gooey_DoNumber	lbp_Proc_81708868(0x68)	lbp_Proc_81708868 lbp_Wrap_8148aa96 lbp_Proc_81298570	
+8129b12e	Gooey_DoSlider	lbp_Proc_817089e0(0x68)	lbp_Proc_817089e0 lbp_Proc_812a7fd2 lbp_Proc_812a8a4e lbp_Proc_81298570 lbp_use_floorf_812a8346	+0x25c float = fVar3 | +0x260 undefined4 = *(undefined4 *)(iVar1 + 0x164)
+8129b228	Gooey_DoSliderFixed		lbp_Proc_817089e0 lbp_Proc_812a8064 lbp_Proc_812a8a4e lbp_use_wcslen_81013170 lbp_use_memmove_8154c2a8 lbp_Proc_81298570 lbp_use_floorf_812a8346	+0x25c float = fVar4 | +0x260 undefined4 = *(undefined4 *)(iVar1 + 0x164)
+8129b33e	Gooey_DoVerticalSliderFixed		lbp_Proc_817089e0 lbp_Proc_812a8064 lbp_Proc_812a8a4e lbp_use_wcslen_81013170 lbp_use_memmove_8154c2a8 lbp_Proc_81298570 lbp_use_floorf_812a8346	+0x25c float = fVar4 | +0x260 undefined4 = *(undefined4 *)(iVar1 + 0x164)
+8129b454	Gooey_AddLastItemSliderTouchRange		lbp_Wrap_812a8ae6	
+8129b496	Gooey_DoLessMoreMeasurer	lbp_Proc_817089e0(0x78)	lbp_Proc_817089e0 lbp_Proc_812a8064 lbp_Proc_812a8a4e lbp_Proc_81298570 lbp_use_floorf_812a8346	+0x25c float = fVar3 | +0x260 undefined4 = *(undefined4 *)(iVar1 + 0x164)
+8129b59e	Gooey_DoSliderRadius	lbp_Proc_817089e0(0x98)	lbp_Proc_817089e0 lbp_Proc_812a8064 lbp_Wrap_812a8a98 lbp_Proc_81298570	+0x25c float = fVar4 | +0x260 undefined4 = *(undefined4 *)(iVar1 + 0x164)
+8129b6dc	Gooey_DoSliderScore	lbp_Proc_817089e0(0x98)	lbp_Proc_817089e0 lbp_Proc_812a8064 lbp_Wrap_812a8a98 lbp_Proc_81298570	+0x25c float = fVar4 | +0x260 undefined4 = *(undefined4 *)(iVar1 + 0x164)
+8129b808	Gooey_DoRating	lbp_Proc_81708b58(0x24)	lbp_Proc_81708b58 lbp_use_floorf_8148f420 lbp_Proc_81298570	+0x264 undefined4 = *(undefined4 *)(iVar1 + 0x118)
+8129b888	Gooey_DoMusic	lbp_Proc_81708cd0(0x20)	lbp_Proc_81708cd0 lbp_Proc_81489f4e lbp_Proc_81298570 lbp_Run_8148a380	
+8129b8fa	Gooey_DoThumbButton	lbp_Proc_81708e48(0x30)	lbp_Proc_81708e48 lbp_Proc_81492afa lbp_Wrap_81297560 lbp_Proc_81298570	
+8129b966	Gooey_DoCheckBox	lbp_Proc_81708fc0(0x58)	lbp_Proc_81708fc0 lbp_LeafL_8148023c lbp_Proc_81298570 lbp_Proc_814802a8	+0x23a undefined1 = *(undefined1 *)(iVar1 + 0x144)
+8129b9c8	Gooey_DoPlayerIcon	lbp_Proc_81709138(0x40)	lbp_Proc_81709138 lbp_Run_8148e4bc lbp_Proc_81298570	
+8129ba3e	Gooey_DoPlayerName	lbp_Proc_81709138(0x40)	lbp_Proc_81709138 lbp_Run_8148e4bc lbp_Proc_81298570	
+8129bab4	Gooey_DoPlayStat	lbp_Proc_817092b0(0x38)	lbp_Proc_817092b0 lbp_Proc_8148da4a lbp_Proc_81298570	
+8129bb52	Gooey_DoProgressBar	lbp_Proc_81709428(0x68)	lbp_Proc_81709428 lbp_Proc_8148ec7a lbp_Proc_81298570	
+8129bbb4	Gooey_DoPin	lbp_Proc_817095a0(0x38)	lbp_Proc_817095a0 lbp_Wrap_8148c7d0 lbp_Wrap_81297560 lbp_Proc_81298570	
+8129bc3c	Gooey_DoHighscore	lbp_Proc_8170971c(0x28)	lbp_Proc_8170971c lbp_Proc_81298570	
+8129bcc8	Gooey_DoRank	lbp_Proc_8170971c(0x28)	lbp_Proc_8170971c lbp_Proc_81298570	
+8129bd54	lbp_Proc_8129bd54	lbp_Proc_81709894(0x28)	lbp_Proc_81709894 lbp_Wrap_81480d38 lbp_Proc_81298570 lbp_Proc_81480d9e	
+8129bde0	Gooey_DoImageMarquee	lbp_Proc_81709a0c(0x5c)	lbp_Proc_81709a0c lbp_Wrap_814828d0 lbp_Proc_81298570	+0x2b8 undefined8 = *(undefined8 *)(iVar2 + 0x118) | +0x2c0 undefined8 = uVar5
+8129be74	Gooey_DoPhotograph	lbp_Proc_81709b84(0x28)	lbp_Proc_81709b84 lbp_Wrap_8148b7c8 lbp_Proc_81298570	
+8129bed0	Gooey_DoThumb		lbp_LeafS_8119ce50 lbp_Proc_815567c0 lbp_LeafM_8154498c lbp_LeafM_815448ac lbp_LeafM_81012fee lbp_Wrap_8111bad6 lbp_LeafM_81544968 lbp_LeafM_8128bcca lbp_Proc_81708e48 lbp_Proc_81492afa lbp_Wrap_81297560 lbp_Proc_81298570	

@@ -463,6 +463,7 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - Saved fields of each part: ghidra/partfields.tsv lists, per part type, the writer body and the field names it saves (PSwitch, PShape, PEmitter, PWorld ..).
 - Where a tweak lands in memory: ghidra/partoffsets.tsv gives, for the parts saved field by field (PSwitch, PWorld, PJoint, PCameraTweak, PSpriteLight, PCreature, PSwitchInput, PEnemy), the offset of each named field in the part object (e.g. PSwitch Radius +0x54, Inverted +0xa4).
 - Save order of every part: ghidra/partorder.tsv lists, per part type, what its writer saves in order (offset + size, or the sub-writer), also for parts with no field names (PEmitter, PShape, PBody ..).
+- Reading a tweak back: each widget leaves its result on the menu object and a Get native reads it: checkbox +0x23a (GetCheckBoxValue), carousel +0x250 (GetCarouselValue), slider +0x254 / +0x258 (GetSliderValue / Fixed) and display +0x25c / +0x260, rating +0x264. The script then writes the value to the part. Table of all widget bodies: ghidra/gooeybodies.tsv.
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |

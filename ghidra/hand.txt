@@ -3889,3 +3889,16 @@
 0x816d044c func ItemPackTable_Write hand late85
 0x81178528 func Game_AddEntriesToAllPlayers hand late85
 0x8118e1e0 func PlayerList_AddEntry hand late85
+0x81298570 func Gooey_RunWidget hand late86
+0x8128754a func Gooey_GetCarouselValueByHandle hand late86
+0x812875b2 func Gooey_GetCarouselToolTipByHandle hand late86
+0x8128762a func Gooey_GetSliderValueByHandle hand late86
+0x81287694 func Gooey_GetSliderValueFixedByHandle hand late86
+0x812876fc func Gooey_GetSliderDisplayValueByHandle hand late86
+0x81287766 func Gooey_GetSliderDisplayValueFixedByHandle hand late86
+0x812877ce func Gooey_SetDropShadowAlphaByHandle hand late86
+0x81707f98 func Gooey_GetButtonWidget hand late86
+0x81708fc0 func Gooey_GetCheckBoxWidget hand late86
+0x81708868 func Gooey_GetNumberWidget hand late86
+0x817086f0 func Gooey_GetCarouselWidget hand late86
+0x817089e0 func Gooey_GetSliderWidget hand late86
