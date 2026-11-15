@@ -414,6 +414,12 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - So game messages such as SAVE_LEVEL are not handled in the network callback: they are queued per peer and read later. The reader of that queue (and with it the code that starts the quick save job of 9zg) was not located.
 - Other switches on values that include 0x37 are not message code: Poppet_HandleMessage 0x812fcb1a (0..0x57, default for 0x36..0x38) and the poppet functions 0x81134e52 / 0x8113735a / 0x8113208e (tool mode 0x37 / 0x38).
 
+## 9zi. Who starts the quick save job (read, dump decomp_svh.c; tool tools/mvscan.py)
+- The job vtable object is at 0x8185d56c (vptr = +8 = 0x8185d574). tools/mvscan.py finds the code that loads an address with movw + movt: the constructor is 0x814a28f6 QuickSaveJob_ctor (job size 0x120).
+- Its only caller is 0x81383816 SaveQueue_AddQuickSave(queue, profile ref, user, mask, mask2, flag, doProfile, doBigProfile). It makes a job only when the dirty byte +0x3f of the resource has no bit 4 and has a bit of mask (or of mask2 when bit 8 is set). It can make two jobs: one for the profile and one for the object returned by 0x81188d38 (the big profile, which holds the moon levels). Jobs are queued with 0x8138378e.
+- Callers of SaveQueue_AddQuickSave: 0x81383c46 and 0x81383cd4 (not read).
+- So a save is not started by a direct call from the editor: code marks the profile dirty (byte +0x3f; SaveJob_RunSerialise sets bit 2 there when it has to retry) and the save queue turns dirty profiles into quick save jobs. What sets the dirty bit after message SAVE_LEVEL: not located.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|

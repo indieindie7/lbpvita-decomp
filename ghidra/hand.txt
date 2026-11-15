@@ -3210,3 +3210,6 @@
 0x812acb38 func Net_OnMessage hand late42
 0x812af118 func Net_RouteGameMessage hand late42
 0x812af092 func Net_BufferGameMessage hand late42
+0x814a28f6 func QuickSaveJob_ctor hand late43
+0x81383816 func SaveQueue_AddQuickSave hand late43
+0x8138378e func SaveQueue_AddJob hand late43
