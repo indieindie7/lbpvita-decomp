@@ -3998,3 +3998,5 @@
 0x8165e158 func RemovedPartBit17_SerializeRevisioned hand late99
 0x8165e27c func RemovedPartBit18_SerializeRevisioned hand late99
 0x8165e4c4 func RemovedPartBit31_SerializeRevisioned hand late99
+0x810467da func Camera_RequestZoomMode hand late100
+0x810701f8 func Messaging_CloseOtherDialogsOfTypes1to3 hand late100
