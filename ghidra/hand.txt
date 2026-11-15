@@ -3906,3 +3906,4 @@
 0x812a1fb6 func Gooey_SetLastItemTextOffset hand late88
 0x81288f1e func Gooey_SetLastItemTextOffsetByHandle hand late88
 0x8129545a func Gooey_Init hand late88
+0x81343cc6 func Poppet_BuildJointEndThing hand late90
