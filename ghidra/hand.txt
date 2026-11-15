@@ -2960,3 +2960,9 @@
 0x8122ab00 func Thing_SetBoardHidden hand late32
 0x8118128c func Game_RequestSaveLevel hand late32
 0x811813e8 func Game_CloneLevelBySave hand late32
+0x816d5d60 func Level_ReadBinary hand late33
+0x8162e5c0 func Stream_WriteFloats hand late33
+0x816d6774 func Plan_WriteBinary hand late34
+0x816d6834 func Plan_ReadBinary hand late34
+0x816aaf8c func InventoryDetails_WriteBinary hand late34
+0x816ab76c func InventoryDetails_ReadBinary hand late34

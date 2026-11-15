@@ -344,6 +344,8 @@ So a tool asks what a thing is by testing mask bits: has PShape (0x12) = editabl
 Resource_WriteBody 0x816ca078(stream, resource) is a switch on the resource type byte at +0x3c, one direct call per type, for types 1..55 (table: ghidra/rtype_body.txt). This is a second per-type table next to the thunk row of 9u, and it also covers the types above 30 that 9u could not reach. Type 31 returns 0x69, an unknown type returns 0x6d, types 46, 54 and 55 are written inline. The functions differ from the 9u row for the same type (mesh: 0x8167c8e8 here, 0x8167f730 there; level: 0x816d5a58 here, Reflect_Level 0x816d6180 there) and, by their call lists, do not call the 9u functions directly.
 Level body read: Level_WriteBinary 0x816d5a58(stream, level) writes the fields of 9v as raw big-endian data, with no field names. Order: the block at +0x58 (0x81605f00), PlayerRecord +0x64 (0x816d59c0, 0x20 entries), a second 0x20-entry array at +0x4e4 (0x816d5928), the u32 at +0x564, then TutorialInventory as count +0x44 and 0x70-byte items from +0x40 (item writer 0x816b03e8), TutorialInventoryData as count +0x50 and 0x10-byte items from +0x4c (0x816acf90), then the byte TutorialInventoryActive +0x588; the tail was not read. The stream cursor is +0x68, its limit +0x6c, and 0x8100b54c grows it. So mode 5 is the compact binary form of the same data the reflect functions describe by name: every u32 is byte-swapped to big-endian, arrays are a count followed by the items.
 
+Tail of Level_WriteBinary (read): byte TutorialInventoryActive +0x588, byte CopiedFromSomeoneElse +0x58b, u32 MusicGuid +0x574, u32 MusicSettingsGuid +0x578, then the 3 floats MusicStemVolumes +0x57c (0x8162e5c0, count 3). So the whole binary level body is the 9v field list in order, nothing extra. The reader with the same order is 0x816d5d60 Level_ReadBinary (it also reads the 0x10-byte items with 0x816acff8 and resizes the array at +0x4c with 0x815c4be0).
+
 ## 9za. Save job map (read, dump decomp_sv2.c)
 The save jobs live in a std::map keyed by a 64-bit id (two u32, compared high word first); the value is a counted reference to a SaveJob (0xe0 bytes, vtable 0x8183b134, constructor 0x8105885a). Tree nodes: +0 left, +4 parent, +8 right, +0xc key, +0x14 job reference, +0x19 nil flag.
 - 0x810589fc SaveJobMap_GetOrCreate(out ref, map, key, arg): equal_range on the key. Found: returns a new reference to the existing job, so one slot never has two save jobs. Not found: operator new(0xe0), SaveJob constructor, insert, one SaveJob_Step (0x810587da) at once, return the reference. Callers 0x8105a062 and 0x8105a1ce (not read).
@@ -360,6 +362,15 @@ The save jobs live in a std::map keyed by a 64-bit id (two u32, compared high wo
   On a change it calls the setter 0x8122ab00 Thing_SetBoardHidden, then repeats for the thing in its microchip part (+0xc) and every child of that (+0x48 first, +0x4c next).
 - 0x8118128c Game_RequestSaveLevel(game, flag) (guess): with game +0x80 set, or the slot id at game +0x19c / +0x1a0 equal to DAT_818d2430 / DAT_818d2434, it builds a type 9 resource descriptor from the level at game +0x84 (hash at +0x20, else guid at +0xc) and posts it (0x8105c914, queue DAT_819077c0); otherwise it sends the slot id at +0x1ac / +0x1b0 to 0x812df5c0.
 - 0x811813e8 Game_CloneLevelBySave (guess): in create mode (game +0x3a9, level byte +0x3d of 4 or 5, flag 0x40 at +0x3f of the second level from 0x8114c27e) it makes a new level resource (0x590 bytes, 0x81186cba), saves the current level into a buffer (Level_SaveResource) and loads that buffer into the new one (Level_LoadResource). The copy is passed to 0x811913c2. A level is duplicated by serialising it, the same way undo snapshots work (9k).
+
+## 9zc. Plan binary body (read, dump decomp_plan5.c)
+A plan (RTYPE_PLAN, type 38: one saved object, sticker or costume piece) is written by 0x816d6774 Plan_WriteBinary(stream, plan), all big-endian:
+1. u32 plan +0x50 (revision of the thing data);
+2. u32 byte count (+0x60), then that many raw bytes from +0x5c: the serialised things of the object, kept as an opaque blob;
+3. the inventory details record at +0x68 (0x816aaf8c InventoryDetails_WriteBinary; body not read);
+4. u32 +0xb4 and u32 +0xb8 (not identified).
+The reader 0x816d6834 Plan_ReadBinary takes the same order. It adds each blob size to a running total in the stream (+0x40, 64-bit) and returns error 0x67 once the total reaches 50000000 bytes. After a read it stamps the plan as current: +0x50 = 0x3e2 (the revision this build writes), +0x54 = 0x44310084 (branch tag), +0x58 = the stream flag byte +0x2c.
+So placing an object from the Popit means deserialising the blob of its plan into the level, and capturing an object means serialising its things into a new blob (the commit paths in 9g / 9m call into this).
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
