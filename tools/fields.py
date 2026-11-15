@@ -52,7 +52,7 @@ for a, name, size in funcs:
                 if not m.startswith(("cmp", "tst", "str", "push", "b", "cb", "it")): const.pop(d, None); off.pop(d, None)
         except (ValueError, IndexError):
             pass
-    if rows:
+    if rows and any(r[1] != "(computed name)" for r in rows):  # all-computed = forwarding helper, not a struct
         nf += 1; nfl += len(rows)
         out.append("## %s 0x%08x\n" % (name, a))
         out += ["- +0x%x %s (type 0x%x)\n" % (o, s, t & 0xff) if t >= 0 else "- +0x%x %s\n" % (o, s) for o, s, t, _ in rows]

@@ -267,7 +267,7 @@ Reflect_Level 0x816d6180(visitor, level). Every field is registered by name, so 
 - TutorialInventoryActive +0x588 and CopiedFromSomeoneElse +0x58b (type 9 = bool).
 - MusicGuid +0x574 and MusicSettingsGuid +0x578 (type 0x57 = guid), MusicStemVolumes_0..2 +0x57c (type 8 = float, 3 entries).
 
-Field registration calls: 0x815ba3d4 Reflect_AddField(visitor, name, ptr, type code, element reflect function), 0x812414ea / 0x81241548 fill one 0x50-byte field record after 0x815ba36c grows the record array at visitor +0x14. A scan of every call to these three with its name string and offset gives the layout of all reflected structs: tools/fields.py, output FIELDS.md (416 functions, 2022 fields).
+Field registration calls: 0x815ba3d4 Reflect_AddField(visitor, name, ptr, type code, element reflect function), 0x812414ea / 0x81241548 fill one 0x50-byte field record after 0x815ba36c grows the record array at visitor +0x14. A scan of every call to these three with its name string and offset gives the layout of all reflected structs: tools/fields.py, output FIELDS.md (259 functions, 1857 fields).
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
