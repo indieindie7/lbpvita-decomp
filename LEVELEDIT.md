@@ -184,6 +184,9 @@ Undo is whole-level snapshots, not per-action records.
 lbp_SaveLevelFart 0x8105764e: serialises the level with 0x81212cdc (the twin of the loader 0x81212cd4), queues it as the job "SaveLevelFart", then copies the slot record field by field and updates the slot map. 0x812f9db0 is only the on-screen thermometer / saving notice.
 Both 0x81212cd4 and 0x81212cdc are 8-byte thunks into the resource system: load = 0x8119b6c6, save = 0x8119b89e. Undo snapshots and the level file use the same pair, so an undo step is a level load from memory.
 
+## 9p. Thing tree (read in part)
+0x8122aef6 Thing_SetParent(thing, newParent, flag): things form a tree. +0x50 parent, +0x48 first child, +0x4c next sibling, +0x5c group root, +0x64 body id of the root, +0x28 a physics link that is refreshed (0x810dfbe8) on reparent. The call unlinks the thing from the sibling chain of the old parent, pushes it at the head of the child list of the new one, sets the root pointer (0x8122a6ee) and walks the whole subtree to fix +0x5c. Glue, joints and stamps all end in this call. Rest of the range 0x8122a000..0x8122c400 (38 functions, decomp_thing.c) not read.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|

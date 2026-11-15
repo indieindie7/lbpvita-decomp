@@ -2798,3 +2798,4 @@
 0x814212fe func Decoration_AttachToThing hand read
 0x81212cd4 func Level_LoadResource_thunk hand read
 0x81212cdc func Level_SaveResource_thunk hand read
+0x8122aef6 func Thing_SetParent hand read in part
