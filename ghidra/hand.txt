@@ -3312,3 +3312,13 @@
 0x813958e2 func Thing_GetNameOrPortLabel hand late60
 0x81340dce func Poppet_ApplyCostumeItem hand late60
 0x81382a6c func SaveJob_ComputePackSize hand late61
+0x81042320 func FileCaches_AddReadOnly hand late62
+0x81042362 func FileCaches_OpenDataFarc hand late62
+0x8104243c func FileCaches_Init hand late62
+0x810424c8 func FileCaches_InitTempCache hand late62
+0x81042544 func FileCaches_InitAccelCache hand late62
+0x810425fa func FileCaches_OpenLittlefart hand late62
+0x810426b6 func FileCaches_LittlefartFlag hand late62
+0x810429e8 func FileCaches_GetSize hand late62
+0x81042a28 func FileCaches_Has hand late62
+0x81042a60 func FileCaches_Store hand late62
