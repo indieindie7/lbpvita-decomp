@@ -3249,3 +3249,6 @@
 0x81390e28 func EditData_RegisterMessageHandlers hand late46
 0x81330954 func Poppet_RegisterMessageHandlers hand late46
 0x81330b0e func Poppet_RegisterMessageHandlers2 hand late46
+0x812fc48c func Poppet_CreateFromResources hand late47
+0x812fd3f0 func Poppet_OnV4Default hand late47
+0x8135105e func Poppet_ForwardMessageToHook hand late47
