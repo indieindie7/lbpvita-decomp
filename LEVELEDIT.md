@@ -260,6 +260,15 @@ A thing keeps its parts as a bitmask at +0x10 / +0x14 (up to 0x27 part kinds) wi
 
 For level editing the ones that matter are LEVEL (the world and all things), JOINT, MATERIAL, BEVEL, POPPET_SETTINGS and EDITOR_SETTINGS. Full list: ghidra/rtype_reflect.txt.
 
+## 9v. Level resource fields (read)
+Reflect_Level 0x816d6180(visitor, level). Every field is registered by name, so the reflect functions give the file layout directly:
+- 0x81606074(visitor, level + 0x58): the world reference (the thing tree hangs off it); a non-zero result aborts.
+- PlayerRecord +0x64 (type 0x10, element reflect 0x816e3d90), TutorialInventory +0x40 (type 0x15, 0x816a7bbc), TutorialInventoryData +0x4c (type 0x15, 0x816e3ecc).
+- TutorialInventoryActive +0x588 and CopiedFromSomeoneElse +0x58b (type 9 = bool).
+- MusicGuid +0x574 and MusicSettingsGuid +0x578 (type 0x57 = guid), MusicStemVolumes_0..2 +0x57c (type 8 = float, 3 entries).
+
+Field registration calls: 0x815ba3d4 Reflect_AddField(visitor, name, ptr, type code, element reflect function), 0x812414ea / 0x81241548 fill one 0x50-byte field record after 0x815ba36c grows the record array at visitor +0x14. A scan of every call to these three with its name string and offset would give the layout of all resource types (tool not written yet).
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|

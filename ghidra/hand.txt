@@ -2932,3 +2932,7 @@
 0x816b6728 func Reflect_BigProfile hand late23
 0x816a3e74 func Reflect_SlotList hand late23
 0x812142c8 func Reflect_NoFields hand late23
+0x815ba3d4 func Reflect_AddField hand late24
+0x815ba36c func Reflect_GrowRecords hand late24
+0x812414ea func Reflect_FillRecord hand late24
+0x81241548 func Reflect_FillRecordEx hand late24
