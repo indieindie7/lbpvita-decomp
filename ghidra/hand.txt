@@ -3618,3 +3618,5 @@
 0x81124482 func PodComputer_DisplayCriticalDecision hand late72
 0x811244c0 func PodComputer_DestroyCriticalDecision hand late72
 0x811244f4 func PodComputer_GetCriticalDecisionResult hand late72
+0x816b03e8 func InventoryItem_WriteBinary hand late74
+0x816acf90 func LevelRecord3_WriteBinary hand late74
