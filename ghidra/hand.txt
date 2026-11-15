@@ -4191,3 +4191,5 @@
 0x8107b488 func Poppet_SendGridModeMessage hand late118
 0x8107b550 func Poppet_SendAngleSnapMessage hand late118
 0x8107b618 func Poppet_SendPreviewModeMessage hand late118
+0x811826b8 func Game_SetGridSizeForPlayer hand late119
+0x811826fe func Game_SetAngleSnapForPlayer hand late119
