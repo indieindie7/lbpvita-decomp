@@ -3885,3 +3885,7 @@
 0x81636c2c func Stream_WriteArray_81636c2c hand late83
 0x816573e8 func Stream_WriteArray_816573e8 hand late83
 0x81657380 func Stream_WriteArray_81657380 hand late83
+0x816d03a0 func ItemPackTable_WritePtr hand late85
+0x816d044c func ItemPackTable_Write hand late85
+0x81178528 func Game_AddEntriesToAllPlayers hand late85
+0x8118e1e0 func PlayerList_AddEntry hand late85
