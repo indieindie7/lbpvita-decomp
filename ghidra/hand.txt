@@ -4009,3 +4009,6 @@
 0x811d2914 func Script_CallOnMagicMouthClosed hand late104
 0x81070a02 func Thing_NotifyMagicMouthClosed hand late104
 0x811d2832 func Script_CallStopAudio hand late104
+0x810720ca func Messaging_SendGameEvent hand late107
+0x8143db80 func Messaging_NewGameEventForPlayer hand late107
+0x813807ac func System_IsEnterButtonCross hand late107
