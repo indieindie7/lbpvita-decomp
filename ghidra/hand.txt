@@ -2737,60 +2737,60 @@
 0x811fcd1e func native_GetHeadsetPluggedIn hand script native GetHeadsetPluggedIn__ flag=1
 0x811fcd2a func native_Escape hand script native Escape__Q6String flag=1
 0x812fcb1a func Poppet_HandleMessage hand switch on E_POPPET message, builds tool state
-0x8113c1f8 func PoppetState_Push hand
-0x8113c206 func PoppetState_PopIfTop hand
+0x8113c1f8 func PoppetState_Push hand read
+0x8113c206 func PoppetState_PopIfTop hand read
 0x81134022 func Poppet_QueueAction hand vector +0xc10, runs action vslot 4
 0x812fbdc4 func Poppet_QueueGenericAction hand type +0xc8 arg +0xd0
-0x8113036c func Poppet_UndoSnapshot hand
-0x81130f7a func Poppet_UndoDropSnapshot hand
+0x8113036c func Poppet_UndoSnapshot hand read
+0x81130f7a func Poppet_UndoDropSnapshot hand read
 0x81471f44 func PickState_ctor hand vtable 0x8185b62c
 0x81471fa0 func PickState_UpdateTouch hand tap = action 0x40, drag = marquee
 0x81317b86 func EditVertsPick_ctor hand flag = slice
-0x81314cbe func VertEdit_HoverSelectAdd hand
-0x813132f0 func VertEdit_InsertVertexOnEdge hand
+0x81314cbe func VertEdit_HoverSelectAdd hand read
+0x813132f0 func VertEdit_InsertVertexOnEdge hand read
 0x813140c2 func VertEdit_MoveNextPrev hand from strings
 0x81315fee func VertEdit_Delete hand from strings
 0x813133fc func Slice_EditPoints hand from strings
-0x81312b74 func Slice_Commit hand
+0x81312b74 func Slice_Commit hand read
 0x810e7efa func Shape_SetPolygon hand verts +0x88 loops +0x94
-0x8131868c func GlueState_Update hand
-0x813185d0 func GlueState_ctor hand
-0x81133380 func Poppet_CollectGluedGroup hand
-0x8113c75c func PoppetState_QueueGlue hand
-0x8132a2ec func FloodFill_Action hand
-0x8131833e func FloodFill_ApplyToThing hand
-0x813180b0 func FloodFillState_ctor hand
+0x8131868c func GlueState_Update hand read
+0x813185d0 func GlueState_ctor hand read
+0x81133380 func Poppet_CollectGluedGroup hand read
+0x8113c75c func PoppetState_QueueGlue hand read
+0x8132a2ec func FloodFill_Action hand read
+0x8131833e func FloodFill_ApplyToThing hand read
+0x813180b0 func FloodFillState_ctor hand read
 0x81052af6 func Pad_ButtonPressedPrompt hand pad, button, BP_ text
-0x81052bd0 func Pad_ButtonHeld hand
-0x8100cf40 func operator_new hand
+0x81052bd0 func Pad_ButtonHeld hand read
+0x8100cf40 func operator_new hand read
 0x8130d510 func Poppet_StepLayerOrThickness hand pitch 200 thin 20
 0x8133770e func Poppet_ApplyLayerMove hand snap to 200 clamp -510..110
-0x81337638 func HeldSet_MinBack hand
-0x813376a2 func HeldSet_MaxFront hand
-0x8132decc func Poppet_UnphysicsToggle hand
-0x81328388 func Poppet_SwitchWireUpdate hand
+0x81337638 func HeldSet_MinBack hand read
+0x813376a2 func HeldSet_MaxFront hand read
+0x8132decc func Poppet_UnphysicsToggle hand read
+0x81328388 func Poppet_SwitchWireUpdate hand read
 0x812f9db0 func Poppet_ThermoSaveNotice hand not the save
 0x813131f8 func VertexEdit_DeleteOne hand erase vertex, fix loop count
-0x8131aeda func Joint_CommitAttach hand
-0x81307ca2 func Stamp_CommitDrop hand
-0x8131a01e func Joint_EndAHeld hand
-0x81319f78 func Joint_EndBHeld hand
-0x8140c16e func Bool_AddPolygon hand
-0x8140ba38 func Bool_Sweep hand
-0x8140c306 func Bool_EmitLoops hand
-0x8140b93e func Bool_SplitCrossing hand
-0x81418114 func Glue_TryPair hand
-0x8123d0dc func Undo_PushSnapshot hand
-0x8123d7b8 func Undo_StepBack hand
-0x8123d8c8 func Undo_StepForward hand
-0x8123d502 func Undo_EnsureCurrent hand
-0x8123cf9e func Undo_Clear hand
-0x8123cffc func Undo_DropNewest hand
-0x8123d054 func Undo_IsAtSavedState hand
-0x8123da08 func Undo_CanUndo hand
-0x8130e890 func Held_UpdateScaleRotate hand
-0x8130ce88 func Held_ClampScale hand
-0x8130d0d6 func Held_QuantiseRotation hand
-0x813265da func Sticker_Commit hand
-0x81303a62 func Decoration_Commit hand
-0x8132d320 func UVTool_Update hand
+0x8131aeda func Joint_CommitAttach hand read
+0x81307ca2 func Stamp_CommitDrop hand read
+0x8131a01e func Joint_EndAHeld hand read
+0x81319f78 func Joint_EndBHeld hand read
+0x8140c16e func Bool_AddPolygon hand read
+0x8140ba38 func Bool_Sweep hand read
+0x8140c306 func Bool_EmitLoops hand read
+0x8140b93e func Bool_SplitCrossing hand read
+0x81418114 func Glue_TryPair hand read
+0x8123d0dc func Undo_PushSnapshot hand read
+0x8123d7b8 func Undo_StepBack hand read
+0x8123d8c8 func Undo_StepForward hand read
+0x8123d502 func Undo_EnsureCurrent hand read
+0x8123cf9e func Undo_Clear hand read
+0x8123cffc func Undo_DropNewest hand read
+0x8123d054 func Undo_IsAtSavedState hand read
+0x8123da08 func Undo_CanUndo hand read
+0x8130e890 func Held_UpdateScaleRotate hand read
+0x8130ce88 func Held_ClampScale hand read
+0x8130d0d6 func Held_QuantiseRotation hand read
+0x813265da func Sticker_Commit hand read
+0x81303a62 func Decoration_Commit hand read
+0x8132d320 func UVTool_Update hand read
