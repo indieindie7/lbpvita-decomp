@@ -1,13 +1,13 @@
 func	func_name	part	field	offset	type
-8160676c	lbp_MainColour_8160676c	-	MainColour	0x0	0x10
-8160676c	lbp_MainColour_8160676c	-	SubColour1	0x4	0x10
-8160676c	lbp_MainColour_8160676c	-	SubColour2	0x8	0x10
-8160676c	lbp_MainColour_8160676c	-	Emphasis	0xc	0x10
-81610630	lbp_Photo_81610630	-	Photo	0x8	0x19
-81610630	lbp_Photo_81610630	-	Level	0x24	0x10
-816116b8	lbp_PhotoMetaData_816116b8	-	Sticker	0x24	0x19
-816116b8	lbp_PhotoMetaData_816116b8	-	PhotoMetaData	0x40	0x10
-816116b8	lbp_PhotoMetaData_816116b8	-	Painting	0xb0	0x4d
+8160676c	lbp_MainColour_8160676c	PoppetState (sub)	MainColour	0x0	0x10
+8160676c	lbp_MainColour_8160676c	PoppetState (sub)	SubColour1	0x4	0x10
+8160676c	lbp_MainColour_8160676c	PoppetState (sub)	SubColour2	0x8	0x10
+8160676c	lbp_MainColour_8160676c	PoppetState (sub)	Emphasis	0xc	0x10
+81610630	lbp_Photo_81610630	PMetaData (sub)	Photo	0x8	0x19
+81610630	lbp_Photo_81610630	PMetaData (sub)	Level	0x24	0x10
+816116b8	lbp_PhotoMetaData_816116b8	Plan (sub)	Sticker	0x24	0x19
+816116b8	lbp_PhotoMetaData_816116b8	Plan (sub)	PhotoMetaData	0x40	0x10
+816116b8	lbp_PhotoMetaData_816116b8	Plan (sub)	Painting	0xb0	0x4d
 81613c2c	lbp_ColorCorrectionSrc_81613c2c	PStickers (sub)	Data.Frame	0x48	0x13
 81613c2c	lbp_ColorCorrectionSrc_81613c2c	PStickers (sub)	Data.AlphaMask	0x4c	0x13
 81613c2c	lbp_ColorCorrectionSrc_81613c2c	PStickers (sub)	Data.ColorCorrection	0x8	0xd
@@ -19,10 +19,10 @@ func	func_name	part	field	offset	type
 81617acc	ReflectText_PCostume	PCostume	MeshPartsHidden	0xcac	0x15
 81617acc	ReflectText_PCostume	PCostume	MeshPrimitives	0xcb8	0x10
 81619618	ReflectText_PCameraTweak	PCameraTweak	Nodes	0x24	0x15
-81619890	lbp_LocalSpaceRoll_81619890	-	TargetBox	0x0	0xc
-81619890	lbp_LocalSpaceRoll_81619890	-	PitchAngle	0x10	0xb
-81619890	lbp_LocalSpaceRoll_81619890	-	ZoomDistance	0x20	0x8
-81619890	lbp_LocalSpaceRoll_81619890	-	LocalSpaceRoll	0x24	0x9
+81619890	lbp_LocalSpaceRoll_81619890	PCameraTweak (sub)	TargetBox	0x0	0xc
+81619890	lbp_LocalSpaceRoll_81619890	PCameraTweak (sub)	PitchAngle	0x10	0xb
+81619890	lbp_LocalSpaceRoll_81619890	PCameraTweak (sub)	ZoomDistance	0x20	0x8
+81619890	lbp_LocalSpaceRoll_81619890	PCameraTweak (sub)	LocalSpaceRoll	0x24	0x9
 8161f05c	ReflectText_PSwitch	PSwitch	Outputs	0x34	0x15
 8161f05c	ReflectText_PSwitch	PSwitch	ReferenceThing	0x70	0x12
 8161f05c	ReflectText_PSwitch	PSwitch	Current.ManualActivation	0xc	0x10
@@ -46,24 +46,24 @@ func	func_name	part	field	offset	type
 816235f4	ReflectText_PSpriteLight	PSpriteLight	FalloffTexture	0x5c	0x13
 816235f4	ReflectText_PSpriteLight	PSpriteLight	LookAt	0x60	0x12
 81624b08	ReflectText_PJoint	PJoint	Settings	0x5c	0x13
-8162557c	lbp_CacheDirtyButNotRecomputed_8162557c	-	Contacts	0x0	0x15
-8162557c	lbp_CacheDirtyButNotRecomputed_8162557c	-	ContactsSorted	0x10	0x9
-8162557c	lbp_CacheDirtyButNotRecomputed_8162557c	-	CacheDirtyButNotRecomputed	0x11	0x9
-81625650	lbp_Analogue_81625650	-	Analogue	0x0	0x8
-81625650	lbp_Analogue_81625650	-	Ternary	0x4	0x5
-81625650	lbp_Analogue_81625650	-	Player	0x8	0x6
+8162557c	lbp_CacheDirtyButNotRecomputed_8162557c	PYellowHead (sub)	Contacts	0x0	0x15
+8162557c	lbp_CacheDirtyButNotRecomputed_8162557c	PYellowHead (sub)	ContactsSorted	0x10	0x9
+8162557c	lbp_CacheDirtyButNotRecomputed_8162557c	PYellowHead (sub)	CacheDirtyButNotRecomputed	0x11	0x9
+81625650	lbp_Analogue_81625650	PSwitch (sub)	Analogue	0x0	0x8
+81625650	lbp_Analogue_81625650	PSwitch (sub)	Ternary	0x4	0x5
+81625650	lbp_Analogue_81625650	PSwitch (sub)	Player	0x8	0x6
 8162572c	lbp_SlotNumber_8162572c	Game (sub)	SlotNumber	0x4	0x6
-816258b4	lbp_OnlineID_816258b4	-	OnlineID	0x0	0x10
+816258b4	lbp_OnlineID_816258b4	PMetaData (sub)	OnlineID	0x0	0x10
 81625abc	lbp_BDontWantGammaCorrection_81625abc	-	texture	0x0	0x13
-81625f00	lbp_MorphParamRemap_81625f00	-	CategoriesUsed	0x24	0x6
-81625f00	lbp_MorphParamRemap_81625f00	-	MeshPrimitives	0xac	0x10
-81625f00	lbp_MorphParamRemap_81625f00	-	OriginalPlan	0x8	0x3e
-81626230	lbp_Port_81626230	-	Thing	0x0	0x12
-81626380	lbp_CurrentActivation_81626380	-	Current.Activation	0x8	0x10
-81626380	lbp_CurrentActivation_81626380	-	TargetList	0x18	0x15
-81626380	lbp_CurrentActivation_81626380	-	UserDefinedName	0x2c	0x10
-81626b5c	lbp_DecorationAngle_81626b5c	-	RenderMesh	0x40	0x14
-81626b5c	lbp_DecorationAngle_81626b5c	-	PlanGUID	0x44	0x57
+81625f00	lbp_MorphParamRemap_81625f00	PCostume (sub)	CategoriesUsed	0x24	0x6
+81625f00	lbp_MorphParamRemap_81625f00	PCostume (sub)	MeshPrimitives	0xac	0x10
+81625f00	lbp_MorphParamRemap_81625f00	PCostume (sub)	OriginalPlan	0x8	0x3e
+81626230	lbp_Port_81626230	PSwitch (sub)	Thing	0x0	0x12
+81626380	lbp_CurrentActivation_81626380	PSwitch (sub)	Current.Activation	0x8	0x10
+81626380	lbp_CurrentActivation_81626380	PSwitch (sub)	TargetList	0x18	0x15
+81626380	lbp_CurrentActivation_81626380	PSwitch (sub)	UserDefinedName	0x2c	0x10
+81626b5c	lbp_DecorationAngle_81626b5c	PDecorations (sub)	RenderMesh	0x40	0x14
+81626b5c	lbp_DecorationAngle_81626b5c	PDecorations (sub)	PlanGUID	0x44	0x57
 81626dec	lbp_Shape_81626dec	-	Shape	0x0	0x14
 81626dec	lbp_Shape_81626dec	-	Flags	0x4	0x2
 81628eb4	lbp_EditorColourOffBrightness_81628eb4	PShape	Loops	0x94	0x15
@@ -97,51 +97,51 @@ func	func_name	part	field	offset	type
 81629d38	lbp_EditingPlayer_81629d38	PBody	AngVel	0x34	0x8
 81629d38	lbp_EditingPlayer_81629d38	PBody	Frozen	0xc	0x6
 81629d38	lbp_EditingPlayer_81629d38	PBody	EditingPlayer	0xdc	0x12
-8162aba8	lbp_LastUnitSphereFace_8162aba8	-	OrthoLength	0x0	0x8
-8162aba8	lbp_LastUnitSphereFace_8162aba8	-	Aspect	0x8	0x8
-8162aba8	lbp_LastUnitSphereFace_8162aba8	-	LODDistStart	0xc	0x8
-8162aba8	lbp_LastUnitSphereFace_8162aba8	-	LODDistRange	0x10	0x8
-8162aba8	lbp_LastUnitSphereFace_8162aba8	-	ZNear	0x14	0x8
-8162aba8	lbp_LastUnitSphereFace_8162aba8	-	ViewProjMatrix	0x20	0xd
-8162aba8	lbp_LastUnitSphereFace_8162aba8	-	ViewMatrix	0x60	0xd
-8162aba8	lbp_LastUnitSphereFace_8162aba8	-	CameraMatrix	0xa0	0xd
-8162aba8	lbp_LastUnitSphereFace_8162aba8	-	ProjMatrix	0xe0	0xd
-8162aba8	lbp_LastUnitSphereFace_8162aba8	-	InvViewProjMatrix	0x120	0xd
-8162aba8	lbp_LastUnitSphereFace_8162aba8	-	LastUnitSphereFace	0x160	0x2
-8162ae10	lbp_DoubleTap_8162ae10	-	DoubleTap	0x1	0x9
-8162b804	lbp_KeyboardConnected_8162b804	-	Buttons	0x0	0x6
-8162b804	lbp_KeyboardConnected_8162b804	-	MouseButtons	0x28	0x6
-8162b804	lbp_KeyboardConnected_8162b804	-	KeyModifierState	0x50	0x6
-8162b804	lbp_KeyboardConnected_8162b804	-	MouseWorldPos	0x8	0xc
-8162b804	lbp_KeyboardConnected_8162b804	-	MouseConnected	0x4	0x9
-8162b804	lbp_KeyboardConnected_8162b804	-	KeyboardConnected	0x5	0x9
-8162b804	lbp_KeyboardConnected_8162b804	-	MouseWheelDelta	0x2c	0x5
-8162c614	lbp_LastSignificantMoveTime_8162c614	-	castThingUID	0x0	0x6
-8162c614	lbp_LastSignificantMoveTime_8162c614	-	castT	0x4	0x8
-8162c614	lbp_LastSignificantMoveTime_8162c614	-	gameFrameLastCast	0x8	0x6
-8162c614	lbp_LastSignificantMoveTime_8162c614	-	timeDown	0xc	0x8
-8162c614	lbp_LastSignificantMoveTime_8162c614	-	startX	0x10	0x3
-8162c614	lbp_LastSignificantMoveTime_8162c614	-	startY	0x12	0x3
-8162c614	lbp_LastSignificantMoveTime_8162c614	-	touchRect	0x18	0x6
-8162c614	lbp_LastSignificantMoveTime_8162c614	-	flags	0x21	0x2
-8162c614	lbp_LastSignificantMoveTime_8162c614	-	state	0x24	0x6
-8162c614	lbp_LastSignificantMoveTime_8162c614	-	lastSignificantMoveTime	0x28	0x6
-8162f050	lbp_ControllingPauseMenu_8162f050	-	Alive	0x18	0x9
-8162f050	lbp_ControllingPauseMenu_8162f050	-	LeftStick	0x1c	0xb
-8162f050	lbp_ControllingPauseMenu_8162f050	-	RightStick	0x2c	0xb
-8162f050	lbp_ControllingPauseMenu_8162f050	-	SensorDir	0x108	0xc
-8162f050	lbp_ControllingPauseMenu_8162f050	-	SensorDirOld	0x118	0xc
-8162f050	lbp_ControllingPauseMenu_8162f050	-	PlayerNumber	0x210	0x6
-8162f050	lbp_ControllingPauseMenu_8162f050	-	ControllingPauseMenu	0x214	0x9
-8162f050	lbp_ControllingPauseMenu_8162f050	-	InputState	0x40	0x10
-8162f050	lbp_ControllingPauseMenu_8162f050	-	InputStateOld	0x98	0x10
-8162f050	lbp_ControllingPauseMenu_8162f050	-	MousePosDelta	0x200	0xb
-8162f050	lbp_ControllingPauseMenu_8162f050	-	MoveLastZ	0x1f8	0x8
-8162f050	lbp_ControllingPauseMenu_8162f050	-	UsingNavigator	0x19	0x9
-8162f050	lbp_ControllingPauseMenu_8162f050	-	TouchData	0x318	0x10
-8162f050	lbp_ControllingPauseMenu_8162f050	-	TouchLastNonDeterministicScreenPos	0x6b8	0xc
-8162f050	lbp_ControllingPauseMenu_8162f050	-	TouchEmulatingMove	0x6c8	0x9
-8162f050	lbp_ControllingPauseMenu_8162f050	-	TouchValid	0x6c9	0x9
+8162aba8	lbp_LastUnitSphereFace_8162aba8	PInstrument (sub)	OrthoLength	0x0	0x8
+8162aba8	lbp_LastUnitSphereFace_8162aba8	PInstrument (sub)	Aspect	0x8	0x8
+8162aba8	lbp_LastUnitSphereFace_8162aba8	PInstrument (sub)	LODDistStart	0xc	0x8
+8162aba8	lbp_LastUnitSphereFace_8162aba8	PInstrument (sub)	LODDistRange	0x10	0x8
+8162aba8	lbp_LastUnitSphereFace_8162aba8	PInstrument (sub)	ZNear	0x14	0x8
+8162aba8	lbp_LastUnitSphereFace_8162aba8	PInstrument (sub)	ViewProjMatrix	0x20	0xd
+8162aba8	lbp_LastUnitSphereFace_8162aba8	PInstrument (sub)	ViewMatrix	0x60	0xd
+8162aba8	lbp_LastUnitSphereFace_8162aba8	PInstrument (sub)	CameraMatrix	0xa0	0xd
+8162aba8	lbp_LastUnitSphereFace_8162aba8	PInstrument (sub)	ProjMatrix	0xe0	0xd
+8162aba8	lbp_LastUnitSphereFace_8162aba8	PInstrument (sub)	InvViewProjMatrix	0x120	0xd
+8162aba8	lbp_LastUnitSphereFace_8162aba8	PInstrument (sub)	LastUnitSphereFace	0x160	0x2
+8162ae10	lbp_DoubleTap_8162ae10	PInstrument (sub)	DoubleTap	0x1	0x9
+8162b804	lbp_KeyboardConnected_8162b804	PInstrument (sub)	Buttons	0x0	0x6
+8162b804	lbp_KeyboardConnected_8162b804	PInstrument (sub)	MouseButtons	0x28	0x6
+8162b804	lbp_KeyboardConnected_8162b804	PInstrument (sub)	KeyModifierState	0x50	0x6
+8162b804	lbp_KeyboardConnected_8162b804	PInstrument (sub)	MouseWorldPos	0x8	0xc
+8162b804	lbp_KeyboardConnected_8162b804	PInstrument (sub)	MouseConnected	0x4	0x9
+8162b804	lbp_KeyboardConnected_8162b804	PInstrument (sub)	KeyboardConnected	0x5	0x9
+8162b804	lbp_KeyboardConnected_8162b804	PInstrument (sub)	MouseWheelDelta	0x2c	0x5
+8162c614	lbp_LastSignificantMoveTime_8162c614	PCreature/PYellowHead (shared sub)	castThingUID	0x0	0x6
+8162c614	lbp_LastSignificantMoveTime_8162c614	PCreature/PYellowHead (shared sub)	castT	0x4	0x8
+8162c614	lbp_LastSignificantMoveTime_8162c614	PCreature/PYellowHead (shared sub)	gameFrameLastCast	0x8	0x6
+8162c614	lbp_LastSignificantMoveTime_8162c614	PCreature/PYellowHead (shared sub)	timeDown	0xc	0x8
+8162c614	lbp_LastSignificantMoveTime_8162c614	PCreature/PYellowHead (shared sub)	startX	0x10	0x3
+8162c614	lbp_LastSignificantMoveTime_8162c614	PCreature/PYellowHead (shared sub)	startY	0x12	0x3
+8162c614	lbp_LastSignificantMoveTime_8162c614	PCreature/PYellowHead (shared sub)	touchRect	0x18	0x6
+8162c614	lbp_LastSignificantMoveTime_8162c614	PCreature/PYellowHead (shared sub)	flags	0x21	0x2
+8162c614	lbp_LastSignificantMoveTime_8162c614	PCreature/PYellowHead (shared sub)	state	0x24	0x6
+8162c614	lbp_LastSignificantMoveTime_8162c614	PCreature/PYellowHead (shared sub)	lastSignificantMoveTime	0x28	0x6
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	Alive	0x18	0x9
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	LeftStick	0x1c	0xb
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	RightStick	0x2c	0xb
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	SensorDir	0x108	0xc
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	SensorDirOld	0x118	0xc
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	PlayerNumber	0x210	0x6
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	ControllingPauseMenu	0x214	0x9
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	InputState	0x40	0x10
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	InputStateOld	0x98	0x10
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	MousePosDelta	0x200	0xb
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	MoveLastZ	0x1f8	0x8
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	UsingNavigator	0x19	0x9
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	TouchData	0x318	0x10
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	TouchLastNonDeterministicScreenPos	0x6b8	0xc
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	TouchEmulatingMove	0x6c8	0x9
+8162f050	lbp_ControllingPauseMenu_8162f050	PInstrument (sub)	TouchValid	0x6c9	0x9
 81630138	lbp_LastTimeSlappedAPlayer_81630138	PYellowHead	DeprecatedHead	0x10	0x12
 81630138	lbp_LastTimeSlappedAPlayer_81630138	PYellowHead	LegacyToolTetherJoint	0x7c	0x12
 81630138	lbp_LastTimeSlappedAPlayer_81630138	PYellowHead	LegacyToolTetherWidth	0x78	0x8
@@ -385,50 +385,50 @@ func	func_name	part	field	offset	type
 816410dc	lbp_TouchRotationalStrength_816410dc	PMaterialTweak	Key.ColourIndex	0x28	0x5
 816410dc	lbp_TouchRotationalStrength_816410dc	PMaterialTweak	TouchRotationalStrength	0x38	0x8
 816410dc	lbp_TouchRotationalStrength_816410dc	PMaterialTweak	TouchabilityInvisible	0x19	0x9
-8164154c	lbp_MaterialPlan_8164154c	-	Region	0x0	0x6
-8164154c	lbp_MaterialPlan_8164154c	-	MaterialPlan	0x4	0x3e
-8164154c	lbp_MaterialPlan_8164154c	-	Material	0x20	0x13
-8164154c	lbp_MaterialPlan_8164154c	-	UVScale	0x24	0xb
+8164154c	lbp_MaterialPlan_8164154c	PMaterialOverride (sub)	Region	0x0	0x6
+8164154c	lbp_MaterialPlan_8164154c	PMaterialOverride (sub)	MaterialPlan	0x4	0x3e
+8164154c	lbp_MaterialPlan_8164154c	PMaterialOverride (sub)	Material	0x20	0x13
+8164154c	lbp_MaterialPlan_8164154c	PMaterialOverride (sub)	UVScale	0x24	0xb
 81642580	ReflectText_PMaterialOverride	PMaterialOverride	RegionOverrides	0x1c	0x15
-816434f8	lbp_IsCurrentJumpFlipped_816434f8	-	IsCurrentJumpFlipped	0x0	0x9
-816434f8	lbp_IsCurrentJumpFlipped_816434f8	-	CurSource	0x4	0xb
-816434f8	lbp_IsCurrentJumpFlipped_816434f8	-	CurTarget0	0x14	0xb
-816434f8	lbp_IsCurrentJumpFlipped_816434f8	-	CurTarget1	0x24	0xb
-816434f8	lbp_IsCurrentJumpFlipped_816434f8	-	CurrentJump	0x34	0x5
-816434f8	lbp_IsCurrentJumpFlipped_816434f8	-	CurrentJumpPos	0x38	0x6
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	TargetThing	0x18	0x12
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	Attributes	0x50	0x6
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	MaxMoveSpeed	0x58	0x8
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	MaxWaitTime	0x5c	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	WaypointKey.ColourIndex	0x70	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	POIKey.ColourIndex	0x7c	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	ActingData	0x48	0x14
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	AwarenessRadius	0x54	0x8
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	SharedStateTimer	0xb0	0x6
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	IdleLookAtPos	0x24	0xb
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	LastGoodPosition	0x34	0xb
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	LastPositionValid	0x44	0x9
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	PatrolDirection	0x60	0xb
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	LastPatrolGridX	0x88	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	LastPatrolGridZ	0x8c	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	TargetPatrolGridX	0x90	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	TargetPatrolGridZ	0x94	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	GridDirectionX	0x98	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	GridDirectionZ	0x9c	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	PatrolStationaryCounter	0xa4	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	PatrolUnblockedCounter	0xa8	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	AnimSet	0x198	0x5
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	ExpressionType	0x19c	0x2
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	ExpressionLevel	0x19d	0x2
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	WillRecordAudio	0x19e	0x9
-816464b8	lbp_PatrolStationaryCounter_816464b8	-	MultiJumpLevel	0x19f	0x2
-81646c68	lbp_LastTouchWasATap_81646c68	-	TimeStamp	0x0	0x7
-81646c68	lbp_LastTouchWasATap_81646c68	-	count	0x110	0x2
-81646c68	lbp_LastTouchWasATap_81646c68	-	m_hasChanged	0x111	0x9
-81646c68	lbp_LastTouchWasATap_81646c68	-	LastTouchWasATap	0x112	0x9
-81646c68	lbp_LastTouchWasATap_81646c68	-	LastTouchTapTime	0x114	0x6
-81646e20	lbp_NetworkCamera_81646e20	-	networkCamera	0x230	0x10
-81646e20	lbp_NetworkCamera_81646e20	-	m_hasChanged	0x398	0x9
+816434f8	lbp_IsCurrentJumpFlipped_816434f8	PInstrument (sub)	IsCurrentJumpFlipped	0x0	0x9
+816434f8	lbp_IsCurrentJumpFlipped_816434f8	PInstrument (sub)	CurSource	0x4	0xb
+816434f8	lbp_IsCurrentJumpFlipped_816434f8	PInstrument (sub)	CurTarget0	0x14	0xb
+816434f8	lbp_IsCurrentJumpFlipped_816434f8	PInstrument (sub)	CurTarget1	0x24	0xb
+816434f8	lbp_IsCurrentJumpFlipped_816434f8	PInstrument (sub)	CurrentJump	0x34	0x5
+816434f8	lbp_IsCurrentJumpFlipped_816434f8	PInstrument (sub)	CurrentJumpPos	0x38	0x6
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	TargetThing	0x18	0x12
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	Attributes	0x50	0x6
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	MaxMoveSpeed	0x58	0x8
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	MaxWaitTime	0x5c	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	WaypointKey.ColourIndex	0x70	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	POIKey.ColourIndex	0x7c	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	ActingData	0x48	0x14
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	AwarenessRadius	0x54	0x8
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	SharedStateTimer	0xb0	0x6
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	IdleLookAtPos	0x24	0xb
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	LastGoodPosition	0x34	0xb
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	LastPositionValid	0x44	0x9
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	PatrolDirection	0x60	0xb
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	LastPatrolGridX	0x88	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	LastPatrolGridZ	0x8c	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	TargetPatrolGridX	0x90	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	TargetPatrolGridZ	0x94	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	GridDirectionX	0x98	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	GridDirectionZ	0x9c	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	PatrolStationaryCounter	0xa4	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	PatrolUnblockedCounter	0xa8	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	AnimSet	0x198	0x5
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	ExpressionType	0x19c	0x2
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	ExpressionLevel	0x19d	0x2
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	WillRecordAudio	0x19e	0x9
+816464b8	lbp_PatrolStationaryCounter_816464b8	PNpc/PSwitchInput (shared sub)	MultiJumpLevel	0x19f	0x2
+81646c68	lbp_LastTouchWasATap_81646c68	PInstrument (sub)	TimeStamp	0x0	0x7
+81646c68	lbp_LastTouchWasATap_81646c68	PInstrument (sub)	count	0x110	0x2
+81646c68	lbp_LastTouchWasATap_81646c68	PInstrument (sub)	m_hasChanged	0x111	0x9
+81646c68	lbp_LastTouchWasATap_81646c68	PInstrument (sub)	LastTouchWasATap	0x112	0x9
+81646c68	lbp_LastTouchWasATap_81646c68	PInstrument (sub)	LastTouchTapTime	0x114	0x6
+81646e20	lbp_NetworkCamera_81646e20	PInstrument (sub)	networkCamera	0x230	0x10
+81646e20	lbp_NetworkCamera_81646e20	PInstrument (sub)	m_hasChanged	0x398	0x9
 8164712c	lbp_MThingAction_8164712c	PTrigger (sub)	mThingPtr	0x0	0x12
 8164712c	lbp_MThingAction_8164712c	PTrigger (sub)	mThingAction	0xc	0x5
 81647208	lbp_HasPainting_81647208	PGameplayData (sub)	Shareable	0xc	0x9
@@ -448,23 +448,23 @@ func	func_name	part	field	offset	type
 8164776c	lbp_SpawnPosIndex_8164776c	PCheckpoint (sub)	SpawnThing	0x0	0x12
 8164776c	lbp_SpawnPosIndex_8164776c	PCheckpoint (sub)	SpawnTimer	0xc	0x6
 8164776c	lbp_SpawnPosIndex_8164776c	PCheckpoint (sub)	SpawnPosIndex	0x10	0x6
-81647800	lbp_Things_81647800	-	Things	0x10	0x15
-81647bf0	lbp_RecordingCountdown_81647bf0	-	State	0x8	0x6
-81647bf0	lbp_RecordingCountdown_81647bf0	-	RecordingNpc	0x158	0x12
-81647bf0	lbp_RecordingCountdown_81647bf0	-	Recording	0x10	0x10
-81647bf0	lbp_RecordingCountdown_81647bf0	-	RecordingPlayer	0x164	0x12
-81647bf0	lbp_RecordingCountdown_81647bf0	-	CurrentFrame	0x180	0x6
-81647bf0	lbp_RecordingCountdown_81647bf0	-	RecordingCountdown	0x184	0x5
-81647bf0	lbp_RecordingCountdown_81647bf0	-	VoIPRecording	0x198	0x13
-81647d0c	lbp_RecordingContainsMoveData_81647d0c	-	InputBuffer	0x0	0x15
-81647d0c	lbp_RecordingContainsMoveData_81647d0c	-	OffsetBuffer	0xc	0x15
-81647d0c	lbp_RecordingContainsMoveData_81647d0c	-	AbsoluteExpressionBuffer	0x18	0x15
-81647d0c	lbp_RecordingContainsMoveData_81647d0c	-	StartWorldTransform	0x28	0xd
-81647d0c	lbp_RecordingContainsMoveData_81647d0c	-	StartLocalSceneGraph	0x68	0x15
-81647d0c	lbp_RecordingContainsMoveData_81647d0c	-	StartFootPos	0x74	0xb
-81647d0c	lbp_RecordingContainsMoveData_81647d0c	-	StartVelocities	0x84	0x15
-81647d0c	lbp_RecordingContainsMoveData_81647d0c	-	RecordingContainsMoveData	0x90	0x9
-81647d0c	lbp_RecordingContainsMoveData_81647d0c	-	RecordingContainsVitaData	0x91	0x9
+81647800	lbp_Things_81647800	PCheckpoint (sub)	Things	0x10	0x15
+81647bf0	lbp_RecordingCountdown_81647bf0	PNpc/PSwitchInput (shared sub)	State	0x8	0x6
+81647bf0	lbp_RecordingCountdown_81647bf0	PNpc/PSwitchInput (shared sub)	RecordingNpc	0x158	0x12
+81647bf0	lbp_RecordingCountdown_81647bf0	PNpc/PSwitchInput (shared sub)	Recording	0x10	0x10
+81647bf0	lbp_RecordingCountdown_81647bf0	PNpc/PSwitchInput (shared sub)	RecordingPlayer	0x164	0x12
+81647bf0	lbp_RecordingCountdown_81647bf0	PNpc/PSwitchInput (shared sub)	CurrentFrame	0x180	0x6
+81647bf0	lbp_RecordingCountdown_81647bf0	PNpc/PSwitchInput (shared sub)	RecordingCountdown	0x184	0x5
+81647bf0	lbp_RecordingCountdown_81647bf0	PNpc/PSwitchInput (shared sub)	VoIPRecording	0x198	0x13
+81647d0c	lbp_RecordingContainsMoveData_81647d0c	PNpc/PSwitchInput (shared sub)	InputBuffer	0x0	0x15
+81647d0c	lbp_RecordingContainsMoveData_81647d0c	PNpc/PSwitchInput (shared sub)	OffsetBuffer	0xc	0x15
+81647d0c	lbp_RecordingContainsMoveData_81647d0c	PNpc/PSwitchInput (shared sub)	AbsoluteExpressionBuffer	0x18	0x15
+81647d0c	lbp_RecordingContainsMoveData_81647d0c	PNpc/PSwitchInput (shared sub)	StartWorldTransform	0x28	0xd
+81647d0c	lbp_RecordingContainsMoveData_81647d0c	PNpc/PSwitchInput (shared sub)	StartLocalSceneGraph	0x68	0x15
+81647d0c	lbp_RecordingContainsMoveData_81647d0c	PNpc/PSwitchInput (shared sub)	StartFootPos	0x74	0xb
+81647d0c	lbp_RecordingContainsMoveData_81647d0c	PNpc/PSwitchInput (shared sub)	StartVelocities	0x84	0x15
+81647d0c	lbp_RecordingContainsMoveData_81647d0c	PNpc/PSwitchInput (shared sub)	RecordingContainsMoveData	0x90	0x9
+81647d0c	lbp_RecordingContainsMoveData_81647d0c	PNpc/PSwitchInput (shared sub)	RecordingContainsVitaData	0x91	0x9
 81648f74	lbp_Instrument_81648f74	PInstrument	Instrument	0xc	0x13
 81648f74	lbp_Instrument_81648f74	PInstrument	Colour	0x14	0x6
 81648f74	lbp_Instrument_81648f74	PInstrument	Loops	0x18	0x6
@@ -591,71 +591,71 @@ func	func_name	part	field	offset	type
 8165a688	ReflectText_PWorld	PWorld	BackdropPlan	0x860	0x3e
 8165a688	ReflectText_PWorld	PWorld	BackdropNewPlan	0x87c	0x3e
 8165a688	ReflectText_PWorld	PWorld	MoveCursors	0x358	0x15
-8165ba9c	lbp_Things_8165ba9c	-	Things	0x18	0x15
-8165bc98	lbp_ColourCorrectionFactor_8165bc98	-	LightingFactor	0x0	0x8
-8165bc98	lbp_ColourCorrectionFactor_8165bc98	-	ColourCorrectionFactor	0x4	0x8
-8165bc98	lbp_ColourCorrectionFactor_8165bc98	-	FogFactor	0x88	0x8
-8165bc98	lbp_ColourCorrectionFactor_8165bc98	-	FogTintFactor	0x8c	0x8
-8165bc98	lbp_ColourCorrectionFactor_8165bc98	-	DarknessFactor	0x90	0x8
-8165bc98	lbp_ColourCorrectionFactor_8165bc98	-	NonLinearFog	0x94	0x9
-8165bdbc	lbp_DefaultZoomMultiplier_8165bdbc	-	DefaultZoomMultiplier	0x0	0x8
-8165bdbc	lbp_DefaultZoomMultiplier_8165bdbc	-	MaximumZoomMultiplier	0x4	0x8
-8165bdbc	lbp_DefaultZoomMultiplier_8165bdbc	-	ZoomDelayMultiplier	0x8	0x8
-8165bdbc	lbp_DefaultZoomMultiplier_8165bdbc	-	ZoomSpeedMultiplier	0xc	0x8
-8165be88	lbp_CurrentCutSceneCamera_8165be88	-	State	0x0	0x6
-8165be88	lbp_CurrentCutSceneCamera_8165be88	-	CurrentCutSceneCamera	0x4	0x12
-8165be88	lbp_CurrentCutSceneCamera_8165be88	-	TimeInCurrentCamera	0x14	0x5
-8165be88	lbp_CurrentCutSceneCamera_8165be88	-	EndCountdown	0x18	0x5
-8165be88	lbp_CurrentCutSceneCamera_8165be88	-	TransitionStage	0x1c	0x8
-8165be88	lbp_CurrentCutSceneCamera_8165be88	-	CurrentCameraTweaking	0x10	0x9
-8165bf9c	lbp_DialogueReverbSend_8165bf9c	-	Reverb	0x0	0x5
-8165bf9c	lbp_DialogueReverbSend_8165bf9c	-	MusicVolume	0x10	0x8
-8165bf9c	lbp_DialogueReverbSend_8165bf9c	-	SfxVolume	0x14	0x8
-8165bf9c	lbp_DialogueReverbSend_8165bf9c	-	BackgroundVolume	0x18	0x8
-8165bf9c	lbp_DialogueReverbSend_8165bf9c	-	DialogueVolume	0x1c	0x8
-8165bf9c	lbp_DialogueReverbSend_8165bf9c	-	SfxReverbSend	0x4	0x8
-8165bf9c	lbp_DialogueReverbSend_8165bf9c	-	DialogueReverbSend	0x8	0x8
-8165bf9c	lbp_DialogueReverbSend_8165bf9c	-	MusicReverbSend	0xc	0x8
-8165bf9c	lbp_DialogueReverbSend_8165bf9c	-	SfxFilter	0x20	0x8
-8165bf9c	lbp_DialogueReverbSend_8165bf9c	-	DialogueFilter	0x24	0x8
-8165bf9c	lbp_DialogueReverbSend_8165bf9c	-	MusicFilter	0x28	0x8
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.SelectionFrame	0x0	0x6
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Switch	0xa0	0x12
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.Selection	0x4	0x12
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.LocalPosition	0x20	0xc
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.LocalAngle	0x30	0x8
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.MoveAngleXYZxZy	0x38	0xc
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.LastRCStart	0x48	0xc
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.LastRCDir	0x58	0xc
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.CurrRCStart	0x68	0xc
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.CurrRCDir	0x78	0xc
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.LastRoll	0x88	0x8
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.CurrRoll	0x8c	0x8
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.PrevMoveGrabbing	0x90	0x9
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.MoveGrabbing	0x91	0x9
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	Game.ZMovePos	0x94	0x8
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	GlobalCursorPlayer	0x3f14	0x6
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	CursorPlayerThing	0x3f20	0x12
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	GlobalCursorPanel	0x3f18	0x6
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	ThingUnderCursor	0x3f0c	0x6
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	ThingUnderCursorChangedWhileDown	0x3f10	0x9
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	LastTouchPanel	0x3f04	0x6
-8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	-	LastTouchID	0x3f08	0x5
+8165ba9c	lbp_Things_8165ba9c	PWorld (sub)	Things	0x18	0x15
+8165bc98	lbp_ColourCorrectionFactor_8165bc98	PWorld (sub)	LightingFactor	0x0	0x8
+8165bc98	lbp_ColourCorrectionFactor_8165bc98	PWorld (sub)	ColourCorrectionFactor	0x4	0x8
+8165bc98	lbp_ColourCorrectionFactor_8165bc98	PWorld (sub)	FogFactor	0x88	0x8
+8165bc98	lbp_ColourCorrectionFactor_8165bc98	PWorld (sub)	FogTintFactor	0x8c	0x8
+8165bc98	lbp_ColourCorrectionFactor_8165bc98	PWorld (sub)	DarknessFactor	0x90	0x8
+8165bc98	lbp_ColourCorrectionFactor_8165bc98	PWorld (sub)	NonLinearFog	0x94	0x9
+8165bdbc	lbp_DefaultZoomMultiplier_8165bdbc	PWorld (sub)	DefaultZoomMultiplier	0x0	0x8
+8165bdbc	lbp_DefaultZoomMultiplier_8165bdbc	PWorld (sub)	MaximumZoomMultiplier	0x4	0x8
+8165bdbc	lbp_DefaultZoomMultiplier_8165bdbc	PWorld (sub)	ZoomDelayMultiplier	0x8	0x8
+8165bdbc	lbp_DefaultZoomMultiplier_8165bdbc	PWorld (sub)	ZoomSpeedMultiplier	0xc	0x8
+8165be88	lbp_CurrentCutSceneCamera_8165be88	PWorld (sub)	State	0x0	0x6
+8165be88	lbp_CurrentCutSceneCamera_8165be88	PWorld (sub)	CurrentCutSceneCamera	0x4	0x12
+8165be88	lbp_CurrentCutSceneCamera_8165be88	PWorld (sub)	TimeInCurrentCamera	0x14	0x5
+8165be88	lbp_CurrentCutSceneCamera_8165be88	PWorld (sub)	EndCountdown	0x18	0x5
+8165be88	lbp_CurrentCutSceneCamera_8165be88	PWorld (sub)	TransitionStage	0x1c	0x8
+8165be88	lbp_CurrentCutSceneCamera_8165be88	PWorld (sub)	CurrentCameraTweaking	0x10	0x9
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	PWorld (sub)	Reverb	0x0	0x5
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	PWorld (sub)	MusicVolume	0x10	0x8
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	PWorld (sub)	SfxVolume	0x14	0x8
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	PWorld (sub)	BackgroundVolume	0x18	0x8
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	PWorld (sub)	DialogueVolume	0x1c	0x8
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	PWorld (sub)	SfxReverbSend	0x4	0x8
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	PWorld (sub)	DialogueReverbSend	0x8	0x8
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	PWorld (sub)	MusicReverbSend	0xc	0x8
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	PWorld (sub)	SfxFilter	0x20	0x8
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	PWorld (sub)	DialogueFilter	0x24	0x8
+8165bf9c	lbp_DialogueReverbSend_8165bf9c	PWorld (sub)	MusicFilter	0x28	0x8
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.SelectionFrame	0x0	0x6
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Switch	0xa0	0x12
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.Selection	0x4	0x12
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.LocalPosition	0x20	0xc
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.LocalAngle	0x30	0x8
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.MoveAngleXYZxZy	0x38	0xc
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.LastRCStart	0x48	0xc
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.LastRCDir	0x58	0xc
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.CurrRCStart	0x68	0xc
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.CurrRCDir	0x78	0xc
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.LastRoll	0x88	0x8
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.CurrRoll	0x8c	0x8
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.PrevMoveGrabbing	0x90	0x9
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.MoveGrabbing	0x91	0x9
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	Game.ZMovePos	0x94	0x8
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	GlobalCursorPlayer	0x3f14	0x6
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	CursorPlayerThing	0x3f20	0x12
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	GlobalCursorPanel	0x3f18	0x6
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	ThingUnderCursor	0x3f0c	0x6
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	ThingUnderCursorChangedWhileDown	0x3f10	0x9
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	LastTouchPanel	0x3f04	0x6
+8165c334	lbp_ThingUnderCursorChangedWhileDown_8165c334	PWorld (sub)	LastTouchID	0x3f08	0x5
 81664b50	Reflect_Thing	-	Parent	0x50	0x14
 81664b50	Reflect_Thing	-	GroupHead	0x58	0x14
 81664b50	Reflect_Thing	-	CreatedBy	0x74	0x4
 81664b50	Reflect_Thing	-	ChangedBy	0x76	0x4
 81664b50	Reflect_Thing	-	PlanGUID	0x6c	0x57
-81673890	lbp_OverrideShape_81673890	-	IsInUse	0xbf0	0x9
-81673890	lbp_OverrideShape_81673890	-	ModeStack	0x184	0x15
-81673890	lbp_OverrideShape_81673890	-	PoppetGooey	0x740	0x10
-81673890	lbp_OverrideShape_81673890	-	Raycast	0x1978	0x10
-81673890	lbp_OverrideShape_81673890	-	Inventory	0x500	0x10
-81673890	lbp_OverrideShape_81673890	-	FrozenList	0x12c	0x15
-81673890	lbp_OverrideShape_81673890	-	HiddenList	0x138	0x15
-81673890	lbp_OverrideShape_81673890	-	OverrideMaterial	0xb48	0x10
-81673890	lbp_OverrideShape_81673890	-	OverrideShape	0xb88	0x10
-81673890	lbp_OverrideShape_81673890	-	TweakObjects	0x144	0x15
+81673890	lbp_OverrideShape_81673890	PYellowHead (sub)	IsInUse	0xbf0	0x9
+81673890	lbp_OverrideShape_81673890	PYellowHead (sub)	ModeStack	0x184	0x15
+81673890	lbp_OverrideShape_81673890	PYellowHead (sub)	PoppetGooey	0x740	0x10
+81673890	lbp_OverrideShape_81673890	PYellowHead (sub)	Raycast	0x1978	0x10
+81673890	lbp_OverrideShape_81673890	PYellowHead (sub)	Inventory	0x500	0x10
+81673890	lbp_OverrideShape_81673890	PYellowHead (sub)	FrozenList	0x12c	0x15
+81673890	lbp_OverrideShape_81673890	PYellowHead (sub)	HiddenList	0x138	0x15
+81673890	lbp_OverrideShape_81673890	PYellowHead (sub)	OverrideMaterial	0xb48	0x10
+81673890	lbp_OverrideShape_81673890	PYellowHead (sub)	OverrideShape	0xb88	0x10
+81673890	lbp_OverrideShape_81673890	PYellowHead (sub)	TweakObjects	0x144	0x15
 81673cf8	Reflect_PoppetState	-	submode	0x18	0x10
 81673d90	Reflect_PoppetHit	-	HitPoint_Fred	0x0	0xc
 81673d90	Reflect_PoppetHit	-	Normal	0x10	0xc
@@ -669,18 +669,18 @@ func	func_name	part	field	offset	type
 81673d90	Reflect_PoppetHit	-	OnCostumePiece	0x4c	0x5
 81673d90	Reflect_PoppetHit	-	DecorationIdx	0x50	0x6
 81673d90	Reflect_PoppetHit	-	SwitchConnector	0x54	0x9
-81673fac	lbp_PhysicsMaterial_81673fac	-	GfxMaterial	0x1c	0x13
-81673fac	lbp_PhysicsMaterial_81673fac	-	Bevel	0x20	0x13
-81673fac	lbp_PhysicsMaterial_81673fac	-	PhysicsMaterial	0x24	0x13
-81673fac	lbp_PhysicsMaterial_81673fac	-	BevelSize	0x38	0x8
-81673fac	lbp_PhysicsMaterial_81673fac	-	SoundEnum	0x3c	0x6
-81673fac	lbp_PhysicsMaterial_81673fac	-	EditorColour	0x28	0xc
-816740d4	lbp_Front_816740d4	-	Polygon	0x40	0x15
-816740d4	lbp_Front_816740d4	-	Loops	0x4c	0x15
-816740d4	lbp_Front_816740d4	-	Front	0x5c	0x5
-816740d4	lbp_Front_816740d4	-	Scale	0x60	0x8
-816740d4	lbp_Front_816740d4	-	Angle	0x64	0x8
-816740d4	lbp_Front_816740d4	-	WorldMatrix	0x0	0xd
+81673fac	lbp_PhysicsMaterial_81673fac	PYellowHead (sub)	GfxMaterial	0x1c	0x13
+81673fac	lbp_PhysicsMaterial_81673fac	PYellowHead (sub)	Bevel	0x20	0x13
+81673fac	lbp_PhysicsMaterial_81673fac	PYellowHead (sub)	PhysicsMaterial	0x24	0x13
+81673fac	lbp_PhysicsMaterial_81673fac	PYellowHead (sub)	BevelSize	0x38	0x8
+81673fac	lbp_PhysicsMaterial_81673fac	PYellowHead (sub)	SoundEnum	0x3c	0x6
+81673fac	lbp_PhysicsMaterial_81673fac	PYellowHead (sub)	EditorColour	0x28	0xc
+816740d4	lbp_Front_816740d4	PYellowHead (sub)	Polygon	0x40	0x15
+816740d4	lbp_Front_816740d4	PYellowHead (sub)	Loops	0x4c	0x15
+816740d4	lbp_Front_816740d4	PYellowHead (sub)	Front	0x5c	0x5
+816740d4	lbp_Front_816740d4	PYellowHead (sub)	Scale	0x60	0x8
+816740d4	lbp_Front_816740d4	PYellowHead (sub)	Angle	0x64	0x8
+816740d4	lbp_Front_816740d4	PYellowHead (sub)	WorldMatrix	0x0	0xd
 816757e0	Reflect_Bevel	-	Shared.AutoSmoothCutoffAngle	0x5c	0x8
 816757e0	Reflect_Bevel	-	Vertices	0x50	0x15
 816757e0	Reflect_Bevel	-	IncludeBackFace	0x75	0x9
@@ -691,12 +691,12 @@ func	func_name	part	field	offset	type
 816757e0	Reflect_Bevel	-	Spongy	0x74	0x9
 816757e0	Reflect_Bevel	-	SoftPhysicsSettings	0x88	0x13
 816757e0	Reflect_Bevel	-	Shared.TextureRepeats	0x60	0x8
-81675cc4	lbp_Saturation_81675cc4	-	Saturation	0x0	0x8
-81675cc4	lbp_Saturation_81675cc4	-	HueShift	0x4	0x8
-81675cc4	lbp_Saturation_81675cc4	-	Brightness	0x8	0x8
-81675cc4	lbp_Saturation_81675cc4	-	Contrast	0xc	0x8
-81675cc4	lbp_Saturation_81675cc4	-	TintHue	0x10	0x8
-81675cc4	lbp_Saturation_81675cc4	-	TintAmount	0x14	0x8
+81675cc4	lbp_Saturation_81675cc4	PMetaData (sub)	Saturation	0x0	0x8
+81675cc4	lbp_Saturation_81675cc4	PMetaData (sub)	HueShift	0x4	0x8
+81675cc4	lbp_Saturation_81675cc4	PMetaData (sub)	Brightness	0x8	0x8
+81675cc4	lbp_Saturation_81675cc4	PMetaData (sub)	Contrast	0xc	0x8
+81675cc4	lbp_Saturation_81675cc4	PMetaData (sub)	TintHue	0x10	0x8
+81675cc4	lbp_Saturation_81675cc4	PMetaData (sub)	TintAmount	0x14	0x8
 81677030	Reflect_Material	-	Traction	0x60	0x8
 81677030	Reflect_Material	-	IDensity	0x5c	0x8
 81677030	Reflect_Material	-	Restitution	0x48	0x8
@@ -726,13 +726,13 @@ func	func_name	part	field	offset	type
 81677030	Reflect_Material	-	CircuitBoard	0x96	0x9
 81677030	Reflect_Material	-	DisableCSG	0x97	0x9
 81677030	Reflect_Material	-	TouchMoveable	0x5b	0x9
-816778a0	lbp_TextureAlternatives_816778a0	-	Material	0x0	0x13
-816778a0	lbp_TextureAlternatives_816778a0	-	TextureAlternatives	0x4	0x13
-816778a0	lbp_TextureAlternatives_816778a0	-	MinVert	0x8	0x6
-816778a0	lbp_TextureAlternatives_816778a0	-	MaxVert	0xc	0x6
-816778a0	lbp_TextureAlternatives_816778a0	-	FirstIndex	0x10	0x6
-816778a0	lbp_TextureAlternatives_816778a0	-	NumIndices	0x14	0x6
-816778a0	lbp_TextureAlternatives_816778a0	-	Region	0x18	0x6
+816778a0	lbp_TextureAlternatives_816778a0	PCostume (sub)	Material	0x0	0x13
+816778a0	lbp_TextureAlternatives_816778a0	PCostume (sub)	TextureAlternatives	0x4	0x13
+816778a0	lbp_TextureAlternatives_816778a0	PCostume (sub)	MinVert	0x8	0x6
+816778a0	lbp_TextureAlternatives_816778a0	PCostume (sub)	MaxVert	0xc	0x6
+816778a0	lbp_TextureAlternatives_816778a0	PCostume (sub)	FirstIndex	0x10	0x6
+816778a0	lbp_TextureAlternatives_816778a0	PCostume (sub)	NumIndices	0x14	0x6
+816778a0	lbp_TextureAlternatives_816778a0	PCostume (sub)	Region	0x18	0x6
 81682f80	Reflect_Anim	-	Header	0x40	0x10
 81682f80	Reflect_Anim	-	Locators	0x7c	0x10
 81686b6c	Reflect_Gfxmaterial	-	GMatFlags	0x40	0x6
@@ -904,83 +904,83 @@ func	func_name	part	field	offset	type
 81690c98	Reflect_Game	-	InternalLevelLinks	0xa0	0x15
 81690c98	Reflect_Game	-	SubLevels	0xac	0x15
 81690c98	Reflect_Game	-	Videos	0xb8	0x15
-81699bc8	lbp_InventoryCollectionIndex_81699bc8	-	InventoryCollectionIndex	0x20	0x6
-81699bc8	lbp_InventoryCollectionIndex_81699bc8	-	InventoryPageInstances	0x2c	0x15
-81699bc8	lbp_InventoryCollectionIndex_81699bc8	-	CurrentPageNumber	0x38	0x6
-8169a410	lbp_CurrentSortMode_8169a410	-	SubType	0x14	0x6
-8169a410	lbp_CurrentSortMode_8169a410	-	Title	0x18	0xf
-8169a410	lbp_CurrentSortMode_8169a410	-	HeartedOnly	0x28	0x9
-8169a410	lbp_CurrentSortMode_8169a410	-	CustomID	0x2c	0x6
-8169a410	lbp_CurrentSortMode_8169a410	-	CurrentSortMode	0x30	0x6
-8169a410	lbp_CurrentSortMode_8169a410	-	DesiredSortMode	0x34	0x6
-8169b28c	lbp_ActionOnItemSelect_8169b28c	-	InventoryViews	0x10	0x15
-8169b28c	lbp_ActionOnItemSelect_8169b28c	-	CurrentPageNumber	0x1c	0x6
-8169b28c	lbp_ActionOnItemSelect_8169b28c	-	CollectionID	0x20	0x6
-8169b28c	lbp_ActionOnItemSelect_8169b28c	-	ActionOnItemSelect	0x24	0x6
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	SlotID	0x0	0x10
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	Level	0x8	0x21
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	Location	0x60	0xc
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	AuthorID	0x70	0x10
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	AuthorName	0x88	0xf
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	TranslationTag	0x98	0xe
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	Description	0x1a0	0xf
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	PrimaryLinkLevel	0xa8	0x10
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	Group	0xb0	0x10
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	InitiallyLocked	0xb8	0x9
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	Shareable	0xb9	0x2
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	BackgroundGUID	0xbc	0x57
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	PlanetDecorations	0x40	0x21
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	DeveloperLevelType	0xc0	0x6
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	AuthorLabels	0xc8	0x10
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	CollectabubblesRequired	0x174	0x56
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	CollectabubblesContained	0x180	0x56
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	IsSubLevel	0xba	0x9
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	MinPlayers	0xc5	0x2
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	MaxPlayers	0xc6	0x2
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	MoveRecommended	0xc7	0x9
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	ShowOnPlanet	0x5c	0x9
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	LivesOverride	0xc4	0x2
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	AcingEnabled	0x108	0x9
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	ContainsCollectabubbles	0x10c	0x9
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	EnforceMinMaxPlayers	0x170	0x9
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	SameScreenGame	0x171	0x9
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	SizeOfResources	0xd4	0x6
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	SizeOfSubLevels	0xd8	0x6
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	SubLevels	0xdc	0x15
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	SlotList	0xe8	0x35
-8169ef6c	lbp_RewardConditionDescription_8169ef6c	-	Revision	0x104	0x4
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	SlotID	0x0	0x10
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	LastPlayedTimestamp	0x8	0x7
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	PlayCount	0x48	0x4
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	CompletionCount	0x4e	0x4
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	AcedCount	0x50	0x4
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	Collectables	0x60	0x15
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	Videos	0x6c	0x15
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	LinkedLevels	0x78	0x15
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	SubLevels	0x84	0x15
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	LevelHash	0x90	0x10
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	Flags	0x52	0x4
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	DeferredPlayCount	0x4a	0x4
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	DeferredPlayCountUploaded	0x4c	0x4
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	GoldTrophyCount	0x54	0x4
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	SilverTrophyCount	0x56	0x4
-816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	-	BronzeTrophyCount	0x58	0x4
-816a20e0	lbp_LastAuthorPhotoCount_816a20e0	-	SlotID	0x0	0x10
-816a20e0	lbp_LastAuthorPhotoCount_816a20e0	-	LastReviewCount	0x8	0x5
-816a20e0	lbp_LastAuthorPhotoCount_816a20e0	-	LastCommentCount	0xc	0x5
-816a20e0	lbp_LastAuthorPhotoCount_816a20e0	-	LastPhotoCount	0x10	0x5
-816a20e0	lbp_LastAuthorPhotoCount_816a20e0	-	LastAuthorPhotoCount	0x14	0x5
-816a20e0	lbp_LastAuthorPhotoCount_816a20e0	-	LastStreamEventTimestamp	0x18	0x7
-816a20e0	lbp_LastAuthorPhotoCount_816a20e0	-	LastViewedTimestamp	0x20	0x7
-816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	-	OnlineID	0x0	0x10
-816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	-	LastReviewCount	0x14	0x5
-816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	-	LastCommentCount	0x18	0x5
-816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	-	LastPhotosByMeCount	0x1c	0x5
-816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	-	LastPhotosWithMeCount	0x20	0x5
-816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	-	LastFavouriteSlotsCount	0x24	0x5
-816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	-	LastFavouriteUsersCount	0x28	0x5
-816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	-	LastStreamEventTimestamp	0x30	0x7
-816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	-	LastViewedTimestamp	0x38	0x7
+81699bc8	lbp_InventoryCollectionIndex_81699bc8	LocalProfile (sub)	InventoryCollectionIndex	0x20	0x6
+81699bc8	lbp_InventoryCollectionIndex_81699bc8	LocalProfile (sub)	InventoryPageInstances	0x2c	0x15
+81699bc8	lbp_InventoryCollectionIndex_81699bc8	LocalProfile (sub)	CurrentPageNumber	0x38	0x6
+8169a410	lbp_CurrentSortMode_8169a410	LocalProfile (sub)	SubType	0x14	0x6
+8169a410	lbp_CurrentSortMode_8169a410	LocalProfile (sub)	Title	0x18	0xf
+8169a410	lbp_CurrentSortMode_8169a410	LocalProfile (sub)	HeartedOnly	0x28	0x9
+8169a410	lbp_CurrentSortMode_8169a410	LocalProfile (sub)	CustomID	0x2c	0x6
+8169a410	lbp_CurrentSortMode_8169a410	LocalProfile (sub)	CurrentSortMode	0x30	0x6
+8169a410	lbp_CurrentSortMode_8169a410	LocalProfile (sub)	DesiredSortMode	0x34	0x6
+8169b28c	lbp_ActionOnItemSelect_8169b28c	LocalProfile (sub)	InventoryViews	0x10	0x15
+8169b28c	lbp_ActionOnItemSelect_8169b28c	LocalProfile (sub)	CurrentPageNumber	0x1c	0x6
+8169b28c	lbp_ActionOnItemSelect_8169b28c	LocalProfile (sub)	CollectionID	0x20	0x6
+8169b28c	lbp_ActionOnItemSelect_8169b28c	LocalProfile (sub)	ActionOnItemSelect	0x24	0x6
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	SlotID	0x0	0x10
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	Level	0x8	0x21
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	Location	0x60	0xc
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	AuthorID	0x70	0x10
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	AuthorName	0x88	0xf
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	TranslationTag	0x98	0xe
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	Description	0x1a0	0xf
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	PrimaryLinkLevel	0xa8	0x10
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	Group	0xb0	0x10
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	InitiallyLocked	0xb8	0x9
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	Shareable	0xb9	0x2
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	BackgroundGUID	0xbc	0x57
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	PlanetDecorations	0x40	0x21
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	DeveloperLevelType	0xc0	0x6
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	AuthorLabels	0xc8	0x10
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	CollectabubblesRequired	0x174	0x56
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	CollectabubblesContained	0x180	0x56
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	IsSubLevel	0xba	0x9
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	MinPlayers	0xc5	0x2
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	MaxPlayers	0xc6	0x2
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	MoveRecommended	0xc7	0x9
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	ShowOnPlanet	0x5c	0x9
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	LivesOverride	0xc4	0x2
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	AcingEnabled	0x108	0x9
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	ContainsCollectabubbles	0x10c	0x9
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	EnforceMinMaxPlayers	0x170	0x9
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	SameScreenGame	0x171	0x9
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	SizeOfResources	0xd4	0x6
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	SizeOfSubLevels	0xd8	0x6
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	SubLevels	0xdc	0x15
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	SlotList	0xe8	0x35
+8169ef6c	lbp_RewardConditionDescription_8169ef6c	LocalProfile (sub)	Revision	0x104	0x4
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	SlotID	0x0	0x10
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	LastPlayedTimestamp	0x8	0x7
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	PlayCount	0x48	0x4
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	CompletionCount	0x4e	0x4
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	AcedCount	0x50	0x4
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	Collectables	0x60	0x15
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	Videos	0x6c	0x15
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	LinkedLevels	0x78	0x15
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	SubLevels	0x84	0x15
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	LevelHash	0x90	0x10
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	Flags	0x52	0x4
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	DeferredPlayCount	0x4a	0x4
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	DeferredPlayCountUploaded	0x4c	0x4
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	GoldTrophyCount	0x54	0x4
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	SilverTrophyCount	0x56	0x4
+816a1ad0	lbp_DeferredPlayCountUploaded_816a1ad0	CachedLevelData/LocalProfile (shared sub)	BronzeTrophyCount	0x58	0x4
+816a20e0	lbp_LastAuthorPhotoCount_816a20e0	LocalProfile (sub)	SlotID	0x0	0x10
+816a20e0	lbp_LastAuthorPhotoCount_816a20e0	LocalProfile (sub)	LastReviewCount	0x8	0x5
+816a20e0	lbp_LastAuthorPhotoCount_816a20e0	LocalProfile (sub)	LastCommentCount	0xc	0x5
+816a20e0	lbp_LastAuthorPhotoCount_816a20e0	LocalProfile (sub)	LastPhotoCount	0x10	0x5
+816a20e0	lbp_LastAuthorPhotoCount_816a20e0	LocalProfile (sub)	LastAuthorPhotoCount	0x14	0x5
+816a20e0	lbp_LastAuthorPhotoCount_816a20e0	LocalProfile (sub)	LastStreamEventTimestamp	0x18	0x7
+816a20e0	lbp_LastAuthorPhotoCount_816a20e0	LocalProfile (sub)	LastViewedTimestamp	0x20	0x7
+816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	LocalProfile (sub)	OnlineID	0x0	0x10
+816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	LocalProfile (sub)	LastReviewCount	0x14	0x5
+816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	LocalProfile (sub)	LastCommentCount	0x18	0x5
+816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	LocalProfile (sub)	LastPhotosByMeCount	0x1c	0x5
+816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	LocalProfile (sub)	LastPhotosWithMeCount	0x20	0x5
+816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	LocalProfile (sub)	LastFavouriteSlotsCount	0x24	0x5
+816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	LocalProfile (sub)	LastFavouriteUsersCount	0x28	0x5
+816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	LocalProfile (sub)	LastStreamEventTimestamp	0x30	0x7
+816a24e8	lbp_LastFavouriteSlotsCount_816a24e8	LocalProfile (sub)	LastViewedTimestamp	0x38	0x7
 816a35b0	Reflect_Instrument	Instrument	Numstack	0x104	0x5
 816a35b0	Reflect_Instrument	Instrument	Arpeggiate	0x200	0x9
 816a3e74	Reflect_SlotList	-	Slots	0x40	0x15
@@ -997,55 +997,55 @@ func	func_name	part	field	offset	type
 816a7220	Reflect_SyncedProfile	-	Colours	0x4c	0x10
 816a7220	Reflect_SyncedProfile	-	PlayerID	0x5c	0x10
 816a7220	Reflect_SyncedProfile	-	RandomSeed	0x90	0x6
-816a737c	lbp_ContentsType_816a737c	-	ContentsType	0x18	0x6
-816a737c	lbp_ContentsType_816a737c	-	ContentID	0x20	0xe
-816a737c	lbp_ContentsType_816a737c	-	Timestamp	0x218	0x7
-816a7458	lbp_GUIDGuid_816a7458	-	GUID.guid	0x0	0x6
-816a7458	lbp_GUIDGuid_816a7458	-	Flags	0x4	0x6
-816a74c4	lbp_InGameCommerceID_816a74c4	-	Directory	0x0	0xe
-816a74c4	lbp_InGameCommerceID_816a74c4	-	ContentID	0x20	0xe
-816a74c4	lbp_InGameCommerceID_816a74c4	-	InGameCommerceID	0x30	0xe
-816a74c4	lbp_InGameCommerceID_816a74c4	-	CategoryID	0x40	0xe
-816a74c4	lbp_InGameCommerceID_816a74c4	-	Flags	0x5c	0x6
-816a74c4	lbp_InGameCommerceID_816a74c4	-	GUIDs	0x50	0x15
-816a74c4	lbp_InGameCommerceID_816a74c4	-	TypeMask	0x60	0x6
-816a7638	lbp_InitialProgressValue_816a7638	-	ProgressType	0x4	0x6
-816a7638	lbp_InitialProgressValue_816a7638	-	Category	0x8	0x6
-816a7638	lbp_InitialProgressValue_816a7638	-	TitleLamsKey	0xc	0x6
-816a7638	lbp_InitialProgressValue_816a7638	-	DescriptionLamsKey	0x10	0x6
-816a7638	lbp_InitialProgressValue_816a7638	-	InitialProgressValue	0x30	0x6
-816a7638	lbp_InitialProgressValue_816a7638	-	TargetValue	0x34	0x6
-816a7638	lbp_InitialProgressValue_816a7638	-	TrophyToUnlock	0x38	0x1
-816a7638	lbp_InitialProgressValue_816a7638	-	BehaviourFlags	0x3a	0x4
-816a806c	lbp_InventoryPageTitleKey_816a806c	-	InventoryPageTitleKey	0x1c	0x6
-816a806c	lbp_InventoryPageTitleKey_816a806c	-	DesiredSortMode	0x24	0x6
-816a81a4	lbp_Labels_816a81a4	-	Labels	0x0	0x15
-816a8268	lbp_Order_816a8268	-	Order	0x4	0x6
-816a8368	lbp_Count_816a8368	-	Count	0x1c	0x6
-816a8458	lbp_Basenote_816a8458	-	basenote	0x0	0x5
-816a8458	lbp_Basenote_816a8458	-	basebpm	0x4	0x8
-816a8458	lbp_Basenote_816a8458	-	pitched	0xc	0x9
-816a8458	lbp_Basenote_816a8458	-	fitbpm	0xd	0x9
-816a8458	lbp_Basenote_816a8458	-	fitbpm	0xd	0x9
-816a8458	lbp_Basenote_816a8458	-	finetune	0x8	0x8
-816ac304	lbp_MakeSizeProportional_816ac304	-	DateAdded	0x0	0x7
-816ac304	lbp_MakeSizeProportional_816ac304	-	LevelUnlockSlotID	0x8	0x10
-816ac304	lbp_MakeSizeProportional_816ac304	-	HighlightSound	0x10	0x57
-816ac304	lbp_MakeSizeProportional_816ac304	-	Colour	0x14	0x10
-816ac304	lbp_MakeSizeProportional_816ac304	-	SubType	0x1c	0x6
-816ac304	lbp_MakeSizeProportional_816ac304	-	NameTranslationTag	0x20	0x6
-816ac304	lbp_MakeSizeProportional_816ac304	-	DescTranslationTag	0x24	0x6
-816ac304	lbp_MakeSizeProportional_816ac304	-	CreationHistory	0x28	0x10
-816ac304	lbp_MakeSizeProportional_816ac304	-	UserCreatedDetails	0x30	0x14
-816ac304	lbp_MakeSizeProportional_816ac304	-	PhotoData	0x34	0x14
-816ac304	lbp_MakeSizeProportional_816ac304	-	EyetoyData	0x38	0x14
-816ac304	lbp_MakeSizeProportional_816ac304	-	LocationIndex	0x40	0x4
-816ac304	lbp_MakeSizeProportional_816ac304	-	CategoryIndex	0x42	0x4
-816ac304	lbp_MakeSizeProportional_816ac304	-	PrimaryIndex	0x44	0x4
-816ac304	lbp_MakeSizeProportional_816ac304	-	Creator	0x3c	0x10
-816ac304	lbp_MakeSizeProportional_816ac304	-	ToolType	0x46	0x2
-816ac304	lbp_MakeSizeProportional_816ac304	-	Flags	0x47	0x2
-816ac304	lbp_MakeSizeProportional_816ac304	-	MakeSizeProportional	0x48	0x2
+816a737c	lbp_ContentsType_816a737c	Packs (sub)	ContentsType	0x18	0x6
+816a737c	lbp_ContentsType_816a737c	Packs (sub)	ContentID	0x20	0xe
+816a737c	lbp_ContentsType_816a737c	Packs (sub)	Timestamp	0x218	0x7
+816a7458	lbp_GUIDGuid_816a7458	DownloadableContent (sub)	GUID.guid	0x0	0x6
+816a7458	lbp_GUIDGuid_816a7458	DownloadableContent (sub)	Flags	0x4	0x6
+816a74c4	lbp_InGameCommerceID_816a74c4	DownloadableContent (sub)	Directory	0x0	0xe
+816a74c4	lbp_InGameCommerceID_816a74c4	DownloadableContent (sub)	ContentID	0x20	0xe
+816a74c4	lbp_InGameCommerceID_816a74c4	DownloadableContent (sub)	InGameCommerceID	0x30	0xe
+816a74c4	lbp_InGameCommerceID_816a74c4	DownloadableContent (sub)	CategoryID	0x40	0xe
+816a74c4	lbp_InGameCommerceID_816a74c4	DownloadableContent (sub)	Flags	0x5c	0x6
+816a74c4	lbp_InGameCommerceID_816a74c4	DownloadableContent (sub)	GUIDs	0x50	0x15
+816a74c4	lbp_InGameCommerceID_816a74c4	DownloadableContent (sub)	TypeMask	0x60	0x6
+816a7638	lbp_InitialProgressValue_816a7638	Pins (sub)	ProgressType	0x4	0x6
+816a7638	lbp_InitialProgressValue_816a7638	Pins (sub)	Category	0x8	0x6
+816a7638	lbp_InitialProgressValue_816a7638	Pins (sub)	TitleLamsKey	0xc	0x6
+816a7638	lbp_InitialProgressValue_816a7638	Pins (sub)	DescriptionLamsKey	0x10	0x6
+816a7638	lbp_InitialProgressValue_816a7638	Pins (sub)	InitialProgressValue	0x30	0x6
+816a7638	lbp_InitialProgressValue_816a7638	Pins (sub)	TargetValue	0x34	0x6
+816a7638	lbp_InitialProgressValue_816a7638	Pins (sub)	TrophyToUnlock	0x38	0x1
+816a7638	lbp_InitialProgressValue_816a7638	Pins (sub)	BehaviourFlags	0x3a	0x4
+816a806c	lbp_InventoryPageTitleKey_816a806c	LocalProfile (sub)	InventoryPageTitleKey	0x1c	0x6
+816a806c	lbp_InventoryPageTitleKey_816a806c	LocalProfile (sub)	DesiredSortMode	0x24	0x6
+816a81a4	lbp_Labels_816a81a4	LocalProfile (sub)	Labels	0x0	0x15
+816a8268	lbp_Order_816a8268	LocalProfile (sub)	Order	0x4	0x6
+816a8368	lbp_Count_816a8368	LocalProfile (sub)	Count	0x1c	0x6
+816a8458	lbp_Basenote_816a8458	Instrument (sub)	basenote	0x0	0x5
+816a8458	lbp_Basenote_816a8458	Instrument (sub)	basebpm	0x4	0x8
+816a8458	lbp_Basenote_816a8458	Instrument (sub)	pitched	0xc	0x9
+816a8458	lbp_Basenote_816a8458	Instrument (sub)	fitbpm	0xd	0x9
+816a8458	lbp_Basenote_816a8458	Instrument (sub)	fitbpm	0xd	0x9
+816a8458	lbp_Basenote_816a8458	Instrument (sub)	finetune	0x8	0x8
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	DateAdded	0x0	0x7
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	LevelUnlockSlotID	0x8	0x10
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	HighlightSound	0x10	0x57
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	Colour	0x14	0x10
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	SubType	0x1c	0x6
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	NameTranslationTag	0x20	0x6
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	DescTranslationTag	0x24	0x6
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	CreationHistory	0x28	0x10
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	UserCreatedDetails	0x30	0x14
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	PhotoData	0x34	0x14
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	EyetoyData	0x38	0x14
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	LocationIndex	0x40	0x4
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	CategoryIndex	0x42	0x4
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	PrimaryIndex	0x44	0x4
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	Creator	0x3c	0x10
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	ToolType	0x46	0x2
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	Flags	0x47	0x2
+816ac304	lbp_MakeSizeProportional_816ac304	Plan (sub)	MakeSizeProportional	0x48	0x2
 816acdd8	Reflect_OutfitList	OutfitList	Outfits	0x40	0x15
 816ad094	lbp_CachedToolType_816ad094	-	Category	0x0	0x6
 816ad094	lbp_CachedToolType_816ad094	-	Location	0x4	0x6
@@ -1067,31 +1067,31 @@ func	func_name	part	field	offset	type
 816ad8ec	Reflect_PaintBrush	PaintBrush	ScatterY	0x88	0x8
 816ad8ec	Reflect_PaintBrush	PaintBrush	Flags	0x8c	0x6
 816af8d0	Reflect_Painting	Painting	BackgroundAlpha	0x58	0x8
-816b05d8	lbp_UserCategoryIndex_816b05d8	-	Details	0x10	0x10
-816b05d8	lbp_UserCategoryIndex_816b05d8	-	Flags	0x64	0x6
-816b05d8	lbp_UserCategoryIndex_816b05d8	-	UserCategoryIndex	0x68	0x6
+816b05d8	lbp_UserCategoryIndex_816b05d8	BigProfile/Level/LocalProfile (shared sub)	Details	0x10	0x10
+816b05d8	lbp_UserCategoryIndex_816b05d8	BigProfile/Level/LocalProfile (shared sub)	Flags	0x64	0x6
+816b05d8	lbp_UserCategoryIndex_816b05d8	BigProfile/Level/LocalProfile (shared sub)	UserCategoryIndex	0x68	0x6
 816b1290	lbp_SortEnabled_816b1290	BigProfile (sub)	Unsorted	0x0	0x9
 816b1290	lbp_SortEnabled_816b1290	BigProfile (sub)	SortEnabled	0x1	0x9
 816b1290	lbp_SortEnabled_816b1290	BigProfile (sub)	RawIndexToSortedIndex	0x4	0x15
 816b1290	lbp_SortEnabled_816b1290	BigProfile (sub)	StringList	0x10	0x15
-816b15ec	lbp_StatList_816b15ec	-	StatList	0x0	0x15
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	TimeTracker.TotalTime	0x10	0x6
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	TimeTracker.EditingTime	0x14	0x6
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	TimeTracker.PlayingTime	0x18	0x6
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	TimeTracker.IdlingTime	0x1c	0x6
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	MultiplayerGamesCount	0x40	0x6
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	TimeTracker.m_levelTimesMap	0x20	0x10
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	TimeTracker.m_totalLevelTime	0x2c	0x6
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	PlayLadderPoints	0x34	0x8
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	StoryLevelCompletionCount	0x38	0x6
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	CommunityLevelCompletionCount	0x3c	0x6
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	LevelCompletionCount	0x44	0x6
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	LevelsTaggedCount	0x48	0x6
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	GamesWithRandomPlayersCount	0x50	0x6
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	PointsCollected	0x4c	0x8
-816b2650	lbp_CommunityLevelCompletionCount_816b2650	-	Stats	0x0	0x10
-816b35fc	lbp_Protected_816b35fc	-	Values	0x0	0x15
-816b35fc	lbp_Protected_816b35fc	-	Protected	0x1c	0x15
+816b15ec	lbp_StatList_816b15ec	Game/LocalProfile (shared sub)	StatList	0x0	0x15
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	TimeTracker.TotalTime	0x10	0x6
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	TimeTracker.EditingTime	0x14	0x6
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	TimeTracker.PlayingTime	0x18	0x6
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	TimeTracker.IdlingTime	0x1c	0x6
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	MultiplayerGamesCount	0x40	0x6
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	TimeTracker.m_levelTimesMap	0x20	0x10
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	TimeTracker.m_totalLevelTime	0x2c	0x6
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	PlayLadderPoints	0x34	0x8
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	StoryLevelCompletionCount	0x38	0x6
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	CommunityLevelCompletionCount	0x3c	0x6
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	LevelCompletionCount	0x44	0x6
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	LevelsTaggedCount	0x48	0x6
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	GamesWithRandomPlayersCount	0x50	0x6
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	PointsCollected	0x4c	0x8
+816b2650	lbp_CommunityLevelCompletionCount_816b2650	LocalProfile (sub)	Stats	0x0	0x10
+816b35fc	lbp_Protected_816b35fc	LocalProfile (sub)	Values	0x0	0x15
+816b35fc	lbp_Protected_816b35fc	LocalProfile (sub)	Protected	0x1c	0x15
 816b6728	Reflect_BigProfile	-	Inventory	0x60	0x15
 816b6728	Reflect_BigProfile	-	StringTable	0x44	0x10
 816b6728	Reflect_BigProfile	-	FromProductionBuild	0x84	0x9
@@ -1101,36 +1101,36 @@ func	func_name	part	field	offset	type
 816b6728	Reflect_BigProfile	-	NearMyTreasuresDataStore	0xd4	0x10
 816b6728	Reflect_BigProfile	-	DownloadedSlots	0x94	0x10
 816b6728	Reflect_BigProfile	-	PlanetDecorations	0xe4	0x21
-816b6a60	lbp_ThingUID_816b6a60	-	Level	0x0	0x21
-816b6a60	lbp_ThingUID_816b6a60	-	ThingUID	0x1c	0x6
-816b8880	lbp_MoreOfEverythingPinProgress_816b8880	-	PinAwards	0x0	0x15
-816b8880	lbp_MoreOfEverythingPinProgress_816b8880	-	PinProgress	0xc	0x15
-816b8880	lbp_MoreOfEverythingPinProgress_816b8880	-	RecentlyAwardedPinIDs	0x20	0x10
-816b8880	lbp_MoreOfEverythingPinProgress_816b8880	-	ProfileDisplayPinIDs	0x50	0x10
-816b8880	lbp_MoreOfEverythingPinProgress_816b8880	-	PinsFlags	0xd5	0x2
-816b8880	lbp_MoreOfEverythingPinProgress_816b8880	-	WeekdaysPlayedBits	0xd7	0x2
-816b8880	lbp_MoreOfEverythingPinProgress_816b8880	-	MoreOfEverythingPinProgress	0xdc	0x6
-816b8d20	lbp_UseDefaultBackground_816b8d20	-	TriggerOverride	0x1c	0x6
-816b8d20	lbp_UseDefaultBackground_816b8d20	-	StickerSaveSize	0x20	0x6
-816b8d20	lbp_UseDefaultBackground_816b8d20	-	AngleOverride	0x24	0x9
-816b8d20	lbp_UseDefaultBackground_816b8d20	-	UIHidden	0x25	0x9
-816b8d20	lbp_UseDefaultBackground_816b8d20	-	LastAutosave	0x0	0x3e
-816b8d20	lbp_UseDefaultBackground_816b8d20	-	UseDefaultBackground	0x26	0x9
-816b915c	lbp_Components_816b915c	-	Components	0x0	0x58
-816b915c	lbp_Components_816b915c	-	Outfit	0xc	0x3e
-816b937c	lbp_AwardCount_816b937c	-	PinID	0x0	0x6
-816b937c	lbp_AwardCount_816b937c	-	AwardCount	0x4	0x6
-816b9630	lbp_Creators_816b9630	-	Creators	0x10	0x15
-816b96c8	lbp_Description_816b96c8	-	Description	0x18	0xf
-816b9710	lbp_PlayerID_816b9710	-	PlayerID	0x10	0x10
+816b6a60	lbp_ThingUID_816b6a60	LocalProfile (sub)	Level	0x0	0x21
+816b6a60	lbp_ThingUID_816b6a60	LocalProfile (sub)	ThingUID	0x1c	0x6
+816b8880	lbp_MoreOfEverythingPinProgress_816b8880	LocalProfile (sub)	PinAwards	0x0	0x15
+816b8880	lbp_MoreOfEverythingPinProgress_816b8880	LocalProfile (sub)	PinProgress	0xc	0x15
+816b8880	lbp_MoreOfEverythingPinProgress_816b8880	LocalProfile (sub)	RecentlyAwardedPinIDs	0x20	0x10
+816b8880	lbp_MoreOfEverythingPinProgress_816b8880	LocalProfile (sub)	ProfileDisplayPinIDs	0x50	0x10
+816b8880	lbp_MoreOfEverythingPinProgress_816b8880	LocalProfile (sub)	PinsFlags	0xd5	0x2
+816b8880	lbp_MoreOfEverythingPinProgress_816b8880	LocalProfile (sub)	WeekdaysPlayedBits	0xd7	0x2
+816b8880	lbp_MoreOfEverythingPinProgress_816b8880	LocalProfile (sub)	MoreOfEverythingPinProgress	0xdc	0x6
+816b8d20	lbp_UseDefaultBackground_816b8d20	LocalProfile (sub)	TriggerOverride	0x1c	0x6
+816b8d20	lbp_UseDefaultBackground_816b8d20	LocalProfile (sub)	StickerSaveSize	0x20	0x6
+816b8d20	lbp_UseDefaultBackground_816b8d20	LocalProfile (sub)	AngleOverride	0x24	0x9
+816b8d20	lbp_UseDefaultBackground_816b8d20	LocalProfile (sub)	UIHidden	0x25	0x9
+816b8d20	lbp_UseDefaultBackground_816b8d20	LocalProfile (sub)	LastAutosave	0x0	0x3e
+816b8d20	lbp_UseDefaultBackground_816b8d20	LocalProfile (sub)	UseDefaultBackground	0x26	0x9
+816b915c	lbp_Components_816b915c	OutfitList (sub)	Components	0x0	0x58
+816b915c	lbp_Components_816b915c	OutfitList (sub)	Outfit	0xc	0x3e
+816b937c	lbp_AwardCount_816b937c	LocalProfile (sub)	PinID	0x0	0x6
+816b937c	lbp_AwardCount_816b937c	LocalProfile (sub)	AwardCount	0x4	0x6
+816b9630	lbp_Creators_816b9630	LocalProfile (sub)	Creators	0x10	0x15
+816b96c8	lbp_Description_816b96c8	Plan (sub)	Description	0x18	0xf
+816b9710	lbp_PlayerID_816b9710	Plan (sub)	PlayerID	0x10	0x10
 816b9944	lbp_WString_816b9944	BigProfile (sub)	String	0x0	0x6
 816b9944	lbp_WString_816b9944	BigProfile (sub)	WString	0x8	0xf
 816b9944	lbp_WString_816b9944	BigProfile (sub)	Index	0x18	0x6
-816b9a5c	lbp_StatLong_816b9a5c	-	StatLong	0x0	0x7
-816b9bd8	lbp_CreatorID_816b9bd8	-	creatorID	0x0	0x10
-816b9bd8	lbp_CreatorID_816b9bd8	-	labelIndex	0x14	0x6
-816b9bd8	lbp_CreatorID_816b9bd8	-	analogue	0x18	0x15
-816b9bd8	lbp_CreatorID_816b9bd8	-	ternary	0x24	0x15
+816b9a5c	lbp_StatLong_816b9a5c	Game/LocalProfile (shared sub)	StatLong	0x0	0x7
+816b9bd8	lbp_CreatorID_816b9bd8	DataLabelsRes (sub)	creatorID	0x0	0x10
+816b9bd8	lbp_CreatorID_816b9bd8	DataLabelsRes (sub)	labelIndex	0x14	0x6
+816b9bd8	lbp_CreatorID_816b9bd8	DataLabelsRes (sub)	analogue	0x18	0x15
+816b9bd8	lbp_CreatorID_816b9bd8	DataLabelsRes (sub)	ternary	0x24	0x15
 816b9e5c	lbp_Names_816b9e5c	BigProfile (sub)	Names	0x0	0x15
 816b9f28	lbp_LabelIndex_816b9f28	BigProfile (sub)	labelIndex	0x0	0x6
 816b9f84	lbp_NearChallengesOpen_816b9f84	BigProfile (sub)	m_NearChallenges_Log	0xc	0x15
@@ -1146,10 +1146,10 @@ func	func_name	part	field	offset	type
 816ba278	lbp_TimeStampPacked_816ba278	BigProfile (sub)	m_treasureID	0x0	0x6
 816ba278	lbp_TimeStampPacked_816ba278	BigProfile (sub)	m_planID	0x4	0x6
 816ba278	lbp_TimeStampPacked_816ba278	BigProfile (sub)	m_timeStamp.m_packed	0x8	0x6
-816ba434	lbp_ProgressCount_816ba434	-	ProgressType	0x0	0x10
-816ba434	lbp_ProgressCount_816ba434	-	ProgressCount	0x4	0x6
-816baa54	lbp_VideoGuid_816baa54	-	Video.guid	0x0	0x6
-816baa54	lbp_VideoGuid_816baa54	-	Timings	0x4	0x15
+816ba434	lbp_ProgressCount_816ba434	LocalProfile (sub)	ProgressType	0x0	0x10
+816ba434	lbp_ProgressCount_816ba434	LocalProfile (sub)	ProgressCount	0x4	0x6
+816baa54	lbp_VideoGuid_816baa54	TutorialTimingsRes (sub)	Video.guid	0x0	0x6
+816baa54	lbp_VideoGuid_816baa54	TutorialTimingsRes (sub)	Timings	0x4	0x15
 816bad1c	Reflect_TutorialTimingsRes	TutorialTimingsRes	TutorialTimings	0x40	0x15
 816bae68	Reflect_DataLabelsRes	DataLabelsRes	DataLabels	0x40	0x15
 816c74d4	Reflect_LocalProfile	LocalProfile	Inventory	0x60	0x15
@@ -1240,8 +1240,8 @@ func	func_name	part	field	offset	type
 816c74d4	Reflect_LocalProfile	LocalProfile	OnlineBetaBootsSinceOnline	0x5a4	0x6
 816c74d4	Reflect_LocalProfile	LocalProfile	WasTrial	0x45c	0x9
 816c8b64	Reflect_VoipRecording	VoipRecording	RawData	0x44	0x15
-816cb3f8	lbp_Remap_816cb3f8	-	Texture	0x0	0x13
-816cb3f8	lbp_Remap_816cb3f8	-	Remap	0x4	0x4
+816cb3f8	lbp_Remap_816cb3f8	TextureList (sub)	Texture	0x0	0x13
+816cb3f8	lbp_Remap_816cb3f8	TextureList (sub)	Remap	0x4	0x4
 816cd05c	Reflect_GameConstants	-	DefaultGroupRadius	0x1a0	0x8
 816cd05c	Reflect_GameConstants	-	DefaultBadgeRadius	0x1a4	0x8
 816cd05c	Reflect_GameConstants	-	DefaultZoomRadius	0x1a8	0x8
@@ -1483,41 +1483,41 @@ func	func_name	part	field	offset	type
 816dfb78	Reflect_Joint	-	GfxWidth	0xd8	0x8
 816dfb78	Reflect_Joint	-	EventNameAngle	0xf0	0xe
 816dfb78	Reflect_Joint	-	EventNameLength	0xe0	0xe
-816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	-	SyncedProfile	0x15c	0x13
-816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	-	Game.Input	0x198	0x10
-816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	-	AvatarInLimbo.AvatarWorld	0x0	0x12
-816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	-	PlayerNumber	0xd4	0x6
-816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	-	Score	0x2c	0x8
-816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	-	TimeUntilLeave	0x68	0x8
-816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	-	LeaveReason	0x6c	0x10
-816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	-	PlayerID	0x98	0x10
-816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	-	OwnerPlayerID	0x74	0x10
-816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	-	UserID	0xbc	0x6
-816e1bf4	lbp_TimesSpawned_816e1bf4	-	OwnerPlayerID	0x0	0x10
-816e1bf4	lbp_TimesSpawned_816e1bf4	-	UserID	0x24	0x6
-816e1bf4	lbp_TimesSpawned_816e1bf4	-	TimesSpawned	0x28	0x5
-816e21c8	lbp_LeftGameFrame_816e21c8	-	PlayerNumber	0x0	0x6
-816e21c8	lbp_LeftGameFrame_816e21c8	-	PlayerID	0x4	0x10
-816e21c8	lbp_LeftGameFrame_816e21c8	-	OwnerPlayerID	0x28	0x10
-816e21c8	lbp_LeftGameFrame_816e21c8	-	DisplayName	0x50	0xf
-816e21c8	lbp_LeftGameFrame_816e21c8	-	UserID	0x60	0x6
-816e21c8	lbp_LeftGameFrame_816e21c8	-	LeftGameFrame	0x64	0x5
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	OwnerID	0x0	0x10
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	GridSize	0x24	0x5
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	ModalOverlayActive	0x31	0x9
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	LevelFeedback	0x38	0x10
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	AngleSnap	0x28	0x5
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	PreviewMode	0x2c	0x10
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	PoppetCameraTweakThingUID	0x68	0x6
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	PoppetCameraTweakNode	0x6c	0x6
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	FrontView	0x30	0x9
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	TimeLevelJoined	0x70	0x8
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	TimeBasedPinsAwarded1Minute	0x74	0x9
-816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	-	RequestedModalOverlay	0x78	0x6
-816e36ac	lbp_Source_816e36ac	-	Source	0x1c	0x5
-816e37c4	lbp_TutorialGroups_816e37c4	-	TutorialGroups	0x14	0x15
-816e3960	lbp_Tutorials_816e3960	-	NameKey	0x14	0x6
-816e3960	lbp_Tutorials_816e3960	-	Tutorials	0x18	0x15
+816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	Game (sub)	SyncedProfile	0x15c	0x13
+816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	Game (sub)	Game.Input	0x198	0x10
+816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	Game (sub)	AvatarInLimbo.AvatarWorld	0x0	0x12
+816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	Game (sub)	PlayerNumber	0xd4	0x6
+816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	Game (sub)	Score	0x2c	0x8
+816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	Game (sub)	TimeUntilLeave	0x68	0x8
+816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	Game (sub)	LeaveReason	0x6c	0x10
+816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	Game (sub)	PlayerID	0x98	0x10
+816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	Game (sub)	OwnerPlayerID	0x74	0x10
+816e17f0	lbp_AvatarInLimboAvatarWorld_816e17f0	Game (sub)	UserID	0xbc	0x6
+816e1bf4	lbp_TimesSpawned_816e1bf4	Game (sub)	OwnerPlayerID	0x0	0x10
+816e1bf4	lbp_TimesSpawned_816e1bf4	Game (sub)	UserID	0x24	0x6
+816e1bf4	lbp_TimesSpawned_816e1bf4	Game (sub)	TimesSpawned	0x28	0x5
+816e21c8	lbp_LeftGameFrame_816e21c8	Game (sub)	PlayerNumber	0x0	0x6
+816e21c8	lbp_LeftGameFrame_816e21c8	Game (sub)	PlayerID	0x4	0x10
+816e21c8	lbp_LeftGameFrame_816e21c8	Game (sub)	OwnerPlayerID	0x28	0x10
+816e21c8	lbp_LeftGameFrame_816e21c8	Game (sub)	DisplayName	0x50	0xf
+816e21c8	lbp_LeftGameFrame_816e21c8	Game (sub)	UserID	0x60	0x6
+816e21c8	lbp_LeftGameFrame_816e21c8	Game (sub)	LeftGameFrame	0x64	0x5
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	OwnerID	0x0	0x10
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	GridSize	0x24	0x5
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	ModalOverlayActive	0x31	0x9
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	LevelFeedback	0x38	0x10
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	AngleSnap	0x28	0x5
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	PreviewMode	0x2c	0x10
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	PoppetCameraTweakThingUID	0x68	0x6
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	PoppetCameraTweakNode	0x6c	0x6
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	FrontView	0x30	0x9
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	TimeLevelJoined	0x70	0x8
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	TimeBasedPinsAwarded1Minute	0x74	0x9
+816e3434	lbp_TimeBasedPinsAwarded1Minute_816e3434	Game (sub)	RequestedModalOverlay	0x78	0x6
+816e36ac	lbp_Source_816e36ac	Game (sub)	Source	0x1c	0x5
+816e37c4	lbp_TutorialGroups_816e37c4	Tutorials (sub)	TutorialGroups	0x14	0x15
+816e3960	lbp_Tutorials_816e3960	Tutorials (sub)	NameKey	0x14	0x6
+816e3960	lbp_Tutorials_816e3960	Tutorials (sub)	Tutorials	0x18	0x15
 816e3b34	lbp_DescriptionKey_816e3b34	-	LevelGUID	0x3c	0x57
 816e3b34	lbp_DescriptionKey_816e3b34	-	VideoGUID	0x40	0x57
 816e3b34	lbp_DescriptionKey_816e3b34	-	NameKey	0x48	0x6
@@ -1529,44 +1529,44 @@ func	func_name	part	field	offset	type
 816e3b34	lbp_DescriptionKey_816e3b34	-	BonusRewards	0x20	0x15
 816e3d40	lbp_MetaData_816e3d40	-	MetaData	0x70	0x10
 816e3d90	lbp_PlayerIDs_816e3d90	Level (sub)	Offset	0x500	0x6
-816e3f5c	lbp_Category_816e3f5c	-	Location	0x4c	0x6
-816e3f5c	lbp_Category_816e3f5c	-	Category	0x50	0x6
-816e41a8	lbp_MaterialGroupName_816e41a8	-	MaterialGroupName	0x38	0xe
-816e41a8	lbp_MaterialGroupName_816e41a8	-	Hardness	0x48	0x6
-816e41a8	lbp_MaterialGroupName_816e41a8	-	SmallestImpact	0x4c	0x8
-816e41a8	lbp_MaterialGroupName_816e41a8	-	SmallestSize	0x50	0x8
-816e41a8	lbp_MaterialGroupName_816e41a8	-	OverridePitch	0x54	0x9
-816e434c	lbp_MusicStemTranslatedTag_816e434c	-	MusicStemTranslatedTag	0x0	0xe
-816e434c	lbp_MusicStemTranslatedTag_816e434c	-	SliderIndex	0x10	0x5
-816e434c	lbp_MusicStemTranslatedTag_816e434c	-	FadeIn	0x18	0x8
-816e434c	lbp_MusicStemTranslatedTag_816e434c	-	FadeOut	0x1c	0x8
-816e434c	lbp_MusicStemTranslatedTag_816e434c	-	ForwardSend	0x20	0x8
-816e434c	lbp_MusicStemTranslatedTag_816e434c	-	RearSend	0x24	0x8
-816e434c	lbp_MusicStemTranslatedTag_816e434c	-	Trigger	0x28	0x9
-816e45a8	lbp_DspType_816e45a8	-	Parent	0x20	0xe
-816e45a8	lbp_DspType_816e45a8	-	DspType	0x30	0xe
-816e45a8	lbp_DspType_816e45a8	-	Params	0x40	0x15
-816e4748	lbp_DefaultValue_816e4748	-	ParamType	0x10	0xe
-816e4748	lbp_DefaultValue_816e4748	-	CurveType	0x20	0xe
-816e4748	lbp_DefaultValue_816e4748	-	DefaultValue	0x30	0x8
-816e48d0	lbp_Settings_816e48d0	-	Settings	0x10	0x15
-816e49d4	lbp_Value_816e49d4	-	Value	0x10	0x8
-816e4be4	lbp_ReplayStreams_816e4be4	-	Filename	0x0	0xe
-816e4be4	lbp_ReplayStreams_816e4be4	-	Hotkey	0x20	0x6
-816e4be4	lbp_ReplayStreams_816e4be4	-	EstBuffer	0x24	0x6
-816e4be4	lbp_ReplayStreams_816e4be4	-	ReplayStreams	0x28	0x15
-816e4d74	lbp_StreamTypeID_816e4d74	-	StreamTypeID	0x0	0xe
-816e4d74	lbp_StreamTypeID_816e4d74	-	PollInterval	0x10	0x6
+816e3f5c	lbp_Category_816e3f5c	Plan (sub)	Location	0x4c	0x6
+816e3f5c	lbp_Category_816e3f5c	Plan (sub)	Category	0x50	0x6
+816e41a8	lbp_MaterialGroupName_816e41a8	AudioMaterials (sub)	MaterialGroupName	0x38	0xe
+816e41a8	lbp_MaterialGroupName_816e41a8	AudioMaterials (sub)	Hardness	0x48	0x6
+816e41a8	lbp_MaterialGroupName_816e41a8	AudioMaterials (sub)	SmallestImpact	0x4c	0x8
+816e41a8	lbp_MaterialGroupName_816e41a8	AudioMaterials (sub)	SmallestSize	0x50	0x8
+816e41a8	lbp_MaterialGroupName_816e41a8	AudioMaterials (sub)	OverridePitch	0x54	0x9
+816e434c	lbp_MusicStemTranslatedTag_816e434c	MusicSettings (sub)	MusicStemTranslatedTag	0x0	0xe
+816e434c	lbp_MusicStemTranslatedTag_816e434c	MusicSettings (sub)	SliderIndex	0x10	0x5
+816e434c	lbp_MusicStemTranslatedTag_816e434c	MusicSettings (sub)	FadeIn	0x18	0x8
+816e434c	lbp_MusicStemTranslatedTag_816e434c	MusicSettings (sub)	FadeOut	0x1c	0x8
+816e434c	lbp_MusicStemTranslatedTag_816e434c	MusicSettings (sub)	ForwardSend	0x20	0x8
+816e434c	lbp_MusicStemTranslatedTag_816e434c	MusicSettings (sub)	RearSend	0x24	0x8
+816e434c	lbp_MusicStemTranslatedTag_816e434c	MusicSettings (sub)	Trigger	0x28	0x9
+816e45a8	lbp_DspType_816e45a8	MixerSettings (sub)	Parent	0x20	0xe
+816e45a8	lbp_DspType_816e45a8	MixerSettings (sub)	DspType	0x30	0xe
+816e45a8	lbp_DspType_816e45a8	MixerSettings (sub)	Params	0x40	0x15
+816e4748	lbp_DefaultValue_816e4748	MixerSettings (sub)	ParamType	0x10	0xe
+816e4748	lbp_DefaultValue_816e4748	MixerSettings (sub)	CurveType	0x20	0xe
+816e4748	lbp_DefaultValue_816e4748	MixerSettings (sub)	DefaultValue	0x30	0x8
+816e48d0	lbp_Settings_816e48d0	MixerSettings (sub)	Settings	0x10	0x15
+816e49d4	lbp_Value_816e49d4	MixerSettings (sub)	Value	0x10	0x8
+816e4be4	lbp_ReplayStreams_816e4be4	ReplayConfig (sub)	Filename	0x0	0xe
+816e4be4	lbp_ReplayStreams_816e4be4	ReplayConfig (sub)	Hotkey	0x20	0x6
+816e4be4	lbp_ReplayStreams_816e4be4	ReplayConfig (sub)	EstBuffer	0x24	0x6
+816e4be4	lbp_ReplayStreams_816e4be4	ReplayConfig (sub)	ReplayStreams	0x28	0x15
+816e4d74	lbp_StreamTypeID_816e4d74	ReplayConfig (sub)	StreamTypeID	0x0	0xe
+816e4d74	lbp_StreamTypeID_816e4d74	ReplayConfig (sub)	PollInterval	0x10	0x6
 816e4e70	lbp_FromGuid_816e4e70	GuidSubst (sub)	From.guid	0x0	0x6
 816e4e70	lbp_FromGuid_816e4e70	GuidSubst (sub)	To.guid	0x4	0x6
-816e4f68	lbp_Player_816e4f68	-	Player	0x0	0x5
-816e4f68	lbp_Player_816e4f68	-	Score	0x4	0x8
-816e50f0	lbp_Score_816e50f0	-	Score	0x4	0x6
-816e515c	lbp_CountdownStartServerTime_816e515c	-	State	0x0	0x6
-816e515c	lbp_CountdownStartServerTime_816e515c	-	CountdownStartServerTime	0x8	0x7
-816e515c	lbp_CountdownStartServerTime_816e515c	-	Thumb	0x10	0x10
-816ee868	lbp_InstanceLayout_816ee868	-	Script	0x0	0x13
-816ee868	lbp_InstanceLayout_816ee868	-	InstanceLayout	0x4	0x10
+816e4f68	lbp_Player_816e4f68	Game (sub)	Player	0x0	0x5
+816e4f68	lbp_Player_816e4f68	Game (sub)	Score	0x4	0x8
+816e50f0	lbp_Score_816e50f0	Game (sub)	Score	0x4	0x6
+816e515c	lbp_CountdownStartServerTime_816e515c	Game (sub)	State	0x0	0x6
+816e515c	lbp_CountdownStartServerTime_816e515c	Game (sub)	CountdownStartServerTime	0x8	0x7
+816e515c	lbp_CountdownStartServerTime_816e515c	Game (sub)	Thumb	0x10	0x10
+816ee868	lbp_InstanceLayout_816ee868	PDecorations/PoppetState (shared sub)	Script	0x0	0x13
+816ee868	lbp_InstanceLayout_816ee868	PDecorations/PoppetState (shared sub)	InstanceLayout	0x4	0x10
 816f2c64	Reflect_Script	-	ClassName	0x40	0xe
 816f2c64	Reflect_Script	-	SuperClassScript	0x50	0x13
 816f2c64	Reflect_Script	-	Modifiers	0x54	0x4
@@ -1596,9 +1596,9 @@ func	func_name	part	field	offset	type
 816f3040	lbp_InstanceOffset_816f3040	-	DimensionCount	0x18	0x2
 816f3040	lbp_InstanceOffset_816f3040	-	ArrayBaseMachineType	0x1b	0x2
 816f3040	lbp_InstanceOffset_816f3040	-	InstanceOffset	0x14	0x6
-816f32f0	lbp_ScriptInstance_816f32f0	-	ScriptInstance	0x10	0x10
-816f3318	lbp_String_816f3318	-	String	0x10	0xf
-816f3358	lbp_String_816f3358	-	String	0x10	0xe
+816f32f0	lbp_ScriptInstance_816f32f0	PoppetState (sub)	ScriptInstance	0x10	0x10
+816f3318	lbp_String_816f3318	PoppetState (sub)	String	0x10	0xf
+816f3358	lbp_String_816f3358	PoppetState (sub)	String	0x10	0xe
 816f425c	lbp_TypeNameStringIdx_816f425c	Script (sub)	MachineType	0x1	0x2
 816f425c	lbp_TypeNameStringIdx_816f425c	Script (sub)	FishType	0x0	0x2
 816f425c	lbp_TypeNameStringIdx_816f425c	Script (sub)	DimensionCount	0x2	0x2
