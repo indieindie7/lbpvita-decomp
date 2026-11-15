@@ -3792,3 +3792,9 @@
 0x81605ba4 func Stream_WriteThingPtr hand late78
 0x816d0030 func ItemPack_WritePtr hand late78
 0x816d02d8 func ItemPackList_WritePtr hand late78
+0x8131eeb8 func Paint_Reset hand late80
+0x813207e4 func Paint_SaveThenRestart hand late80
+0x8131ec92 func Paint_StartCanvas hand late80
+0x812fef80 func PhotoFrame_Begin hand late80
+0x812ff6d4 func PhotoFrame_BeginFullScreen hand late80
+0x812ff6de func PhotoFrame_End hand late80
