@@ -1,0 +1,87 @@
+8100d71c	2436	Poppet_UndoSnapshot	Poppet_UndoSnapshot	5	0	Logs per-frame undo snapshot memory deltas for the editor's undo history system
+8160c6c0	1280	Msg_OnPoppetPlaceDecoration	Poppet_PlaceDecoration	4	0	Reads a decoration record from the poppet and writes its data into the message buffer.
+8160b288	1234	Msg_OnPoppetPlaceSticker	Poppet_PlaceSticker	4	0	Serializes the poppet's sticker placement state into a message buffer for network or undo purposes.
+8100d2ea	1074	Poppet_UndoSnapshot	Poppet_UndoSnapshot	5	0	Serializes the current level state into a buffer for undo history
+81141592	640	Slice_Commit	Poppet_CommitSlice	4	0	Validate and commit a polygon slice operation for the editor cursor tool
+8146bdf6	578	native_HaveDecorationsChangedFromDefault	Poppet_HasDecorationChanged	4	0	Checks if a decoration's transform or scale has changed from its default state
+811411a2	550	Slice_Commit	Poppet_Slice_Commit	3	0	processes slice planes for a shape during level editing commit
+8121a28e	506	Sticker_PaintOnThing	Poppet_UnwrapStickers	2	1	Unwraps sticker placement data from a thing's array into a flat buffer for the editor.
+812fd758	388	Poppet_PlaceJointPrompt	Poppet_CreateJoint	3	0	Creates a new joint entity in the level editor and stores it in the poppet's joint record.
+812fd4e2	384	Poppet_PlaceJointPrompt	Poppet_JointApply	4	1	Applies a joint to the level by setting end A and B after computing positions
+81141452	320	Slice_Commit	Poppet_Slice_Commit	4	1	Commits a slice operation on the shape by applying polygon data and cleaning up resources.
+8134db58	304	native_SendSelectSlotMessage	Poppet_SendSelectSlotMessage	4	1	Sends a network message to the server when a select slot action is performed
+811616de	292	Undo_StepBack	Undo_LockLevel	2	1	Acquire a mutex lock for the level data before performing an undo step
+812fda9a	282	Poppet_PlaceJointPrompt	Poppet_JointPrompt	4	1	Handle the poppet joint placement prompt by initializing a wrap and either confirming or invoking the failure 
+81346b7c	270	Poppet_PlaceJointPrompt	Poppet_CanPlaceJoint	3	1	Validates whether a joint can be placed at the current poppet state
+812fd662	246	Poppet_PlaceJointPrompt	Poppet_IsJointValid	3	1	validates a joint by checking its type and target constraints
+81362cb6	242	native_DoInventoryItemInfoIcons	Poppet_DoInventoryItemInfoIcons	5	1	Executes the inventory item info icon action for the selected poppet object.
+812fca2c	238	Poppet_HandleMessage	Poppet_HandleMessage	5	0	Iterates over a list of objects and applies actions based on flags
+81449c0c	232	native_DoAuthorLabelSelector	Poppet_DoAuthorLabelSelector	4	1	Handles the author label selector tool by walking a linked list of objects and running a leaf action on the se
+81324f20	200	StickerHoverState_ctor	Poppet_CanPlaceSticker	4	1	Determines whether a sticker can be placed at the current cursor position in the editor.
+811815e2	194	Decoration_Commit	Poppet_CheckPlacementSize	3	1	Checks if placing a decoration or sticker would exceed the level's size limit and triggers an error if so
+811406ce	184	Slice_Commit	Poppet_SliceCommit	3	0	Commits a slice operation on a joint or object record via a wrapper call
+814335f4	168	native_DoLabelSelector	Poppet_DoLabelSelector	2	1	Selects a label in the poppet editor by walking a list of objects and running an action on the chosen one
+81343e8a	166	Joint_CommitAttach	Joint_CommitAttach	4	1	Applies joint length/offset values to the joint record based on attached state
+812fd446	156	Poppet_PlaceJointPrompt	Poppet_CanPlaceJoint	4	1	Determines whether the player can place a joint in the current state
+816ab6d0	152	InventoryDetails_ReadBinary	Poppet_InventoryDetails_ReadBinary	5	0	Reads an inventory item's binary data and updates the editor's undo state
+8143feae	148	native_DoLabelSelector	Poppet_DoLabelSelector	3	1	Traverse a linked list of objects to find one matching a label selector and run an action on it
+8138e10a	122	native_TriggerOnPlanetTweak	Poppet_GetToolFromList	3	1	Walks a list of tool objects to find one whose ID is less than param_1 and returns its action result
+813028d4	118	Decoration_Commit	Poppet_CommitDecoration	3	0	Commits the currently held decoration or sticker to the level
+81206b9a	98	native_DoSelectedFilterUI	Poppet_DoSelectedFilterUI	4	1	Traverse the selected filter list to find and run the target object's action
+81345bf0	64	Joint_CommitAttach	Joint_CommitAttach	5	1	Applies joint attachment logic based on the joint type and stored values.
+811615fa	62	Undo_PushSnapshot	Undo_PushSnapshot	5	1	Initializes a new undo history snapshot record with default values and the level data pointer.
+8113138a	62	Poppet_UseInventoryItems	Poppet_ApplyItemOffset	3	1	Applies item offset and rotation to the poppet's transform based on inventory state
+815ae0b4	54	Poppet_QueueAction	Poppet_PushAction	4	1	appends a new action to the poppet's action queue array
+81176e88	44	Undo_StepBack	Poppet_ResetSelection	3	1	Resets the editor selection state and clears associated flags after a step operation
+810d60b6	32	Game_CloneLevelBySave	Game_ClearUndoHistory	2	0	Iterate and free all entries in the undo history list
+81140420	32	Joint_CommitAttach	Poppet_IsAttached	3	1	checks if the poppet is attached to a joint
+8145003c	20	native_IsStamping	Poppet_IsStamping	5	1	Returns whether the poppet is currently stamping
+816c987c	12	PPhysicsTweak_SerializeSub_8163d67c	Poppet_PhysicsTweak	3	1	Thunk that runs a physics tweak action with a fixed parameter
+81014ed0	4	Undo_PushSnapshot	Undo_PushSnapshot	5	0	Returns the snapshot pointer stored in the undo history record for the given undo state.
+81348ad6	24	Slice_Commit	Poppet_Unused	2	1	empty wrapper function with no meaningful logic
+8113d2f0	8	PlaceJointTool_ctor	Poppet_ToolState_ctor	5	1	Constructs the base tool state for a named editor tool
+810c5572	122	Joint_CommitAttach	Joint_CommitAttach	1	1	Applies a joint's attachment offset to its target position
+81039710	68	VertEdit_HoverSelectAdd	Poppet_HoverSelectAdd	5	0	Called by VertEdit_HoverSelectAdd to perform the hover select add action on a poppet
+8117b562	20	Decoration_Commit	Poppet_AcquireInventoryItem	3	1	Acquires an inventory item for the poppet by calling a wrapper at offset 0x488
+8113fda8	100	Joint_CommitAttach	Poppet_JointPromptCommit	3	1	collects joint candidates and queues glue for a poppet joint prompt commit
+814184ca	562	Slice_Commit	Poppet_Slice_Commit	4	0	commits a slice operation by adding parts, gluing them, and updating the level
+813282d6	178	Poppet_SwitchWireUpdate	Poppet_Createstamp	4	1	Creates a stamp for the poppet and decrements its remaining count.
+81014fa8	70	Undo_StepBack	Poppet_UndoStepBack	1	0	Guess based on caller name only
+81086514	40	Paint_AskQuit	Poppet_CanUndo	3	1	Checks if the current level state can be undone or redone
+81117d20	32	Poppet_UnphysicsToggle	Poppet_UnphysicsToggle	5	1	Sets a flag in the Poppet state and triggers an action if it reaches 0xff
+8112b2b0	8	Slice_Commit	Poppet_Thunk	1	1	Thunk wrapper function that calls a single procedure
+8100cfcc	798	Poppet_UndoSnapshot	Game_ArenaCountIndicationOfSystemMemory	5	1	Prints a diagnostic report of arena memory allocation statistics to the debug console.
+8112b01a	662	Slice_Commit	Poppet_ValidateCopy	2	1	Checks whether a copied object's data matches an existing one during paste operations
+81123ee8	624	native_StartSetDevGroupDecorations	Poppet_Run	4	1	Main editor tool update loop that handles placement and joint creation
+81346c8a	582	Poppet_PlaceJointPrompt	Poppet_JointAttach	4	1	Attaches a new joint to the level using a leaf object and sets its ends
+812f9c3e	300	Poppet_ThermoSaveNotice	Poppet_ApplyUndo	2	1	Applies undo/redo state changes to the level and updates the editor UI.
+816ab5e0	238	InventoryDetails_ReadBinary	Poppet_EditorAddThing	3	1	Adds a new thing to the level via a queue and returns an error code if it fails
+81346a98	228	Poppet_PlaceJointPrompt	Poppet_SnapToGrid	2	1	Adjusts the editor cursor position to a grid or snap point when in grid mode
+81464362	178	native_HaveDecorationsChangedFromDefault	Poppet_IsLocked	3	1	Checks whether the poppet or its target is locked or has a locked interaction
+81125e68	166	native_OnMixAndPickSelected	Poppet_Unselect	3	1	Deselects the editor tool and resets state when a menu or leaf action completes.
+816aaec0	108	InventoryDetails_WriteBinary	Poppet_AddUndoEntry	4	1	Appends a level snapshot to the undo history and processes pending undo entries
+81336b06	68	Slice_Commit	Poppet_SetSelected	3	1	Assigns a new selected object to the editor's current selection state
+81336faa	66	Slice_Commit	Poppet_SetTool	3	1	Sets the current poppet tool state and runs the associated update logic
+815beaa8	60	Decoration_Commit	Poppet_AppendRecord	3	1	appends a value to a dynamic record array tracked by a count index
+8134d73a	14	Poppet_UseInventoryItems	Game_Unused	1	1	Placeholder wrapper function with no meaningful logic
+8146b6f4	760	native_SaveDecorations	Poppet_SyncUndoHistory	3	1	Restores the level and objects from an undo/redo snapshot after saving resources.
+815b1750	824	Slice_Commit	Poppet_CollisionDetect	3	1	detect collisions between a shape and nearby shapes within a radius
+81336c92	790	Slice_Commit	Poppet_Run	5	1	Main per-frame update loop for the editor's cursor/poppet object
+8158c478	88	Poppet_HandleMessage	Poppet_ReplaceObjects	4	0	replaces a list of objects in the level with new ones from another list
+8121588a	1474	Poppet_PlaceJointPrompt	Poppet_Run	3	1	Run the poppet's per-frame update and level processing logic
+813488c6	528	Slice_Commit	Poppet_IsInsidePolygon	4	1	Determines whether a point is inside a polygon using cross-product winding
+8133691c	490	Slice_Commit	Poppet_JointUpdateAll	3	0	Iterates over a list of joints and updates their end A or B positions based on the caller's transform.
+812fd8dc	446	Poppet_PlaceJointPrompt	Poppet_GetAverageAngle	3	1	Computes the average angle of a set of joints attached to a poppet.
+8162f450	302	Poppet_ApplyCostumeItem	Poppet_AppendUndoEntry	3	0	appends a serialized level state to the undo history stream
+8161f7a4	284	Poppet_ApplyCostumeItem	Poppet_UndoRedo	3	1	Restores or applies an editor action using a saved buffer and updates the undo history.
+8163151c	258	Poppet_ApplyCostumeItem	Poppet_PushUndoSnapshot	3	0	Appends a level state byte and word to the undo history stream
+81639b90	258	Poppet_ApplyCostumeItem	Poppet_PushUndoSnapshot	4	1	Appends a level state snapshot to the undo history stream for undo/redo support.
+816336a4	254	Poppet_ApplyCostumeItem	Poppet_ApplyTool	3	1	Applies the selected poppet tool to a level object and updates the undo history
+8122ddf4	194	native_DeleteThingAndChildrenAndJoints	Poppet_RunUndoHistory	4	1	Iterates over undo history snapshots and runs each recorded object's update function
+81087b0a	188	native_SetTweakNodeIndex	Poppet_SendLevelSnapshot	3	1	Sends a level snapshot message to the network when a leaf object is valid
+810eb936	140	Slice_Commit	Poppet_MaskFlags	3	1	Combines mask flags from two objects to produce a combined result
+81141fec	128	Poppet_UseInventoryObject	Poppet_ApplyUndoList	3	1	adds unique items from a list to the undo history
+8104297c	108	Undo_StepBack	Poppet_TryPlaceObject	4	1	Attempts to place an object in the level by validating against a check function up to three times
+81336b8c	90	Slice_Commit	Poppet_GetToolAction	4	1	Retrieves the tool action data for the current poppet state
+81632f74	78	Poppet_ApplyCostumeItem	Poppet_WriteUndoData	3	1	Encodes two 32-bit values into a stream buffer with byte-swapping
+8132fcf6	40	Poppet_HandleMessage	Poppet_SetDefaultPainting	4	1	Initializes a painting item's default texture and scale for the editor cursor tool

@@ -1,0 +1,21 @@
+addr	current	proposed	conf	ev_ok	purpose
+8107b488	Poppet_SendGridModeMessage	Poppet_SendMessage	3	1	Sends a message to the network if a player object is valid
+8113036c	Poppet_UndoSnapshot	Undo_PushSnapshot	5	1	Pushes a snapshot of the level into the undo history when undo is available.
+8123d7b8	Undo_StepBack	Poppet_LoadLevelResources	3	1	Loads level resources after acquiring locks and waiting for async completion
+8123d8c8	Undo_StepForward	Poppet_LoadLevel	3	1	Loads level resources when the current level differs from the target level
+8123da08	Undo_CanUndo	Poppet_CanUndo	4	0	Checks whether an undo snapshot can be performed or if the player is in a valid state to undo
+812fbdc4	Poppet_QueueGenericAction	Poppet_CreateNewAction	4	1	Allocates and initializes a new action record and queues it for the given player
+81319f78	Joint_EndBHeld	Joint_CommitAttach	5	1	Validates and commits an attach joint by wrapping coordinates and calling the leaf constraint setup.
+81330954	Poppet_RegisterMessageHandlers	Msg_OnRegister	3	1	Registers network message handlers for the poppet editor
+81330cfe	Poppet_OnCreateDefault	Poppet_CreateFromResources	5	1	Creates a poppet from a list of resource IDs
+81330dcc	Poppet_OnLoadPainting	Msg_OnPoppetLoadPainting	5	0	Handles the poppet load painting message by syncing the poppet and applying the painting resource to the object.
+8133770e	Poppet_ApplyLayerMove	Poppet_AdjustSelection	3	0	Adjusts the selection range of held objects based on min/max front/back values
+813403b4	Poppet_SpawnJointFromPlan	Poppet_BuildJointThing	5	0	Creates a new joint object and initializes it with the given parameters.
+813417d6	Poppet_WearCostumeItem	Poppet_ApplyCostumeItem	5	1	Applies a costume item to the poppet and returns success status
+81341886	Poppet_UseBackgroundItem	Poppet_UseInventoryObject	5	0	Applies an inventory object to the poppet and updates its state.
+81343cc6	Poppet_BuildJointEndThing	Poppet_BuildJointThing	5	0	Creates a joint thing for the editor cursor tool
+813459a2	Joint_AttachEnd	Joint_CommitAttach	5	1	Applies a joint's computed transform to its end A or B and updates the level.
+815ae0f0	Msg_OnPoppetPlaceDecoration	Poppet_IsValidForEditor	3	1	Checks if a poppet is valid and its children are safe before allowing an operation
+815ae168	Msg_OnPoppetPlaceSticker	Poppet_UnlockCursor	3	1	Unlock the poppet's cursor mutex and run its unlock routine
+8172e200	Msg_OnPoppetCreate	Poppet_OnCreateDefault	4	1	Creates a default poppet for the player when none exists or is invalid
+8101ad36	Joint_GetSoundName	Joint_GetName	4	0	Returns the asset path string for a given joint type index

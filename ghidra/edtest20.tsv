@@ -1,0 +1,21 @@
+addr	current	proposed	conf	ev_ok	purpose
+8107b488	Poppet_SendGridModeMessage	Poppet_SendMessage	4	1	Send a Poppet message to the network if the leaf is valid
+8113036c	Poppet_UndoSnapshot	Poppet_UndoSnapshot	5	0	Executes undo command by pushing a snapshot of the current level state
+8123d7b8	Undo_StepBack	Poppet_LoadLevel	4	1	Loads the level resource for the poppet editor after acquiring a mutex and waiting on an event flag
+8123d8c8	Undo_StepForward	Poppet_LoadResource	4	1	Loads a resource for the editor cursor tool when not already loaded
+8123da08	Undo_CanUndo	Poppet_IsValidObject	2	1	Checks if a poppet object is valid and not locked by another process
+812fbdc4	Poppet_QueueGenericAction	Poppet_CreateWrap	4	1	Allocates and initializes a new wrap object then queues it for the poppet system
+81319f78	Joint_EndBHeld	Poppet_IsValidSelection	4	1	Determines whether a selected object is valid for further interaction
+81330954	Poppet_RegisterMessageHandlers	Poppet_NetRegisterHandlers	4	1	Registers network message handlers for the poppet editor system
+81330cfe	Poppet_OnCreateDefault	Poppet_CreateFromResources	5	1	Creates a poppet entity from a list of resources
+81330dcc	Poppet_OnLoadPainting	Poppet_UndoApply	4	1	Applies undo/redo to a poppet in the editor
+8133770e	Poppet_ApplyLayerMove	Poppet_AdjustSelection	3	1	Adjusts the selection range of a held set of poppets in the editor
+813403b4	Poppet_SpawnJointFromPlan	Poppet_BuildJointThing	5	0	Creates a joint thing for the poppet editor based on parameters and existing joint data
+813417d6	Poppet_WearCostumeItem	Poppet_ApplyCostume	5	1	Applies a costume item to the poppet and updates its appearance
+81341886	Poppet_UseBackgroundItem	Poppet_UndoSnapshot	5	1	Restores an object's state to a saved snapshot when the editor detects a mismatch.
+81343cc6	Poppet_BuildJointEndThing	Poppet_AddPolygon	3	1	Creates a new polygon shape for the poppet cursor tool
+813459a2	Joint_AttachEnd	Poppet_JointSetEnd	3	1	Sets a joint's end position or rotation based on a leaf node and parameter index
+815ae0f0	Msg_OnPoppetPlaceDecoration	Poppet_IsValid	3	1	Checks if a poppet is valid and active for the player
+815ae168	Msg_OnPoppetPlaceSticker	Poppet_ValidateAndProcess	3	1	Validates a poppet and processes its leafs before calling its update function
+8172e200	Msg_OnPoppetCreate	Poppet_OnCreate	4	1	Initialize or create a Poppet for the player and handle default creation
+8101ad36	Joint_GetSoundName	Poppet_JointName	5	1	Returns the path string for a given joint type index

@@ -1,0 +1,480 @@
+addr	current	proposed	conf	ev_ok	purpose
+8100d71c	lbp_DIFF_8100d71c	Poppet_UndoSnapshot	5	0	Logs per-frame undo snapshot memory deltas for the editor's undo history system
+810ebc84	lbp_Proc_810ebc84	Joint_AttachEnd	5	0	Attaches a joint end to a thing using computed transform and physics parameters
+81726240	lbp_Proc_81726240	Poppet_ApplyInventoryItems	4	1	Applies inventory items to the poppet by encoding them into its state fields
+8160c6c0	lbp_use_memcpy_8160c6c0	Poppet_PlaceDecoration	4	0	Reads a decoration record from the poppet and writes its data into the message buffer.
+8160b288	lbp_Proc_8160b288	Poppet_PlaceSticker	4	0	Serializes the poppet's sticker placement state into a message buffer for network or undo purposes.
+8100d2ea	lbp_LeafL_8100d2ea	Poppet_UndoSnapshot	5	0	Serializes the current level state into a buffer for undo history
+812fc14c	lbp_Run_812fc14c	Poppet_HandleMessage	5	0	Iterates over a list of poppet objects and performs per-object update or cleanup logic based on flags.
+81143352	lbp_GameplayStickerSwitchMatch_81143352	Poppet_AttachStickerSwitch	3	1	Checks if a sticker switch can be attached to a thing and plays the match animation
+81141592	lbp_Run_81141592	Poppet_CommitSlice	4	0	Validate and commit a polygon slice operation for the editor cursor tool
+8160b8e4	lbp_Proc_8160b8e4	Msg_OnPoppetPickSticker	5	0	Reads a serialized message stream and populates the Poppet sticker selection state
+81621fd4	lbp_Offset_81621fd4	PDecorations_WriteBinary	4	0	Writes decoration offset records to the level stream
+8146bdf6	lbp_Proc_8146bdf6	Poppet_HasDecorationChanged	4	0	Checks if a decoration's transform or scale has changed from its default state
+811411a2	lbp_Proc_811411a2	Poppet_Slice_Commit	3	0	processes slice planes for a shape during level editing commit
+8108f444	lbp_Run_8108f444	Poppet_ApplyCostumeItem	5	0	Applies a costume item to the poppet by updating its state and triggering related updates.
+8121a28e	lbp_Proc_8121a28e	Poppet_UnwrapStickers	2	1	Unwraps sticker placement data from a thing's array into a flat buffer for the editor.
+81344426	lbp_Proc_81344426	Poppet_FitEndDepths	3	0	Compute the best fit angle for a joint's end depths across multiple objects
+8146bc1e	lbp_Proc_8146bc1e	Poppet_ResetDecorations	4	1	Resets decoration state flags in the poppet's object record
+812fd758	lbp_Run_812fd758	Poppet_CreateJoint	3	0	Creates a new joint entity in the level editor and stores it in the poppet's joint record.
+812fd4e2	lbp_Proc_812fd4e2	Poppet_JointApply	4	1	Applies a joint to the level by setting end A and B after computing positions
+811cfa7a	lbp_use___aeabi_atexit_811cfa7a	Poppet_UseInventoryObject	5	0	Executes the editor's use of an inventory item by initializing and running a leaf object.
+8163af68	lbp_Proc_8163af68	Poppet_SerializeRevisioned	5	0	Serialize a revisioned poppet object into a buffer with size tracking and validation
+81343774	lbp_Proc_81343774	Poppet_BuildJointThing	2	1	Selects the nearest two things and writes their handles into the joint record at offsets 0x120 and 0x128
+8131810e	lbp_Proc_8131810e	Poppet_CreateFromResources	5	1	Spawns an inventory thing from resources and updates the poppet's editor state
+81141452	lbp_Run_81141452	Poppet_Slice_Commit	4	1	Commits a slice operation on the shape by applying polygon data and cleaning up resources.
+81301216	lbp_Run_81301216	Poppet_HandleMessage	1	1	Process a message by copying and applying plan data to objects in the level
+81321aea	lbp_Proc_81321aea	Poppet_CreateFromResources	3	0	Creates a new poppet object from resources and attaches it to the level
+8134db58	lbp_Run_8134db58	Poppet_SendSelectSlotMessage	4	1	Sends a network message to the server when a select slot action is performed
+811616de	lbp_use_sceKernelLockLwMutex_811616de	Undo_LockLevel	2	1	Acquire a mutex lock for the level data before performing an undo step
+812fda9a	lbp_Proc_812fda9a	Poppet_JointPrompt	4	1	Handle the poppet joint placement prompt by initializing a wrap and either confirming or invoking the failure path
+81614840	lbp_Proc_81614840	Poppet_SerializeRevisioned	4	0	Serializes a list of poppet objects to a revisioned format
+81346b7c	lbp_LeafL_81346b7c	Poppet_CanPlaceJoint	3	1	Validates whether a joint can be placed at the current poppet state
+8134d95c	lbp_PoppetObjectSelect_8134d95c	Poppet_ObjectSelect	5	1	Send a network message to select an object in the editor and decrement the selection lock count.
+812fd662	lbp_Proc_812fd662	Poppet_IsJointValid	3	1	validates a joint by checking its type and target constraints
+81343b92	lbp_Wrap_81343b92	Poppet_BuildJointEndThing	5	0	Computes world-space positions for a joint's end thing using the poppet's transform and offsets.
+81362cb6	lbp_Proc_81362cb6	Poppet_DoInventoryItemInfoIcons	5	1	Executes the inventory item info icon action for the selected poppet object.
+81389704	lbp_LeafL_81389704	Poppet_CanAttachDecoration	4	1	Checks whether a decoration can be attached at the given index in the poppet's decoration list
+8135e444	lbp_Proc_8135e444	Poppet_SetFromInventory	3	1	Copies state from an inventory item into a poppet and applies it to the level
+812fca2c	lbp_Proc_812fca2c	Poppet_HandleMessage	5	0	Iterates over a list of objects and applies actions based on flags
+8134e864	lbp_Proc_8134e864	Poppet_GetFixedTweakData	3	1	Retrieves a fixed tweak data value for a given thing using a lookup and wrapping logic
+81339554	lbp_Wrap_81339554	Poppet_StepLayerOrThickness	5	1	Toggles the layer or thickness setting of the poppet's current tool based on a flag and global state.
+81449c0c	lbp_Proc_81449c0c	Poppet_DoAuthorLabelSelector	4	1	Handles the author label selector tool by walking a linked list of objects and running a leaf action on the selected one
+812fe99e	lbp_Proc_812fe99e	Poppet_InitRenderTargets	3	1	Initializes the poppet's render target and leaf for preview rendering
+81146036	lbp_Proc_81146036	Poppet_SetPropagateToChildren	3	1	Sets a flag on the object and recursively propagates it to child objects in the hierarchy.
+81614d30	lbp_Proc_81614d30	Poppet_ApplyStickerRevision	3	1	Applies a sticker revision to the level by updating memory and copying data
+81441922	lbp_use___aeabi_atexit_81441922	Poppet_GetCurrentPaintingName	5	1	Returns the name of the currently selected painting for the player's poppet.
+81621edc	lbp_Proc_81621edc	Poppet_SerializeDecoration	4	0	Serialize a decoration object into the level data structure
+8161495c	lbp_Proc_8161495c	Poppet_SerializeSub	4	1	Serializes the current sticker state into a revisioned record for the editor
+8159c938	lbp_Proc_8159c938	Poppet_RemoveRange	5	0	Remove a range of stickers by iterating and calling the removal worker for each entry
+8127e94c	lbp_Wrap_8127e94c	Poppet_SetFrameSprayPaintParams	2	0	Walks a linked list of objects to find one matching a frame index and calls a leaf function with spray paint parameters
+81131498	lbp_Proc_81131498	Poppet_MoveObject	4	1	Moves a held object by copying its position and clamping the Y coordinate
+8144f90c	lbp_Proc_8144f90c	Poppet_DoSearchLabelSelector	3	1	Executes a community search for level labels using the search details and runs the search results.
+81324f20	lbp_Proc_81324f20	Poppet_CanPlaceSticker	4	1	Determines whether a sticker can be placed at the current cursor position in the editor.
+8110c4f6	lbp_Proc_8110c4f6	Poppet_ThermoSaveNotice	1	1	Checks if a thermo save notice should be displayed and updates player records
+81327bfc	lbp_Proc_81327bfc	Poppet_HandleMessage	4	0	Dispatches a Poppet message by calling the appropriate handler function based on the message type.
+811815e2	lbp_Proc_811815e2	Poppet_CheckPlacementSize	3	1	Checks if placing a decoration or sticker would exceed the level's size limit and triggers an error if so
+81618380	lbp_Proc_81618380	Poppet_SerializeRevisioned	4	0	Serializes a revisioned object state into the camera tweak buffer
+81441af4	lbp_Wrap_81441af4	Poppet_GetPaintingPlayer	3	1	Returns the painting player object if the local player is painting
+816afe84	lbp_Proc_816afe84	Poppet_SerializeRevisioned	4	0	Serializes a revisioned object for the emitter's save system
+8163ba4c	lbp_Proc_8163ba4c	Poppet_WriteBinary	4	0	Serializes a Poppet object and its referenced things into a binary stream
+81615200	lbp_DataColorCorrection_81615200	Poppet_WriteColorCorrection	4	1	Writes a color correction entry into the level data stream
+811406ce	lbp_Proc_811406ce	Poppet_SliceCommit	3	0	Commits a slice operation on a joint or object record via a wrapper call
+8134ea84	lbp_Wrap_8134ea84	Poppet_GetGeneratedTweakCount	4	0	Counts tweak objects generated by the current level generation process
+8143b3ca	lbp_Proc_8143b3ca	Poppet_AttemptStartCameraTweak	4	1	Attempt to start a camera tweak operation on the poppet if it is valid and not already active
+814335f4	lbp_Wrap_814335f4	Poppet_DoLabelSelector	2	1	Selects a label in the poppet editor by walking a list of objects and running an action on the chosen one
+81343e8a	lbp_Wrap_81343e8a	Joint_CommitAttach	4	1	Applies joint length/offset values to the joint record based on attached state
+81140d9c	lbp_LeafL_81140d9c	Poppet_IsHeldObjectValid	3	1	Checks if the held object is valid and references a specific game object type
+816ab454	lbp_Proc_816ab454	Poppet_InventoryDetails_ReadBinary	5	1	Reads an inventory item's binary data from a level file and updates the item reference count.
+8107dc3c	lbp_Proc_8107dc3c	Poppet_SetIsTweakingWaterLevel	4	1	Sets the water level tweak flag on a leaf object if it is valid and the caller matches
+81324fe8	lbp_Proc_81324fe8	Poppet_SetStickerState	4	1	Initializes a sticker's render state and applies gamma mode based on flags
+812fc98e	lbp_Proc_812fc98e	Poppet_HandleMessage	5	1	Iterates over the poppet's held object list and updates each object's state or destroys it based on flags.
+812fd446	lbp_Proc_812fd446	Poppet_CanPlaceJoint	4	1	Determines whether the player can place a joint in the current state
+8110401c	lbp_Wrap_8110401c	Poppet_GetSelectionBounds	3	0	Returns the selection bounds of the poppet cursor tool
+8159cb9c	lbp_Proc_8159cb9c	Stickers_RemoveRange	5	0	Remove a range of stickers from the level by iterating and deleting them
+81317d00	lbp_Proc_81317d00	Poppet_HandleMessage	5	1	Processes a poppet message by updating state and invoking related logic
+816ab6d0	lbp_Proc_816ab6d0	Poppet_InventoryDetails_ReadBinary	5	0	Reads an inventory item's binary data and updates the editor's undo state
+8134eb32	lbp_LeafL_8134eb32	Poppet_HaveStickers	4	0	Checks if a thing has any stickers attached
+8134ebc6	lbp_LeafL_8134ebc6	Poppet_HasDecoration	4	1	Check whether a thing or its children have any decorations attached
+8143feae	lbp_Wrap_8143feae	Poppet_DoLabelSelector	3	1	Traverse a linked list of objects to find one matching a label selector and run an action on it
+8143ded4	lbp_Proc_8143ded4	Poppet_GetInventoryItemPlanFromMainProfile	4	1	Loads a plan resource from the main profile inventory and returns it to the caller
+8138d8d0	lbp_Proc_8138d8d0	Poppet_MoveCursorToResult	3	1	Searches the poppet list for a target and calls the leaf function to move the cursor to it
+81287830	lbp_Proc_81287830	Poppet_SetSelectSound	3	1	Sets the select sound string for a poppet entry in the editor menu
+8134e06a	lbp_Proc_8134e06a	Poppet_RetrieveInventoryCollectionInstance	3	1	Retrieves an inventory collection instance from a list of candidates based on a given ID
+81341a7c	lbp_Proc_81341a7c	Poppet_UseInventoryObject	5	0	Recursively apply an inventory object to a thing and its children when the poppet uses it
+81623c88	lbp_Proc_81623c88	Joint_SerializeRevisioned	3	0	Serializes a joint revision into a buffer with wrapping logic
+810c6168	lbp_Proc_810c6168	Poppet_JointEndThing	3	0	Builds or validates a joint end thing for the poppet editor
+81417fbe	lbp_LeafL_81417fbe	Poppet_IsInList	4	1	Checks whether a pointer to an object is present in a sorted list of objects
+8138e08a	lbp_LeafL_8138e08a	Poppet_TriggerOnPlanetSearchResultSelected	3	1	Traverse a linked list of objects to find one matching a search criterion and invoke its callback
+8134e1b6	lbp_LeafL_8134e1b6	Poppet_SetJointTweakLength	2	1	Sets the tweak length flag on a joint after walking a linked list of joints
+8134e53e	lbp_LeafL_8134e53e	Poppet_GetNonDeterministicCursorPos	3	1	Traverse a linked list of objects to find one matching a cursor position and return its associated value.
+81322acc	lbp_Wrap_81322acc	Poppet_HoverSelectAdd	4	0	Checks if a hover point is within the editor's selection range and adds it to the leaf list
+8138cfcc	lbp_Wrap_8138cfcc	Poppet_SetDevGroupDecorations	3	1	Iterates over a list of objects to find one matching a group id and runs its decoration handler
+8138e10a	lbp_LeafL_8138e10a	Poppet_GetToolFromList	3	1	Walks a list of tool objects to find one whose ID is less than param_1 and returns its action result
+810d6256	lbp_Proc_810d6256	Game_CloneLevelBySave	5	0	Iterates over level objects and clones them into a new save-based level structure.
+8139232e	lbp_Proc_8139232e	Poppet_GetStickerSwitchIcon	3	0	Retrieves the icon for a sticker switch item in the editor
+81611060	lbp_PhotoMetaData_81611060	InventoryDetails_WriteBinary	5	0	Writes photo metadata fields into a binary buffer for an inventory item detail record
+816114dc	lbp_PhotoMetaData_816114dc	PhotoMetaData_ReadBinary	4	1	Reads a PhotoMetaData record from a binary buffer into memory
+813028d4	lbp_Proc_813028d4	Poppet_CommitDecoration	3	0	Commits the currently held decoration or sticker to the level
+8134e5be	lbp_Wrap_8134e5be	Poppet_SetNonDeterministicCursorPos	5	0	Sets the non-deterministic cursor position of a Poppet object in the level
+810f820a	lbp_Wrap_810f820a	Poppet_WireUpdate	4	0	Traverse a wire chain to find and return the first editable wire object
+814200b0	lbp_LeafL_814200b0	Poppet_ctorDefault	5	1	Initializes a new Poppet record with default values including zeroed fields and default float settings.
+8138d860	lbp_Wrap_8138d860	Poppet_MoveCursorToPos	5	1	Traverse the Poppet cursor tree to find a leaf node and call its move function at the given position.
+8134dffa	lbp_Wrap_8134dffa	Poppet_GetInventoryItem	2	1	Retrieves an inventory item from the current collection based on an index
+8134df8a	lbp_Wrap_8134df8a	Poppet_GetInventoryPageInstance	3	1	Traverse inventory list to find a page instance matching the given index
+8134e72e	lbp_Wrap_8134e72e	Poppet_UpdateCursor	3	1	Traverse inventory grid to find and update the cursor position for the editor tool
+8134e94e	lbp_Wrap_8134e94e	Poppet_SetFixedTweakData	4	1	Sets fixed tweak data on a leaf object found via a traversal of the player's poppet hierarchy
+81615144	lbp_Proc_81615144	Poppet_WriteStickers	4	0	Serializes sticker data into a binary stream for saving
+8127eb72	lbp_Wrap_8127eb72	Poppet_SetFrameClipCursor	3	1	Traverse a linked list of objects to find one matching the frame clip cursor parameter and call its leaf method.
+8138d5dc	lbp_Wrap_8138d5dc	Poppet_SetSelectDefaultResult	3	1	Walks a list of selectable objects to find the one matching param_1 and calls its default result handler
+8138d646	lbp_LeafL_8138d646	Poppet_SetCursorMode	4	1	Sets the cursor mode of the current poppet tool based on a mode parameter
+8127d9a0	lbp_Wrap_8127d9a0	Poppet_SetFrameCornerJauntinessSeed	3	1	Assigns a corner jauntiness seed value to a frame component of a poppet object
+8128833e	lbp_Wrap_8128833e	Poppet_IsLastItemSelected	3	1	Determines whether the given item index is the last selected item in a list of objects
+8138d95c	lbp_Wrap_8138d95c	Poppet_HasCursorArrived	3	1	Checks whether the cursor has arrived at a target in the level
+8138d6b0	lbp_LeafL_8138d6b0	Poppet_GetCursorMode	3	0	Walks a linked list of cursor mode objects to find the one matching the given ID and returns its enabled flag.
+8138ecee	lbp_Wrap_8138ecee	Poppet_OnMixAndPickSelected	5	1	Selects the appropriate poppet object from a linked list based on a level ID and calls its handler
+8134e7fc	lbp_Wrap_8134e7fc	Poppet_InvalidateLocalTweakData	5	0	Recalculates tweak data for a poppet and its children when the local tweak value changes.
+81142b08	lbp_Proc_81142b08	Poppet_IsHeldByCursor	3	1	Returns whether the poppet is currently being held by the cursor tool
+8138d046	lbp_Wrap_8138d046	Poppet_SetPlayerDecorations	3	1	Iterates over a list of decoration objects to find one matching a player ID and run a function if found
+8134e9bc	lbp_Wrap_8134e9bc	Poppet_NextTool	3	1	Select next tool in the poppet's tool list based on a given index
+8134ea20	lbp_LeafL_8134ea20	Poppet_GetTweakCount	2	1	Returns the tweak count of the currently selected poppet or its parent in the level tree
+81441bb4	lbp_Proc_81441bb4	Poppet_SavePainting	4	1	Saves the current painting when the poppet is valid and paint state allows
+81450c1c	lbp_LeafL_81450c1c	Poppet_GetEditorCursorTool	3	1	Returns the currently selected editor tool object from the poppet's cursor state
+813929cc	lbp_Proc_813929cc	Poppet_GetEmitterPlanIcon	3	0	Retrieves the icon for an emitter plan object from a Poppet structure
+81322b4a	lbp_Wrap_81322b4a	Poppet_HandleMessage	5	1	Initializes a Poppet message state structure to default values
+8127ce5c	lbp_LeafL_8127ce5c	Poppet_SetLastNavSelectionMode	3	1	Sets the last navigation selection mode in the editor cursor state
+8127d658	lbp_Wrap_8127d658	Poppet_SetFrameCornerRadius	3	1	Walks a tree of objects to find the leaf node and set its frame corner radius
+8127d93e	lbp_Wrap_8127d93e	Poppet_SetFrameCornerJauntiness	5	1	Traverse the poppet's frame tree to find and set the corner jauntiness value of a leaf node
+812882dc	lbp_Wrap_812882dc	Poppet_SetLastItemSelected	5	0	Updates the last selected item in the editor based on a search through the object list
+81206b9a	lbp_Wrap_81206b9a	Poppet_DoSelectedFilterUI	4	1	Traverse the selected filter list to find and run the target object's action
+8134e79c	lbp_Wrap_8134e79c	Poppet_InvalidateLocalTweakData	5	0	Invalidates the local tweak data of a Poppet object and its children when a level is modified.
+814418c6	lbp_Proc_814418c6	Poppet_SetCurrentPaintingName	4	1	Sets the name of the current painting in the editor's poppet state
+8145117c	lbp_LeafM_8145117c	Poppet_HasValidStickerTarget	5	0	Checks whether the current poppet selection is a valid target for placing a sticker
+810ae376	lbp_Wrap_810ae376	Poppet_GetEditorRange	2	1	computes a clamped range value from offset fields in the poppet record
+81441a00	lbp_Wrap_81441a00	Poppet_SetHeldObject	3	1	Marks the poppet's held object as valid and sets a flag in its state
+8160cc50	lbp_Proc_8160cc50	Poppet_PickDecoration	4	1	Adds a decoration to the poppet's inventory when space allows
+816aaf34	lbp_Proc_816aaf34	Poppet_WriteBinary	3	0	Writes binary data for an inventory item detail record
+816aadf8	lbp_Proc_816aadf8	Poppet_WriteBinary	3	1	Writes a binary representation of the poppet's inventory details to a stream
+814759c6	lbp_Proc_814759c6	Poppet_OnLoadPainting	5	0	Validates and loads a painting asset into the level via wrapped pointers.
+8134e0f0	lbp_Proc_8134e0f0	Poppet_RespondToItemSelect	5	1	Delete community objects for the player's poppet when item select is confirmed
+81441d4e	lbp_Wrap_81441d4e	Poppet_GetStickerSaveSize	5	1	Returns the size in bytes of the sticker data held by the player's poppet
+8160af20	lbp_Proc_8160af20	Poppet_LoadPainting	4	1	Initializes the poppet's painting data fields during load.
+81441d9c	lbp_Wrap_81441d9c	Poppet_SetStickerSaveSize	4	1	Sets the sticker save size on the player's poppet object
+81392980	lbp_Wrap_81392980	Poppet_GetEmitterPlan	4	1	Retrieve the emitter plan object from a Poppet's data structure
+81394724	lbp_Wrap_81394724	Poppet_CanActivate	3	1	Checks if the poppet can activate a tweak based on flags and state
+81394840	lbp_LeafM_81394840	Poppet_HasEmitterPlan	4	1	Checks whether a poppet has an emitter plan attached
+816151b4	lbp_Proc_816151b4	Poppet_WriteBinary	5	1	Write a single binary token to the poppet's stream buffer and notify listeners
+81618b50	lbp_Proc_81618b50	Poppet_WriteBinary	4	1	Writes a binary representation of the camera tweak data to the stream
+8144bfa0	lbp_LeafM_8144bfa0	-	-	0	-
+81142ac2	lbp_Proc_81142ac2	Poppet_GetGrabbedObject	3	1	Returns the object currently held by the poppet cursor or null if none
+812f9d6a	lbp_Proc_812f9d6a	Poppet_ThermoSaveNotice	5	1	Checks and processes pending thermo save notice flags for the poppet editor tool
+8160e460	lbp_Proc_8160e460	Msg_OnSelectSlot	5	0	Validates a selected slot by checking multiple offset fields and returns status.
+8144bf5c	lbp_LeafM_8144bf5c	Poppet_SetTweakFlag	3	1	Set a flag byte at offset 0x46 in the tweak target object
+8139396c	lbp_LeafM_8139396c	Poppet_GetIsLocked	3	1	Returns whether the cursor tool is locked by checking a flag and a pointer field.
+8131ec50	lbp_Proc_8131ec50	Poppet_CreateFromResources	5	0	Creates a poppet from resources and runs it if the create flag is set
+81345bf0	lbp_LeafM_81345bf0	Joint_CommitAttach	5	1	Applies joint attachment logic based on the joint type and stored values.
+8139452a	lbp_LeafM_8139452a	Poppet_SetJointStrength	3	1	Sets the strength value of a joint object based on an offset and strength parameter
+81146116	lbp_Proc_81146116	Poppet_JoinToThing	3	1	Attaches a held object to a target thing when conditions allow
+811615fa	lbp_Proc_811615fa	Undo_PushSnapshot	5	1	Initializes a new undo history snapshot record with default values and the level data pointer.
+8113138a	lbp_Proc_8113138a	Poppet_ApplyItemOffset	3	1	Applies item offset and rotation to the poppet's transform based on inventory state
+8146c160	lbp_Proc_8146c160	Poppet_SaveDecorations	3	1	Saves decoration objects to a leaf node list
+8131e10a	lbp_Wrap_8131e10a	Poppet_Construct	4	1	Initializes a PoppetState object with default values and vtable
+814650b4	lbp_Proc_814650b4	Poppet_ActivateDecorationMode	3	1	Handles the decoration mode activation by checking a flag and calling leaf management functions
+814650ec	lbp_Proc_814650ec	Poppet_SetDecorations	4	1	Applies decoration data to a poppet object via leaf message handling
+813190b2	lbp_Wrap_813190b2	Poppet_ResetState	3	1	Initializes or resets a Poppet object's state fields to default values
+815ae0b4	lbp_Wrap_815ae0b4	Poppet_PushAction	4	1	appends a new action to the poppet's action queue array
+8114046c	lbp_LeafM_8114046c	Poppet_GetLayerOrThickness	4	1	Returns the layer or thickness value of the poppet's current tool setting
+810ced0e	lbp_LeafM_810ced0e	Poppet_GetSelectedSticker	3	1	Returns the object ID of a sticker in the level that matches the given target pointer
+816aff40	lbp_Wrap_816aff40	Poppet_CheckBounds	3	1	Validate that a parameter is within an acceptable range before proceeding
+813889be	lbp_LeafM_813889be	Poppet_GetResourceOffset	3	1	Compute pointer to resource entry in a list based on an index and size
+8107c776	lbp_Proc_8107c776	Poppet_ClearPlayerSelectDialogue	4	1	Clears the player select dialogue UI element when a valid item index is found
+81176e88	lbp_Wrap_81176e88	Poppet_ResetSelection	3	1	Resets the editor selection state and clears associated flags after a step operation
+8143c77c	lbp_Wrap_8143c77c	Game_GetDefaultSelectedOption	4	1	Returns the default selected option index from a global table based on an input parameter.
+81392304	lbp_Proc_81392304	Poppet_GetStickerSwitchPlan	3	1	Retrieves the plan for a sticker switch object in the editor
+81463fc4	lbp_Proc_81463fc4	Poppet_CreatePickDecorations2State	4	1	Allocates and constructs a PickDecorations2State object for the poppet's decoration mode
+81475a22	lbp_Wrap_81475a22	Poppet_DeleteRange	3	1	Deletes a range of objects in the editor by calling a delete function for each item
+81321a9a	lbp_Wrap_81321a9a	Poppet_OnLoadPainting	5	0	Loads a painting asset into the poppet and marks it as loaded.
+810d60b6	lbp_Wrap_810d60b6	Game_ClearUndoHistory	2	0	Iterate and free all entries in the undo history list
+8107b6ee	lbp_LeafM_8107b6ee	Poppet_IsInEditMode	4	1	Returns whether the editor is in visual mode for the poppet tool
+81140420	lbp_Wrap_81140420	Poppet_IsAttached	3	1	checks if the poppet is attached to a joint
+8145b0a8	lbp_LeafM_8145b0a8	Poppet_DeactivateDecorationMode	3	1	Iterates and calls a function pointer from the object's vtable while a flag at offset 0x29c is non-zero.
+81324ed8	lbp_Wrap_81324ed8	Poppet_SetType	3	1	Sets the poppet's type field and vtable to a new object type
+813938f4	lbp_Proc_813938f4	Poppet_SetTweakNodeIndex	4	1	Sets the tweak node index of a poppet by running its associated procedure if valid
+8135e8fa	lbp_Proc_8135e8fa	Poppet_SetSelected	4	1	Marks the selected poppet object as active in the editor
+8144257e	lbp_LeafM_8144257e	Poppet_HasPJoint	4	1	Check if the poppet object has an attached PJoint component
+814426ea	lbp_LeafM_814426ea	Poppet_HasStickers	4	1	Check if the poppet has stickers attached
+81442704	lbp_LeafM_81442704	Poppet_HasDecorations	4	1	Check if the poppet has decorations attached
+8144276c	lbp_LeafM_8144276c	Poppet_HasPEmitter	5	1	Checks whether the given object has a particle emitter attached
+814427d4	lbp_LeafM_814427d4	Poppet_HasPCameraTweak	5	1	Checks whether the poppet object has a PC camera tweak flag set
+81442870	lbp_LeafM_81442870	Poppet_HasPhysicsTweak	4	1	Returns whether the poppet has physics tweak enabled
+814428d0	lbp_LeafM_814428d0	Poppet_HasPMaterialTweak	5	1	Returns whether the object has a physics material tweak applied
+81464414	lbp_Wrap_81464414	Poppet_SaveToInventory	4	1	Saves the currently held poppet object into the player's inventory
+8132d304	lbp_Wrap_8132d304	Poppet_HandleMessage	3	1	Wraps a message handler thunk and sets the result pointer to a default string
+813938dc	lbp_Proc_813938dc	Poppet_GetTweakNodeIndex	3	1	Returns the tweak node index of a poppet if it exists
+8134f63a	lbp_Proc_8134f63a	Poppet_UseInventoryItems	5	1	Checks if the player has an item and a leaf, then wraps the inventory items
+81350e3c	lbp_Proc_81350e3c	Poppet_UseInventoryItems	1	1	Check if inventory item use is allowed and wrap the poppet
+81350e54	lbp_Proc_81350e54	Poppet_UseInventoryItems	5	1	Checks if editor tool is active and inventory item selected to wrap selection
+81613db8	lbp_Wrap_81613db8	Poppet_SetSubID	3	1	Sets a sub-identifier field of a sticker object during serialization
+81432412	lbp_LeafM_81432412	Poppet_GetInventoryPageInstance	4	1	Retrieves the inventory page instance from the poppet's data structure
+8144227e	lbp_LeafM_8144227e	Poppet_GetElemPJoint	3	1	Retrieves a pointer to a PJoint record from a Poppet's joint array offset by index
+814423b2	lbp_LeafM_814423b2	Poppet_GetElemPStickers	5	1	Retrieves the element pointer from the Poppet's sticker array index
+814423c8	lbp_LeafM_814423c8	Poppet_GetDecoration	3	1	Retrieves a decoration item from the poppet's decoration list by index
+81442420	lbp_LeafM_81442420	Poppet_GetEmitter	3	1	Retrieves a value from an emitter array based on index and offset
+81442478	lbp_LeafM_81442478	Poppet_GetElemPCameraTweak	3	1	Retrieves the PC camera tweak value for a given element index from the poppet's camera data.
+814424fc	lbp_LeafM_814424fc	Poppet_GetPhysicsTweak	3	1	Retrieves a physics tweak value from a leaf object's data table
+81442554	lbp_LeafM_81442554	Poppet_GetElemPMaterialTweak	5	1	Retrieves the material tweak value for a given element index from a Poppet object's data.
+8110d03e	lbp_Wrap_8110d03e	Poppet_SetSelected	3	1	Marks the poppet as selected in its flag field
+8145003c	lbp_LeafM_8145003c	Poppet_IsStamping	5	1	Returns whether the poppet is currently stamping
+8143dec0	lbp_Wrap_8143dec0	Poppet_SetInventoryItemFromMainProfile	3	1	Sets the inventory item on the current player's poppet from the main profile
+816181a4	lbp_LeafM_816181a4	Poppet_GetCursorTool	3	1	Retrieve the current poppet cursor tool from the camera tweak object
+8134eec8	lbp_Wrap_8134eec8	Game_GetTweakPlayerNumber	4	1	Returns the number of tweak players or -1 if none
+81392da2	lbp_Wrap_81392da2	Poppet_StopTweakingGun	3	1	Stops the tweaking gun tool by clearing a flag and calling the tool's stop handler
+81392db4	lbp_Wrap_81392db4	Poppet_StopTweakingGun	5	1	Marks the gun as no longer being tweaked and triggers a UI update.
+8133100a	lbp_LeafS_8133100a	Poppet_SyncBeforeMessage	5	1	Marks the poppet object as needing a sync update before sending a message
+8107b804	lbp_LeafS_8107b804	Game_EditorMode	3	1	Returns the current play or edit mode flag from the game state
+81442048	lbp_LeafS_81442048	Poppet_GetSizeJoint	3	1	Returns the size of a joint referenced via an offset in the poppet object
+81442128	lbp_LeafS_81442128	Poppet_GetSizePStickers	2	1	Returns the size of a poppet's PSticker data if present
+81442138	lbp_LeafS_81442138	Poppet_GetDecorationSize	3	1	Returns the size of a decoration attached to a poppet object
+81442178	lbp_LeafS_81442178	Poppet_GetSizePEmitter	3	1	Returns the size of a PEmitter component attached to an object
+814421b8	lbp_LeafS_814421b8	Poppet_GetSizePCameraTweak	3	1	Returns the size of the PC camera tweak value from a Poppet object
+81442218	lbp_LeafS_81442218	Poppet_GetPhysicsTweak	3	1	Returns the physics tweak value of a poppet object's physics component
+81442258	lbp_LeafS_81442258	Poppet_GetMaterialTweakSize	3	1	Returns the size of a material tweak value from a poppet's material tweak data
+8107a330	lbp_LeafS_8107a330	Poppet_IsUserSelectorForPadScreenVisible	5	1	Returns whether the pad screen user selector is visible
+813672fe	lbp_LeafS_813672fe	Poppet_ReleaseInventory	3	0	Releases the currently held inventory item from the poppet's grasp
+814505f4	lbp_Wrap_814505f4	Poppet_AddPartCameraTweak	4	1	Adds a camera tweak part to a thing when the parameter is non-zero
+8135e7e0	lbp_LeafS_8135e7e0	Poppet_ReleaseHeldObject	3	0	Releases the currently held object from the poppet cursor tool
+8134d6ce	lbp_Wrap_8134d6ce	Poppet_ForwardMessageToHook	5	1	Wraps a message and forwards it to the hook handler via atexit-style cleanup
+81450602	lbp_Thunk_81450602	Poppet_DeletePartCameraTweak	5	1	Deletes the camera tweak part of a poppet when the parameter is non-zero
+81321c1e	lbp_Thunk_81321c1e	Poppet_CreateFromResources	5	1	Thunk that calls the real creation function via a wrapper offset
+8110d18c	lbp_LeafS_8110d18c	Poppet_ResetState	3	1	Resets the poppet's state flags and a field at offset 0x40.
+8112dd3e	lbp_Thunk_8112dd3e	Poppet_UseInventoryItems	3	1	Thunk that calls the inventory item usage handler with the poppet's pointer offset by 0x19c
+816dff1c	lbp_Thunk_816dff1c	Poppet_SerializeRevisioned	4	1	Thunk that calls the serialization routine for revisioned joint data
+816dff28	lbp_Thunk_816dff28	Poppet_JointWriteBinary	4	1	Writes a joint record to binary via thunk
+816c987c	lbp_Thunk_816c987c	Poppet_PhysicsTweak	3	1	Thunk that runs a physics tweak action with a fixed parameter
+816c9888	lbp_Thunk_816c9888	Poppet_PhysicsTweak_WriteBinary	4	1	Thunk that forwards to the physics tweak writer with a fixed parameter
+8144fe0a	lbp_Thunk_8144fe0a	Poppet_DeleteThingAndJoints	3	1	Deletes a thing and its joints when the pointer is valid
+8144fe00	lbp_Thunk_8144fe00	Poppet_DeleteThingAndChildrenAndJoints	3	1	Thunk wrapper that calls the real delete function when the pointer is non-null
+8104fe28	lbp_LeafS_8104fe28	Game_SetFrontViewForPlayer	5	0	Sets the front view flag for a player in the game state
+8138c9f0	lbp_Thunk_8138c9f0	Poppet_SetFadePodDecorations	4	1	Calls the editor function that sets fade pod decorations for the poppet
+81242b3a	lbp_Thunk_81242b3a	Poppet_CameraRequiresCapture	2	1	Thunk that calls the stub handling camera capture requirement
+816181b8	lbp_LeafS_816181b8	Poppet_GetCursor	3	1	Returns the cursor object from the camera tweak state
+816181c0	lbp_LeafS_816181c0	Poppet_GetCameraTweakRevision	3	1	Retrieves the revision field of a camera tweak object from its data structure
+816181c8	lbp_LeafS_816181c8	Poppet_SetCursorZoom	3	0	Stores a zoom value into the camera tweak state structure
+816181d8	lbp_LeafS_816181d8	Poppet_SetViewAngle	3	1	Sets the view angle of the camera tweak object in the editor
+8135e14e	lbp_LeafS_8135e14e	Poppet_GetLastSelectedID	2	1	Returns the last selected poppet ID from a Poppet object
+81014ed0	lbp_Stub_81014ed0	Undo_PushSnapshot	5	0	Returns the snapshot pointer stored in the undo history record for the given undo state.
+81322bae	lbp_Thunk_81322bae	Poppet_Thunk	5	1	Thunk wrapper calling the wrapped function
+81348ad6	lbp_Wrap_81348ad6	Poppet_Unused	2	1	empty wrapper function with no meaningful logic
+8113d2f0	lbp_Thunk_8113d2f0	Poppet_ToolState_ctor	5	1	Constructs the base tool state for a named editor tool
+81214fdc	lbp_Run_81214fdc	Poppet_SerializeRevisioned	4	0	Serializes a level object to a revisioned binary format based on its type index
+8133fe92	lbp_Proc_8133fe92	Poppet_ApplyGridSnap	3	1	Applies grid snapping to selected objects in the editor by adjusting their positions based on snap settings
+8118ebf0	lbp_Proc_8118ebf0	Poppet_EquipCostumeItem	3	0	Equip a costume item on the poppet by iterating over its parts and applying matching items
+81475a4a	lbp_Run_81475a4a	Poppet_UnloadCanvas	3	1	Release canvas objects and reset the editor's paint canvas state
+814640a2	lbp_Proc_814640a2	Poppet_ResetDecorations	4	1	Clears decoration objects from the level or editor cursor when reset is requested
+8122c40c	lbp_use_memmove_8122c40c	Poppet_RemoveFromList	3	1	Remove an element from a dynamic array/list of the poppet's joint end data
+810c5572	lbp_Proc_810c5572	Joint_CommitAttach	1	1	Applies a joint's attachment offset to its target position
+81327f8a	lbp_Proc_81327f8a	Poppet_SwitchWireUpdate	5	0	Finalizes a switch wire by releasing and zeroing its state fields
+8122c3bc	lbp_Proc_8122c3bc	Poppet_AddJointEnd	4	1	Adds a joint end to the poppet's list if not already present and triggers update
+81039710	lbp_Wrap_81039710	Poppet_HoverSelectAdd	5	0	Called by VertEdit_HoverSelectAdd to perform the hover select add action on a poppet
+810f1274	lbp_Wrap_810f1274	Poppet_RemoveStickerRange	3	1	removes a range of stickers from a level twin based on an offset index
+8117b562	lbp_Wrap_8117b562	Poppet_AcquireInventoryItem	3	1	Acquires an inventory item for the poppet by calling a wrapper at offset 0x488
+81133f2c	lbp_Wrap_81133f2c	Poppet_GetSelectedObject	3	1	Returns the currently selected poppet object from the selection list
+810ec580	lbp_Proc_810ec580	Poppet_ShapeSetPolygon	4	1	Sets a polygon shape from a list of vertex points in the editor tool
+8113fda8	lbp_Proc_8113fda8	Poppet_JointPromptCommit	3	1	collects joint candidates and queues glue for a poppet joint prompt commit
+81321ee4	lbp_Proc_81321ee4	Poppet_HoverSelectAdd	4	1	Compute bounding box and update selection extents for hovered objects in the editor
+81142dda	lbp_GameplayStickerSwitchMatch_81142dda	Poppet_StickerSwitchMatch	4	1	Checks if a sticker switch object matches the player's current selection and applies the match result
+813438cc	lbp_Proc_813438cc	Poppet_BuildJointThing	5	0	Initializes a new joint between two things and computes its direction vector.
+8131c06e	lbp_Proc_8131c06e	Poppet_ApplySnapToGrid	3	0	Rounds the editor cursor or held object position to the grid based on snap settings
+814184ca	lbp_Proc_814184ca	Poppet_Slice_Commit	4	0	commits a slice operation by adding parts, gluing them, and updating the level
+810cfaf6	PartPhysicsWorld_fn_810cfaf6	Poppet_PhysicsWorldStep	4	1	Iterates physics world objects and applies their update logic each frame
+81321d2c	lbp_Proc_81321d2c	Poppet_VertEditInit	3	1	Initializes a vertex-edit selection record with zeroed fields and copies transform data
+8172b268	lbp_use_memcpy_8172b268	Poppet_VertexInsertOnEdge	4	1	Inserts a vertex into an edge's vertex list, growing the array if needed
+811326e0	lbp_Proc_811326e0	Poppet_HandleMessage	5	0	Process a poppet message and update the poppet state
+810a855c	lbp_use___aeabi_atexit_810a855c	Poppet_GetDecorationCost	3	1	Returns the cost of a decoration based on the held object type and flags
+8133ee24	lbp_Proc_8133ee24	Poppet_UseInventoryObject	5	0	Handles the poppet's use of an inventory object by wrapping and processing the item data
+810f1bf4	lbp_Wrap_810f1bf4	Poppet_GetEditObject	4	1	Returns an object from the level's edit list based on a numeric index or '@' tag
+810a7b44	lbp_Proc_810a7b44	Poppet_AttachDecorations	3	1	Checks if a decoration can be attached and calls the leaf attachment function
+812f8e2c	lbp_Proc_812f8e2c	Poppet_ThermoSaveNotice	5	0	Process the thermo save notice state and update associated data
+816ab4fc	lbp_Proc_816ab4fc	Poppet_UnloadResource	4	0	Release a loaded resource object and decrement reference counts of its associated objects
+81140ffc	lbp_LeafL_81140ffc	Poppet_SortLayerOrder	3	0	Sorts two layer indices so that the smaller one is stored in param_1 and the larger in param_2.
+813282d6	lbp_PoppetCreatestamp_813282d6	Poppet_Createstamp	4	1	Creates a stamp for the poppet and decrements its remaining count.
+8121b554	lbp_Proc_8121b554	Poppet_RemoveSelectedPackFromCart	3	1	Remove a selected pack item from the cart by unloading its leaf and clearing references
+813886fc	lbp_Proc_813886fc	Poppet_CopySticker	3	0	Copies one sticker record into another record.
+8122c6ba	lbp_Proc_8122c6ba	Poppet_GetToolTarget	3	0	Resolves the tool's target object for the poppet cursor or held object
+810cda14	lbp_Proc_810cda14	Poppet_UseBackgroundItem	5	0	Applies the selected background item to the level or updates the poppet's background state
+8133ef9c	lbp_Wrap_8133ef9c	Poppet_UnparentObjects	4	1	detach all objects in the list from their parents
+8131825a	lbp_Proc_8131825a	Poppet_HandleMessage	3	1	Dispatch an incoming message to the appropriate handler based on its type.
+816aae50	lbp_Proc_816aae50	Poppet_WriteBinary	4	1	Serializes the poppet's state into a buffer for saving or network transmission
+813452b8	lbp_LeafL_813452b8	Joint_GetEndValue	5	1	Reads the value stored at a joint's end A or B depending on param_2
+810b4bc2	lbp_Proc_810b4bc2	Poppet_UnlinkFromHistory	2	1	Iterates a list of objects and unlinks one matching the given pointer, clearing a flag.
+810b5f68	lbp_Proc_810b5f68	Poppet_MaterialTweakApply	3	1	Applies a material tweak to a poppet object if the tweak is valid and not wrapped.
+816139c4	lbp_DataColorCorrection_816139c4	InventoryDetails_WriteBinary	5	1	Write binary data for the inventory details color correction settings
+81613b60	lbp_DataColorCorrection_81613b60	InventoryDetails_ReadBinary	5	1	Reads a Data.ColorCorrection inventory record from binary data
+810a8f0a	lbp_Wrap_810a8f0a	Poppet_UnlinkStickers	4	1	Detach all stickers attached to a thing when copying it to the world twin
+8139416c	lbp_LeafM_8139416c	Poppet_IsLongJoint	4	1	Determines whether the joint is long based on its type and state flags
+8112a6d2	lbp_LeafM_8112a6d2	Poppet_VertexEditPolygonArea	4	1	Compute signed area of a polygon given vertex positions in an array
+8108f040	lbp_Wrap_8108f040	Poppet_ApplyCostumeItem	5	1	Applies a costume item from the poppet's inventory to a leaf object
+81014fa8	FileBlockCache_use_sceKernelDeleteLwMutex_81014fa8	Poppet_UndoStepBack	1	0	Guess based on caller name only
+81302592	lbp_Wrap_81302592	Poppet_StickerHoverState_ctor	5	1	Initializes the sticker hover state object with default values and a thunk.
+8146b0aa	lbp_Proc_8146b0aa	Poppet_GetSelectedResult	4	1	Retrieves the currently selected level object from the poppet's selection state into a result struct.
+8134d2a4	lbp_LeafM_8134d2a4	Poppet_IsHeld	3	1	checks if the thing is currently held by the poppet
+81179c98	lbp_Wrap_81179c98	Poppet_SetSelected	4	1	Marks the selected poppet object in the editor
+810c5dae	lbp_Wrap_810c5dae	Poppet_ToggleJointActive	4	1	Toggles a joint's active flag and updates the joint list if changed.
+81086514	lbp_LeafM_81086514	Poppet_CanUndo	3	1	Checks if the current level state can be undone or redone
+81337580	lbp_LeafM_81337580	Joint_IsInList	4	1	Checks whether a given thing pointer is present in the joint's held-thing list
+81117d20	lbp_Wrap_81117d20	Poppet_UnphysicsToggle	5	1	Sets a flag in the Poppet state and triggers an action if it reaches 0xff
+8172c438	lbp_Wrap_8172c438	Poppet_SetCanvasWidth	3	1	Sets the canvas width field of the paint object if a canvas exists
+813627c8	lbp_LeafM_813627c8	Poppet_GetInventoryPageInstance	3	1	Retrieves the inventory page instance pointer from a Poppet object's data
+810ed85a	lbp_Wrap_810ed85a	Poppet_HoverSelectAdd	3	1	Adds a hover selection to the poppet's edit state
+812fc97e	lbp_LeafS_812fc97e	Poppet_SetPaintingActive	3	1	Marks a painting object as active after setting its state field
+8134f0c0	lbp_Proc_8134f0c0	Game_UnloadResource	3	1	Called during game teardown to release the resource system
+810f0e06	lbp_Thunk_810f0e06	Poppet_AddSticker	3	1	Adds a sticker to the level via the poppet editor tool
+8112b2b0	lbp_Thunk_8112b2b0	Poppet_Thunk	1	1	Thunk wrapper function that calls a single procedure
+8108ff56	lbp_LeafS_8108ff56	Poppet_SetCostumeItemFlag	3	1	Sets a byte flag in the poppet's costume item data structure
+816181d0	lbp_LeafS_816181d0	Poppet_IsVisible	3	1	Reads a byte flag at offset 0x24 from a pointer stored at offset 0x24 of the object
+8114725a	lbp_Run_8114725a	Poppet_MenuLoop	3	0	Draws the poppet editor menu by looping through four section headers and rendering text/button entries from a list of strings.
+81727024	lbp_use_memmove_81727024	Poppet_SortObjects	3	0	Sorts an array of object pointers by their velocity magnitude using a quicksort-like algorithm
+812f991c	lbp_Proc_812f991c	Poppet_MapSetTooLong	3	1	Walks the map set tree and calls a callback for each leaf, used to fix up long map sets
+8100cfcc	lbp_ArenaCountIndicationOfSystemMemory_8100cfcc	Game_ArenaCountIndicationOfSystemMemory	5	1	Prints a diagnostic report of arena memory allocation statistics to the debug console.
+812068c8	lbp_Run_812068c8	Poppet_DoTitle	4	1	Draws the poppet's title bar and button list in the editor menu
+8112b01a	lbp_Proc_8112b01a	Poppet_ValidateCopy	2	1	Checks whether a copied object's data matches an existing one during paste operations
+81123ee8	lbp_Run_81123ee8	Poppet_Run	4	1	Main editor tool update loop that handles placement and joint creation
+81346c8a	lbp_Proc_81346c8a	Poppet_JointAttach	4	1	Attaches a new joint to the level using a leaf object and sets its ends
+812f96ee	lbp_Proc_812f96ee	Poppet_MapSetTooLong	3	1	Iterates level objects and calls MapSetTooLong on each to reset invalid map set state
+81614f3c	lbp_Proc_81614f3c	Poppet_WriteThingToStream	4	1	Serialize one thing record into a stream buffer
+817534d0	lbp_CSearchDetailsCommunity_817534d0	Game_SearchDetailsCommunity	3	1	Creates a community search details object and returns it if the player's current search matches or is compatible.
+810cd824	lbp_Proc_810cd824	Poppet_SyncJoint	3	0	Syncs the joint's two endpoints in the editor by applying identical transforms to both ends
+81139ef4	lbp_Run_81139ef4	Poppet_DeleteCommunityObjectsPrompt	3	0	Iterates community objects and deletes them when the player confirms the delete prompt
+816181e0	lbp_Wrap_816181e0	Poppet_ReadPlanData	3	1	Reads and byte-swaps a fixed-size plan record from a source buffer into an output buffer
+8121a0f6	lbp_LeafL_8121a0f6	Poppet_IsLocked	4	1	Checks whether the poppet's level is locked or restricted for editing
+811cef2a	lbp_use___aeabi_atexit_811cef2a	Poppet_AutoAexit	1	1	Initialize and run an auto-save or exit hook for the editor tool
+81139db0	lbp_Proc_81139db0	Poppet_DeleteCommunityObjectsPrompt	2	0	Checks community objects for deletion eligibility and locks mutexes during the prompt
+812f9c3e	lbp_Proc_812f9c3e	Poppet_ApplyUndo	2	1	Applies undo/redo state changes to the level and updates the editor UI.
+8146424a	lbp_Run_8146424a	Poppet_AddPart	3	1	Adds a part to a thing when the poppet is in a valid state and a new part is available
+81124158	lbp_Run_81124158	Poppet_Run	3	1	Main per-frame update loop for the poppet editor tool object
+8108540a	lbp_Wrap_8108540a	Poppet_CalculateDistance	3	1	Computes distance vectors between objects in a list to determine proximity for editor snapping or selection.
+816ab5e0	lbp_Proc_816ab5e0	Poppet_EditorAddThing	3	1	Adds a new thing to the level via a queue and returns an error code if it fails
+8135cc86	lbp_Proc_8135cc86	Poppet_IsSelected	3	1	Determines whether the poppet is currently selected based on flags and returns result.
+81346a98	lbp_LeafL_81346a98	Poppet_SnapToGrid	2	1	Adjusts the editor cursor position to a grid or snap point when in grid mode
+81610e88	lbp_Proc_81610e88	Poppet_AddObject	3	1	appends a new object to the poppet's stream buffer and initializes it
+8135107a	lbp_Proc_8135107a	Poppet_UpdateState	3	1	Updates the poppet's state flags and syncs its visual state based on level leaf data
+812fe8d0	lbp_Proc_812fe8d0	Poppet_InitShaderResources	3	1	Initializes shader resources and fragment programs for the editor's rendering pipeline.
+81618a90	lbp_Proc_81618a90	Poppet_CopyThingData	3	0	Copies a fixed-size record block from one buffer to another with byte-swapping
+81464362	lbp_LeafL_81464362	Poppet_IsLocked	3	1	Checks whether the poppet or its target is locked or has a locked interaction
+81327ed8	lbp_Proc_81327ed8	Poppet_SwitchWireUpdate	5	0	Clears the wire target data of a poppet and its nested child object when updating switch wires.
+81125e68	lbp_Proc_81125e68	Poppet_Unselect	3	1	Deselects the editor tool and resets state when a menu or leaf action completes.
+81392268	lbp_Proc_81392268	Poppet_EquipResource	3	1	Equip a resource onto the poppet if it is valid and equipped
+816110d8	lbp_Proc_816110d8	Poppet_SendEditData	2	1	Encodes two 32-bit values and sends them via a leaf message wrapper
+81298168	lbp_LeafL_81298168	Poppet_SetupCursor	1	1	Calls the cursor tool's virtual function from its vtable when a cursor is active
+81463f3e	lbp_Proc_81463f3e	Poppet_NewObject	3	1	Creates a new object in the editor based on the current tool state
+8113404c	lbp_Wrap_8113404c	Poppet_UpdateToolList	3	1	Iterates over held objects and updates the editor tool cursor state
+816aaec0	lbp_Proc_816aaec0	Poppet_AddUndoEntry	4	1	Appends a level snapshot to the undo history and processes pending undo entries
+8139b992	lbp_Wrap_8139b992	Poppet_RemoveInvalid	3	1	Iterates over a list of objects and removes those that are not valid or meet certain criteria.
+8159cb3c	lbp_Proc_8159cb3c	Poppet_AdvanceEditorStep	4	1	Advances the editor cursor/selection index and updates the corresponding object state
+810ae3d2	lbp_Proc_810ae3d2	Poppet_Unlink	3	1	Detaches a child object from its parent and cleans up the leaf reference
+81613cec	lbp_Proc_81613cec	Poppet_ClearRange	4	1	Clears a range of editor tool slots to zero and marks them as free
+8113a0c0	lbp_Proc_8113a0c0	Poppet_UnlockMutex	3	1	Unlock a mutex and release a lock on the poppet object
+8145862c	lbp_Proc_8145862c	Poppet_ClearList	3	1	Frees and resets a list of objects held by the editor tool.
+8118159e	lbp_Proc_8118159e	Poppet_CheckCanRelease	3	1	Checks if the held poppet can be released based on state and joint constraints
+81336b06	lbp_Proc_81336b06	Poppet_SetSelected	3	1	Assigns a new selected object to the editor's current selection state
+81336faa	lbp_Proc_81336faa	Poppet_SetTool	3	1	Sets the current poppet tool state and runs the associated update logic
+817267d4	lbp_Wrap_817267d4	Poppet_SetObjectData	3	1	Stores a value into the object array at the current index and increments the index.
+815beaa8	lbp_Wrap_815beaa8	Poppet_AppendRecord	3	1	appends a value to a dynamic record array tracked by a count index
+8112dd68	lbp_Wrap_8112dd68	Poppet_ApplyTool	3	1	Marks a tool as used and runs it on the object
+8131e354	lbp_Wrap_8131e354	PoppetState_ctor	5	1	Constructs a PoppetState object and initializes its fields to zero
+8131dfc4	lbp_Wrap_8131dfc4	Poppet_CreateDefaultPainting	4	1	Constructs a PoppetState for the default painting item used by the editor's text item name.
+812195fa	lbp_Proc_812195fa	Poppet_Wrap	2	1	Wraps a Poppet object's state based on a flag and optional leaf data
+812a1a64	lbp_Wrap_812a1a64	Poppet_UpdateEditorState	3	1	Checks if the poppet's state allows updating and calls the editor update procedure
+8146b1ca	lbp_LeafM_8146b1ca	Poppet_SetTarget	2	1	Calls a vtable function to set the target of an object via its vtable offset 0x38
+8160e438	lbp_Proc_8160e438	Poppet_SyncObject	4	1	Syncs one object's transform and state fields to a network message
+8110456a	lbp_Wrap_8110456a	Poppet_SetHeldObject	3	1	Marks the poppet as holding an object and updates its held state flag
+812982b2	lbp_LeafM_812982b2	Poppet_SetToolState	3	1	Calls a virtual method on the tool object stored at offset 0x38 when the tool pointer is non-null
+81087bc6	lbp_Wrap_81087bc6	Poppet_GetSelectedObject	2	1	returns the selected object pointer from the poppet's internal state if valid
+81303826	lbp_LeafM_81303826	Poppet_DecrementPlanCount	3	1	Decrements a plan or object count in the editor if a matching ID is present.
+81726810	lbp_Wrap_81726810	Poppet_SetHeldObject	3	1	Sets the held object reference in the poppet's state record
+812a1a94	lbp_LeafM_812a1a94	Poppet_IsSelected	3	1	Checks if the editor object is selected by comparing two flags or pointers
+8146b210	lbp_LeafM_8146b210	Poppet_IsValid	4	1	Checks if the poppet's target object pointer is non-null before calling its method
+81086878	lbp_LeafM_81086878	Game_GridSize	3	1	Returns the grid size setting from a global data field
+81072fe0	lbp_LeafS_81072fe0	Poppet_GetToolData	3	1	Reads a per-player tool state field from the Poppet object
+8134d662	lbp_Wrap_8134d662	Game_AutoWrap	3	1	Wraps a game object using an auto-wrap utility function
+8134d710	lbp_Wrap_8134d710	Poppet_DeleteCommunityObjectsPrompt	3	0	Wraps the prompt for deleting community objects in the editor
+8134d72c	lbp_Wrap_8134d72c	Poppet_Atomize	3	1	Register a destructor for the poppet object's cleanup on exit
+8134d73a	lbp_Wrap_8134d73a	Game_Unused	1	1	Placeholder wrapper function with no meaningful logic
+8134d748	lbp_Wrap_8134d748	Poppet_DeleteCommunityObjectsPrompt	3	1	Finalizes the community object deletion prompt by registering cleanup via atexit
+8134d71e	lbp_Wrap_8134d71e	Poppet_DeleteCommunityObjectsPrompt	3	0	Wraps the deletion confirmation prompt for community objects in the editor
+8112dda0	lbp_LeafS_8112dda0	Poppet_SetGridSize	3	1	Stores a grid size value into the Poppet object's state array
+8112ddac	lbp_LeafS_8112ddac	Poppet_ResetFlag	3	1	Clears a flag byte in the Poppet object structure at offset 0xf44
+81683028	lbp_Thunk_81683028	Poppet_Throttle	3	1	Runs a thunk with a fixed throttle count of 5
+812aa65a	lbp_LeafS_812aa65a	Poppet_GetCursorTool	3	1	Returns the current cursor tool from the poppet object
+8113cf44	lbp_Thunk_8113cf44	Game_EditorStateInit	2	1	Initializes the per-player edit state via a thunk wrapper
+8146b6f4	lbp_Run_8146b6f4	Poppet_SyncUndoHistory	3	1	Restores the level and objects from an undo/redo snapshot after saving resources.
+810ced40	lbp_Proc_810ced40	Poppet_RemoveInvalidObjects	3	1	Iterates a list of objects and removes those that are not valid editor tools.
+815b1750	lbp_use_sceKernelUnlockLwMutex2_815b1750	Poppet_CollisionDetect	3	1	detect collisions between a shape and nearby shapes within a radius
+81336c92	lbp_Run_81336c92	Poppet_Run	5	1	Main per-frame update loop for the editor's cursor/poppet object
+81093c5c	lbp_Proc_81093c5c	Poppet_ApplyToolToThing	4	1	Applies the selected editor tool to the target thing in the level
+8158c478	lbp_Proc_8158c478	Poppet_ReplaceObjects	4	0	replaces a list of objects in the level with new ones from another list
+811343ce	lbp_LeafM_811343ce	Poppet_HasInvalidCommunityObjects	3	1	Checks if any community objects in the list are invalid (negative ID)
+816d6a4c	lbp_Thunk_816d6a4c	Poppet_Run	3	1	Thunk that calls the main run function with a fixed opcode
+8167f764	lbp_Thunk_8167f764	Game_SerializeRevisioned	3	1	Runs a serialization thunk for a revisioned game object
+816516d0	lbp_CutSceneCameraManager_816516d0	Msg_OnLoadLevelData	3	1	Unpacks a level data message and writes all fields into the level object.
+81634b18	lbp_ForceThatSmashedCreature_81634b18	Poppet_SaveState	4	1	Serializes the full state of a creature or poppet object into a stream for saving.
+8113af86	lbp_PoppetCreateObjectPlans_8113af86	Poppet_CreateObjectPlans	5	1	Creates a plan object from the poppet cursor and adds it to the level.
+8121588a	lbp_Run_8121588a	Poppet_Run	3	1	Run the poppet's per-frame update and level processing logic
+8163d0e0	lbp_GameStartOrientation_8163d0e0	Game_StartOrientation	5	1	Serializes the game start orientation record into a stream for saving or network transfer.
+81619f94	lbp_GetDataLabelsDataLabelName_81619f94	Poppet_DataLabelsDataLabelName	3	1	Writes the DataLabelsData LabelName field and related sub-fields to a stream for a poppet data label
+8164c91c	lbp_use_memcpy_8164c91c	Poppet_WriteStream	4	1	Serializes a Poppet object's fields into a byte stream for saving or network transfer
+8163ac1c	lbp_Plan_8163ac1c	Poppet_Plan_Write	2	1	Serializes a plan object's fields into a stream for saving or network transfer
+81363512	lbp_Run_81363512	Poppet_Render	3	0	Renders the poppet cursor or held object with optional overlays and effects
+816239b4	lbp_TweakTargetMaxLength_816239b4	Poppet_WriteStream	3	1	Serializes the poppet's tweak target and joint fields to a stream
+8163fd88	lbp_Run_8163fd88	Poppet_PlanSave	3	1	Serializes a plan object into a stream buffer for saving or network transfer
+8111e26e	lbp_Proc_8111e26e	Poppet_UpdateSnapToGrid	3	1	Update the poppet's snap-to-grid state based on a float parameter
+81647f64	lbp_use_memcpy_81647f64	Poppet_WriteStream	4	1	Serializes a poppet record into a stream buffer with byte-swapped fields
+8164ab68	lbp_SackbotRecordingDataNbytes_8164ab68	Poppet_SackbotRecordingData	4	1	Serializes a sackbot recording data structure into the stream
+81617e4c	lbp_CutSceneSendsSignalOnCancelled_81617e4c	Poppet_CutSceneWriteSignal	4	1	Serializes cutscene signal and state fields into a stream for saving or network transfer.
+813488c6	lbp_use___aeabi_atexit_813488c6	Poppet_IsInsidePolygon	4	1	Determines whether a point is inside a polygon using cross-product winding
+8133691c	lbp_Proc_8133691c	Poppet_JointUpdateAll	3	0	Iterates over a list of joints and updates their end A or B positions based on the caller's transform.
+81649238	lbp_Proc_81649238	Poppet_WriteToStream	4	1	Serializes a Poppet record into a stream buffer with byte-swapped fields and nested sub-records.
+812fd8dc	lbp_Proc_812fd8dc	Poppet_GetAverageAngle	3	1	Computes the average angle of a set of joints attached to a poppet.
+81631fc8	lbp_Proc_81631fc8	Poppet_WriteLevelData	3	1	Serializes the level data from a source struct into the poppet's stream buffer
+8175c6dc	lbp_Proc_8175c6dc	Poppet_CloneObject	3	1	Clones a Poppet object record into the level array at the next free slot
+81622ba0	lbp_MultiplierOff_81622ba0	Poppet_WriteSpotLight	4	1	Serializes a spot light object's properties into a stream
+81641770	lbp_Proc_81641770	Poppet_SendLevelData	3	1	Iterates over the level's object list and sends each valid object's data to a stream for saving or syncing.
+81141ea0	lbp_Proc_81141ea0	Poppet_RemoveInvalidObjects	3	1	Iterates over a list of objects and removes those that are invalid or have an invalid parent.
+8164a0a4	lbp_Proc_8164a0a4	Poppet_WriteToStream	3	1	Serializes a Poppet object's fields into a stream buffer for saving or transfer.
+8162071c	lbp_NewWalkConstraintMass_8162071c	Poppet_WriteWalkConstraintProps	4	1	Serializes walk constraint properties into a stream for the level editor
+8144caca	lbp_Run_8144caca	Poppet_UpdateLayout	3	1	Redraws the editor layout and updates the poppet cursor when the level or selection changes
+81613a24	lbp_use_memcpy_81613a24	Poppet_ReadPlanData	2	1	Reads a serialized plan or object data block from a source buffer into a destination record
+813281a8	lbp_Proc_813281a8	Poppet_SetToolTarget	3	1	Assigns a target object and parameters to the poppet's tool state
+8162f450	lbp_Proc_8162f450	Poppet_AppendUndoEntry	3	0	appends a serialized level state to the undo history stream
+8164ed48	lbp_Proc_8164ed48	Poppet_UpdateEditorState	3	1	Updates the poppet's internal state and editor settings via wrap calls
+81140eda	lbp_use_floorf_81140eda	Poppet_SnapToGrid	3	1	Snaps two coordinate parameters to a grid and adjusts them based on their separation distance
+8161f7a4	lbp_Run_8161f7a4	Poppet_UndoRedo	3	1	Restores or applies an editor action using a saved buffer and updates the undo history.
+8133ed20	lbp_Proc_8133ed20	Poppet_SnapToGrid	3	1	Selects a nearby object to snap to the grid when moving the poppet cursor
+8163151c	lbp_Proc_8163151c	Poppet_PushUndoSnapshot	3	0	Appends a level state byte and word to the undo history stream
+81639b90	lbp_Proc_81639b90	Poppet_PushUndoSnapshot	4	1	Appends a level state snapshot to the undo history stream for undo/redo support.
+816336a4	lbp_Proc_816336a4	Poppet_ApplyTool	3	1	Applies the selected poppet tool to a level object and updates the undo history
+81675bbc	lbp_Wrap_81675bbc	Poppet_ReadNextSticker	3	0	Reads a 4-byte little-endian value from a stream and byte-swaps it into the output buffer
+8161fd40	lbp_IncludeRigidConnectors_8161fd40	Poppet_WriteRigidConnector	3	1	Serializes rigid connector properties to a stream during level saving
+81633e24	lbp_Proc_81633e24	Poppet_WriteLevelData	3	1	Serializes a level's data fields into a stream buffer
+8122ddf4	lbp_Proc_8122ddf4	Poppet_RunUndoHistory	4	1	Iterates over undo history snapshots and runs each recorded object's update function
+8132dd14	lbp_LeafL_8132dd14	Poppet_UnphysicsState_ctor	5	1	Initializes the unphysics state of a poppet object and clears flags on its attached physics objects.
+81475bec	lbp_Proc_81475bec	Poppet_UnloadObjects	3	1	Frees all child objects in the list and resets the object array offsets
+81087b0a	lbp_Run_81087b0a	Poppet_SendLevelSnapshot	3	1	Sends a level snapshot message to the network when a leaf object is valid
+81616504	lbp_CostumePieceVecCOSTUMEPARTTEMP_81616504	Poppet_CostumePieceVecInit	4	1	Initializes the costume piece vector record with default sub-objects and mesh part lists.
+8162138c	lbp_Creator_8162138c	Poppet_CreateCreator	3	1	Creates a new creator object in the level using a thunk and registers it
+811e2fc6	lbp_use___aeabi_atexit_811e2fc6	Poppet_Init	3	0	Initializes a global Poppet object lazily via atexit and Proc/LeafM setup
+81675b14	lbp_Wrap_81675b14	Poppet_SerializeLevel	3	1	Serializes 6 words of level data into a stream with byte-swapped endianness
+81629494	lbp_Proc_81629494	Poppet_SendPlanData	3	1	Serializes and sends a plan's data via the stream system
+8132fe76	lbp_PGpG_8132fe76	Poppet_ItemNameDefaultPainting	4	0	Initializes a default painting item record for the editor's name prompt
+810eb936	lbp_LeafL_810eb936	Poppet_MaskFlags	3	1	Combines mask flags from two objects to produce a combined result
+816fb494	lbp_Wrap_816fb494	Poppet_SetRefSlot	3	1	Resizes a reference array and appends an item to it
+811939ba	lbp_Proc_811939ba	Poppet_CheckObject	3	0	Iterates a list of objects and checks if one matches the given criteria
+81141fec	lbp_Proc_81141fec	Poppet_ApplyUndoList	3	1	adds unique items from a list to the undo history
+8131ef1c	lbp_Proc_8131ef1c	Poppet_ResetPainting	3	1	Resets painting-related state fields of a poppet object in the editor.
+8163a61c	lbp_Plan_8163a61c	Poppet_PlanRef	3	1	Handles plan reference logic for the editor's plan tool
+81614320	lbp_CostumeDecals_81614320	Game_LoadCostumeDecals	3	1	Loads costume decals and eyetoy data for the current game state
+8104297c	lbp_Proc_8104297c	Poppet_TryPlaceObject	4	1	Attempts to place an object in the level by validating against a check function up to three times
+81133ec2	lbp_Proc_81133ec2	Poppet_IsHeldByCursor	3	1	Checks if the poppet is currently held by the cursor tool and returns its ID
+8122dc98	lbp_Proc_8122dc98	Poppet_RunAll	3	1	Runs the main loop for each object in a list of pointers
+81336b8c	lbp_Wrap_81336b8c	Poppet_GetToolAction	4	1	Retrieves the tool action data for the current poppet state
+8108f088	lbp_Proc_8108f088	Poppet_UpdateHeldObjects	3	1	Iterates over held object slots and updates each one via leaf update
+81475976	lbp_Wrap_81475976	Poppet_AddUniqueThing	3	1	Adds a unique thing pointer to a list if not already present
+81414ddc	lbp_Wrap_81414ddc	Poppet_SetState	3	1	Copies a fixed array of eight global values into the object's fields and zeroes two leaf members.
+81632f74	lbp_Proc_81632f74	Poppet_WriteUndoData	3	1	Encodes two 32-bit values into a stream buffer with byte-swapping
+8132f9ec	lbp_Proc_8132f9ec	Poppet_CreatePainting	3	1	Initialize a new painting object in the editor
+8113cfa0	lbp_Proc_8113cfa0	Poppet_InitPainting	4	0	Initializes a painting item record with default values and returns it
+814718cc	lbp_Wrap_814718cc	Poppet_SetupCursor	4	1	Initializes a Poppet cursor object with default state and proc pointer
+81621c2c	lbp_Proc_81621c2c	Poppet_UpdateSelection	4	1	Updates the selection offset and clears it if the target is empty.
+81219536	lbp_Proc_81219536	Poppet_Spawn	3	1	Spawns a new poppet object and destroys it if out of range.
+81125f20	lbp_Proc_81125f20	Poppet_BpVisitPlanet	4	1	Initializes a Poppet for the BpVisitPlanet level editor tool and runs it
+81631180	lbp_WorldPosition_81631180	Game_SetWorldPosition	3	1	Sets the world position of an object via a proc and wrap function
+8132fcf6	lbp_Wrap_8132fcf6	Poppet_SetDefaultPainting	4	1	Initializes a painting item's default texture and scale for the editor cursor tool
+8111ab96	lbp_LeafM_8111ab96	Poppet_ResetSelection	3	1	Resets a selection or bounding box record to all-ones then copies from another record
+810850f8	lbp_LeafM_810850f8	Poppet_DefaultPainting	4	1	Initializes a default painting record with zeroed fields and two float values.
+816118c8	lbp_Proc_816118c8	Poppet_LeafS	2	0	Initialize a leaf structure and wrap it for the poppet system
+81388fb6	lbp_Wrap_81388fb6	Poppet_Unselect	2	1	Deselects the currently held poppet object
+81622ac8	lbp_Wrap_81622ac8	Poppet_Wrap	1	1	wrapper function for a poppet-related operation
+81606560	lbp_Wrap_81606560	Game_IsReady	3	1	Checks whether the game or level is ready to proceed before continuing
+816a8ba0	lbp_Wrap_816a8ba0	Poppet_CopyState	3	1	Copies a block of memory from a source offset to the object
+816d7cc4	lbp_Thunk_816d7cc4	Poppet_WriteBinary	3	1	Thunk that calls the write binary proc for a sprite light or instrument object
+814a03a0	lbp_LeafS_814a03a0	Poppet_ClearPaintingOffsets	3	1	Resets three offset fields to zero for a painting item

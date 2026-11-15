@@ -1,0 +1,8 @@
+Editor glossary (LittleBigPlanet Vita create mode):
+- Poppet = the per-player editor tool object (menu, cursor, held objects). Prefix Poppet_ for its methods.
+- Undo history = a list of whole-level snapshots; undo / redo load an older / newer snapshot back into the level. Prefix Undo_ for functions that work on that history (step, can-step, push).
+- Joint = bolt, string, rod, spring, piston... between two things, with end A and end B. Prefix Joint_ for functions of the joint record itself.
+- Msg_On<Name> = a small network / queue message handler: it unpacks a message and calls one worker function. Use it for short functions that only read a message record and forward it.
+- Inventory items: costume piece, background, sticker, decoration, plan (a saved object), painting.
+- Game_ = per-player edit state kept in the game object (grid size, angle snap, preview, front view).
+- A function that only fills a message and sends it is Send<What>Message; name <What> from the constants and the callers.
