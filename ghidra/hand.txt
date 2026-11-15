@@ -3206,3 +3206,7 @@
 0x8123e2d6 func Save_SlotFolder hand late40
 0x814a395e func QuickSaveJob_Finish hand late41
 0x817621b8 func QuickSaveJob_GetName hand late41
+0x812c27f8 func Net_SendMessage hand late42
+0x812acb38 func Net_OnMessage hand late42
+0x812af118 func Net_RouteGameMessage hand late42
+0x812af092 func Net_BufferGameMessage hand late42

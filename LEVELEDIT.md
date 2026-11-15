@@ -407,6 +407,13 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - 212 more functions got Text_<key> names from tools/keyscan.py output (hand.txt lines tagged textkey_late40): the name says which text key the function loads, not what it does.
 - The job class (late 41): its vtable sits at file offset 0x85d5f4 of eboot.elf, followed by the string "QuickSaveProfile"; slot +0x10 is 0x817621b8 (auto name QuickSaveBigProfile). Slots: +8 = SaveJob_WriteAndVerify (the worker entry 0x81367790 only calls vtable +8), +0xc = 0x814a395e QuickSaveJob_Finish (holds the SAVEGAME_ERROR texts; RunSerialise calls it after setting an error code), +0x2c = SaveJob_RunSerialise. So the edited level reaches the disk through the quick save of the big profile.
 
+## 9zh. Network message path for SAVE_LEVEL (0x37) (read in part, disassembly + dumps decomp_svb.c, decomp_svc.c)
+- Correction to 9zb: 0x812c2896 is not a message builder. It only acts for r1 = 8, 0xa or 0xc (calls 0x812c048c on session +0x1804); for 0x37 it does nothing. The message is the record on the stack of Game_SendSaveLevelMsg (type 0x37 at +0, session +0x1abc at +4) sent by 0x812c27f8 Net_SendMessage.
+- Net_SendMessage picks a channel by type: 7 for 0x5f..0x60, 5 for 0x11..0x14 and 0x61, else 3 (so 3 for SAVE_LEVEL), gets a buffer with 0x812cad50 and appends with 0x812dc746; a buffer over 0x100000 bytes is dropped (0x812cb66c).
+- Receive side: 0x812acb38 Net_OnMessage switches on the type (0..0x61, table at 0x812acbca, 24 distinct targets). SAVE_LEVEL has no case of its own: the default 0x812ad4c4 calls 0x812af118 Net_RouteGameMessage, which switches on the delivery kind (message +4, 0..0x14) and calls 0x812af092 Net_BufferGameMessage. That one appends the bytes to the buffer of the sending peer (same 0x812cad50 / 0x812dc746 pair).
+- So game messages such as SAVE_LEVEL are not handled in the network callback: they are queued per peer and read later. The reader of that queue (and with it the code that starts the quick save job of 9zg) was not located.
+- Other switches on values that include 0x37 are not message code: Poppet_HandleMessage 0x812fcb1a (0..0x57, default for 0x36..0x38) and the poppet functions 0x81134e52 / 0x8113735a / 0x8113208e (tool mode 0x37 / 0x38).
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
