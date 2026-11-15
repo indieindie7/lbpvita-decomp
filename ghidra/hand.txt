@@ -2794,3 +2794,7 @@
 0x813265da func Sticker_Commit hand read
 0x81303a62 func Decoration_Commit hand read
 0x8132d320 func UVTool_Update hand read
+0x8121a488 func Sticker_PaintOnThing hand read
+0x814212fe func Decoration_AttachToThing hand read
+0x81212cd4 func Level_LoadResource_thunk hand read
+0x81212cdc func Level_SaveResource_thunk hand read

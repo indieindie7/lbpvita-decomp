@@ -175,12 +175,14 @@ Undo is whole-level snapshots, not per-action records.
 - Sticker: 0x813265da Sticker_Commit calls 0x8121a488 (paints the sticker onto the target thing; body not dumped). Sound poppet/placesticker with pitch 1 - log(sqrt(w * h + 1) * 0.0033): big stickers sound lower.
 - Decoration: 0x81303a62 Decoration_Commit calls 0x814212fe (attaches the decoration to the target; body not dumped).
 - Both then record the item as used (0x810b49ba), notify the target (0x813028d4) and, unless a keep-holding flag is set, drop the held item (0x8113c206). Failure takes the error path 0x81130f7a.
+- Inside (skeleton): 0x8121a488 Sticker_PaintOnThing refuses when the target is locked (0x8134d316), adds the sticker to the target with 0x81143a32, then runs the sticker switch check (0x81142dda) and the first-use prize popup (0x8107075e, type 0x2e). 0x814212fe Decoration_AttachToThing does the same with 0x810a8cf2 and the switch check 0x81143352.
 
 ## 9n. UV tool (read in part)
 0x8132d320: select a shape (poppet/object/select), then the stick pans the texture offset (step 0.002 times zoom, wrapped with fmodf 1.0) and rotates it (angle kept in -pi..pi at +0x38 of the UV record of the shape). Button 0xb = BP_RESET_UV_TOOL.
 
 ## 9o. Level save (call skeleton)
 lbp_SaveLevelFart 0x8105764e: serialises the level with 0x81212cdc (the twin of the loader 0x81212cd4), queues it as the job "SaveLevelFart", then copies the slot record field by field and updates the slot map. 0x812f9db0 is only the on-screen thermometer / saving notice.
+Both 0x81212cd4 and 0x81212cdc are 8-byte thunks into the resource system: load = 0x8119b6c6, save = 0x8119b89e. Undo snapshots and the level file use the same pair, so an undo step is a level load from memory.
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
