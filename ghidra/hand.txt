@@ -2770,3 +2770,8 @@
 0x8132decc func Poppet_UnphysicsToggle hand
 0x81328388 func Poppet_SwitchWireUpdate hand
 0x812f9db0 func Poppet_ThermoSaveNotice hand not the save
+0x813131f8 func VertexEdit_DeleteOne hand erase vertex, fix loop count
+0x8131aeda func Joint_CommitAttach hand
+0x81307ca2 func Stamp_CommitDrop hand
+0x8131a01e func Joint_EndAHeld hand
+0x81319f78 func Joint_EndBHeld hand

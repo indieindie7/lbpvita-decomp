@@ -124,6 +124,21 @@ Source: Ghidra decompile of eboot (names-only project). Addresses are eboot VAs.
 - Place / stamp 0x81307f28: BP_PLACE_HERE (9) -> placement test 0x81343346, on success sound poppet/createstamp, on failure poppet/error_3d; BP_DELETE (0xb); BP_HIDE / BP_SHOW on button 0x3b. Commit path: undo snapshot, 0x81307ca2(state, thing), snapshot dropped on failure.
 - 0x812f9db0 is not the save itself: it is the thermometer / saving notification (voice lines vo_create_saving, vo_create_thermo).
 
+## 9f. Joints, detail (read)
+- A joint is itself a thing; while placing, it is the held thing (state+0x88 list). Its joint part: +0x18 = thing on end A, +0x24 = thing on end B, +0x144 / +0x148 = two settings kept across a re-attach.
+- 0x8131a01e = end A is inside the held set, 0x81319f78 = end B is, 0x8131a0c4 = the attached thing, 0x8131a20a -> 0x81344612 = that end is fixed.
+- Commit 0x8131aeda(state, target, pos): no valid target -> the joint just drops (state vtable +0x94, +0xb4, then 0x8113fda8 registers it). With a target: 0x813459a2(jointThing, target, endIsB) attaches the free end, 0x810c5c38(joint) rebuilds it, the group of the old end is re-registered (0x81130fc8). A joint with one end already fixed continues as "place second end" (0x811406ce).
+- Bolts on a glued target: flag 8 is set on target part +0x20 word +0xc and the shape is rebuilt (0x810ed21e, 0x810ed1b8) (guess: bolt hole / static mark).
+
+## 9g. Stamp commit (read)
+- 0x81307ca2(state, parent): for every held thing whose type byte (thing+0x7e) is 0x42 the switch outputs that point outside the stamped set are relinked with 0x810fe578; then state vtable +0x98 does the actual drop; then the parent thing gets 0x810bbdba (guess: refresh of the group it lands on). Returns 0 when the drop is refused.
+
+## 9h. Delete vertex (read)
+- In 0x81315fee: BP_DELETE_VERTEX on button 0xb (touch variant 0x52). Undo snapshot, thing registered (0x8113c85c), vertex vector copied from shape +0x108.
+- The positions of the neighbours (previous of the first selected, next of the last selected, index wrapped with 0x81543dc4) are kept so the cursor can jump to one of them afterwards (0x8131280c).
+- Each selected index goes through 0x813131f8(state, index, verts, loops): erase the 16-byte vertex, find the loop that owns it and take 1 from its count. For a loop that is not the first one, when the area test 0x8112a6d2 passes the whole loop is removed from both vectors and the function returns 1, which stops the pass (guess: a hole that collapsed is dropped whole).
+- Then the usual set-polygon; if nothing is left selected the editor leaves (0x81312a62).
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
@@ -143,4 +158,4 @@ Source: Ghidra decompile of eboot (names-only project). Addresses are eboot VAs.
 Full list: ghidra/work/poppet_strs.txt.
 
 ## 11. Not read yet
-- Delete vertex body (0x81315fee), the polygon boolean (0x8140c306), the glue test maths (0x810e8322, 0x81418114), joint creation (0x8131aeda), stamp commit (0x81307ca2), scale / rotate maths (0x8130e890), stickers, decorations, UV, the real level save.
+- The polygon boolean (0x8140c306), the glue test maths (0x810e8322, 0x81418114), scale / rotate maths (0x8130e890), stickers, decorations, UV, the real level save (lbp_SaveLevelFart 0x8105764e, script native RequestSaveLevel 0x811ed4b0; not dumped).
