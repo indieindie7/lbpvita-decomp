@@ -1,0 +1,90 @@
+type	case	calls	keys_and_data
+0x01	81070bce	lbp_LeafM_812c64b0 CreateMode_AskLeaveSave lbp_use_sceKernelLockLwMutex_8106510a	@819077a8 @81862d70 @818d0348
+0x02	81070c40	lbp_LeafS_812c37a0 lbp_LeafM_81544210 lbp_Run_8157f1bc	@819077a8 @818d016c
+0x03	81070c8a	lbp_LeafS_812c37a0 lbp_LeafM_81544210 lbp_Run_8157f1bc	@819077a8 @818d016c
+0x04	81070cd2	lbp_LeafS_812c37a0 lbp_LeafM_81544210 lbp_Run_8157f1bc	@819077a8 @818d016c
+0x05	81070d1a	lbp_LeafS_812c37a0 lbp_LeafM_81544210 lbp_Run_8157f1bc	@819077a8 @818d016c
+0x06	81070d62	lbp_LeafM_81544210 lbp_Run_8157f280 lbp_Wrap_81012efc	@819077a8 @818d016c
+0x07	81070e16	lbp_Wrap_812c820c lbp_Proc_8114c27e lbp_Proc_812dfb64 lbp_LeafM_81544210 lbp_Run_8157f280 lbp_Wrap_81012efc	@819077a8 @818d016c
+0x08	81070f06	lbp_LeafM_81544210 lbp_Run_8157f280 lbp_Wrap_81012efc	@819077a8 @818d016c
+0x09	81070fd0	lbp_LeafM_812c64b0 lbp_LeafM_81544210 lbp_Wrap_812c611c CreateMode_AskLeaveSave lbp_Wrap_812bfa0a lbp_use_sceKernelLockLwMutex_8106510a	@819077a8 @81862d70 @818d0348
+0x0a	81071084	Text_TgFailedToConnectOnlineRejectedEula_812c38f8 lbp_LeafS_81084d20	@819077a8 @81862ca0
+0x0b	810710b6	lbp_Wrap_812e0cce Text_PresenceString	@819077a8
+0x0c	81071140	lbp_Wrap_81084d2e lbp_Wrap_81012efc lbp_Proc_8114cb44 lbp_use_sceNpManagerGetNpId_812c375a lbp_use_sceNpCmpNpId_81012f3a lbp_Wrap_81012eac Text_LookupKey Messaging_AddMessage	@81862ca0 @819077a8 @818d0144 @81862de8 TG_Failed_to_connect_online_rejected_EULA
+0x0d	8107123a	lbp_use_sceNpMessageDialogInit_812bfd40	@819077a8
+0x0e	81071252	Game_RequestSaveLevel	@818e56ec @818d354c
+0x0f	81071292	lbp_Proc_811785e6	@818e56ec @818d354c
+0x10	810712d2		
+0x11	81070b8e	lbp_Wrap_81070a02	@818d354c
+0x12	810710d6	lbp_LeafS_8111eaa6 lbp_Thunk_811260e4	
+0x13	810710ec		@81902fa0
+0x14	81071116		
+0x15	8107112a	lbp_LeafS_8111eaa6 lbp_Thunk_811260da	
+0x16	81071120		
+0x17	81071100	lbp_NearHeap_812b8910	@818f6c88
+0x18	810712e0	lbp_LeafS_8111eaa6 lbp_LeafS_811244e4	
+0x19	81071300	lbp_LeafS_8111eaa6 lbp_LeafS_811244ec	
+0x1a	81071346	Game_PreSaveCheck lbp_Proc_812e0370	@818e56ec @819077a8
+0x1b	81071374	lbp_use_sceKernelUnlockLwMutex2_812c64d0	@819077a8
+0x1c	81071396	lbp_use_sceKernelUnlockLwMutex2_812c64d0	@819077a8
+0x1d	81071484	Game_RequestSaveLevel	@818e56ec
+0x1e	8107149e	lbp_Wrap_81070a02	@818d354c
+0x1f	8107131a	lbp_LeafM_8114cf04	
+0x20	8107133c		
+0x21	810714de	lbp_LeafS_8111eaa6	
+0x22	810714f6	lbp_PodPublish_811c5632	@81862ca0
+0x23	81071518	lbp_LeafS_811c5704	@81862ca0
+0x24	8107153a	lbp_Proc_8114cb44 lbp_Proc_81191410 Game_RequestSaveLevel	@818e56ec
+0x25	810715cc	lbp_LeafM_8157f3b0 lbp_Wrap_8110c4d4 lbp_LeafS_81188d38 lbp_Wrap_811651e0	
+0x26	8107160c	lbp_LeafM_8157f3b0 lbp_Wrap_8110c4d4 lbp_LeafS_81188d38 lbp_Wrap_81165272	
+0x27	8107155e	lbp_LeafL_8157f344 lbp_Wrap_8110c4d4 lbp_Proc_812fbe8e	@819077a8
+0x28	8107164c	lbp_Proc_8114cb44 lbp_LeafM_81544968 lbp_Wrap_811909f2 lbp_LeafM_815448ac	
+0x29	8107167e	lbp_LeafM_8114cca4 lbp_LeafM_8114cc0e lbp_Stub_815454f4 lbp_Run_81383da0	
+0x2a	810716b6	lbp_LeafM_8114cee0 lbp_LeafM_81544968 lbp_LeafM_8119169a lbp_LeafM_815448ac	
+0x2b	81071702		
+0x2c	8107170a	lbp_Stub_815454f4 lbp_Stub_81000000	
+0x2d	8107171c	lbp_LeafS_8111eaa6 lbp_Proc_812cc8fe operator_new lbp_LeafS_812c37a0 lbp_Proc_81209654 lbp_LeafM_81546450 lbp_LeafM_8154642c	@818e56ec @819077a8
+0x2e	810717b4	lbp_Proc_8114c27e lbp_LeafS_8111eaa6 lbp_Proc_812cc8fe lbp_LeafM_81546450 lbp_LeafM_8154642c lbp_LeafM_811916ee lbp_Wrap_81124378	@818e56ec @819077a8
+0x2f	8107183c	lbp_Proc_8114c27e lbp_LeafS_8111eaa6 lbp_LeafM_811916ee lbp_Wrap_81124378	
+0x30	8107186c	lbp_LeafS_8111eaa6	
+0x31	81071884	lbp_LeafS_8111eaa6	
+0x32	8107189a		
+0x33	810718a2	lbp_Thunk_812c37a6 lbp_LeafM_81012fee lbp_use_sceKernelUnlockLwMutex2_812df684	@819077a8
+0x34	810718f2	lbp_Proc_8114c27e lbp_LeafM_81544968 lbp_Wrap_81190b60 lbp_LeafS_8118f940 lbp_LeafM_815448ac	
+0x35	81071936	lbp_Proc_8114c27e lbp_LeafM_81544968 lbp_LeafS_8118f940 lbp_LeafM_815448ac	
+0x36	81071972	lbp_Proc_8114c27e lbp_LeafM_81544968 lbp_LeafM_8118f94a lbp_LeafM_815448ac	
+0x37	810719ae	lbp_Photo_8111195c lbp_LeafM_81546450 lbp_Proc_81149fbc lbp_LeafM_8154642c	@81862ca0
+0x38	81071a00	lbp_Proc_81149db4	@81862ca0 @81b911bc
+0x39	81071a20	lbp_Proc_81149ece	@81862ca0 @818e5e60
+0x3a	81071a40	lbp_LeafL_8157f344 lbp_Wrap_810cdb0a lbp_LeafM_8157f3f0 lbp_use___aeabi_atexit_811d3306 lbp_use___aeabi_atexit_811d6388	
+0x3b	81071aa4	lbp_Proc_812dfa7e	@819077a8
+0x3c	81071ad0	lbp_Proc_812dfa7e	@819077a8
+0x3d	81071afc		@819077a8
+0x3e	81070b50	lbp_Thunk_812c37a6 lbp_LeafS_812c37a0 lbp_Proc_812c82d4 lbp_Run_81070144	@819077a8
+0x3f	81071b4a	lbp_LeafM_811795ee lbp_Proc_8102c52a	@818e56ec @81862ca0
+0x40	81071bea	Game_GetPoppetForPlayer	@818e56ec @81920398
+0x41	81071c56	Game_GetPoppetForPlayer lbp_Proc_812fbe8e lbp_Proc_8131eeb8	@818e56ec @81920398
+0x42	81071d74	Game_GetPoppetForPlayer lbp_Proc_813207e4	@818e56ec @81920398
+0x43	81071cec	Game_GetPoppetForPlayer lbp_Thunk_812ff6d4	@818e56ec @8192022c
+0x44	81071d30	Game_GetPoppetForPlayer lbp_Proc_812ff6de	@818e56ec @8192022c
+0x45	81071db8	lbp_LeafS_8111eaa6 lbp_Proc_81120db2	
+0x46	81071dca	lbp_LeafS_8111eaa6 lbp_Thunk_81125f62 lbp_Proc_811785e6	@818e56ec
+0x47	81071df0	lbp_Proc_811785e6	@818e56ec
+0x48	81071e0a	lbp_Run_8157f430	@819077a8 @818d016c
+0x49	81071e38	lbp_Proc_810750a2	@81862ca0
+0x4a	81071e54	lbp_Run_8157f430	@819077a8 @818d016c
+0x4b	81071e84	lbp_Proc_812e0370	@819077a8
+0x4c	81071b16		@819077a8
+0x4d	81071b30		@819077a8
+0x4e	810713b8	lbp_Wrap_81179814 Game_SendSaveLevelMsg lbp_Proc_8114cb44 lbp_Run_811892ce lbp_Proc_8105c914 lbp_Proc_812c6af8	@818e56ec @819077a8
+0x4f	8107142c	lbp_Proc_8114cb44 lbp_Run_811892ce lbp_Proc_8105c914 lbp_Proc_812c6af8	@819077a8
+0x50	8107147a		
+0x51	81071f88	Game_GetPoppetForPlayer Paint_AskSavePainting lbp_Proc_812fbe8e	@818e56ec @81920398
+0x52	81071e9a	Game_GetPoppetForPlayer lbp_LeafM_8114cf04 lbp_use_memset_81543fa0 lbp_Wrap_815441b8 lbp_Run_81086a6c lbp_Proc_812fbe8e	@818e56ec
+0x53	81071f42	lbp_LeafM_8114cf04 lbp_use_memset_81543fa0 lbp_Wrap_815441b8 Game_GetPoppetForPlayer lbp_Proc_812fbe8e	@818e56ec
+0x54	81071fec		@818d8464 @818d154c
+0x55	8107200c		@818d8464 @818d154c
+0x56	8107202e		@818d8464 @818d154c
+0x57	81072050		@818d8464 @818d154c
+0x58	81072072		
+0x59	81072072		
