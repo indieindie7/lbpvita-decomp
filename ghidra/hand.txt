@@ -4012,3 +4012,4 @@
 0x810720ca func Messaging_SendGameEvent hand late107
 0x8143db80 func Messaging_NewGameEventForPlayer hand late107
 0x813807ac func System_IsEnterButtonCross hand late107
+0x811795ee func Game_FindPlayerRecordById hand late108
