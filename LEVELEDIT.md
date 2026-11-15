@@ -228,4 +228,5 @@ Full list: ghidra/work/poppet_strs.txt.
 - Thing 0x8122ab62 (walks parents by kind byte +0x7e), 0x8122c012.
 - The writer 0x81213470, the generic reflection reader 0x81240d52, the per-type reflection table 0x816079b4.
 - Piece-pair distance 0x810e5b10, sticker removal 0x810f066e, script native RequestSaveLevel 0x811ed4b0.
-- Class / vtable recovery and library identification (FMOD, libpng); libult and steroid suprx modules.
+- Class trees are in CLASSES.md (Poppet tool states sit under PickState 0x8185b62c; each constructor passes its SUBMODE number). Unnamed classes there still need reading.
+- Library identification (FMOD, libpng); libult and steroid suprx modules.

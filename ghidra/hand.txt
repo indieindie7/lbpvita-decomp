@@ -2815,3 +2815,11 @@
 0x81212b94 func Resource_Deserialise hand late11
 0x81212288 func Resource_ReadBinary hand late11
 0x81213470 func Resource_Serialise hand late11
+0x81300ec0 func GrabPlanState_ctor hand vtable 0x8185741c
+0x81301898 func DangerState_ctor hand vtable 0x8185757c
+0x813043c2 func PickDecorationsState_ctor hand vtable 0x81857818
+0x81305750 func PickDecorations2State_ctor hand vtable 0x818578c8
+0x81322bb6 func TweakSelectState_ctor hand vtable 0x81858378
+0x81327560 func StickerCutterState_ctor hand vtable 0x81858608
+0x8132dbca func EditUVState_ctor hand vtable 0x81858c48
+0x8132ddd4 func UnphysicsState_ctor hand vtable 0x81858cf8
