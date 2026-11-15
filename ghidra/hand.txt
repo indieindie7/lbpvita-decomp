@@ -2953,3 +2953,6 @@
 0x816ca078 func Resource_WriteBody hand late29
 0x816d5a58 func Level_WriteBinary hand late30
 0x8100b54c func Stream_Grow hand late30
+0x810589fc func SaveJobMap_GetOrCreate hand late31
+0x81058c8e func SaveJobMap_Update hand late31
+0x8105885a func SaveJob_Ctor hand late31
