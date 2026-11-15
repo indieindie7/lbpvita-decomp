@@ -222,6 +222,44 @@ A thing keeps its parts as a bitmask at +0x10 / +0x14 (up to 0x27 part kinds) wi
 - 0x8118128c (next to it, read in part) fills a type 9 resource descriptor from the level resource (+0x84 of the game), the same type the undo snapshots use.
 - Message 0x37 is E_MESSAGE_TYPE_SAVE_LEVEL in the message type enum. The save job is stepped by 0x810587da SaveJob_Step (job state +0x28, 1 = running): pending work at +0x3c goes to 0x810585ec, a slot index at +0x38 other than -1 goes to 0x81058472; otherwise it scans the per-peer status array (+0x1c, count +0x20): any 0 = wait (0x81058148), any 1 = 0x810580b0, all higher = lbp_SaveLevelFart 0x8105764e (section 9o). State 2 or 3 returns 1 = finished. Callers 0x810589fc and 0x81058c8e (not read).
 
+## 9u. Reflect function per resource type (read)
+0x816079b4 is not a table but a row of 8-byte thunks, one per resource type (type n at 0x816079b4 + (n - 1) * 8). The binary reader 0x81212288 and the writer pick the thunk by the type byte +0x3c of the resource; each thunk calls the reflect function of that type, which visits the fields for load and for save alike. 0x812142c8 is shared by the types with no reflected fields (raw payload). The row was read for types 1..30; later types use another code shape and were not listed.
+
+| type | name | reflect function |
+|---|---|---|
+| 1 | RTYPE_TEXTURE | 0x81546408 |
+| 2 | RTYPE_MESH | 0x8167f730 |
+| 3 | RTYPE_PIXEL_SHADER | 0x812142c8 |
+| 4 | RTYPE_VERTEX_SHADER | 0x812142c8 |
+| 5 | RTYPE_ANIM | 0x81682f80 |
+| 6 | RTYPE_GUID_SUBST | 0x816dea10 |
+| 7 | RTYPE_GFXMATERIAL | 0x81686b6c |
+| 8 | RTYPE_SPU_ELF | 0x812142c8 |
+| 9 | RTYPE_LEVEL | 0x816d6180 |
+| 10 | RTYPE_FILENAME | 0x812142c8 |
+| 11 | RTYPE_SCRIPT | 0x816f2c64 |
+| 12 | RTYPE_SETTINGS_CHARACTER | 0x816884ac |
+| 13 | RTYPE_FILE_OF_BYTES | 0x812142c8 |
+| 14 | RTYPE_SETTINGS_SOFT_PHYS | 0x816d3018 |
+| 15 | RTYPE_FONTFACE | 0x812142c8 |
+| 16 | RTYPE_MATERIAL | 0x81677030 |
+| 17 | RTYPE_DOWNLOADABLE_CONTENT | 0x816a647c |
+| 18 | RTYPE_EDITOR_SETTINGS | 0x8169275c |
+| 19 | RTYPE_JOINT | 0x816dfb78 |
+| 20 | RTYPE_GAME_CONSTANTS | 0x816cd05c |
+| 21 | RTYPE_POPPET_SETTINGS | 0x816898ac |
+| 22 | RTYPE_CACHED_LEVEL_DATA | 0x816a4650 |
+| 23 | RTYPE_SYNCED_PROFILE | 0x816a7220 |
+| 24 | RTYPE_BEVEL | 0x816757e0 |
+| 25 | RTYPE_GAME | 0x81690c98 |
+| 26 | RTYPE_SETTINGS_NETWORK | 0x816d470c |
+| 27 | RTYPE_PACKS | 0x816a4e80 |
+| 28 | RTYPE_BIG_PROFILE | 0x816b6728 |
+| 29 | RTYPE_SLOT_LIST | 0x816a3e74 |
+| 30 | RTYPE_TRANSLATION | 0x812142c8 |
+
+For level editing the ones that matter are LEVEL (the world and all things), JOINT, MATERIAL, BEVEL, POPPET_SETTINGS and EDITOR_SETTINGS. Full list: ghidra/rtype_reflect.txt.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
@@ -242,6 +280,6 @@ Full list: ghidra/work/poppet_strs.txt.
 
 ## 11. Not read yet
 - Thing state byte +0x7f (0x8122ab62) and the rest of decomp_joint.c.
-- The per-type reflection table 0x816079b4, body writer 0x816ca078, handler of network message 0x37 (the real save), thing kinds 7 / 0x84.
+- Body writer 0x816ca078, reflect functions of types above 30, handler of network message 0x37 (the real save), thing kinds 7 / 0x84.
 - Class trees are in CLASSES.md (Poppet tool states sit under PickState 0x8185b62c; each constructor passes its SUBMODE number). Unnamed classes there still need reading.
 - Libraries: FMOD, zlib and libpng are named; vorbis, Bink and xml are not. libult and steroid suprx modules.
