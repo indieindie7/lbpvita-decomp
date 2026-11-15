@@ -3787,3 +3787,8 @@
 0x8129bb52 func Gooey_DoProgressBar hand late77
 0x8129bde0 func Gooey_DoImageMarquee hand late77
 0x8129be74 func Gooey_DoPhotograph hand late77
+0x81661ee0 func Thing_WriteBinary hand late78
+0x81661e8c func Thing_WriteParts hand late78
+0x81605ba4 func Stream_WriteThingPtr hand late78
+0x816d0030 func ItemPack_WritePtr hand late78
+0x816d02d8 func ItemPackList_WritePtr hand late78
