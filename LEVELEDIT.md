@@ -421,6 +421,22 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - So the files are written when the game changes level (for example create mode back to the pod), for profiles whose dirty bits 1 or 2 are set.
 - So a save is not started by a direct call from the editor: code marks the profile dirty (byte +0x3f; SaveJob_RunSerialise sets bit 2 there when it has to retry) and the save queue turns dirty profiles into quick save jobs. What sets the dirty bit after message SAVE_LEVEL: not located.
 
+## 9zj. The receiver of SAVE_LEVEL: what a level save does (read, dumps decomp_svk.c, decomp_svl.c, decomp_svm.c, decomp_svn.c; tools tools/msgreg.py, tools/immscan.py)
+- Correction to 9zh: 0x812acb38 Net_OnMessage is the handler of the game host thread. Its default case only forwards a message to the other peers (0x812af092 sends, it does not queue for later).
+- Every peer (the host too) handles game messages in 0x812c0baa Net_ClientReceive: it reads the header and calls a handler from a table in the session object: function at session +0x1830 + type * 0xc. 0x812c0a14 Net_RegisterHandler(session, type, fn, a, b) fills the table. All 103 registrations (89 message types) are listed in ghidra/work/msghandlers.tsv: type, name, handler stub, registering function.
+- The poppet messages 0x1e..0x28, 0x3c..0x3e, 0x44, 0x5a are registered by 0x81330954 / 0x81330b0e (same 14 handlers twice); EDIT_DATA 0x31 by 0x81390e28; the game ones (0x37, 0x3b, 0x34, 0x33, 0x2a, 0x2c, 0x4d, 0x55) by 0x8117f054 Game_RegisterMessageHandlers.
+- SAVE_LEVEL: stub 0x815c2d7c Msg_OnSaveLevel reads the slot id (two words: type, number) and calls 0x81177656 Game_OnSaveLevel(game, slot id). CLOSED_SAVE_LEVEL_MESSAGE 0x38 has no handler.
+- Game_OnSaveLevel, in order:
+  1. The same 0x21 budget check as the sender (9t); over a limit = notice (Limit_ShowCannotSave) and no save.
+  2. Stores the slot id at game +0x19c / +0x1a0 and +0x1ac / +0x1b0 (the old one is kept for step 6). Goes on only for slot type 2 and when game +0x17c is set.
+  3. 0x8117723a Game_SnapshotLevelForSave(game, game +0x3e0): takes every player out of the world (0x81177192(game, player, 1) over the 0x870-byte player records at game +0x1d8, count +0x1dc), collects the player things, calls 0x8116122a on the level resource (game +0x84) = the level serialiser, then puts the players back (0x81177192(..., 0)). Result = a resource descriptor at game +0x3e0; it must be type 9 with the high flag bit set.
+  4. Finds or makes the slot record in the big profile (0x81164180(big profile, slot id, 1); big profile = 0x81188d38(local profile)). Bumps the slot revision (short +0x104, never 0), sets the author (0x812180fa) when the name differs, sets a default icon (+0x24) when none, copies the level descriptor to slot +8.
+  5. Copies world fields to the slot: +0xc0 = 6 or 7 for world +0x50 of 1 or 2 (else cleared when it was 6 / 7), +0xc5..+0xc7 from world +0x5e..+0x60 (+0x60 = the board-hidden byte of 9zb), +0x170 from world +0xc38, +0xbc from world +0x860 / +0x87c, +0x10c = 1 when a thing of object type 0x76 is in the level. Things of type 0x6c add their text length; over 0x7ce characters shows notification 0xb7d29a2e. Slot +0xdc.. = the resource list (0x8118783a), +0xd4 = summed size of the dependencies (0x81247d7c walk).
+  6. When the slot id changed (save to another slot): icon, flags +0xb8..+0xba, name and description are copied from the old slot (or set to defaults), and 0x8118fa24(profile, slot id) runs.
+  7. Marks dirty: profile byte +0x3f |= 1 (when 0x81188704 says the slot changed) and big profile +0x3f |= 1. Then 0x81383a4e Save_FlagDirtyForQuickSave: a profile with dirty bits 0xc1 also gets bit 2, the bit Save_QuickSaveLocalProfile (9zi) looks for.
+- So "save level" = serialise the world without players into a level resource in memory, attach it to a slot of the big profile, mark both profiles dirty. The file write happens later through the save queue (9zi, 9zg, 9zf).
+- 0x81383cd4 SaveQueue_SaveNowAndWait: guard byte DAT_818658ec, SaveQueue_AddQuickSave with mask 0xc1, then it waits in a loop (queue +0x44 not 0: run vtable +0x14 of the first job, sleep 5). Used by the profile load code.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|

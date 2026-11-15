@@ -3214,3 +3214,12 @@
 0x81383816 func SaveQueue_AddQuickSave hand late43
 0x8138378e func SaveQueue_AddJob hand late43
 0x81383c46 func Save_QuickSaveLocalProfile hand late44
+0x81383cd4 func SaveQueue_SaveNowAndWait hand late45
+0x8134e29a func Net_SendRemoteIcon hand late45
+0x812c0a14 func Net_RegisterHandler hand late45
+0x812c0baa func Net_ClientReceive hand late45
+0x815c2d7c func Msg_OnSaveLevel hand late45
+0x81177656 func Game_OnSaveLevel hand late45
+0x8117723a func Game_SnapshotLevelForSave hand late45
+0x81383a4e func Save_FlagDirtyForQuickSave hand late45
+0x8117f054 func Game_RegisterMessageHandlers hand late45
