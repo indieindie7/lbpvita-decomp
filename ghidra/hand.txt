@@ -4002,3 +4002,5 @@
 0x810701f8 func Messaging_CloseOtherMagicMouths hand late101
 0x81070144 func Messaging_SendMagicMouthClosed hand late101
 0x8157f4f4 func Msg_OnMagicMouthClosed hand late101
+0x8106e1ac func Game_OnMagicMouthClosedRemote hand late102
+0x811d29f6 func Script_CallOnMagicMouthRemoteStop hand late102
