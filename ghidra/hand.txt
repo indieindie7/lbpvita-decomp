@@ -3607,3 +3607,6 @@
 0x81042e48 func FileCacheRecord_Swap hand late69
 0x8129b12e func Gooey_DoSlider hand late70
 0x81297544 func Gooey_GetTopLayout hand late70
+0x815731f8 func Msg_OnCameraZoomMode hand late71
+0x81045c78 func Game_SetCameraZoomMode hand late71
+0x81045bee func Camera_SetZoomMode hand late71
