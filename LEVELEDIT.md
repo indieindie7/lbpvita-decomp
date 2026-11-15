@@ -476,6 +476,7 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - Dialog buttons: a button press reaches a dialog as a numbered event. The pad sends 1, 2, 6 or 8; the pop-up scripts send the option events (5 first option, 6 second, 7 third, 8 back) through the script call Messaging.NewGameEvent; event 3 closes the speech bubble of one object. The dialog row turns the event into its action code.
 - Dialog priority and icon: every dialog type has a rank and an icon number. Only 8 dialogs can be open; when all are used a new one replaces the least important one, or is dropped when it is even less important. Scripts read the icon number with Messaging.GetMessageIcon.
 - Part and resource tables: one switch gives the field list reader of each of the 39 object parts by part number (ghidra/partreflect.tsv), a second one gives the reader of each of the 55 file types by the type byte of the file (ghidra/restypes.tsv; type 0x26 is the plan = a saved object, type 9 the level).
+- Saved edit state: grid size, angle snap, preview mode and front view are stored per player in the game record (Reflect_PlayerEditState); the poppet record inside the player head part keeps the mode stack, frozen and hidden lists, tweak objects and the material / shape override (Reflect_Poppet). Offsets: NOTES.md late 117.
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
