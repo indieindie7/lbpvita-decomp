@@ -4013,3 +4013,6 @@
 0x8143db80 func Messaging_NewGameEventForPlayer hand late107
 0x813807ac func System_IsEnterButtonCross hand late107
 0x811795ee func Game_FindPlayerRecordById hand late108
+0x8164a1f0 func PControlinator_SerializeRevisioned hand late109
+0x81665eb8 func PControlinator_Construct hand late109
+0x8108bd14 func PControlinator_Destruct hand late109

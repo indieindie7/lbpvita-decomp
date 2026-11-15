@@ -45,4 +45,4 @@ file_bit	test_addr	thing_slot	part	min_parts_revision	calls
 43	81660300	0x8c	PMaterialOverride	0x2b	816418d4
 44	81660390	0x90	PInstrument	0x2c	816481d0
 45	8166041c	0x94	PSequencer	0x2d	8164941c
-46	816604ac	0x98	PControlinator	0x2e	
+46	816604ac	0x98	PControlinator	0x2e	8164a1f0
