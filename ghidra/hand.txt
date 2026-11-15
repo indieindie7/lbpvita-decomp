@@ -3255,3 +3255,6 @@
 0x8116122a func Resource_SerialiseToHash hand late48
 0x81161358 func Resource_FormatName hand late48
 0x81342740 func Poppet_UseInventoryItems hand late49
+0x8130294a func DecorationHoverState_ctor hand late50 vtable 0x818576d0
+0x8130fc3a func SelectionTool_ctor hand late50 vtable 0x81857ad0
+0x81325088 func StickerHoverState_ctor hand late50 vtable 0x818584b8
