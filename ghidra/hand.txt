@@ -3267,3 +3267,7 @@
 0x81188704 func Profile_FindOrAddSlotRecord hand late52
 0x81341886 func Poppet_UseBackgroundItem hand late53
 0x813403b4 func Poppet_SpawnJointFromPlan hand late53
+0x813417d6 func Poppet_WearCostumeItem hand late54
+0x81340ba0 func Thing_CopyStickersToWorldTwin hand late54
+0x8130fdb2 func SelectionTool_ApplyStickerSettings hand late54
+0x81343f30 func Poppet_BuildJointThing hand late54
