@@ -139,6 +139,49 @@ Source: Ghidra decompile of eboot (names-only project). Addresses are eboot VAs.
 - Each selected index goes through 0x813131f8(state, index, verts, loops): erase the 16-byte vertex, find the loop that owns it and take 1 from its count. For a loop that is not the first one, when the area test 0x8112a6d2 passes the whole loop is removed from both vectors and the function returns 1, which stops the pass (guess: a hole that collapsed is dropped whole).
 - Then the usual set-polygon; if nothing is left selected the editor leaves (0x81312a62).
 
+## 9i. Cut / slice boolean (read)
+Three stages in the range 0x8140b000..0x8140d000, all on one node array (0x20 bytes per node: x, y, z, w, +0x10 own index, +0x14 prev, +0x18 next, +0x1c output link, -1 = not linked).
+- 0x8140c16e Bool_AddPolygon: copies one polygon (vertices plus loop counts) into the node array as closed prev/next rings. Flag = subtract: the vertex order is reversed, so the cutter has opposite winding. A non-zero tolerance first grows or shrinks the polygon (0x8140bf6c).
+- 0x8140ba38 Bool_Sweep: sweep line. Nodes are sorted, then visited in order; an active edge list (0x2c-byte list nodes: start, end, winding count +0x10, direction +0x14) holds the edges the line crosses. Each vertex is a start (both neighbours later: two edges added, winding taken from the edge beside it), a pass (one edge replaced) or an end (two edges removed). Edges whose winding count is 0 are the boundary of the result and get their +0x1c link written. Crossing edges are split by 0x8140b93e.
+- 0x8140c306 Bool_EmitLoops: follows the +0x1c links and writes each chain as one output loop. With a tolerance it cleans the result, tests it (0x8112b2b0) and re-runs the two stages once.
+
+So material cutting is a winding-number polygon boolean, not a triangle clipper.
+
+## 9j. Glue pair (read)
+0x81418114 Glue_TryPair(shapeA, shapeB, world, flags):
+- both shapes need bit 0 of the u16 at +0xc0 (glueable);
+- same body (+8 -> +100) and already listed: returns 1, nothing to do;
+- flag 2: measures the gap with 0x810e8322 and refuses when it is over 0.5;
+- adds each shape to the list of the other at +0xa4 (0x81417e44), type 1, or type 2 with flag 8;
+- unless flag 1, asks the world (+8 -> +0x54) to rebuild (0x8133504e).
+
+## 9k. Undo / redo (read)
+Undo is whole-level snapshots, not per-action records.
+- 0x8123d0dc Undo_PushSnapshot: makes a resource of type 9, serialises the current level into it (0x81130b9c), drops every snapshot after the cursor (the redo tail) and appends. Then it trims from the oldest end while there are more than 0x80 snapshots, or more than 1 and the pool reports over 0x200000 bytes (2 MB).
+- List head DAT_818f1004, count DAT_818f1008, cursor DAT_818f0ff8, saved marker DAT_818f0ffc.
+- 0x8123d7b8 Undo_StepBack and 0x8123d8c8 Undo_StepForward move the cursor and load that snapshot with 0x81212cd4 (the level deserialiser), then refresh the world. Return 0x66 = nothing to step to, 0x77 = busy.
+- 0x8123d502 Undo_EnsureCurrent pushes a snapshot of the present state before the first step back, so redo can return to it.
+- 0x8123cf9e Undo_Clear, 0x8123cffc Undo_DropNewest, 0x8123d054 Undo_IsAtSavedState, 0x8123da08 Undo_CanUndo (create mode 4 or 5 only, and not while any part reports state 5).
+
+## 9l. Scale / rotate of the held set (read in part)
+0x8130e890 is the per-frame update of held objects (tool mode at +0xb0; modes 7 and 8 leave early).
+- Stick input goes through 0x81145a14 (grid aware, uses floorf), giving an angle step and a scale factor.
+- 0x8130ce88 clamps the scale: it gets the smallest and largest allowed factor for the set (0x81145604 / 0x81145682) and replaces the factor when it would pass either; a factor of exactly 1.0 means no scaling this frame.
+- 0x8130d0d6 quantises the rotation when the grid is on or a part of the set is a snapping kind.
+- With the grid on and no stick angle, the step becomes 1.5707964 (90 degrees) about the centre of the bounds of the set (0x81337b9e).
+- Prompt on button 9: BP_SCALE_ROTATE when the set can scale (0x8130c33c), else BP_ROTATE.
+
+## 9m. Stickers and decorations (commit read)
+- Sticker: 0x813265da Sticker_Commit calls 0x8121a488 (paints the sticker onto the target thing; body not dumped). Sound poppet/placesticker with pitch 1 - log(sqrt(w * h + 1) * 0.0033): big stickers sound lower.
+- Decoration: 0x81303a62 Decoration_Commit calls 0x814212fe (attaches the decoration to the target; body not dumped).
+- Both then record the item as used (0x810b49ba), notify the target (0x813028d4) and, unless a keep-holding flag is set, drop the held item (0x8113c206). Failure takes the error path 0x81130f7a.
+
+## 9n. UV tool (read in part)
+0x8132d320: select a shape (poppet/object/select), then the stick pans the texture offset (step 0.002 times zoom, wrapped with fmodf 1.0) and rotates it (angle kept in -pi..pi at +0x38 of the UV record of the shape). Button 0xb = BP_RESET_UV_TOOL.
+
+## 9o. Level save (call skeleton)
+lbp_SaveLevelFart 0x8105764e: serialises the level with 0x81212cdc (the twin of the loader 0x81212cd4), queues it as the job "SaveLevelFart", then copies the slot record field by field and updates the slot map. 0x812f9db0 is only the on-screen thermometer / saving notice.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
