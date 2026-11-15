@@ -3610,3 +3610,11 @@
 0x815731f8 func Msg_OnCameraZoomMode hand late71
 0x81045c78 func Game_SetCameraZoomMode hand late71
 0x81045bee func Camera_SetZoomMode hand late71
+0x8107075e func Messaging_OpenDialog hand late72
+0x81070280 func Messaging_AddMessage hand late72
+0x8138de54 func PodComputer_DisplayCriticalDecisionByHandle hand late72
+0x8138ded8 func PodComputer_DestroyCriticalDecisionByHandle hand late72
+0x8138df38 func PodComputer_GetCriticalDecisionResultByHandle hand late72
+0x81124482 func PodComputer_DisplayCriticalDecision hand late72
+0x811244c0 func PodComputer_DestroyCriticalDecision hand late72
+0x811244f4 func PodComputer_GetCriticalDecisionResult hand late72
