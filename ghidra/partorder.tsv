@@ -1,0 +1,701 @@
+part	seq	kind	offset	extra
+PBody	0	u32	0x24	
+PBody	1	u32	0x28	
+PBody	2	u32	0x2c	
+PBody	3	u32	0x34	
+PBody	4	u32	0xc	
+PBody	5	Stream_WriteThingRef	0xdc	
+PJoint	0	Stream_WriteThingRef	0x18	
+PJoint	1	Stream_WriteThingRef	0x24	
+PJoint	2	lbp_Wrap_81617c9c	0x34	"AContact"
+PJoint	3	lbp_Wrap_81617c9c	0x44	"BContact"
+PJoint	4	lbp_Wrap_81606608	0xd8	"Length"
+PJoint	5	lbp_Wrap_81606608	0xd4	"Angle"
+PJoint	6	lbp_Wrap_81606608	0x150	"OffsetTime"
+PJoint	7	lbp_Wrap_8160ef50	0x158	"InvertAngle"
+PJoint	8	lbp_Thunk_816dff28	0x5c	
+PJoint	9	lbp_Proc_81616c58	0x120	2
+PJoint	10	lbp_Thunk_81618a50	0x130	"BoneLengths"
+PJoint	11	lbp_Wrap_81606608	0xc	&DAT_8183fd94
+PJoint	12	lbp_Wrap_81606608	0xb8	"Strength"
+PJoint	13	lbp_Wrap_8160ef50	0x30	"Stiff"
+PJoint	14	lbp_Wrap_81617c9c	0xa8	"SlideDir"
+PJoint	15	lbp_Wrap_81606608	0xbc	"AnimationPattern"
+PJoint	16	lbp_Wrap_81606608	0xc0	"AnimationRange"
+PJoint	17	lbp_Wrap_81606608	0xc4	"AnimationTime"
+PJoint	18	lbp_Wrap_81606608	0xc8	"AnimationPhase"
+PJoint	19	lbp_Wrap_81606608	0xcc	"AnimationSpeed"
+PJoint	20	lbp_Wrap_81606608	0xd0	"AnimationPause"
+PJoint	21	lbp_Wrap_81606608	0x54	"AAngleOffset"
+PJoint	22	lbp_Wrap_81606608	0x58	"BAngleOffset"
+PJoint	23	lbp_Wrap_81606608	0x114	"Game.ModStartFrame"
+PJoint	24	lbp_Wrap_81606608	0x118	"Game.ModDeltaFrames"
+PJoint	25	lbp_Wrap_81606608	0x11c	"Game.ModScale"
+PJoint	26	lbp_Wrap_81606608	0x140	"RenderScale"
+PJoint	27	lbp_Wrap_81606608	0xdc	"JointSoundEnum"
+PJoint	28	lbp_Wrap_81606608	0x144	"TweakTargetMaxLength"
+PJoint	29	lbp_Wrap_81606608	0x148	"TweakTargetMinLength"
+PJoint	30	lbp_Wrap_8160ef50	0x14c	"CurrentlyEditing"
+PJoint	31	lbp_Wrap_8160ef50	0x159	"HideInPlayModeOld"
+PJoint	32	lbp_Wrap_81618a64	0xa4	"Behaviour"
+PWorld	0	lbp_Proc_816571a4	0x14	"Things"
+PWorld	1	lbp_Wrap_81606608	0x840	"MaxVel"
+PWorld	2	lbp_Wrap_81606608	0x844	"MaxAVel"
+PWorld	3	lbp_Wrap_81606608	0x28c	"Frame"
+PWorld	4	lbp_Wrap_81606608	0x290	"Game.SimFrame"
+PWorld	5	lbp_Wrap_81606608	0x300	"FrameLevelStarted"
+PWorld	6	lbp_Wrap_81606608	0x10	"ThingUIDCounter"
+PWorld	7	lbp_Proc_81657334	0x64	"Selections"
+PWorld	8	Stream_WriteThingRef	0x848	 iVar1 == 0
+PWorld	9	Stream_WriteThingRef	0x854	
+PWorld	10	lbp_Wrap_81606608	0x898	"BackdropTimer"
+PWorld	11	lbp_Wrap_81606608	0x89c	"LBP2NightDaySwapped"
+PWorld	12	lbp_Wrap_8160ef50	0x8a0	"IsPaused"
+PWorld	13	lbp_Wrap_81606608	0x364	"LightingFactor"
+PWorld	14	lbp_Wrap_81606608	0x368	"ColorCorrectionFactor"
+PWorld	15	lbp_Wrap_81606608	0x36c	"FogFactor"
+PWorld	16	lbp_Wrap_81606608	0x370	"FogTintFactor"
+PWorld	17	lbp_Wrap_81606608	0x374	"DarknessFactor"
+PWorld	18	lbp_Wrap_8160ef50	0x378	"NonLinearFog"
+PWorld	19	lbp_Proc_81657380	0xc3c	"CompleteRewards"
+PWorld	20	lbp_Proc_81657380	0xc48	"CollectRewards"
+PWorld	21	lbp_Proc_81657380	0xc54	"AceRewards"
+PWorld	22	lbp_Wrap_8160ef50	0xc60	"AreRewardsShareable"
+PWorld	23	lbp_Wrap_8160fe78	0xc64	"ScoreboardLevelLinkSlot"
+PWorld	24	lbp_Proc_816573e8	0xc6c	"CompleteUnlocks"
+PWorld	25	lbp_Proc_816573e8	0xc78	"CollectUnlocks"
+PWorld	26	lbp_Proc_816573e8	0xc84	"AceUnlocks"
+PWorld	27	lbp_Proc_81657380	0xbc8	"GoldRewards"
+PWorld	28	lbp_Proc_816573e8	0xbd4	"GoldUnlocks"
+PWorld	29	lbp_Proc_81657380	0xbe0	"SilverRewards"
+PWorld	30	lbp_Proc_816573e8	0xbec	"SilverUnlocks"
+PWorld	31	lbp_Proc_81657380	0xbf8	"BronzeRewards"
+PWorld	32	lbp_Proc_816573e8	0xc04	"BronzeUnlocks"
+PWorld	33	lbp_Wrap_8160ef50	0xc10	"GoldTrophyConditionType"
+PWorld	34	lbp_Wrap_8160ef50	0xc11	"SilverTrophyConditionType"
+PWorld	35	lbp_Wrap_8160ef50	0xc12	"BronzeTrophyConditionType"
+PWorld	36	lbp_Wrap_81606608	0xc14	"ScoreRequiredForGoldTrophy"
+PWorld	37	lbp_Wrap_81606608	0xc18	"TimeRequiredForGoldTrophy"
+PWorld	38	lbp_Wrap_81606608	0xc1c	 "LivesLostRequiredForGoldTrophy"
+PWorld	39	lbp_Wrap_81606608	0xc20	"ScoreRequiredForSilverTrophy"
+PWorld	40	lbp_Wrap_81606608	0xc24	"TimeRequiredForSilverTrophy"
+PWorld	41	lbp_Wrap_81606608	0xc28	 "LivesLostRequiredForSilverTrophy"
+PWorld	42	lbp_Wrap_81606608	0xc2c	"ScoreRequiredForBronzeTrophy"
+PWorld	43	lbp_Wrap_81606608	0xc30	"TimeRequiredForBronzeTrophy"
+PWorld	44	lbp_Wrap_81606608	0xc34	 "LivesLostRequiredForBronzeTrophy"
+PWorld	45	lbp_Wrap_8160ef50	0xbc0	"EnableAcing"
+PWorld	46	lbp_Wrap_8160ef50	0xbc1	"EnableGoldTrophy"
+PWorld	47	lbp_Wrap_8160ef50	0xbc2	"EnableSilverTrophy"
+PWorld	48	lbp_Wrap_8160ef50	0xbc3	"EnableBronzeTrophy"
+PWorld	49	lbp_Wrap_8160ef50	0xc38	"EnforceMinMaxPlayers"
+PWorld	50	lbp_Wrap_81606608	0xca0	"MaxNumPlayers"
+PWorld	51	lbp_Proc_81636c2c	0x70	"DissolvingThings"
+PWorld	52	lbp_Proc_81636c2c	0x7c	"OldDissolvingThings"
+PWorld	53	lbp_Wrap_8160ef50	0xca9	"EverSpawned"
+PWorld	54	lbp_Wrap_81606608	0xca4	"SpawnFailureCount"
+PWorld	55	lbp_Wrap_81651084	0x380	"TargetGlobalSettings"
+PWorld	56	lbp_Wrap_81651084	0x418	"FromGlobalSettings"
+PWorld	57	lbp_Wrap_81606608	0x5ac	 "Deprecated_GlobalSettingsBlendFactor"
+PWorld	58	lbp_Wrap_8160ef50	0x4b0	"HasLevelLightingBeenSetup"
+PWorld	59	lbp_Wrap_81606608	0x5b0	 "Deprecated_GlobalSettingThingUID"
+PWorld	60	lbp_Wrap_8160662c	0x4b4	"CameraSettings"
+PWorld	61	lbp_Wrap_81606608	0x4c4	"WaterLevel"
+PWorld	62	lbp_Wrap_81606608	0x4c8	"FromWaterLevel"
+PWorld	63	lbp_Wrap_81606608	0x4cc	"TargetWaterLevel"
+PWorld	64	lbp_Wrap_81606608	0x4d0	"WaterWaveMagnitude"
+PWorld	65	lbp_Wrap_81606608	0x4d4	 "FromWaterWaveMagnitude"
+PWorld	66	lbp_Wrap_81606608	0x4d8	 "TargetWaterWaveMagnitude"
+PWorld	67	lbp_Wrap_81606608	0x53c	"Gravity"
+PWorld	68	lbp_Wrap_81606608	0x540	"FromGravity"
+PWorld	69	lbp_Wrap_81606608	0x544	"TargetGravity"
+PWorld	70	Stream_WriteFloats	0x54c	8
+PWorld	71	lbp_Proc_8165710c	0x56c	8
+PWorld	72	lbp_Proc_8165710c	0x58c	8
+PWorld	73	lbp_Wrap_81606608	0x51c	"WaterColor"
+PWorld	74	lbp_Wrap_81606608	0x520	"WaterBrightness"
+PWorld	75	lbp_Wrap_81606608	0x510	"WaterMurkiness"
+PWorld	76	lbp_Wrap_81606608	0x514	"FromWaterMurkiness"
+PWorld	77	lbp_Wrap_81606608	0x518	"TargetWaterMurkiness"
+PWorld	78	lbp_Wrap_81606608	0x524	"WaterBits"
+PWorld	79	lbp_Wrap_81606608	0x528	"FromWaterBits"
+PWorld	80	lbp_Wrap_81606608	0x52c	"TargetWaterBits"
+PWorld	81	lbp_Wrap_8160ef50	0x530	"WaterDrainSoundsEnabled" 
+PWorld	82	lbp_Wrap_8160ef50	0x531	 "CurrWaterDrainSoundsEnabled"
+PWorld	83	lbp_Wrap_81606608	0x298	"Game.CurrWavePos"
+PWorld	84	lbp_Wrap_81606608	0x50	"GameMode"
+PWorld	85	lbp_Wrap_81606608	0x548	"NextSackbotPlayerNumber"
+PWorld	86	lbp_Proc_81657454	0x5b4	"CutSceneCameraManager"
+PWorld	87	lbp_Wrap_816574f4	0xcb0	"GlobalAudioSettings"
+PWorld	88	lbp_Proc_816055e8	0x860	0,0
+PWorld	89	lbp_Proc_816055e8	0x87c	0,0
+PWorld	90	lbp_Wrap_8160ef50	0x5c	"SubLevel"
+PWorld	91	lbp_Wrap_8160ef50	0x7b4	"ScoreLocked"
+PWorld	92	lbp_Wrap_81606608	0x7b8	"DebugTimeInLevel"
+PWorld	93	lbp_Wrap_8160ef50	0x5d	 "UseEvenNewerCheckpointCode"
+PWorld	94	lbp_Proc_8165785c	0x358	"MoveCursors"
+PWorld	95	lbp_Wrap_81606608	0x7d0	"GlobalTouchCursor"
+PWorld	96	lbp_Wrap_8160ef50	0x5e	"MinPlayers"
+PWorld	97	lbp_Wrap_8160ef50	0x5f	"MaxPlayers"
+PWorld	98	lbp_Wrap_8160ef50	0x60	"MoveRecommended"
+PWorld	99	lbp_Wrap_8160ef50	0x7d4	"PortraitMode"
+PWorld	100	lbp_Wrap_8160ef50	0xcac	"FixInvalidInOutMoverContacts"
+PWorld	101	lbp_Wrap_8160ef50	0x7d9	"SharedScreen"
+PWorld	102	lbp_Wrap_8160ef50	0x7d5	"DisableHUD"
+PWorld	103	lbp_Wrap_8160ef50	0x7d6	"DisableShadows"
+PWorld	104	lbp_Wrap_8160ef50	0x7da	"FlipBackground"
+PWorld	105	lbp_Wrap_8160ef50	0x7db	"MPSeparateScreen"
+PRenderMesh	0	lbp_Thunk_8167f770	0x4c	
+PRenderMesh	1	u32	0x44	
+PRenderMesh	2	u32	0x40	
+PRenderMesh	3	u32	0x44	
+PRenderMesh	4	u32	0x40	
+PRenderMesh	5	u32	0x44	
+PRenderMesh	6	lbp_Thunk_81683034	0x1c	
+PRenderMesh	7	u32	0x20	
+PRenderMesh	8	u32	0x28	
+PRenderMesh	9	u8	0x60	
+PRenderMesh	10	u32	0x2c	
+PRenderMesh	11	u32	0x30	
+PRenderMesh	12	lbp_Wrap_81606608	0x10	
+PRenderMesh	13	u8	0x5c	
+PRenderMesh	14	u8	0x5d	
+PRenderMesh	15	u8	0x5f	
+PRenderMesh	16	u32	0x58	
+PPos	0	Stream_WriteThingRef	0x10	
+PPos	1	u32	0xc	
+PPos	2	lbp_Proc_816138e8	0x60	"WorldPosition"
+PTrigger	0	u8	0xc	
+PTrigger	1	u32	0x14	
+PTrigger	2	u32	0x10	
+PTrigger	3	u32	0x14	
+PTrigger	4	u32	0x10	
+PTrigger	5	u32	0x14	
+PTrigger	6	u32	0x1c	
+PTrigger	7	u8	0xe	
+PTrigger	8	u32	0x20	
+PTrigger	9	u8	0xd	
+PTrigger	10	u32	0x24	
+PTrigger	11	u32	0x4c	
+PYellowHead	0	Stream_WriteThingRef	0x10	
+PYellowHead	1	Stream_WriteThingRef	0x7c	 iVar2 == 0
+PYellowHead	2	u32	0x78	
+PYellowHead	3	u32	0xc	
+PYellowHead	4	u8	0x44	
+PYellowHead	5	Stream_WriteThingRef	0x6c	
+PYellowHead	6	u32	0x1c	
+PYellowHead	7	u8	0x20	
+PYellowHead	8	u8	0x88	
+PYellowHead	9	Stream_WriteThingRef	0x34	
+PYellowHead	10	u32	0x28	
+PAudioWorld	0	u32	0x1c	
+PAudioWorld	1	u32	0x18	
+PAudioWorld	2	u32	0x28	
+PAudioWorld	3	u32	0x2c	
+PAudioWorld	4	u32	0x30	
+PAudioWorld	5	u32	0x34	
+PAudioWorld	6	u32	0x38	
+PAudioWorld	7	u32	0x3c	
+PAudioWorld	8	u8	0x41	
+PAudioWorld	9	u8	0x42	
+PAudioWorld	10	u8	0x43	
+PAudioWorld	11	u8	0x44	
+PAudioWorld	12	u8	0x45	
+PAudioWorld	13	u32	0x54	
+PAudioWorld	14	u32	0x48	
+PAudioWorld	15	lbp_Wrap_81606608	0x4c	
+PAnimation	0	lbp_Thunk_81683034	0xc	
+PAnimation	1	u32	0x10	
+PAnimation	2	u32	0x14	
+PGeneratedMesh	0	lbp_Thunk_81675044	0x44	
+PGeneratedMesh	1	lbp_Thunk_81675ae4	0x48	
+PGeneratedMesh	2	lbp_use_memcpy_8100b88a	0x30	0x10
+PGeneratedMesh	3	u32	0x60	
+PGeneratedMesh	4	u8	0x6c	
+PGeneratedMesh	5	u32	0x70	
+PGeneratedMesh	6	u32	0x74	
+PGeneratedMesh	7	u32	0x78	
+PLevelSettings	0	u32	0xb4	
+PLevelSettings	1	u32	0xb0	
+PLevelSettings	2	u32	0xb4	
+PLevelSettings	3	u32	0xb0	
+PLevelSettings	4	u32	0xb4	
+PLevelSettings	5	u8	0x12c	
+PLevelSettings	6	u32	0x11c	
+PLevelSettings	7	u32	0x118	
+PLevelSettings	8	lbp_Thunk_816d7f58	0x128	
+PSpriteLight	0	lbp_Thunk_81618a50	0x38	"Color"
+PSpriteLight	1	lbp_Thunk_81618a50	0x28	"ColorOff"
+PSpriteLight	2	lbp_Wrap_81606608	0x48	"Multiplier"
+PSpriteLight	3	lbp_Wrap_81606608	0x4c	"MultiplierOff"
+PSpriteLight	4	lbp_Wrap_81606608	0x50	"GlowRadius"
+PSpriteLight	5	lbp_Wrap_81606608	0x54	"FarDist"
+PSpriteLight	6	lbp_Wrap_81606608	0x58	"SourceSize"
+PSpriteLight	7	lbp_Thunk_816d7cc4	0x5c	
+PSpriteLight	8	Stream_WriteThingRef	0x60	
+PSpriteLight	9	lbp_Wrap_8160ef50	0xc	"SpotLight"
+PSpriteLight	10	lbp_Wrap_81606608	0x6c	"FogAmount"
+PSpriteLight	11	lbp_Wrap_81606608	0x70	"OnSpeed"
+PSpriteLight	12	lbp_Wrap_81606608	0x74	"OffSpeed"
+PSpriteLight	13	lbp_Wrap_81606608	0x78	"FlickerProb"
+PSpriteLight	14	lbp_Wrap_81606608	0x7c	"FlickerAmount"
+PSpriteLight	15	lbp_Wrap_81618a64	0xa0	"Behaviour"
+PScriptName	0	u32	0x14	
+PScriptName	1	u32	0x10	
+PCreature	0	lbp_Thunk_81688d90	0x560	
+PCreature	1	u32	0x94	
+PCreature	2	u32	0x120	
+PCreature	3	lbp_Wrap_81617c9c	0xf0	"GroundNormal"
+PCreature	4	Stream_WriteThingRef	0x59c	 iVar2 == 0
+PCreature	5	Stream_WriteThingRef	0x98	
+PCreature	6	u32	0x580	
+PCreature	7	u32	0x574	
+PCreature	8	u32	0x578	
+PCreature	9	u32	0x57c	
+PCreature	10	u32	0x564	
+PCreature	11	u32	0x568	
+PCreature	12	u32	0x570	
+PCreature	13	lbp_Wrap_81617c9c	0x6f8	"ForceThatSmashedCreature"
+PCreature	14	u32	0x6ec	
+PCreature	15	u32	0x56c	
+PCreature	16	u32	0x6d0	
+PCreature	17	lbp_Proc_816369f0	0x5c0	"BouncepadThingUIDs"
+PCreature	18	lbp_Proc_816369f0	0x6a0	"GrabbedThingUIDs"
+PCreature	19	u8	0x6d4	
+PCreature	20	lbp_Proc_81636c2c	0x788	"LegList"
+PCreature	21	lbp_Proc_81636c2c	0x7b8	"LifeSourceList"
+PCreature	22	Stream_WriteThingRef	0x7c4	 iVar2 == 0
+PCreature	23	Stream_WriteThingRef	0x7d0	 iVar2 == 0
+PCreature	24	u32	0x7e0	
+PCreature	25	u32	0x7e4	
+PCreature	26	u8	0x708	
+PCreature	27	lbp_Proc_81636c2c	0x794	"EyeList"
+PCreature	28	lbp_Proc_81636c2c	0x7a0	"BrainAIList"
+PCreature	29	lbp_Proc_81636c2c	0x7ac	"BrainLifeList"
+PCreature	30	u8	0x7ec	
+PCreature	31	lbp_Proc_816138e8	0x438	"OldAnimMatrix"
+PCreature	32	u32	0x478	
+PCreature	33	lbp_Wrap_81617c9c	0x100	"GroundNormalRaw"
+PCreature	34	lbp_Wrap_81617c9c	0x110	"GroundNormalSmooth"
+PCreature	35	u32	0x480	
+PCreature	36	lbp_Wrap_81617c9c	0x4a4	"Game.GunDir"
+PCreature	37	Stream_WriteThingRef	0x7f0	 iVar2 == 0
+PCreature	38	u32	0x4b4	
+PCreature	39	u32	0x4bc	
+PCreature	40	u32	0x4c0	
+PCreature	41	Stream_WriteThingRef	0x7fc	
+PCreature	42	Stream_WriteThingRef	0x808	 iVar2 == 0
+PCreature	43	u32	0x4b8	
+PCreature	44	u32	0x870	
+PCreature	45	u32	0x8a4	
+PCreature	46	u8	0x4c4	
+PCreature	47	u32	0x874	
+PCreature	48	u32	0x878	
+PCreature	49	lbp_Wrap_81617c9c	0x880	"BulletEmitOffset"
+PCreature	50	u32	0x890	
+PCreature	51	Stream_WriteThingRef	0x814	
+PCreature	52	Stream_WriteThingRef	0x820	 iVar2 == 0
+PCreature	53	u32	0x82c	
+PCreature	54	u32	0x8a8	
+PCreature	55	u32	0x8c	
+PCreature	56	u32	0x90	
+PCreature	57	u8	0x8b1	
+PCreature	58	u8	0xc8	
+PCreature	59	lbp_Thunk_816d6a58	0x8ac	
+PCreature	60	Stream_WriteThingRef	0x590	 iVar2 == 0 
+PCreature	61	Stream_WriteThingRef	0x768	 iVar2 == 0
+PCreature	62	u32	0x764	
+PCreature	63	Stream_WriteThingRef	0x774	
+PCreature	64	u32	0x4c8	
+PCreature	65	lbp_Wrap_81617c9c	0x4cc	 "Game.WallJumpPos"
+PCreature	66	lbp_Proc_81636c98	0x4dc	 "Game.BootContactForceList"
+PCreature	67	u32	0x87c	
+PCreature	68	u8	0x8b2	
+PCreature	69	Stream_WriteThingRef	0x834	
+PCreature	70	u32	0x70c	
+PCreature	71	u32	0x710	
+PCreature	72	u8	0x715	
+PCreature	73	u32	0x784	
+PCreature	74	u32	0x7e8	
+PCreature	75	u32	0x898	
+PCheckpoint	0	u8	0x40	
+PCheckpoint	1	u32	0xc	
+PCheckpoint	2	u32	0x10	
+PCheckpoint	3	u32	0x14	
+PCheckpoint	4	u8	0x41	
+PCheckpoint	5	u32	0x2c	
+PCheckpoint	6	u32	0x28	
+PCheckpoint	7	u32	0x2c	
+PCheckpoint	8	u32	0x28	
+PCheckpoint	9	u32	0x2c	
+PCheckpoint	10	u32	0x34	
+PCheckpoint	11	u32	0x38	
+PCheckpoint	12	u32	0x3c	
+PCheckpoint	13	u8	0x43	
+PStickers	0	lbp_Proc_816151b4	0xc	"Decals"
+PStickers	1	lbp_Proc_81615144	0x18	0x11
+PStickers	2	lbp_DataColorCorrection_81615200	0xe4	"EyetoyData"
+PDecorations	0	u32	0x10	
+PDecorations	1	lbp_Offset_81621fd4	0xc	uVar3
+PScript	0	lbp_Proc_816ec71c	0xc	
+PShape	0	u32	0x8c	
+PShape	1	lbp_Proc_81616e78	0x94	"Loops"
+PShape	2	lbp_Thunk_816775a8	0xa0	 iVar16 == 0
+PShape	3	lbp_Thunk_816775a8	0x10	 iVar16 == 0
+PShape	4	u32	0x7c	
+PShape	5	u32	0x70	
+PShape	6	lbp_Wrap_81606608	0x18	
+PShape	7	u32	0x60	
+PShape	8	u32	0x68	
+PShape	9	lbp_Proc_816138e8	0x20	&DAT_81842d40
+PShape	10	u32	0x20	
+PShape	11	u32	0x28	
+PShape	12	u32	0x30	
+PShape	13	u32	0x38	
+PShape	14	u32	0x40	
+PShape	15	u32	0x48	
+PShape	16	u32	0x50	
+PShape	17	u32	0x58	
+PShape	18	lbp_Proc_816138e8	0x20	&DAT_81842d40
+PShape	19	u32	0xe0	
+PShape	20	lbp_Wrap_81606608	0x1c	
+PShape	21	u32	0x64	
+PShape	22	u16	0x124	
+PShape	23	u32	0x6c	
+PShape	24	u8	0x127	
+PShape	25	u16	0xc0	
+PShape	26	lbp_Contacts_816252a0	0xa4	
+PShape	27	u8	0xc9	
+PShape	28	u8	0xc8	
+PShape	29	u8	0xc7	
+PShape	30	u8	0xc2	
+PShape	31	u8	0xc3	
+PShape	32	u8	0xcb	
+PShape	33	u8	0xca	
+PShape	34	u8	0xcc	
+PShape	35	u8	0xce	
+PShape	36	u32	0xd0	
+PShape	37	u8	0xcd	
+PEffector	0	u32	0xc	
+PEffector	1	u32	0x10	
+PEffector	2	u32	0x14	
+PEffector	3	u32	0x2c	
+PEffector	4	u32	0x30	
+PEffector	5	u32	0x38	
+PEffector	6	u32	0x1c	
+PEffector	7	u32	0x20	
+PEffector	8	u32	0x24	
+PEffector	9	u8	0x40	
+PEffector	10	u8	0x41	
+PEffector	11	u32	0x34	
+PEffector	12	u32	0x3c	
+PEmitter	0	u32	0x28	
+PEmitter	1	u32	0x2c	
+PEmitter	2	u32	0x30	
+PEmitter	3	u32	0x48	
+PEmitter	4	u8	0x89	
+PEmitter	5	lbp_Wrap_816aff40	0x5c	0,&DAT_818450ec,&DAT_81841264
+PEmitter	6	u32	0x4c	
+PEmitter	7	u32	0x54	
+PEmitter	8	u32	0x18	
+PEmitter	9	u32	0x14	
+PEmitter	10	lbp_Wrap_8161ca10	0x1c	
+PEmitter	11	u32	0x110	
+PEmitter	12	u32	0x68	
+PEmitter	13	u32	0xc	
+PEmitter	14	u32	0x50	
+PEmitter	15	u8	0x8b	
+PEmitter	16	lbp_use_memcpy_8100b88a	0x38	0x10
+PEmitter	17	u32	0x10	
+PEmitter	18	u32	0x6c	
+PEmitter	19	u32	0x70	
+PEmitter	20	u32	0x74	
+PEmitter	21	u32	0x78	
+PEmitter	22	u8	0x88	
+PEmitter	23	u32	0x58	
+PEmitter	24	u8	0x10c	
+PEmitter	25	u8	0x10d	
+PEmitter	26	u8	0x8a	
+PEmitter	27	lbp_Proc_8163ba4c	0x64	
+PEmitter	28	u8	0xb5	
+PEmitter	29	u8	0xb6	
+PEmitter	30	u32	0x114	
+PEmitter	31	u8	0x10e	
+PEmitter	32	u8	0x10f	
+PRef	0	lbp_Wrap_816af9ac	0xc	0,&DAT_818450ec,&DAT_81841264
+PRef	1	u32	0x2c	
+PRef	2	u32	0x30	
+PCostume	0	lbp_Thunk_8167f770	0xc88	
+PCostume	1	lbp_Thunk_81675044	0xc8c	
+PCostume	2	lbp_Proc_816055e8	0xc90	0,0
+PCostume	3	lbp_Proc_81616e78	0xcac	"MeshPartsHidden"
+PCostume	4	lbp_Proc_816170b8	0xcb8	"MeshPrimitives"
+PCostume	5	lbp_Proc_81616de0	0xc	0x10
+PCostume	6	lbp_Proc_81616de0	0xbcc	1
+PCameraTweak	0	lbp_Thunk_81618a50	0x10	"TriggerBox"
+PCameraTweak	1	lbp_Wrap_81606608	0x20	"PositionFactor"
+PCameraTweak	2	lbp_Wrap_81606608	0x4c	"PhotoBoothTimerLength"
+PCameraTweak	3	lbp_Wrap_81606608	0x30	"CameraType"
+PCameraTweak	4	lbp_Wrap_8160ef50	0x34	"DisableZoomMode"
+PCameraTweak	5	lbp_Wrap_8160ef50	0x35	"RequireAll"
+PCameraTweak	6	lbp_Wrap_8160ef50	0x50	"MotionControllerZone"
+PCameraTweak	7	lbp_Wrap_81618a64	0x38	"Behaviour"
+PCameraTweak	8	lbp_Wrap_8160ef50	0x51	"CutSceneTransitionType"
+PCameraTweak	9	lbp_Wrap_81606608	0x54	"CutSceneHoldTime"
+PCameraTweak	10	lbp_Wrap_8160ef50	0x5d	"CutSceneSkippable"
+PCameraTweak	11	lbp_Wrap_8160ef50	0x5e	"CutSceneTimeSinceUsed"
+PCameraTweak	12	lbp_Wrap_81606608	0x58	"CutSceneTransitionTime"
+PCameraTweak	13	lbp_Wrap_81606608	0x78	"CutSceneColour"
+PCameraTweak	14	lbp_Wrap_8160ef50	0x60	"CutSceneMovieMode"
+PCameraTweak	15	lbp_Wrap_81606608	0x64	"CutSceneDepthOfField"
+PCameraTweak	16	lbp_Wrap_81606608	0x68	"CutSceneFog"
+PCameraTweak	17	lbp_Wrap_81606608	0x6c	"CutSceneFOV"
+PCameraTweak	18	lbp_Wrap_81606608	0x70	"CutSceneShake"
+PCameraTweak	19	lbp_Wrap_8160ef50	0x74	"FadeAudio"
+PCameraTweak	20	lbp_Wrap_8160ef50	0x36	"OldStyleCameraZone"
+PCameraTweak	21	lbp_Wrap_8160ef50	0x75	"CutSceneTrackPlayer"
+PCameraTweak	22	lbp_Wrap_8160ef50	0x76	"CutSceneSendsSignalOnCancelled"
+PCameraTweak	23	lbp_Wrap_8160ef50	0x77	"CutSceneWasActiveLastFrame"
+PCameraTweak	24	lbp_Proc_81618b50	0x24	"Nodes"
+PSwitch	0	lbp_Wrap_8160ef50	0xa4	"Inverted"
+PSwitch	1	lbp_Wrap_81606608	0x54	"Radius"
+PSwitch	2	lbp_Wrap_81606608	0x58	"MinRadius"
+PSwitch	3	lbp_Wrap_81606608	0x60	"Key.ColourIndex"
+PSwitch	4	lbp_Wrap_8160ef50	0xc3	"CrappyOldLBP1Switch"
+PSwitch	5	lbp_Wrap_81606608	0x4c	"BehaviourOld"
+PSwitch	6	lbp_Proc_8161cc88	0x34	"Outputs"
+PSwitch	7	lbp_Wrap_8160ef50	0xa6	"HideInPlayModeOld"
+PSwitch	8	lbp_Wrap_81618a64	0x30	&DAT_8183fd94
+PSwitch	9	Stream_WriteThingRef	0x70	
+PSwitch	10	lbp_Wrap_8161ca10	0xc	 iVar1 == 0
+PSwitch	11	u32	0x7c	
+PSwitch	12	lbp_Wrap_81606608	0x24	"Current.ActivationHoldTime"
+PSwitch	13	lbp_Wrap_8160ef50	0xa8	"RequireAll"
+PSwitch	14	lbp_Wrap_8160ef50	0xe2	"ImpactSensorMode"
+PSwitch	15	lbp_Wrap_81606608	0x5c	"AngleRange"
+PSwitch	16	lbp_Wrap_81606608	0x6c	"IncludeTouching"
+PSwitch	17	u32	0x7c	
+PSwitch	18	lbp_Wrap_81606608	0xac	"BulletsRequired"
+PSwitch	19	lbp_Wrap_81606608	0x18	"Current.BulletsDetected"
+PSwitch	20	lbp_Wrap_81606608	0x1c	"Current.BulletRefreshTime"
+PSwitch	21	lbp_Wrap_8160ef50	0xc0	"ResetWhenFull"
+PSwitch	22	lbp_Proc_8161ccd4	0x50	"InputListDeprecated"
+PSwitch	23	lbp_Wrap_8160ef50	0xa9	"IncludeRigidConnectors"
+PSwitch	24	lbp_Wrap_81606608	0x20	"Current.TimerCount"
+PSwitch	25	lbp_Wrap_81618a64	0x44	"TeamFilter"
+PSwitch	26	lbp_Wrap_81618a64	0xa0	"Behaviour"
+PSwitch	27	lbp_Wrap_81618a64	0x88	"RandomBehaviour"
+PSwitch	28	lbp_Wrap_81618a64	0x8c	"RandomPattern"
+PSwitch	29	lbp_Wrap_81606608	0x90	"RandomOnTimeMin"
+PSwitch	30	lbp_Wrap_81606608	0x94	"RandomOnTimeMax"
+PSwitch	31	lbp_Wrap_81606608	0x98	"RandomOffTimeMin"
+PSwitch	32	lbp_Wrap_81606608	0x9c	"RandomOffTimeMax"
+PSwitch	33	lbp_Wrap_8160ef50	0xa7	"RetardedOldJoint"
+PSwitch	34	lbp_Wrap_81618a64	0x84	"KeySensorMode"
+PSwitch	35	lbp_Wrap_81606608	0x48	 iVar1 == 0
+PSwitch	36	lbp_Wrap_8160ef50	0xa5	"WiresVisible"
+PSwitch	37	lbp_Wrap_8160ef50	0xe1	"BulletTypes"
+PSwitch	38	lbp_Wrap_8160ef50	0xc1	"DetectUnspawnedPlayers" 
+PSwitch	39	lbp_Wrap_8160ef50	0xc4	"PlaySwitchAudio"
+PSwitch	40	lbp_Wrap_81606608	0xc8	"SwitchTouchType"
+PSwitch	41	lbp_Wrap_8160ef50	0xdc	"CursorScreenArea"
+PSwitch	42	lbp_Wrap_8160ef50	0xde	"CursorInteractionType"
+PSwitch	43	lbp_Wrap_8160ef50	0xdf	"CursorTouchPanels"
+PSwitch	44	lbp_Wrap_8160ef50	0xe0	"CursorTouchIndex"
+PSwitch	45	lbp_Wrap_8160ef50	0xdd	"Flags"
+PSwitch	46	lbp_Wrap_81606608	0xd4	"outputAndOr"
+PSwitch	47	lbp_Wrap_8160ef50	0xe4	"IncludeSameChipTags"
+PSwitch	48	lbp_Wrap_81606608	0xec	"GlowFrontCol"
+PSwitch	49	lbp_Wrap_81606608	0xf0	"GlowBackCol"
+PSwitch	50	lbp_Wrap_81606608	0xf4	"GlowActiveCol"
+PSwitch	51	lbp_Wrap_8160ef50	0xaa	"PlayerFilter"
+PSwitchKey	0	u32	0xc	
+PSwitchKey	1	u8	0x24	
+PGameplayData	0	u32	0x14	
+PGameplayData	1	u32	0xc	
+PGameplayData	2	u32	0x10	
+PGameplayData	3	u32	0x18	
+PEnemy	0	lbp_Wrap_81606608	0xc	"PartType"
+PEnemy	1	lbp_Wrap_81606608	0x20	"Radius"
+PEnemy	2	lbp_Wrap_81606608	0x24	"SnapVertex"
+PEnemy	3	lbp_Wrap_81617c9c	0x34	"CenterOffset"
+PEnemy	4	Stream_WriteThingRef	0x28	 iVar1 == 0
+PEnemy	5	lbp_Wrap_81606608	0x44	"AnimSpeed"
+PEnemy	6	lbp_Wrap_81606608	0x48	"SourcePlayerNumber"
+PEnemy	7	lbp_Wrap_8160ef50	0x1c	"NewWalkConstraintMass"
+PEnemy	8	lbp_Wrap_81606608	0x4c	
+PEnemy	9	lbp_Wrap_81606608	0x50	"SmokeBrightness"
+PEnemy	10	lbp_Wrap_8160ef50	0x119	"bTouchSensitive"
+PEnemy	11	lbp_Wrap_81606608	0x11c	"TouchType"
+PGroup	0	lbp_Thunk_81607d38	0x3c	"Creator"
+PGroup	1	lbp_Proc_816055e8	0x20	0,0
+PGroup	2	Stream_WriteThingPtr	0x60	
+PGroup	3	lbp_Wrap_81606608	0xc	"Lifetime"
+PGroup	4	lbp_Wrap_81606608	0x10	"AliveFrames"
+PGroup	5	lbp_Wrap_8160ef50	0x64	"Flags"
+PPhysicsTweak	0	u32	0x18	
+PPhysicsTweak	1	u32	0x1c	
+PPhysicsTweak	2	u32	0x20	
+PPhysicsTweak	3	u32	0x24	
+PPhysicsTweak	4	u32	0x28	
+PPhysicsTweak	5	u32	0x40	
+PPhysicsTweak	6	u32	0x44	
+PPhysicsTweak	7	u32	0x48	
+PPhysicsTweak	8	u32	0x30	
+PPhysicsTweak	9	u32	0x34	
+PPhysicsTweak	10	u32	0x38	
+PPhysicsTweak	11	u32	0x50	
+PPhysicsTweak	12	u32	0x54	
+PPhysicsTweak	13	u32	0x58	
+PPhysicsTweak	14	u8	0x5c	
+PPhysicsTweak	15	u32	0xc	
+PPhysicsTweak	16	u8	0x94	
+PPhysicsTweak	17	u32	0x98	
+PPhysicsTweak	18	u32	0x14	
+PPhysicsTweak	19	u32	0x10	
+PPhysicsTweak	20	u8	0xa4	
+PPhysicsTweak	21	u8	0xa5	
+PPhysicsTweak	22	u32	0xa8	
+PPhysicsTweak	23	u32	0xac	
+PPhysicsTweak	24	u8	0xb4	
+PPhysicsTweak	25	u32	0xb0	
+PPhysicsTweak	26	u8	0xb5	
+PPhysicsTweak	27	u32	0x60	
+PPhysicsTweak	28	u8	0x64	
+PPhysicsTweak	29	u32	0x68	
+PPhysicsTweak	30	u32	0x8c	
+PPhysicsTweak	31	u8	0x90	
+PPhysicsTweak	32	lbp_Thunk_816c9888	0xb8	
+PPhysicsTweak	33	u32	0xcc	
+PPhysicsTweak	34	u32	0xbc	
+PPhysicsTweak	35	u32	0xc0	
+PPhysicsTweak	36	u32	0x110	
+PPhysicsTweak	37	u32	0x114	
+PPhysicsTweak	38	u32	0x118	
+PPhysicsTweak	39	u8	0x124	
+PPhysicsTweak	40	lbp_Proc_816138e8	0xd0	"Game.StartOrientation"
+PPhysicsTweak	41	u32	0x128	
+PPhysicsTweak	42	u8	0x12c	
+PPhysicsTweak	43	u32	0x134	
+PPhysicsTweak	44	u32	0x138	
+PPhysicsTweak	45	u32	0x130	
+PPhysicsTweak	46	u8	0x13c	
+PNpc	0	lbp_Proc_81643158	0xc	
+PNpc	1	u32	0x7c	
+PNpc	2	u32	0x78	
+PNpc	3	u32	0x78	
+PNpc	4	lbp_Proc_81616e78	0x84	"SackbotRecordingDataNbytes"
+PNpc	5	u32	0x90	
+PNpc	6	u32	0x94	
+PNpc	7	lbp_Proc_81616e78	0x98	"SackbotRecordingTimes"
+PNpc	8	u32	0x7e8	
+PNpc	9	Stream_WriteThingRef	0x794	
+PNpc	10	Stream_WriteThingRef	0x7a4	 iVar3 == 0
+PNpc	11	u32	0x7c4	
+PNpc	12	u32	0x7c8	
+PNpc	13	u32	0x7cc	
+PNpc	14	u32	0x7e4	
+PNpc	15	u32	0x7ec	
+PNpc	16	u32	0xc04	
+PNpc	17	u32	0x7f4	
+PNpc	18	u32	0x7f8	
+PNpc	19	u32	0x7fc	
+PNpc	20	u8	0x7b7	
+PSwitchInput	0	Stream_WriteThingRef	0xc	
+PSwitchInput	1	lbp_Wrap_81606608	0x1c	"UpdateType"
+PSwitchInput	2	lbp_Wrap_81606608	0x28	"LethalType"
+PSwitchInput	3	lbp_Wrap_8160ef50	0x2f	"IncludeRigidConnectors"
+PSwitchInput	4	lbp_Wrap_81606608	0x18	"Game.LethalActivationFrame"
+PSwitchInput	5	lbp_Wrap_8160ef50	0x2c	"LethalInverted"
+PSwitchInput	6	lbp_Wrap_8160ef50	0x2d	"HideInPlayModeOld"
+PSwitchInput	7	lbp_Wrap_8160ef50	0x2e	"DisableLethalAudio"
+PSwitchInput	8	lbp_Proc_816200f4	0x20	"SackbotBehaviour"
+PSwitchInput	9	lbp_Wrap_81606608	0x34	"SackbotObjectColourIndex"
+PSwitchInput	10	lbp_Wrap_81618a64	0x24	"Behaviour"
+PSwitchInput	11	lbp_Wrap_81618a64	0x30	"EffectDestroy"
+PMicroChip	0	Stream_WriteThingRef	0xc	
+PMicroChip	1	u8	0x18	
+PMicroChip	2	u8	0x19	
+PMicroChip	3	u32	0x1c	
+PMicroChip	4	lbp_use_memcpy_8100b88a	0x20	0x10
+PMicroChip	5	u32	0xa8	
+PMicroChip	6	lbp_Proc_8164d608	0xb4	uVar11
+PMicroChip	7	u32	0x3c	
+PMicroChip	8	u32	0x40	
+PMaterialTweak	0	u8	0x14	
+PMaterialTweak	1	u32	0xc	
+PMaterialTweak	2	u32	0x10	
+PMaterialTweak	3	u8	0x16	
+PMaterialTweak	4	u8	0x17	
+PMaterialTweak	5	u8	0x15	
+PMaterialTweak	6	u8	0x1a	
+PMaterialTweak	7	u8	0x1c	
+PMaterialTweak	8	u8	0x18	
+PMaterialTweak	9	u32	0x34	
+PMaterialTweak	10	u8	0x1d	
+PMaterialTweak	11	u8	0x1e	
+PMaterialTweak	12	u8	0x1f	
+PMaterialTweak	13	u8	0x20	
+PMaterialTweak	14	u8	0x21	
+PMaterialTweak	15	u32	0x24	
+PMaterialTweak	16	u32	0x28	
+PMaterialTweak	17	u32	0x38	
+PMaterialTweak	18	u8	0x19	
+PMaterialOverride	0	u32	0x20	
+PMaterialOverride	1	u32	0x20	
+PMaterialOverride	2	u32	0x20	
+PMaterialOverride	3	lbp_Thunk_8167f770	0x28	
+PInstrument	0	lbp_Thunk_816a3840	0xc	
+PInstrument	1	u32	0x10	
+PInstrument	2	u32	0x14	
+PInstrument	3	u32	0x18	
+PInstrument	4	u32	0x1c	
+PInstrument	5	u32	0x20	
+PInstrument	6	u32	0x24	
+PInstrument	7	u32	0x28	
+PInstrument	8	u32	0x2c	
+PInstrument	9	u32	0x30	
+PInstrument	10	u16	0x34	
+PInstrument	11	u16	0x36	
+PInstrument	12	u16	0x38	
+PInstrument	13	u16	0x3a	
+PInstrument	14	u32	0x58	
+PInstrument	15	u32	0x58	
+PInstrument	16	u32	0x58	
+PInstrument	17	lbp_Thunk_816d7cc4	0x3c	
+PSequencer	0	u32	0xc	
+PSequencer	1	u32	0x10	
+PSequencer	2	u32	0x14	
+PSequencer	3	u32	0x18	
+PSequencer	4	u32	0x1c	
+PSequencer	5	u32	0x20	
+PSequencer	6	u8	0x24	
+PSequencer	7	u32	0x28	
+PSequencer	8	u32	0x2c	
+PSequencer	9	u32	0x30	
+PSequencer	10	u32	0x34	
+PSequencer	11	u32	0x38	
+PSequencer	12	u32	0x3c	
+PSequencer	13	u32	0x40	
+PSequencer	14	u32	0x44	
+PSequencer	15	u32	0x48	
+PSequencer	16	u8	0x4c	
+PSequencer	17	u8	0x54	
+PSequencer	18	u32	0x68	
+PSequencer	19	u32	0x64	
+PSequencer	20	Stream_WriteThingRef	0x58	
+PControlinator	0	Stream_WriteThingRef	0xc	
+PControlinator	1	Stream_WriteThingRef	0x18	
+PControlinator	2	Stream_WriteThingRef	0x28	
+PControlinator	3	Stream_WriteThingRef	0x34	
+PControlinator	4	u32	0x40	
+PControlinator	5	u32	0x44	
+PControlinator	6	u8	0x48	
+PControlinator	7	u32	0x4c	
+PControlinator	8	u8	0x50	
+PControlinator	9	u8	0x51	
+PControlinator	10	u8	0x52	
+PControlinator	11	Stream_WriteThingRef	0x54	
+PControlinator	12	u32	0x64	
+PControlinator	13	u32	0x68	
+PControlinator	14	u32	0x6c	
+PControlinator	15	u8	0x70	
