@@ -4006,3 +4006,6 @@
 0x811d29f6 func Script_CallOnMagicMouthRemoteStop hand late102
 0x810cdb0a func PWorld_GetThingByUID hand late103
 0x810cda9c func PWorld_FindThingIndexByUID hand late103
+0x811d2914 func Script_CallOnMagicMouthClosed hand late104
+0x81070a02 func Thing_NotifyMagicMouthClosed hand late104
+0x811d2832 func Script_CallStopAudio hand late104
