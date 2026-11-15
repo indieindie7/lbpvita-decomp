@@ -3601,3 +3601,7 @@
 0x8112d99a func Poppet_GetMode hand late68
 0x8112ddba func Poppet_GetSubMode hand late68
 0x81284b7a func Gooey_DoSliderByHandle hand late68 callee of native_DoSlider
+0x81042ff2 func CacheFileReader_ctor hand late69
+0x81043066 func CacheFileReader_Close hand late69
+0x810430a2 func CacheFileReader_OpenByHash hand late69
+0x81042e48 func FileCacheRecord_Swap hand late69
