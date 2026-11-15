@@ -392,6 +392,14 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - Job state +0x28: 1 running, 2 failed or cancelled, 3 done. The step (0x810587da) waits for every dependency, then calls lbp_SaveLevelFart (9o) to store the downloaded level locally. So lbp_SaveLevelFart is the cache write of a downloaded level; the editor save goes through Game_PreSaveCheck (section 7, 9zd) and message 0x37.
 - 0x810594c0 Download_SlotStatus(profile, slot, deep): slot type field (+0x100) must be 0x1d with the top bit set, else 4; with deep it takes the worst status of the linked slots; a queued resource in state 1 gives 2, state 3 gives 4; no local copy gives 3; a local copy with the same hash gives 0. Exact meaning of each value: not read.
 
+## 9zf. Where the edited level is written (read, dumps decomp_sv3.c, decomp_sv4.c, decomp_sv5.c; tool tools/keyscan.py)
+- tools/keyscan.py lists every text key hash loaded as a constant in the code (movw + movt): 1535 uses in 279 functions, ghidra/work/keyuse.tsv. The save game texts (SAVEGAME_ERROR_NO_SPACE_QUICKSAVE, SAVEGAME_FAIL_UNKNOWN_ERROR, MSG_PROCEED_WITHOUT_SAVING) sit in 0x814a2416 and 0x814a395e, next to two callers of the level serialiser.
+- 0x814a2a02 SaveGame_SerialiseProfile(job): first step of a profile save. With a game object present it calls Game_CloneLevelBySave (9zb), so the level being edited is copied by serialising it and handed to the profile (0x811913c2). Then it calls the pre-save hook of the profile resource (job +0x20, vtable +0x38), serialises that resource into the buffer at job +0x54 (hash record to +0xac), calls the post-save hook (vtable +0x3c, argument = success) and sets the byte +0x119. With job +0x100 = 1 it first copies the slot map of the profile (+0x8c) into job +0x60. Caller 0x814a2b7e.
+- 0x814a2ce2 (3184 bytes, read in part) is the writer that follows: it also calls the serialiser and builds file names "moon%u_%u".
+- So the save order for an edited level is: Game_PreSaveCheck (limits and Move flag, 9zd) -> message 0x37 -> level cloned into the profile by serialising -> profile save job writes the files. The handler of message 0x37 itself was not located; this chain is from the callers of the serialiser.
+- Not the save: 0x8123409e (state 3 at +0xf0: saves the resources of a flagged thing list, queues 0x34-byte records, replaces two undo snapshots by one; caller 0x8123dcf2) and 0x8146b6f4 (makes a new 0x590 level resource and loads a serialised copy, like Game_CloneLevelBySave). Meaning of both: not read.
+- Leaving create mode with changes: 0x812c68c4 asks CREATE_MODE_LEAVE_TO_POD_PROMPT with CREATE_MODE_LEAVE_SAVE / CREATE_MODE_LEAVE_DISCARD / TG_Cancel.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|

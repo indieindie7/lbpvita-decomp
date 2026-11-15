@@ -2983,3 +2983,5 @@
 0x81059c5a func DownloadJobMap_CancelAll hand late37
 0x810595fc func DownloadJobMap_Find hand late37
 0x810594c0 func Download_SlotStatus hand late37
+0x814a2a02 func SaveGame_SerialiseProfile hand late39
+0x812c68c4 func CreateMode_AskLeaveSave hand late39
