@@ -474,6 +474,7 @@ The only callers of the 9za functions are script natives (found by scanning ever
 - Part bits in a level file: each object stores a 64-bit list of which parts it has. The file numbering has 47 bits and still counts 8 parts that the game no longer keeps (they are read and thrown away), so it differs from the in-memory numbering. The table is ghidra/partbits.tsv.
 - Magic mouth bubbles: dialog types 1 to 3 are the speech bubbles. Opening a new one closes the others, and each close is sent to the other players (net message MAGIC_MOUTH_CLOSED).
 - Dialog buttons: a button press reaches a dialog as a numbered event. The pad sends 1, 2, 6 or 8; the pop-up scripts send the option events (5 first option, 6 second, 7 third, 8 back) through the script call Messaging.NewGameEvent; event 3 closes the speech bubble of one object. The dialog row turns the event into its action code.
+- Dialog priority and icon: every dialog type has a rank and an icon number. Only 8 dialogs can be open; when all are used a new one replaces the least important one, or is dropped when it is even less important. Scripts read the icon number with Messaging.GetMessageIcon.
 
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |

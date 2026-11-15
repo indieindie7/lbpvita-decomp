@@ -4047,3 +4047,10 @@
 0x81654a4c func PWorld_SerializeSub_81654a4c hand late110
 0x81654cc4 func PWorld_SerializeSub_81654cc4 hand late110
 0x810211ba func VoiceChat_Update hand late113
+0x81072f12 func Messaging_GetSlotIcon hand late114
+0x8143d272 func Messaging_GetMessageIconForPlayer hand late114
+0x81072f04 func Messaging_HasOpenDialog hand late114
+0x812c55b2 func Net_CountActivePeers hand late114
+0x812c824a func Net_CountPeerPlayers hand late114
+0x812ccfb8 func LevelChange_Request hand late114
+0x811786a2 func Game_IsDialogTimerHeld hand late114
