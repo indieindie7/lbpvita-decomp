@@ -2799,3 +2799,10 @@
 0x81212cd4 func Level_LoadResource_thunk hand read
 0x81212cdc func Level_SaveResource_thunk hand read
 0x8122aef6 func Thing_SetParent hand read in part
+0x8122bb30 func Thing_AddPart hand late10
+0x8122b8d4 func Thing_IsValid hand late10
+0x81143a32 func Stickers_Add hand late10
+0x81143964 func Stickers_EnsurePart hand late10
+0x810a8cf2 func Decorations_Add hand late10
+0x8119b6c6 func Resource_Load hand late10
+0x8119b89e func Resource_Save hand late10

@@ -187,6 +187,17 @@ Both 0x81212cd4 and 0x81212cdc are 8-byte thunks into the resource system: load 
 ## 9p. Thing tree (read in part)
 0x8122aef6 Thing_SetParent(thing, newParent, flag): things form a tree. +0x50 parent, +0x48 first child, +0x4c next sibling, +0x5c group root, +0x64 body id of the root, +0x28 a physics link that is refreshed (0x810dfbe8) on reparent. The call unlinks the thing from the sibling chain of the old parent, pushes it at the head of the child list of the new one, sets the root pointer (0x8122a6ee) and walks the whole subtree to fix +0x5c. Glue, joints and stamps all end in this call. Rest of the range 0x8122a000..0x8122c400 (38 functions, decomp_thing.c) not read.
 
+## 9q. Parts on a thing, sticker and decoration add, resource load / save (read)
+A thing keeps its parts as a bitmask at +0x10 / +0x14 (up to 0x27 part kinds) with a slot table at +0x34 (slot = kind * 4) or, for sparse things, up to 4 inline slots at +0x38 indexed by 2-bit fields at +0x18 / +0x1c. Direct pointers: +0x20 body (kind 0), +0x28 position (kind 4), +0x2c shape (kind 0x12), +0x24 render mesh.
+- 0x8122bb30 Thing_AddPart(thing, kind, arg): no-op when the bit is already set; else allocates the part (0x812307ec), wires the position pointer into body +0xe8 and shape +0xe4, registers a new body with the world, and marks the thing dirty (+0x78).
+- Kinds seen in use: 0 body, 2 world, 3 render mesh, 4 position, 0xf stickers, 0x10 decorations, 0x12 shape, 0x1a (handed to the world at +0xc). These numbers match the part order known from the PS3 games; only the ones listed are checked here.
+- 0x8122b8d4 Thing_IsValid: every float of the two 4x4 matrices in the position part (+0x20, +0x60) must be finite (0x813a3d90), the bounds must pass 0x8122966e, and a thing with no parent needs at least one part other than position.
+- 0x81143a32 Stickers_Add(id, thing, ...sticker): 0x81143964 adds part 0xf if missing and records the plan as used (0x810b49ba), then 0x810f0c58 appends the sticker record to the part. Sticker record: +0x20 / +0x24 centre (shifted by half the size along both axes), +0x3e u16 id, +0x42 kind (2 = eyetoy / photo sticker, gets its texture from 0x810f0e06).
+- 0x810a8cf2 Decorations_Add(id, plan, thing, ...): needs a plan with a mesh (+0xe8), adds part 0x10 if missing, then 0x810a8740 does the attach.
+- 0x8119b6c6 Resource_Load: under the resource mutex (DAT_818e5b00), only for load state 0 or 4..5 (byte +0x3d); state 3 while loading; makes a 0x178-byte reader, runs the deserialiser 0x81212b94, then state 4 on success or the error path 0x811997ac. Load time is summed into DAT_818e5a90.
+- 0x8119b89e Resource_Save: only for state 4..5; state 5 while 0x81213470 serialises, then back to 4. Both return 0x72 when refused.
+- Joint placement 0x8134465c (not named): works on end A (+0x18) and end B (+0x24), joint type 1..6 at +0xc, compares an angle at +0x7c of each end with 90 and 180 and moves the ends with 0x810dfbb0. Purpose of the angle test not determined.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
