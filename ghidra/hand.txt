@@ -3252,3 +3252,5 @@
 0x812fc48c func Poppet_CreateFromResources hand late47
 0x812fd3f0 func Poppet_OnV4Default hand late47
 0x8135105e func Poppet_ForwardMessageToHook hand late47
+0x8116122a func Resource_SerialiseToHash hand late48
+0x81161358 func Resource_FormatName hand late48
