@@ -372,6 +372,8 @@ A plan (RTYPE_PLAN, type 38: one saved object, sticker or costume piece) is writ
 The reader 0x816d6834 Plan_ReadBinary takes the same order. It adds each blob size to a running total in the stream (+0x40, 64-bit) and returns error 0x67 once the total reaches 50000000 bytes. After a read it stamps the plan as current: +0x50 = 0x3e2 (the revision this build writes), +0x54 = 0x44310084 (branch tag), +0x58 = the stream flag byte +0x2c.
 So placing an object from the Popit means deserialising the blob of its plan into the level, and capturing an object means serialising its things into a new blob (the commit paths in 9g / 9m call into this).
 
+Inventory details record (dump decomp_invd.c; callee list read, field order not checked one by one): 0x816aaf8c writes the struct that FIELDS.md lists under 0x816ac304: DateAdded +0 (64-bit, 0x8100bea8), LevelUnlockSlotID +8, HighlightSound +0x10, Colour +0x14, Type +0x18, SubType +0x1c, the two translation tags +0x20 / +0x24, a creator id at +0x28 (0x816aaf34), Icon +0x2c (resource descriptor, 0x816aae50), UserCreatedDetails +0x30 (two UTF-16 strings, each a count then count * 2 bytes), PhotoData +0x34 (0x81611060) and EyetoyData +0x38 (0x816139c4), each written only when present, the u16 indices LocationIndex / CategoryIndex / PrimaryIndex +0x40..+0x44, a record at +0x3c (0x816aadf8) and the bytes ToolType +0x46, Flags +0x47, MakeSizeProportional +0x48. This is what the Popit shows for an item: name, description, icon, category and creator all travel inside the plan.
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
