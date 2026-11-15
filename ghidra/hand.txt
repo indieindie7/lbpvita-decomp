@@ -2897,3 +2897,11 @@
 0x813f4ef0 func png_write_sCAL hand libstring
 0x813f4f74 func png_write_pHYs hand libstring
 0x813f4ffc func png_write_tIME hand libstring
+0x8134465c func Joint_FitEndDepths hand read
+0x8122c012 func Thing_SetRefSlot hand read
+0x81607188 func Resource_WriteMode5 hand read
+0x81240d52 func Resource_ReadWithHeader hand read
+0x810f066e func Stickers_RemoveRange hand read
+0x810e5b10 func Shape_PairDistance hand read
+0x8107b0b2 func Game_RequestSaveLevel hand read
+0x8107b0de func Game_DoPreSaveLevelCheck hand read

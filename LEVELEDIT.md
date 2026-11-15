@@ -205,6 +205,16 @@ A thing keeps its parts as a bitmask at +0x10 / +0x14 (up to 0x27 part kinds) wi
 - 0x813459a2 Joint_AttachEnd(angle, joint thing, target thing, end): needs the joint part (kind 1) and a target with a shape; end 0 goes through 0x810c4d58 (set end A, +0x18), end 1 through 0x810c4db8 (set end B, +0x24). The joint keeps a per-end angle offset at +0x54 / +0x58 and a local anchor at +0x34.. / +0x44..; re-attaching an end zeroes its anchor.
 - 0x81212b94 Resource_Deserialise: sniffs the header (0x81211efe); binary goes to 0x81212288, text to 0x816067d8, then calls the resource vtable slot 0 (post-load). 0x81212288 switches on the resource type byte (+0x3c, 1..0x29 and up) to pick the reflection function from a table at 0x816079b4 (8 bytes per type) and runs the generic reader 0x81240d52. Unknown type returns 0x6d. 0x81213470 is the writer twin (not read).
 
+## 9s. Joint end depths, thing slots, writers, sticker removal (read)
+- 0x8134465c Joint_FitEndDepths(joint, hit, changedCount): the 90 / 180 numbers are depths, not angles. For the shape at each end it reads the depth value d at +0x7c and the centre c = (+0xf0 + +0x100) * 0.5. Both d under 180: both end offsets are 0. A wholly in front of B (cA - dA >= cB + dB): offset A = 90 - dA, offset B = dB - 90. A wholly behind B: the signs swap. Equal depths that overlap: both 90 - d. Different depths that overlap: the shape with the smaller d sets the offset and its point is carried into the space of the other shape (0x8172b3bc). An offset is forced to 0 for a shape with d under 180. Results go to joint +0x3c (end A) and +0x4c (end B); the count of changed ends is returned through the third argument. So a joint end on a deep shape is pulled to 90 from the face that looks at the other shape.
+- 0x8122c012 Thing_SetRefSlot(thing, value, index): pointer vector at thing +0x60; grows it to the index, stores, trims empty slots from the end, frees the vector when it is empty, then marks the thing dirty in the world (+0xc) and in the dirty byte table (world +0x2a8, index = u16 at part +0x28).
+- 0x8122ab62 (not named): recomputes the state byte +0x7f of a thing from its kind byte +0x7e (3, 6, 7, 0x24, 0x40, 0x43, 0x95) and the same byte of its parent (+0x50) chain; kind 0x40 inherits from the parent. Meaning of the byte still open.
+- 0x81213470 Resource_WriteToBuffer(res, out, opts): frees the old buffer; opts[0] is the mode (3 = pick by resource type with 0x8119f97e). Mode 1 = binary writer 0x81212ce4. Mode 5 = 0x81607188 Resource_WriteMode5, a stream writer (vtable 0x8183fd04) that emits marker words 0xe2030000 and 0x84003144 before the body 0x816ca078.
+- 0x81240d52 Resource_ReadWithHeader: optional 4 byte magic, then a header parsed by 0x8123f9e0; when the hash in the header equals res +0x44 the body is skipped (already current), else the dependency range is loaded (0x8124028c) and the body read (0x81240b72).
+- 0x810f066e Stickers_RemoveRange(part, first, count, list, otherList, markOnly, onlyFlagged): list -1 = the main sticker list at part +0xc, else the list at part + list * 0xc + 0x18; records are 0x58 bytes. Each removed record frees its 0x70 byte slot in the table at part +0xe4 (index u16 at +0x3c) and every higher index in both lists moves down by one. markOnly sets byte +0x44 on the records in place of erasing. Then the render caches of the world are marked dirty.
+- 0x810e5b10 Shape_PairDistance(a, b, outDist, outInfo): radius at +0x38 of each shape. Both 0: polygon against polygon (0x811292b0), distance = separation along the returned axis. One with a radius: closest point of each polygon edge to the centre of the round shape.
+- native_RequestSaveLevel 0x811ed4b0 only calls 0x8107b0b2; native_DoPreSaveLevelCheck 0x811ed4b8 calls 0x8107b0de (bodies not read).
+
 ## 10. Function map by tool (from strings; bodies not read unless listed above)
 | addr | what |
 |---|---|
@@ -224,9 +234,7 @@ A thing keeps its parts as a bitmask at +0x10 / +0x14 (up to 0x27 part kinds) wi
 Full list: ghidra/work/poppet_strs.txt.
 
 ## 11. Not read yet
-- Joint placement 0x8134465c (angle test against 90 / 180 not understood) and the rest of decomp_joint.c.
-- Thing 0x8122ab62 (walks parents by kind byte +0x7e), 0x8122c012.
-- The writer 0x81213470, the generic reflection reader 0x81240d52, the per-type reflection table 0x816079b4.
-- Piece-pair distance 0x810e5b10, sticker removal 0x810f066e, script native RequestSaveLevel 0x811ed4b0.
+- Thing state byte +0x7f (0x8122ab62) and the rest of decomp_joint.c.
+- The per-type reflection table 0x816079b4, body writer 0x816ca078, save request 0x8107b0b2 / 0x8107b0de.
 - Class trees are in CLASSES.md (Poppet tool states sit under PickState 0x8185b62c; each constructor passes its SUBMODE number). Unnamed classes there still need reading.
-- Library identification (FMOD, libpng); libult and steroid suprx modules.
+- Libraries: FMOD, zlib and libpng are named; vorbis, Bink and xml are not. libult and steroid suprx modules.
