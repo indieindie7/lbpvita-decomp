@@ -118,35 +118,35 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
         - StickerCutterState 0x81858608 slots 42 own 11
         - UnphysicsState 0x81858cf8 slots 42 own 6
       - EditUVState 0x81858c48 slots 42 own 5
-- cls_8183d74c 0x8183d74c slots 40 own 40
-  - cls_8183d8f4 0x8183d8f4 slots 40 own 9
-  - cls_8183d9f0 0x8183d9f0 slots 40 own 8
-  - cls_8183daec 0x8183daec slots 43 own 13
-    - cls_8183dc0c 0x8183dc0c slots 43 own 7
-    - cls_8183dd38 0x8183dd38 slots 43 own 10
-    - cls_8183de60 0x8183de60 slots 43 own 7
-    - cls_8183e034 0x8183e034 slots 43 own 7
-    - cls_8183e210 0x8183e210 slots 43 own 7
-    - cls_8183e3e0 0x8183e3e0 slots 43 own 7
-    - cls_8183e508 0x8183e508 slots 43 own 8
-    - cls_8183ecb4 0x8183ecb4 slots 43 own 7
-    - cls_8183f304 0x8183f304 slots 43 own 8
-    - cls_8183f548 0x8183f548 slots 43 own 8
-    - cls_8183f668 0x8183f668 slots 43 own 7
-  - cls_8183e628 0x8183e628 slots 41 own 12
-  - cls_8183e744 0x8183e744 slots 41 own 12
-  - cls_8183e85c 0x8183e85c slots 40 own 14
-  - cls_8183e978 0x8183e978 slots 40 own 11
-  - cls_8183ea90 0x8183ea90 slots 40 own 12
-  - cls_8183eba0 0x8183eba0 slots 40 own 12
-  - cls_8183edd8 0x8183edd8 slots 40 own 9
-  - cls_8183eeec 0x8183eeec slots 40 own 11
-  - cls_8183f00c 0x8183f00c slots 40 own 10
-  - cls_8183f124 0x8183f124 slots 40 own 12
-  - cls_8183f234 0x8183f234 slots 40 own 15
-  - cls_8183f42c 0x8183f42c slots 40 own 12
-  - cls_8183f78c 0x8183f78c slots 40 own 10
-  - cls_8183f878 0x8183f878 slots 40 own 10
+- CSearchDetails 0x8183d74c slots 40 own 40
+  - CSearchDetailsStoryLevels 0x8183d8f4 slots 40 own 9
+  - CSearchDetailsMyLevels 0x8183d9f0 slots 40 own 8
+  - CSearchDetailsCommunity 0x8183daec slots 43 own 13
+    - CSearchDetailsNewestLevels 0x8183dc0c slots 43 own 7
+    - CSearchDetailsMMPicks 0x8183dd38 slots 43 own 10
+    - SIER 0x8183de60 slots 43 own 7
+    - CSearchDetailsHighestRatedLevels 0x8183e034 slots 43 own 7
+    - CSearchDetailsMostHeartedLevels 0x8183e210 slots 43 own 7
+    - CSearchDetailsMostPlayedLevels 0x8183e3e0 slots 43 own 7
+    - CSearchDetailsLuckyDip 0x8183e508 slots 43 own 8
+    - CSearchDetailsCoolLevels 0x8183ecb4 slots 43 own 7
+    - CSearchDetailsFavouriteLevels 0x8183f304 slots 43 own 8
+    - CSearchDetailsLolcatftw 0x8183f548 slots 43 own 8
+    - CSearchDetailsSimilarLevels 0x8183f668 slots 43 own 7
+  - CSearchDetailsFriendsList 0x8183e628 slots 41 own 12
+  - CSearchDetailsNearList 0x8183e744 slots 41 own 12
+  - CSearchDetailsShowStore 0x8183e85c slots 40 own 14
+  - CSearchDetailsMyDLC 0x8183e978 slots 40 own 11
+  - CSearchDetailsCart 0x8183ea90 slots 40 own 12
+  - CSearchDetailsLevelDLC 0x8183eba0 slots 40 own 12
+  - CSearchDetailsDownloads 0x8183edd8 slots 40 own 9
+  - CSearchDetailsRecentLevels 0x8183eeec slots 40 own 11
+  - CSearchDetailsLinkedLevels 0x8183f00c slots 40 own 10
+  - CSearchDetailsGroup 0x8183f124 slots 40 own 12
+  - CSearchDetailsPlayer 0x8183f234 slots 40 own 15
+  - CSearchDetailsFavouriteAuthors 0x8183f42c slots 40 own 12
+  - CSearchDetailsFindWithTag 0x8183f78c slots 40 own 10
+  - CSearchDetailsFindText 0x8183f878 slots 40 own 10
 - cls_8185d3e8 0x8185d3e8 slots 61 own 61
   - cls_81856d70 0x81856d70 slots 61 own 14
   - cls_8185bd04 0x8185bd04 slots 61 own 15
@@ -260,10 +260,10 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
   - cls_81859cfc 0x81859cfc slots 6 own 4
   - cls_81859d1c 0x81859d1c slots 6 own 4
 - cls_8185d4fc 0x8185d4fc slots 9 own 9
-  - cls_8185928c 0x8185928c slots 9 own 6
-  - cls_8185930c 0x8185930c slots 10 own 7
-  - cls_81859390 0x81859390 slots 9 own 6
-  - cls_81859998 0x81859998 slots 9 own 6
+  - CInventoryCollectionInstance 0x8185928c slots 9 own 6
+  - CInventoryInfoBubble 0x8185930c slots 10 own 7
+  - CInventoryInfoCategoryBubble 0x81859390 slots 9 own 6
+  - CSendToFriendBubble 0x81859998 slots 9 own 6
 - cls_8185709c 0x8185709c slots 4 own 4
   - cls_8183beec 0x8183beec slots 4 own 2
     - cls_8183be84 0x8183be84 slots 4 own 2
@@ -287,9 +287,9 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
 - cls_8183b864 0x8183b864 slots 22 own 22
   - cls_8183b8c4 0x8183b8c4 slots 22 own 9
   - cls_8183b924 0x8183b924 slots 82 own 78
-- cls_8183f9d8 0x8183f9d8 slots 28 own 28
-  - cls_8183fa8c 0x8183fa8c slots 30 own 27
-  - cls_8183fb6c 0x8183fb6c slots 28 own 17
+- CSearchResult 0x8183f9d8 slots 28 own 28
+  - CSearchResultSlot 0x8183fa8c slots 30 own 27
+  - CSearchResultPlayer 0x8183fb6c slots 28 own 17
 - cls_81855d20 0x81855d20 slots 158 own 158
   - cls_81855fa0 0x81855fa0 slots 161 own 131
     - cls_8185622c 0x8185622c slots 161 own 5
@@ -305,8 +305,8 @@ Made by tools/vtscan.py + tools/classes.py. 746 vtables, 295 with a base found, 
 - cls_81858f54 0x81858f54 slots 8 own 8
   - cls_81858f90 0x81858f90 slots 8 own 5
   - cls_81858fcc 0x81858fcc slots 8 own 4
-- cls_8185b528 0x8185b528 slots 23 own 23
-  - cls_8183bd68 0x8183bd68 slots 23 own 12
+- CPlanets 0x8185b528 slots 23 own 23
+  - CPodComputerPlanets 0x8183bd68 slots 23 own 12
   - cls_8183d648 0x8183d648 slots 23 own 7
 - cls_8185b738 0x8185b738 slots 25 own 25
   - cls_8183c254 0x8183c254 slots 25 own 11
