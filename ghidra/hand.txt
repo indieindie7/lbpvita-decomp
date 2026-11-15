@@ -3273,7 +3273,7 @@
 0x81343f30 func Poppet_BuildJointThing hand late54
 0x810847ea func Text_TrialAndChatRestrictedDialogs hand late55 by text keys (keyuse.tsv), body not read
 0x8108e6cc func Text_CostumeCategoryNames hand late55 by text keys (keyuse.tsv), body not read
-0x811059a4 func Text_TweakOptionNames hand late55 by text keys (keyuse.tsv), body not read
+0x811059a4 func Switch_GetPortLabel hand late57 was Text_TweakOptionNames
 0x8112452e func Text_LevelLaunchMessages hand late55 by text keys (keyuse.tsv), body not read
 0x81127fe2 func Text_PlanetStatusStrings hand late55 by text keys (keyuse.tsv), body not read
 0x81137df2 func Text_PopitMyItemsCategories hand late55 by text keys (keyuse.tsv), body not read
